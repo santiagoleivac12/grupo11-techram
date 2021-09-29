@@ -1,7 +1,7 @@
 # techRam
 
-![Logo de techRam](logo/eva.png)
-![Logo de techRam](logo/blanco.png)
+![Logo de techRam](Logo/eva.png)
+![Logo de techRam](Logo/blanco.png)
 ## Nuestro sitio
 
 Nuestro e-commerce ofrece diversos productos de tecnología (componentes de pc, periféricos, laptops). 
