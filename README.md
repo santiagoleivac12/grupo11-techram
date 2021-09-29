@@ -1,4 +1,8 @@
-# Productos de nuestro e-commerce
+# techRam
+
+![Logo de techRam](logo/eva.png)
+![Logo de techRam](logo/blanco.png)
+## Nuestro sitio
 
 Nuestro e-commerce ofrece diversos productos de tecnología (componentes de pc, periféricos, laptops). 
 Tambien ofreceremos sillas gamer y escritorios para el setup de la pc.
@@ -7,19 +11,40 @@ ya que ofrecemos ayuda para armar una pc según las necesidades del cliente.
 
 ## Integrantes del proyecto
 
-Nuestro equipo esta formado por:
-Brian Garcia
+**Brian Garcia**
 - 24 años
-- Estudiante de programación web Full Stack e Licenciatura en Informática  
-Micaela Sosa
+- Estudiante de programación web Full Stack e Licenciatura en Informática
+
+**Micaela Sosa**
 - 27 años
 - Estudiante de programación web Full Stack, amante de los gatos, dibujante digital
-Santiago Leiva
+
+**Santiago Leiva**
 - 20 años
 - Estudiante de programación web Full Stack e ingeniería en informática y facturador en mayorista
-Marité Mena
+
+**Marité Mena**
 - 19 años
 - Estudiante de programación web Full Stack, apasionada por la cocina y bascket
-Ricardo J Juturi
+
+**Ricardo Jose Juturi**
 - 20 años 
 - Estudiante de programación web Full Stack, ciclista y dibujante
+
+## Sitios de referencia:
+
+Elegimos estas paginas debido a que algunas son pioneras en lo relacionado a venta de productos tecnologicos, y otras tienen una estetica agradable a la vista y es lo que queremos lograr con nuestro e-commerce. 
+- [Maximus](https://www.maximus.com.ar/)
+- [Compragamer](https://compragamer.com/)
+- [Gezatek](https://www.gezatek.com.ar/)
+- [Fravega](https://www.fravega.com/)
+- [Garbarino](https://www.garbarino.com/)
+
+## Wireframes
+
+![Home](wireframes/Home.pdf)
+![Administrador](wireframes/Admin.pdf)
+![Categorias](wireframes/categorias.pdf)
+![carrito de compras](wireframes/carrito-de-compras-boceto-y-terminaciones.pdf)
+![Inicio de sesión](wireframes/Inicio-de-sesión.pdf)
+![Perfil de usuario](wireframes/Perfil-de-usuario.pdf)
