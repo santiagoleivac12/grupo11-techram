@@ -19,7 +19,7 @@
 ![Perfil de usuario](img/perfil-de-usuario.jpeg)
 
 ### Detalle del producto
-![Detalle del producto](Detalle-de-los-productos-page-0001)
+![Detalle del producto](Detalle-de-los-productos-page-0001.jpg)
 
 ## Paleta de colores
  
