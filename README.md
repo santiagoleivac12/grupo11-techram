@@ -1,7 +1,7 @@
 # techRam
 
-![Logo de techRam](Logo/eva.png)
-![Logo de techRam](Logo/blanco.png)
+![Logo de techRam](Logo/logo.jpeg)
+![Logo de techRam](Logo/techram.jpeg)
 ## Nuestro sitio
 
 Nuestro e-commerce ofrece diversos productos de tecnología (componentes de pc, periféricos, laptops). 
@@ -42,9 +42,10 @@ Elegimos estas paginas debido a que algunas son pioneras en lo relacionado a ven
 
 ## Wireframes
 
-![Home](wireframes/Home.pdf)
-![Administrador](wireframes/Admin.pdf)
-![Categorias](wireframes/categorias.pdf)
-![carrito de compras](wireframes/carrito-de-compras-boceto-y-terminaciones.pdf)
-![Inicio de sesión](wireframes/Inicio-de-sesión.pdf)
-![Perfil de usuario](wireframes/Perfil-de-usuario.pdf)
+![Home](https://www.figma.com/file/NXnFmEeki62bo15L330SV4/Untitled?node-id=0%3A1)
+![Administrador](https://www.figma.com/file/31eiPMYnYiMUiiH3DfNKX4/Admin?node-id=0%3A1)
+![Categorias](https://www.figma.com/file/WLfki9kydSdibzq1oTs0UB/categorias?node-id=0%3A1)
+![carrito de compras](https://www.figma.com/file/y44CpeJOCg8qbSmkALUjKv/carrito-de-compras-%2Cboceto-y-terminaciones.?node-id=0%3A1)
+![Registro](https://www.figma.com/file/rhpn9XHokOluOHZhfgSw07/registro?node-id=0%3A1)
+![Inicio de sesión](https://www.figma.com/file/NXnFmEeki62bo15L330SV4/Untitled?node-id=69%3A2)
+![Perfil de usuario](https://www.figma.com/file/NXnFmEeki62bo15L330SV4/Untitled?node-id=69%3A117)
