@@ -1,6 +1,6 @@
 ## Wireframes
 
-![Home](img/)
+![Home](img/Home.jpeg)
 
 ![Administrador](img/administrador.jpeg)
 
@@ -11,6 +11,8 @@
 ![Inicio de sesión](img/Inicio-de-sesion.jpeg)
 
 ![Perfil de usuario](img/perfil-de-usuario.jpeg)
+
+![Detalle del producto](Detalle-de-los-productos_page-0001)
 
 ## Paleta de colores
  
