@@ -1,0 +1,23 @@
+{
+  "name": "grupo11-techram-master",
+  "version": "1.0.0",
+  "description": "![Logo de techRam](Logo/logo.jpeg)\r ![Logo de techRam](Logo/techram.jpeg)\r ## Nuestro sitio",
+  "main": "app.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/santiagoleivac12/grupo11-techram.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/santiagoleivac12/grupo11-techram/issues"
+  },
+  "homepage": "https://github.com/santiagoleivac12/grupo11-techram#readme",
+  "dependencies": {
+    "express": "^4.17.1"
+  }
+}

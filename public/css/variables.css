@@ -1,0 +1,15 @@
+:root{
+    /*colors*/
+    --morado: #150050;
+    --rosa: #e7d8e8;
+    --negro: black; 
+    --blanco: white;
+    --degradeFondo: linear-gradient(to bottom , #03001e, #7303c0, #fdeff9);
+
+
+}
+html, body{
+    height: 100%;
+}
+
+  
