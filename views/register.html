@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="css/style.css">
+    <title>Registrate</title>
+</head>
+
+<body class="body-register">
+    <section class="form-register">
+        <h4>Formulario registro</h4>
+        <p>Nombre</p>
+        <input class="controls" type="text" name="nombre" id="nombre" placeholder="Ingrese su nombre" required />
+        <p>Apellido</p>
+        <input class="controls" type="text" name="nombre" id="apellido" placeholder="Ingrese su apellido" required/>
+        <p>Email</p>
+        <input class="controls" type="text" name="correo" id="correo" placeholder="ej: tuemail@mail.com" required/>
+        <p>Contraseña</p>
+        <input class="controls" type="password" name="correo" id="correo" placeholder="Ingrese su contraseña" required />
+        <p>Repita su contraseña</p>
+        <input class="controls" type="password" name="correo" id="correo" placeholder="Repita su contraseña" required />
+        <br>
+        <label for="dropdown" id="provincia">Elige tu Provincia</label>
+        <select id="dropdown" class="controls" required>
+            <option value="Buenos Aires">Buenos Aires</option>
+            <option value="Capital Federal">Capital Federal</option>
+            <option value="Catamarca">Catamarca</option>
+            <option value="Chaco">Chaco</option>
+            <option value="Chubut">Chubut</option>
+            <option value="Cordoba">Córdoba</option>
+            <option value="Corrientes">Corrientes</option>
+            <option value="Entre Rios">Entre Ríos</option>
+            <option value="Formosa">Formosa</option>
+            <option value="Jujuy">Jujuy</option>
+            <option value="La Pampa">La Pampa</option>
+            <option value="La Rioja">La Rioja</option>
+            <option value="Mendoza">Mendoza</option>
+            <option value="Misiones">Misiones</option>
+            <option value="Neuquen">Neuquén</option>
+            <option value="Rio Negro">Río Negro</option>
+            <option value="Salta">Salta</option>
+            <option value="San Juan">San Juan</option>
+            <option value="San Luis">San Luis</option>
+            <option value="Santa Cruz">Santa Cruz</option>
+            <option value="Santa Fe">Santa Fe</option>
+            <option value="Santiago del Estero">Santiago del Estero</option>
+            <option value="Tierra del Fuego">Tierra del Fuego</option>
+            <option value="Tucuman">Tucumán</option>
+        </select>
+        <input type="checkbox" name="aceptar" id="term-cond" value="acept" required />
+        <label for="checkbox">Acepto los <a href="#">Terminos y Condiciones</a> y autorizo el uso de
+            mis datos de acuerdo a la Declaración de Privacidad</label>
+        <input type="submit" value="Registrarme" id="submit" class="button" />
+        <p><a href="#">Ya tengo cuenta</a></p>
+    </section>
+</body>
+
+</html>
