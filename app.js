@@ -10,6 +10,9 @@ app.use(express.static('public'))
 app.get('/', function (req, res){
     res.sendFile(path.join(__dirname, './views/index.html'))
 })
+app.get('/register', function (req, res){
+    res.sendFile(path.join(__dirname, './views/register.html'))
+})
 
 //Server
 app.listen(PORT, () => console.log(`
