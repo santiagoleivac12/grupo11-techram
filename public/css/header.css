@@ -3,3 +3,41 @@
     padding: 0;
     box-sizing: border-box;
 }
+
+.nav-container {
+    display: flex;
+    width: 100%;
+    height:5.5rem;
+    background-color: var(--morado);
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+}
+
+
+.burguer-menu {
+    width: 32px;
+    height: 32px;
+    font-size: 32px;
+    text-align: center;
+}
+
+.logo {
+    width: 70px;
+    height: 40px;
+}
+
+.logo-imagen img{
+    width: 100%;
+}
+
+.text-techram img{
+    width: 100%;
+}
+
+.menu {
+    display: none;
+}
+
+.buscador input{
+    display: none;
+}
