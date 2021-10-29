@@ -4,6 +4,9 @@
     box-sizing: border-box;
 }
 
+
+/* Menu hamburguesa y logo*/
+
 .nav-container {
     display: flex;
     width: 100%;
@@ -33,12 +36,38 @@
     color: white;
 }
 
-
-.container-icon {
-    display: flex;
-    width: 30%;
-    justify-content: space-evenly;
+.menu {
+    background-color: var(--morado);
+    width: 100%;
+    height: 300px;
+    text-align: center; 
+   /*  display: none; */
 }
+
+/* .burguer-menu:hover > .menu {
+    display: inline-block;
+} */
+
+.menu .nav__lu {
+    list-style: none;
+}
+
+.menu .nav__lu .nav__li, .nav__a {
+    margin: 20px;
+    font-size: 13px;
+    color: white;
+    font-weight: 700;
+    line-height: 20px;
+    text-decoration: none;
+    padding-left: 27px;
+    padding: 4px 28px;
+    text-transform: uppercase;
+}
+
+.menu .nav__lu .nav__li:first-child {
+    margin-top: 0px;
+} 
+
 
 .logo-imagen {
     width: 37%;
@@ -49,7 +78,6 @@
 }
 
 .logo-imagen img{
-   /*  width:100%; */
     max-width: 108.95px;
     max-height: 84.8px;
 }
@@ -58,8 +86,14 @@
     width:100%;
 }
 
-.menu {
-    display: none;
+
+
+/* carrito, lupa y usuario*/
+
+.container-icon {
+    display: flex;
+    width: 30%;
+    justify-content: space-evenly;
 }
 
 .buscador i {
@@ -85,3 +119,4 @@
 .buscador input{
     display: none;
 }
+
