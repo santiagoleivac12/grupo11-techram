@@ -141,6 +141,7 @@ header {
 /* Tablet */
 
 @media (min-width:510px ) {
+    /* Containers*/
     .nav-container {
         width:100%;
         height: 5.3rem;
@@ -162,6 +163,8 @@ header {
     .logo-imagen img{
         max-width: 90%;
     }
+
+    /* Menu hamburguesa*/
 
     .burguer-menu {
         display: none;
@@ -187,6 +190,8 @@ header {
         top: 100px;
         left: 0;
     } */
+
+    /* Search bar*/
 
     .buscador {
         width: 70%;
