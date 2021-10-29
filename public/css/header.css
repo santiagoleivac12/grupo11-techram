@@ -7,35 +7,79 @@
 .nav-container {
     display: flex;
     width: 100%;
-    height:5.5rem;
+    height:6.7rem;
     background-color: var(--morado);
     flex-wrap: wrap;
     justify-content: space-evenly;
+    align-items: center;
 }
 
+.container-logo { 
+    display: flex;
+    width: 60%;
+   /*  height: 90px; */
+    align-items: center;
+    justify-content: center;
+    flex-wrap: wrap;
+    justify-self: center;
+    align-self: center;
+   /*  margin: 0 auto; */
+}
 
 .burguer-menu {
-    width: 32px;
-    height: 32px;
-    font-size: 32px;
+    width: 26%;
+    font-size: 30px;
     text-align: center;
+    color: white;
 }
 
-.logo {
-    width: 70px;
-    height: 40px;
+
+.container-icon {
+    display: flex;
+    width: 30%;
+    justify-content: space-evenly;
+}
+
+.logo-imagen {
+    width: 37%;
+}
+
+.text-techram {
+    width: 37%;
 }
 
 .logo-imagen img{
-    width: 100%;
+   /*  width:100%; */
+    max-width: 108.95px;
+    max-height: 84.8px;
 }
 
 .text-techram img{
-    width: 100%;
+    width:100%;
 }
 
 .menu {
     display: none;
+}
+
+.buscador i {
+    font-size: 22px;
+    text-align: center;
+    color: white;
+}
+
+.user {
+    font-size: 22px;
+    text-align: center;
+    color: white;
+  
+}
+
+.carrito {
+    font-size: 22px;
+    text-align: center;
+    color: white;
+
 }
 
 .buscador input{
