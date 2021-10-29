@@ -4,6 +4,9 @@
     box-sizing: border-box;
 }
 
+header {
+    position: fixed;
+}
 
 /* Menu hamburguesa y logo*/
 
@@ -48,13 +51,23 @@
     display: none;
 }
 
-/* .burguer-menu:hover > .menu {
-    display: inline-block;
-} */
+.menu-responsive {
+    background-color: var(--morado);
+    width: 100%;
+    height: 300px;
+    text-align: center; 
+    display: none;
+}
+
+.burguer-menu:hover > .menu {
+    display: block;
+    position: absolute;
+    top: 100px;
+    left: 0;
+}
 
 .menu .nav__lu {
     list-style: none;
-    border: 1px solid white;
 }
 
 .menu .nav__lu .nav__li, .nav__a {
@@ -167,6 +180,13 @@
     .burguer-responsive i {
         text-align: center; 
     }
+/* 
+    .burguer-responsive:hover > .menu-responsive {
+        display: block;
+        position: absolute;
+        top: 100px;
+        left: 0;
+    } */
 
     .buscador {
         width: 70%;
