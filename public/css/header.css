@@ -6,6 +6,8 @@
 
 header {
     position: fixed;
+    left: 0;
+    top: 0;
 }
 
 /* Menu hamburguesa y logo*/
@@ -23,7 +25,7 @@ header {
 .container-logo { 
     display: flex;
     width: 60%;
-   /*  height: 90px; */
+    height: 90px;
     align-items: center;
     justify-content: center;
     flex-wrap: wrap;
