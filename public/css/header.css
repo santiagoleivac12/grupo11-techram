@@ -3,3 +3,221 @@
     padding: 0;
     box-sizing: border-box;
 }
+
+header {
+    position: fixed;
+}
+
+/* Menu hamburguesa y logo*/
+
+.nav-container {
+    display: flex;
+    width: 100%;
+    height:6.7rem;
+    background-color: var(--morado);
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+    align-items: center;
+}
+
+.container-logo { 
+    display: flex;
+    width: 60%;
+   /*  height: 90px; */
+    align-items: center;
+    justify-content: center;
+    flex-wrap: wrap;
+    justify-self: center;
+    align-self: center;
+   /*  margin: 0 auto; */
+}
+
+.burguer-menu {
+    width: 26%;
+    font-size: 30px;
+    text-align: center;
+    color: white;
+}
+
+.burguer-responsive {
+    display: none;
+}
+
+.menu {
+    background-color: var(--morado);
+    width: 100%;
+    height: 300px;
+    text-align: center; 
+    display: none;
+}
+
+.menu-responsive {
+    background-color: var(--morado);
+    width: 100%;
+    height: 300px;
+    text-align: center; 
+    display: none;
+}
+
+.burguer-menu:hover > .menu {
+    display: block;
+    position: absolute;
+    top: 100px;
+    left: 0;
+}
+
+.menu .nav__lu {
+    list-style: none;
+}
+
+.menu .nav__lu .nav__li, .nav__a {
+    margin: 20px;
+    font-size: 13px;
+    color: white;
+    font-weight: 700;
+    line-height: 20px;
+    text-decoration: none;
+    padding-left: 27px;
+    padding: 4px 28px;
+    text-transform: uppercase;
+}
+
+.menu .nav__lu .nav__li:first-child {
+    margin-top: 0px;
+} 
+
+
+.logo-imagen {
+    width: 37%;
+}
+
+.text-techram {
+    width: 37%;
+}
+
+.logo-imagen img{
+    max-width: 108.95px;
+    max-height: 84.8px;
+}
+
+.text-techram img{
+    width:100%;
+}
+
+
+
+/* carrito, lupa y usuario*/
+
+.container-icon {
+    display: flex;
+    width: 30%;
+    justify-content: space-evenly;
+}
+
+.buscador i {
+    font-size: 22px;
+    text-align: center;
+    color: white;
+}
+
+.user {
+    font-size: 22px;
+    text-align: center;
+    color: white;
+  
+}
+
+.carrito {
+    font-size: 22px;
+    text-align: center;
+    color: white;
+
+}
+
+.buscador input{
+    display: none;
+}
+
+/* Tablet */
+
+@media (min-width:510px ) {
+    /* Containers*/
+    .nav-container {
+        width:100%;
+        height: 5.3rem;
+    }
+
+    .container-logo {
+        width: 25%;
+        flex-direction: row-reverse;
+        justify-content: center;
+        align-items: flex-start;
+        position: relative;
+    }
+
+    .container-icon {
+        width: 75%;
+        justify-content: space-evenly;
+    }
+
+    .logo-imagen img{
+        max-width: 90%;
+    }
+
+    /* Menu hamburguesa*/
+
+    .burguer-menu {
+        display: none;
+    }
+
+    .burguer-responsive {
+        display: block;
+        width: 100%;
+        height: 26px;
+        color: white;
+        background-color: black;
+        border: 1px solid var(--morado);
+        font-size: 20px;
+    }
+
+    .burguer-responsive i {
+        text-align: center; 
+    }
+/* 
+    .burguer-responsive:hover > .menu-responsive {
+        display: block;
+        position: absolute;
+        top: 100px;
+        left: 0;
+    } */
+
+    /* Search bar*/
+
+    .buscador {
+        width: 70%;
+        background-color: white;
+        border: 1px solid #ccc;
+        border-radius: 7px;
+        font-size: 2px;
+    }
+
+    .buscador input{
+        display: inline-block;
+        width: 90%;
+        height: 30px;
+        align-items: center;
+        border: none;
+       /*  background-color: #fff; */
+       /*  border: 1px solid #ccc;
+        border-radius: 7px; */
+    }
+
+    .buscador i {
+        color: var(--fucsia);
+        text-align: center;
+        width: 1px;
+        height: 1px;
+        margin-right: 0px;
+    }
+}
+
