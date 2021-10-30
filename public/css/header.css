@@ -4,11 +4,11 @@
     box-sizing: border-box;
 }
 
-header {
+/* header {
     position: fixed;
     left: 0;
     top: 0;
-}
+} */
 
 /* Menu hamburguesa y logo*/
 
@@ -24,18 +24,18 @@ header {
 
 .container-logo { 
     display: flex;
-    width: 60%;
+    width: 40%;
     height: 90px;
-    align-items: center;
-    justify-content: center;
+    /* align-items: center; */
+    /* justify-content: space-between; */
     flex-wrap: wrap;
-    justify-self: center;
-    align-self: center;
+     justify-self: center; 
+    align-self: center; 
    /*  margin: 0 auto; */
 }
 
 .burguer-menu {
-    width: 26%;
+    width: 30%;
     font-size: 30px;
     text-align: center;
     color: white;
@@ -90,21 +90,19 @@ header {
 
 
 .logo-imagen {
-    width: 37%;
+    width: 50%;
+    justify-self: flex-end;
+    text-align: center;
+    margin: 0 auto;
 }
 
-.text-techram {
-    width: 37%;
-}
+
 
 .logo-imagen img{
     max-width: 108.95px;
     max-height: 84.8px;
 }
 
-.text-techram img{
-    width:100%;
-}
 
 
 
@@ -133,7 +131,7 @@ header {
     font-size: 22px;
     text-align: center;
     color: white;
-
+    display: none;
 }
 
 .buscador input{
