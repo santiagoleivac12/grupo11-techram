@@ -1,0 +1,234 @@
+* {
+    margin: 0px;
+    padding: 0px;
+    box-sizing: border-box;
+}
+
+body {
+    background: linear-gradient(to bottom , #03001e, #7303c0, #fdeff9); 
+    background-size: cover;
+    background-attachment: fixed; 
+    font-family: 'Source Sans Pro', sans-serif;
+}
+
+a {
+    text-decoration: none;
+}
+
+
+/* Main */
+
+/* .carrusel{
+    padding: 30px;
+} */
+
+#home-carrusel1 {
+    width: 100%;
+    height: 120px;
+    overflow: hidden;
+}
+
+.carrusel-div {
+    position: relative;
+    width: 100%;
+    height: 100%;
+}
+
+.flechas-carrusel {
+    position: absolute;
+    top: 0;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 15px;
+    height: 100%;
+    width: 100%;
+}
+
+
+ .carrusel-img img{
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.categorias {
+    display: flex;
+    width: 100%;
+    justify-content: space-evenly;
+    flex-wrap: wrap;
+    background-color: #7303c0;
+    background: linear-gradient(to bottom , #03001e, #7303c0, #fdeff9); 
+    background-size: cover;
+    background-attachment: fixed;
+    margin-top: 15px;
+    margin-bottom: 15px;
+}
+
+.categorias__icon {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    width: 27%;
+    color: #b87cfd;
+}
+
+.categorias__icon a {
+    display: flex;
+    flex-wrap: wrap;
+    width: 6rem;
+    height: 5.3125rem;
+    border: none;
+    border-radius: 50%;
+    align-items: center;
+    justify-content: center;
+    background-color: #7303c0;
+}
+
+
+.categorias__icon a .gamepad {
+    align-self: center;
+    justify-self: center;
+    font-size: 2.8125rem;
+    color: white;
+}
+
+.categorias__icon .discount {
+    position: relative;
+    right: 15px;
+    bottom: 7px;
+    align-self: flex-end;
+    font-size: 10px;
+}
+
+.title-card {
+    background: #b87cfd; 
+    background-size: cover;
+    background-attachment: fixed; 
+    color: white;
+    width: 95%;
+    text-align: center;
+    margin: 0 auto;
+    border-radius: 5px;
+    padding: 1rem;
+    text-transform: uppercase;
+    margin-bottom: .5rem;
+}
+
+.productos {
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+}
+
+.productos-article {
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: row;
+    justify-content: space-evenly;
+}
+
+.productos-article__card {
+    margin-bottom: 15px;
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: column;
+    width: 40%;
+    justify-content: space-between;
+    background: linear-gradient(to bottom , #03001e, #7303c0, #fdeff9); 
+    background-size: cover;
+    background-attachment: fixed;
+    border: 1px solid rgba(160, 102, 218, 0.658);
+}
+
+
+
+.productos-article .productos-article__card a img{
+    width: 100%;
+    object-fit: cover;
+}
+
+.card-img {
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    width: 100%;
+    justify-content: space-between;
+    text-align: center;
+}
+
+.price {
+    display: block;
+    font-weight: bold;
+    color:#fdeff9;
+    font-size: 18px;
+    margin: 15px;
+}
+
+.descripcion-producto {
+    font-size: 14px;
+}
+
+
+.button-producto {
+    background-color: #b87cfd;
+    border-radius: .8rem;
+    width: 60%;
+    height: fit-content;
+    height: -moz-fit-content;
+    text-align: center;
+    margin: 0 auto;
+    margin-bottom: 7px;
+    padding: .54rem;
+    text-transform: uppercase;
+    border:none;
+    cursor: pointer;
+}
+
+.button-producto a {
+    color: white;
+    font-size: 12px;
+    font-weight: bold;
+}
+
+
+@media (min-width:560px) {
+    .productos-article__card {
+        width: 23%;
+        margin-bottom: 30px;
+        margin-top: 30px;
+    }
+
+    .categorias__icon {
+        width:15%
+    }
+
+    .categorias__icon a {
+        width: 5.5rem;
+        height: 5.3125rem;
+    }
+
+
+}
+
+@media (min-width:760px) {
+    .productos-article__card {
+        width: 21%;
+        margin-bottom: 50px;
+        margin-top: 50px;
+    }
+
+    .categorias__icon {
+        width:15%
+    }
+
+    .categorias__icon a {
+        width: 7.5rem;
+        height: 5.3125rem;
+    }
+
+}
+
+
