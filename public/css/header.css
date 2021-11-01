@@ -142,11 +142,19 @@ input:checked  ~ ul{
   
 }
 
+.user-p {
+    display: none;
+}
+
 .carrito {
     font-size: 24px;
     text-align: center;
     color:#b87cfd;
    /*  display: none; */
+}
+
+.carrito-p {
+    display: none;
 }
 
 #search-bar{
@@ -177,6 +185,7 @@ input:checked  ~ ul{
     border: none;
     border-radius:5px 0 0 5px; 
     padding: 12px 0 12px 10px;
+    outline: none;
 }
 
 .buscador input:checked ~ ul{
@@ -193,6 +202,11 @@ input:checked  ~ ul{
     border-radius: 0 5px 5px 0;
     color: white;
 }
+
+.boton-mobile i {
+    font-size: 18px;
+}
+
 
 
 /* Tablet */
@@ -270,13 +284,12 @@ input:checked  ~ ul{
         border: none;
         border-radius:5px 0 0 5px; 
         padding: 12px 0 12px 10px;
-       /*  width: 250px; */
+        outline: none;
     }
 
     .buscador-responsive #div-buscador button{
         position: relative;
         top: 0;
-        /* right: 35px */;
         height: 30px;
         border: none;
         border-radius: 0 5px 5px 0;
@@ -286,11 +299,36 @@ input:checked  ~ ul{
         cursor: pointer;
     }
 
-   /*  .user {
-        width: 15%;
+    .boton-mobile i {
+        font-size: 22px;
+    }
+}
+
+@media (min-width:790px ) {
+
+    .buscador-responsive {
+        width:70%;
     }
 
-    .carrito {
-        width: 15%;
-    } */
+    .user-p,
+    .carrito-p {
+        display: inline-block;
+        font-size: 10px;
+        font-weight: bold;
+        color: white;
+        text-transform: uppercase;
+    }
+
+    .nav__ul {
+        width: 300px;
+        height: 100%;
+        text-align: start;
+    }
+
+    .nav__ul .nav__li, .nav__a {
+        padding-left: 0;
+        margin-top: 10px;
+        line-height: 30px;
+    }
+
 }
