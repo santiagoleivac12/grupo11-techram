@@ -139,9 +139,49 @@ input:checked  ~ ul{
    /*  display: none; */
 }
 
-.buscador input{
+#search-bar{
     display: none;
 }
+
+.ul-buscador {
+    display: none;
+    background-color: var(--morado);
+    width: 100%;
+    height: 45px;
+    position: absolute;
+    top: 100px;
+    left: 0;
+    text-align: center;
+    color: white;
+    list-style: none;
+}
+
+
+.li-buscador input{
+    display: inline-block;
+    margin-top: 5px;
+    width: 70%;
+    height: 30px;
+    align-items: center;
+    border: none;
+    border-radius:5px 0 0 5px; 
+    padding: 12px 0 12px 10px;
+}
+
+.buscador input:checked ~ ul{
+    display:block;
+}
+
+.boton-mobile {
+    position: relative;
+    left: 135px;
+    bottom: 30px;
+    height: 30px;
+    border: none;
+    border-radius: 0 5px 5px 0;
+    color: white;
+}
+
 
 /* Tablet */
 
