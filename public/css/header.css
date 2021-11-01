@@ -65,7 +65,7 @@ input:checked  ~ ul{
     display:block;
 }
 
-.burguer-menu input {
+.burguer-menu input,.burguer-responsive input {
     display: none;
 }
 
@@ -91,6 +91,10 @@ input:checked  ~ ul{
     color: #b87cfd;
 }
 
+.burguer-responsive label i {
+    cursor: pointer;
+}
+
 .menu-responsive {
     background-color: var(--morado);
     width: 100%;
@@ -106,6 +110,7 @@ input:checked  ~ ul{
     justify-self: flex-end;
     text-align: center;
     margin: 0 auto;
+    cursor: pointer;
 }
 
 .logo-imagen img{
@@ -123,6 +128,7 @@ input:checked  ~ ul{
     font-size: 24px;
     text-align: center;
     color:#b87cfd;
+    cursor: pointer;
 }
 
 .user {
@@ -205,9 +211,10 @@ input:checked  ~ ul{
         justify-content: space-evenly;
     }
 
-    .logo-imagen img{
-        max-width: 90%;
+    .logo-imagen {
+        margin-left: 0;
     }
+
 
     /* Menu hamburguesa*/
 
@@ -218,9 +225,10 @@ input:checked  ~ ul{
     .burguer-responsive {
         display: block;
         width: 100%;
-        height: 26px;
+        height: 32px;
         color: white;
         background-color: black;
+        padding:5px;
         border: 1px solid var(--morado);
         font-size: 20px;
     }
@@ -228,17 +236,39 @@ input:checked  ~ ul{
     .burguer-responsive i {
         text-align: center; 
     }
-/* 
-    .burguer-responsive:hover > .menu-responsive {
-        display: block;
-        position: absolute;
-        top: 100px;
-        left: 0;
-    } */
+
+    .nav__ul {
+        top: 117px;
+    }
 
     /* Search bar*/
+   .buscador {
+        width: 70%;
+    }  
 
-    .buscador {
+    .ul-buscador {
+        width: 60%;
+        display: inline-block;
+        color: white;
+        list-style: none;
+        top: 26px;
+        left: 100px;
+        margin: 0 auto;
+    }
+
+    .buscador label i {
+        display: none;
+    } 
+
+    .li-buscador input{
+        display: inline-block;
+        width: 300px;
+        height: 30px;
+        align-items: center;
+        border: none;
+    }
+
+/*    .buscador {
         width: 70%;
         background-color: white;
         border: 1px solid #ccc;
@@ -252,17 +282,8 @@ input:checked  ~ ul{
         height: 30px;
         align-items: center;
         border: none;
-       /*  background-color: #fff; */
-       /*  border: 1px solid #ccc;
-        border-radius: 7px; */
-    }
-
-    .buscador i {
-        color: var(--fucsia);
-        text-align: center;
-        width: 1px;
-        height: 1px;
-        margin-right: 0px;
-    }
+        background-color: #fff; 
+         border: 1px solid #ccc;
+        border-radius: 7px;  */
 }
 
