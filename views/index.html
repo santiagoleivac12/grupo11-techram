@@ -9,6 +9,64 @@
     <link rel="stylesheet" href="https://pro.fontawesome.com/releases/v5.10.0/css/all.css" integrity="sha384-AYmEC3Yw5cVb3ZcuHtOA93w35dYTsvhLPVnYs9eStHfGJvOvKxVfELGroGkvsg+p" crossorigin="anonymous"/>
 </head>
 <body>
+    <header>
+        <nav class="nav-container">
+            <div class="burguer-menu">
+                <input type="checkbox" id="menu">
+                <label for="menu"><i class="fas fa-bars"></i></label>
+                <ul class="nav__ul">
+                    <li class="nav__li"><a href="#" class="nav__a">PRODUCTOS</a></li>
+                    <li class="nav__li"><a href="#" class="nav__a">ARMA TU PC</a></li>
+                    <li class="nav__li"><a href="#" class="nav__a">ENCONTRA TU EQUIPO</a></li>
+                    <li class="nav__li"><a href="#" class="nav__a">MI CUENTA</a></li>
+                    <li class="nav__li"><a href="#" class="nav__a">AYUDAS</a></li>
+                    <li class="nav__li"><a href="#" class="nav__a">MARCAS SPONSOR</a></li>
+                </ul>
+            </div>
+            <div class="container-logo">
+                <div class="logo-imagen">
+                    <img src="images/logos/eva.png" alt="techRam logo">
+                </div>
+            </div>
+            <div class="container-icon">
+                <div class="buscador">
+                    <input type="checkbox" id="search-bar">
+                    <label for="search-bar"><i class="fas fa-search"></i></label>
+                    <ul class="ul-buscador">
+                        <li class="li-buscador"><input type="text" placeholder="Buscar..."></li>
+                        <li class="li-buscador"><button class="boton-mobile"><i class="fas fa-search"></i></button></li>
+                    </ul>
+                </div>
+                <div class="buscador-responsive">
+                    <div id="div-buscador">
+                        <input type="text" placeholder="Buscar...">
+                        <button class="boton-mobile"><i class="fas fa-search"></i></button>
+                    </div>
+                </div>
+                <div class="user">
+                    <i class="fas fa-user"></i>
+                    <p class="user-p">mi cuenta</p>
+                </div>
+                <div class="carrito">
+                    <i class="fas fa-shopping-cart"></i>
+                    <p class="carrito-p">mi carrito</p>
+                </div>
+            </div>
+        </nav>
+        <div class="burguer-responsive">
+            <input type="checkbox" id="menu-responsive">
+                <label for="menu-responsive"><i class="fas fa-bars"></i></label>
+                <ul class="nav__ul">
+                    <li class="nav__li"><a href="#" class="nav__a">PRODUCTOS</a></li>
+                    <li class="nav__li"><a href="#" class="nav__a">ARMA TU PC</a></li>
+                    <li class="nav__li"><a href="#" class="nav__a">ENCONTRA TU EQUIPO</a></li>
+                    <li class="nav__li"><a href="#" class="nav__a">MI CUENTA</a></li>
+                    <li class="nav__li"><a href="#" class="nav__a">AYUDAS</a></li>
+                    <li class="nav__li"><a href="#" class="nav__a">MARCAS SPONSOR</a></li>
+                </ul>
+            </div>
+        </div>
+    </header>
     <main class="home-main">
         <section id="home-carrusel1">
             <div class="carrusel-div">
@@ -112,27 +170,7 @@
             <article class="productos-article">
                 <div class="productos-article__card">
                     <div class="card-img">
-                        <a href="#"><img src="img-macbook-pro-2019.jpg" alt="pc"></a>
-                        <h5 class="descripcion-producto">Descripcion del producto</h5>
-                        <p class="price">$2000</p>
-                    </div>
-                    <div class="button-producto">
-                        <a href="#">VER PRODUCTO</a>
-                    </div>
-                </div>
-                <div class="productos-article__card">
-                    <div class="card-img">
-                        <a href="#"><img src="img-macbook-pro-2019.jpg" alt="pc"></a>
-                        <h5 class="descripcion-producto">Descripcion del producto</h5>
-                        <p class="price">$2000</p>
-                    </div>
-                    <div class="button-producto">
-                        <a href="#">VER PRODUCTO</a>
-                    </div>
-                </div>
-                <div class="productos-article__card">
-                    <div class="card-img">
-                        <a href="#"><img src="img-macbook-pro-2019.jpg" alt="pc"></a>
+                        <a href="#"><img src="/public/images/productos/producto1.png" alt="pc"></a>
                         <h5 class="descripcion-producto">Descripcion del producto</h5>
                         <p class="price">$2000</p>
                     </div>
@@ -193,109 +231,6 @@
             </article>
             <h3 class="title-card">Lo que esta en oferta</h3>
             <article class="productos-article">
-                <div class="productos-article__card">
-                    <div class="card-img">
-                        <a href="#"><img src="img-macbook-pro-2019.jpg" alt="pc"></a>
-                        <h5 class="descripcion-producto">Descripcion del producto</h5>
-                        <p class="price">$2000</p>
-                    </div>
-                    <div class="button-producto">
-                        <a href="#">VER PRODUCTO</a>
-                    </div>
-                </div>
-                <div class="productos-article__card">
-                    <div class="card-img">
-                        <a href="#"><img src="img-macbook-pro-2019.jpg" alt="pc"></a>
-                        <h5 class="descripcion-producto">Descripcion del producto</h5>
-                        <p class="price">$2000</p>
-                    </div>
-                    <div class="button-producto">
-                        <a href="#">VER PRODUCTO</a>
-                    </div>
-                </div>
-                <div class="productos-article__card">
-                    <div class="card-img">
-                        <a href="#"><img src="img-macbook-pro-2019.jpg" alt="pc"></a>
-                        <h5 class="descripcion-producto">Descripcion del producto</h5>
-                        <p class="price">$2000</p>
-                    </div>
-                    <div class="button-producto">
-                        <a href="#">VER PRODUCTO</a>
-                    </div>
-                </div>
-                <div class="productos-article__card">
-                    <div class="card-img">
-                        <a href="#"><img src="img-macbook-pro-2019.jpg" alt="pc"></a>
-                        <h5 class="descripcion-producto">Descripcion del producto</h5>
-                        <p class="price">$2000</p>
-                    </div>
-                    <div class="button-producto">
-                        <a href="#">VER PRODUCTO</a>
-                    </div>
-                </div>
-                <div class="productos-article__card">
-                    <div class="card-img">
-                        <a href="#"><img src="img-macbook-pro-2019.jpg" alt="pc"></a>
-                        <h5 class="descripcion-producto">Descripcion del producto</h5>
-                        <p class="price">$2000</p>
-                    </div>
-                    <div class="button-producto">
-                        <a href="#">VER PRODUCTO</a>
-                    </div>
-                </div>
-                <div class="productos-article__card">
-                    <div class="card-img">
-                        <a href="#"><img src="img-macbook-pro-2019.jpg" alt="pc"></a>
-                        <h5 class="descripcion-producto">Descripcion del producto</h5>
-                        <p class="price">$2000</p>
-                    </div>
-                    <div class="button-producto">
-                        <a href="#">VER PRODUCTO</a>
-                    </div>
-                </div>
-                <div class="productos-article__card">
-                    <div class="card-img">
-                        <a href="#"><img src="img-macbook-pro-2019.jpg" alt="pc"></a>
-                        <h5 class="descripcion-producto">Descripcion del producto</h5>
-                        <p class="price">$2000</p>
-                    </div>
-                    <div class="button-producto">
-                        <a href="#">VER PRODUCTO</a>
-                    </div>
-                </div>
-                <div class="productos-article__card">
-                    <div class="card-img">
-                        <a href="#"><img src="img-macbook-pro-2019.jpg" alt="pc"></a>
-                        <h5 class="descripcion-producto">Descripcion del producto</h5>
-                        <p class="price">$2000</p>
-                    </div>
-                    <div class="button-producto">
-                        <a href="#">VER PRODUCTO</a>
-                    </div>
-                </div>
-            </article>
-            <h3 class="title-card">No se que poner</h3>
-            <article class="productos-article">
-                <div class="productos-article__card">
-                    <div class="card-img">
-                        <a href="#"><img src="img-macbook-pro-2019.jpg" alt="pc"></a>
-                        <h5 class="descripcion-producto">Descripcion del producto</h5>
-                        <p class="price">$2000</p>
-                    </div>
-                    <div class="button-producto">
-                        <a href="#">VER PRODUCTO</a>
-                    </div>
-                </div>
-                <div class="productos-article__card">
-                    <div class="card-img">
-                        <a href="#"><img src="img-macbook-pro-2019.jpg" alt="pc"></a>
-                        <h5 class="descripcion-producto">Descripcion del producto</h5>
-                        <p class="price">$2000</p>
-                    </div>
-                    <div class="button-producto">
-                        <a href="#">VER PRODUCTO</a>
-                    </div>
-                </div>
                 <div class="productos-article__card">
                     <div class="card-img">
                         <a href="#"><img src="img-macbook-pro-2019.jpg" alt="pc"></a>

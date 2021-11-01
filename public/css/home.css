@@ -135,7 +135,7 @@ a {
     display: flex;
     flex-wrap: wrap;
     flex-direction: column;
-    width: 40%;
+    width: 45%;
     justify-content: space-between;
     background: linear-gradient(to bottom , #03001e, #7303c0, #fdeff9); 
     background-size: cover;
@@ -196,7 +196,7 @@ a {
 
 @media (min-width:560px) {
     .productos-article__card {
-        width: 23%;
+        width: 35%;
         margin-bottom: 30px;
         margin-top: 30px;
     }
@@ -213,9 +213,9 @@ a {
 
 }
 
-@media (min-width:760px) {
+@media (min-width:800px) {
     .productos-article__card {
-        width: 21%;
+        width: 15%;
         margin-bottom: 50px;
         margin-top: 50px;
     }
@@ -228,6 +228,7 @@ a {
         width: 7.5rem;
         height: 5.3125rem;
     }
+
 
 }
 
