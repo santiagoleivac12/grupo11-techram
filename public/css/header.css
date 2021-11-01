@@ -4,13 +4,8 @@
     box-sizing: border-box;
 }
 
-/* header {
-    position: fixed;
-    left: 0;
-    top: 0;
-} */
 
-/* Menu hamburguesa y logo*/
+/* Containers*/
 
 .nav-container {
     display: flex;
@@ -26,53 +21,55 @@
     display: flex;
     width: 40%;
     height: 90px;
-    /* align-items: center; */
-    /* justify-content: space-between; */
     flex-wrap: wrap;
-     justify-self: center; 
+    justify-self: center; 
     align-self: center; 
-   /*  margin: 0 auto; */
 }
+
+.container-icon {
+    display: flex;
+    width: 30%;
+    justify-content: space-around;
+}
+
+/* Menu hamburguesa*/
 
 .burguer-menu {
     width: 30%;
-    font-size: 30px;
+    font-size: 27px;
     text-align: center;
-    color: white;
+    color: #b87cfd;
 }
 
-.burguer-responsive {
+
+.burguer-menu label i{
+    margin-right: 60%;
+    cursor: pointer;
+}
+
+
+.nav__ul{
+    list-style: none;
     display: none;
-}
-
-.menu {
     background-color: var(--morado);
     width: 100%;
     height: 300px;
     text-align: center; 
-    display: none;
-}
-
-.menu-responsive {
-    background-color: var(--morado);
-    width: 100%;
-    height: 300px;
-    text-align: center; 
-    display: none;
-}
-
-.burguer-menu:hover > .menu {
-    display: block;
     position: absolute;
     top: 100px;
-    left: 0;
+    left: 0;  
+} 
+
+
+input:checked  ~ ul{
+    display:block;
 }
 
-.menu .nav__lu {
-    list-style: none;
+.burguer-menu input {
+    display: none;
 }
 
-.menu .nav__lu .nav__li, .nav__a {
+.nav__ul .nav__li, .nav__a {
     margin: 20px;
     font-size: 13px;
     color: white;
@@ -84,19 +81,32 @@
     text-transform: uppercase;
 }
 
-.menu .nav__lu .nav__li:first-child {
+.nav__ul .nav__li:first-child {
     margin-top: 0px;
-} 
+}
+
+/* Menu responsive*/
+.burguer-responsive {
+    display: none;
+    color: #b87cfd;
+}
+
+.menu-responsive {
+    background-color: var(--morado);
+    width: 100%;
+    height: 300px;
+    text-align: center; 
+    display: none;
+}
 
 
+/* Logo */
 .logo-imagen {
     width: 50%;
     justify-self: flex-end;
     text-align: center;
     margin: 0 auto;
 }
-
-
 
 .logo-imagen img{
     max-width: 108.95px;
@@ -108,30 +118,25 @@
 
 /* carrito, lupa y usuario*/
 
-.container-icon {
-    display: flex;
-    width: 30%;
-    justify-content: space-evenly;
-}
 
 .buscador i {
-    font-size: 22px;
+    font-size: 24px;
     text-align: center;
-    color: white;
+    color:#b87cfd;
 }
 
 .user {
-    font-size: 22px;
+    font-size: 24px;
     text-align: center;
-    color: white;
+    color:#b87cfd;
   
 }
 
 .carrito {
-    font-size: 22px;
+    font-size: 24px;
     text-align: center;
-    color: white;
-    display: none;
+    color:#b87cfd;
+   /*  display: none; */
 }
 
 .buscador input{
