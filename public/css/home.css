@@ -144,6 +144,7 @@ a {
 
 .descripcion-producto {
     font-size: 14px;
+    margin-top: 10px;
 }
 
 
@@ -190,7 +191,7 @@ a {
 
 @media (min-width:800px) {
     .productos-article__card {
-        width: 15%;
+        width: 16%;
         margin-bottom: 50px;
         margin-top: 50px;
     }
@@ -206,5 +207,4 @@ a {
 
 
 }
-
 

@@ -154,6 +154,10 @@ input:checked  ~ ul{
    /*  display: none; */
 }
 
+.carrito a {
+    color:#b87cfd;
+}
+
 .carrito-p {
     display: none;
 }
@@ -318,6 +322,10 @@ input:checked  ~ ul{
         font-weight: bold;
         color: white;
         text-transform: uppercase;
+    }
+
+    .carrito-p a {
+        color: white;
     }
 
     .nav__ul {
