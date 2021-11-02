@@ -1,0 +1,147 @@
+*{
+    box-sizing: border-box;
+    padding: 0;
+    margin: 0;
+}
+body{
+    background:linear-gradient(to bottom, #03001e, #7303c0, #af2c8c);
+   
+font-family: 'Times New Roman', Times, serif;
+
+
+}
+
+
+
+.nombre p{
+   /*  position: relative;
+    right: 2.5rem; */
+    height: 50%;
+    font-size: 20px;
+}
+.envio span{
+    height: 50%px;
+    color:rgb(67, 170, 67);
+   
+}
+
+.envio{
+    margin: 3px 0 3px 0;
+}
+
+
+
+
+a{
+    height: 50px;
+}
+
+
+
+.caja{
+width:100%;    
+height: 100%;
+background-color: rgba(255, 255, 255, 0.809);
+border: solid 2px black;
+margin-bottom: 10px;
+display: flex;
+padding-top:5px ;
+padding-left: 5px;
+border-radius: 8px;
+}
+
+article.cajita{
+    height: 100%;
+}
+
+
+.img1 img {
+    width: 90px;
+    height: 85px;
+    margin-bottom: 10px;
+}
+.img1{
+    width: 90px;
+    height: 85px;
+}
+
+
+
+.suma p{
+    border: 1px solid black;
+    width: 40px;
+    background-color: rgb(252, 183, 252);
+    border-radius: 4px;
+    box-shadow: 0px 3px 0 0 rgb(72, 70, 70);
+margin-bottom:3px ;
+margin-top: 2px;
+}
+
+.eli-com a{
+    border: 1px solid black;
+    background-color: rgb(252, 183, 252);
+    border-radius: 4px;
+    box-shadow: 0px 3px 0 0 rgb(72, 70, 70);
+    padding: 2px;
+    color: black;
+    text-decoration: none;
+}
+
+
+.eli-com{
+    width: 150px;
+    margin-top:15px ;
+    margin-right: 10px;
+}
+
+
+
+.precio{
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+}
+
+article.total1{
+   padding-top:10px;
+    background-color: aquamarine;
+    height: 100px;
+    padding-top: 40px; 
+    text-align: center;
+}
+
+article.total2{
+    padding-top:10px;
+     background-color: aquamarine;
+     height: 100px;
+   
+        text-align: center;
+ }
+
+section.total-caja{ 
+background-color: rgb(20, 26, 199);
+height: 200px;
+margin-top: 15px;
+border: solid 1px black;
+}
+
+.comprar{
+padding-top: 10px;
+
+}
+.comprar button{
+    background-color: rgb(45, 14, 75);
+    color: white;
+    border-radius: 8px;
+    height: 25px;
+    width: 80px;
+    box-shadow: 3px 3px 0 0 black;
+    padding: 4px;
+}
+.suma select{
+    background-color: rgb(252, 183, 252);
+    border-radius:8px ;
+    border:  1px solid black;
+}
