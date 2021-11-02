@@ -39,6 +39,7 @@ a {
 .categorias {
     display: flex;
     width: 100%;
+    margin-top: 15px;
     justify-content: space-evenly;
     flex-wrap: wrap;
     background-color: #7303c0;
@@ -50,6 +51,7 @@ a {
 }
 
 .categorias__icon {
+    margin-top: 20px;
     display: flex;
     flex-direction: column;
     align-items: center;
