@@ -3,13 +3,21 @@
     padding: 0;
     margin: 0;
 }
+
 body{
-    background:linear-gradient(to bottom, #03001e, #7303c0, #af2c8c);
-   
-font-family: 'Times New Roman', Times, serif;
+        --font-titulos: "Bebas Neue", cursive;
+        --font-textos:'Source Sans Pro', sans-serif;
+        background-image: linear-gradient(to bottom, #03001e, #7303c0, #fdeff9 );
+        background-size: cover;
+        background-attachment: fixed;
+     }
 
 
-}
+
+
+
+
+
 
 
 
@@ -20,21 +28,22 @@ font-family: 'Times New Roman', Times, serif;
     font-size: 20px;
 }
 .envio span{
-    height: 50%px;
+    height: 50%;
     color:rgb(67, 170, 67);
    
 }
 
 .envio{
     margin: 3px 0 3px 0;
+
 }
 
 
 
 
-a{
+/* a{
     height: 50px;
-}
+} */
 
 
 
@@ -85,6 +94,10 @@ margin-top: 2px;
     padding: 2px;
     color: black;
     text-decoration: none;
+    display: flex;
+    flex-direction: column;
+    width: 100px;
+    height: 22px;
 }
 
 
@@ -92,6 +105,7 @@ margin-top: 2px;
     width: 150px;
     margin-top:15px ;
     margin-right: 10px;
+    height: 50px;
 }
 
 
@@ -101,7 +115,11 @@ margin-top: 2px;
     display: flex;
     justify-content: center;
     align-items: center;
+    width:130px;
 
+}
+.cajita2{
+    width:125px;
 }
 
 article.total1{
@@ -143,5 +161,98 @@ padding-top: 10px;
 .suma select{
     background-color: rgb(252, 183, 252);
     border-radius:8px ;
-    border:  1px solid black; 
- }
+    border:  1px solid black;
+}
+
+
+
+
+/* ----------------------------- */
+/* tablet */
+@media(min-width:480px){
+    .caja{  
+        height: 220px;}
+
+     .img1 img {
+        width: 130px;
+        height: 130px;
+        margin-bottom: 10px;
+    }
+    .img1{
+        width: 159px;
+        height: 150px;
+    }
+    
+.eli-com{
+    width: 150px;
+    margin-top:5px ;
+    margin-right: 10px;
+}
+.cajita{
+    padding-left: 20px;
+}
+
+
+
+}
+
+
+
+/* -------------------------- */
+/* escritorio */
+@media(min-width:770px){
+    .caja{ height: 300px;
+        }
+        .cajita{
+    padding-left: 20px;
+        }
+
+
+     .img1 img {
+        width: 200px;
+        height: 200px;
+        margin-bottom: 10px;
+    }
+    .img1{
+        width: 90px;
+        height: 85px;
+    }
+    
+    .eli-com{
+        width: 150px;
+        margin-top:95px ;
+        margin-right: 10px;
+        padding-top:25px;
+    }
+
+
+    .envio{
+    margin-top: 10px;
+    margin-bottom: 10px;
+    }
+
+
+    article p .titulo{
+
+    }
+
+    .eli-com a{
+    margin-bottom:8px;
+    width: 200px;
+    
+
+
+
+
+}
+    
+div.cajita2{
+    width: 200px;
+    height: 100px;
+  
+}
+
+
+
+
+}
