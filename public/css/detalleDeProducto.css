@@ -1,78 +1,98 @@
 .container-detalle {
-   height: 100%;
-   width: 100%;
-   display: flex;
-   align-items: center;
-   flex-direction: column;
-   text-align: center;
+  height: 100%;
+  width: 100%;
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  text-align: center;
 }
 
 .imagen-detalle {
-   height: 300px;
-   width: 300px;
+  height: 300px;
+  width: 300px;
 }
 
 .container-boton {
-   display: flex;
-   flex-direction: column-reverse;
+  display: flex;
+  flex-direction: column-reverse;
+  align-items: center;
+  justify-content: center;
 }
 
-
-.botones-detalle, button {
-   display: flex;
-   justify-content: center;
-   background-color: #b87cfd;
-   border-radius: .8rem;
-   width: 40%;
-   height: fit-content;
-   height: -moz-fit-content;
-   text-align: center;
-   margin: 0 auto;
-   margin-bottom: 7px;
-   padding: .4rem;
-   text-transform: uppercase;
-   border:none;
-   cursor: pointer;
-   color: white;
+.botones-detalle,
+button {
+  display: flex;
+  justify-content: center;
+  background-color: #b87cfd;
+  border-radius: 0.8rem;
+  width: 40%;
+  height: fit-content;
+  height: -moz-fit-content;
+  text-align: center;
+  margin: 0 auto;
+  margin-bottom: 7px;
+  padding: 0.4rem;
+  text-transform: uppercase;
+  border: none;
+  cursor: pointer;
+  color: white;
 }
-
 
 .cantidad-detalle {
-   display: flex;
-   justify-content: center;
-   align-items: center;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 
-#cantidad {
-   align-self: center;
-   width: 50%;
-   padding-bottom: 10px;
+.selector-cant {
+  width: 20%;
+  height: 40px;
+  border-radius: 10px;
 }
-
-
-
 .details {
-   display: flex;
-   flex-direction: column;
-   align-items: center;
-   justify-content: center;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
 }
 
 .article-detalle {
-   margin: 12px;
-   /* border: 1px solid var(--inter); */
+  margin: 12px;
+  /* border: 1px solid var(--inter); */
 }
 
 .article-detalle h4 {
-   color: var(--fucsia);
-   text-align: center;
-   margin-bottom: 8px;
-   font-family: var(--font-titulos);
-   border-bottom: 3px solid var(--inter);
+  color: var(--fucsia);
+  text-align: center;
+  margin-bottom: 8px;
+  font-family: var(--font-titulos);
+  border-bottom: 3px solid var(--inter);
 }
 
 .p-detalle {
-   font-size: var(--font-textos);
-   color: thistle;
-   text-align: center;
+  font-family: var(--font-textos);
+  color: thistle;
+  text-align: center;
+}
+.h1detalle {
+  color: thistle;
+  font-family: var(--font-titulos);
+  margin: 10px;
+}
+
+@media (min-width: 500px) {
+  .article-detalle h4 {
+    font-size: 35px;
+  }
+
+  .p-detalle {
+    font-size: 20px;
+  }
+  .botones-detalle,button{
+     width: 20%;
+  }
+  
+}
+@media(min-width:770px){
+   
 }
