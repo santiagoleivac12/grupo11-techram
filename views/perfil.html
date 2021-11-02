@@ -1,20 +1,27 @@
 <!DOCTYPE html>
-<html lang="es">
+<html lang="en">
+
 <head>
+
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <link rel="stylesheet" href="../css/footer.css">
+    <link rel="stylesheet" href="../css/header.css">
+    <link rel="stylesheet" href="../css/style.css">
+    <link rel="stylesheet" href="../css/perfil.css">
     <link
     rel="stylesheet"
     href="https://pro.fontawesome.com/releases/v5.10.0/css/all.css"
     integrity="sha384-AYmEC3Yw5cVb3ZcuHtOA93w35dYTsvhLPVnYs9eStHfGJvOvKxVfELGroGkvsg+p"
     crossorigin="anonymous"
   />
-    
-    <link rel="stylesheet" href="css/style.css">
-    
-    <title>Login</title>
+
+
+    <title>Document</title>
 </head>
+
 <body>
     <header>
         <nav class="nav-container">
@@ -32,7 +39,7 @@
             </div>
             <div class="container-logo">
                 <div class="logo-imagen">
-                    <img src="images/logos/eva.png" alt="techRam logo">
+                    <img src="images/logos/eva.png" alt="techRam logo" >
                 </div>
             </div>
             <div class="container-icon">
@@ -66,40 +73,72 @@
                 <ul class="nav__ul">
                     <li class="nav__li"><a href="#" class="nav__a">PRODUCTOS</a></li>
                     <li class="nav__li"><a href="#" class="nav__a">ARMA TU PC</a></li>
-                    <li class="nav__li"><a href="perfil" class="nav__a">MI CUENTA</a></li>
-                    <li class="nav__li"><a href="#" class="nav__a">AYUDAS</a></li>
+                    <li class="nav__li"><a href="#" class="nav__a">MI CUENTA</a></li>
+                    <li class="nav__li"><a href="#" class="nav__a">AYUDA</a></li>
                     <li class="nav__li"><a href="register" class="nav__a">REGISTRATE</a></li>
                     <li class="nav__li"><a href="login" class="nav__a">INGRESA</a></li>
                 </ul>
             </div>
         </div>
     </header>
-      <div class="login-container">
-          <div class="login-info-container">
-            <h1 class="title">Ingresa con</h1>
-            <div class="social-login">
-                <div class="social-login-element">
-                    <img src="images/logos/google.svg" alt="google-image">
-                    <span>Google</span>
-                </div>
-                <div class="social-login-element">
-                    <img src="images/logos/facebook.svg" alt="facebook-image">
-                    <span>Facebook</span>
-                </div>
-            </div>
-            <p>ó</p>
-            <form class="inputs-container">
-                <input class="input" type="text" placeholder="email" required>
-                <input class="input" type="text" placeholder="Contraseña" required>
-                <p class="anexo"><input id="checkbox" type="checkbox" name="recordar" value="recordar-contraseña">Recordar contraseña</p>
-                <p class="anexo">Olvidaste tu contraseña? <a class="span">Click aquí</a></p>
 
-                <button class="btn">login</button>
-                <p class="anexo">Aún no tienes una cuenta? <a class="span" href="/register">Registrate aquí</a></p>
-            </form>
-          </div>
-            <img class="image-container" src="images/logos/eva.png" alt="Logo techRam">
-      </div>
+
+
+    <form id="form" action="/users/profile?_method=PUT" method="POST" enctype="multipart/form-data">
+        <div class="formulario" >
+        <!-- 1.Datos Personales -->
+        <div class="datos-Personales-Edit">
+          <h2>Datos Personales</h2>
+          
+          <label for="name"><b>Nombre</b></label>
+          <input type="text" placeholder="Nombre " name="firstName" id="firstName" >
+         
+        
+        
+          <p class="error" id="firstNameError"></p>
+          <br>
+          <label for="name"><b>Apellido</b></label>
+          <input type="text" placeholder="Apellido" name="lastName" id="lastName" >
+          <p class="error" id="lastNameError"></p>
+         
+           
+      
+      <br>
+          <label for="Email"><b>Email</b></label>
+          <input type="email" placeholder="Ingrese su Email" disabled name="email" id="email" >
+    <br>
+
+    <br>
+          <label for="Perfil"><b>Cambiar foto de Perfil</b></label>
+          <input class="File" type="file" name="Perfil" accept="jpg">
+    
+                  </div>
+
+        <!-- Datos de envio -->
+        <div class="entrega">
+            <h2>Datos de envio</h2>
+            
+            <label for="Dirrecion"><b>Dirrecion</b></label>
+            <input type="text" placeholder="Direccion" name="address" id="name" >.
+        <br>
+            <label for="Numero"><b>C.Postal</b></label>
+            <input type="number" placeholder="Codigo Postal" name="cp" id="Numero">
+      <br>
+            <label for="name"><b>Provincia</b></label>
+            <input type="text" placeholder="Provincia" name="provincia" id="provincia"> 
+        <br>
+            <label for="name"><b>Localidad</b></label>
+            <input type="text" placeholder="Localidad" name="localidad" id="name" >
+                      </div>
+        </div>
+          <button type='submit' class="checkout-cta-Edit">Editar</button><br>
+          <span class="error" id="mistakes"></span>
+      </form>    
+    
+
+
+
+
       <div class="contenedor">
         <footer class="main-footer">
             <section class="section-footer">
@@ -150,6 +189,6 @@
             </section>
 
         </footer>
-
 </body>
+
 </html>
