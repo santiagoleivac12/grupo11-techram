@@ -142,10 +142,10 @@
   }  
 }
 
-@media screen and (max-width: 700px) {
+@media screen and (max-width: 650px) {
   .login-container {
       width: 90%;
-      height: 90%;
+      /* height: 90%; */
   }
 }
 

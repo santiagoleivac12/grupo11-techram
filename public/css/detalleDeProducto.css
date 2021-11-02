@@ -1,11 +1,33 @@
-.container-detalle{
+.container-detalle {
    height: 100%;
    width: 100%;
    display: flex;
    align-items: center;
    flex-direction: column;
+   text-align: center;
 }
-.imagen-detalle{
+
+.imagen-detalle {
    height: 300px;
    width: 300px;
+}
+
+.botones-detalle {
+   display: flex;
+   justify-content: center;
+}
+
+.cantidad-detalle {
+   display: flex;
+   justify-content: center;
+}
+
+.pago-detalle {
+   display: flex;
+   justify-content: center;
+}
+
+.details {
+   display: flex;
+   justify-content: center;
 }

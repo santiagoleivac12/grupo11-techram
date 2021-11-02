@@ -74,30 +74,32 @@
          <p class="price">$12.500</p>
     </div>
 
-    <div>
-         <ul class="botones">
+    <div class="botones-detalle">
+         <ul>
             <button>Comprar</button>
             <button>Agregar al carrito</button>
          </ul>
+    </div class="cantidad-detalle">
+        <label for="cantidad">Cantidad: </label>
+        <input type="number" name="cantidad" id="cantidad">
+    <div>
+    <div class="pago-detalle">
+        <h4>Forma de pago</h4>
+        <label for="debito">Débito <input type="radio" name="pay" id="debito" value="debito" checked></label><br>        
+        <label for="credito">Crédito <input type="radio" name="pay" id="credito" value="credito" ></label><br>        
+        <label for="efectivo">Efectivo <input type="radio" name="pay" id="efectivo" value="efectivo" ></label><br>     
     </div>
-            <label for="cantidad">Cantidad: </label>
-            <input type="number" name="cantidad" id="cantidad">
-      <div>
-          <h4>Forma de pago</h4>
-                   <label for="debito">Débito <input type="radio" name="pay" id="debito" value="debito" checked></label><br>        
-                   <label for="credito">Crédito <input type="radio" name="pay" id="credito" value="credito" ></label><br>        
-                   <label for="efectivo">Efectivo <input type="radio" name="pay" id="efectivo" value="efectivo" ></label><br>
-                
-          <h4>Detalles</h4>
-               <ul>
-                    <li>Funciones</li>
-                    <li>Material</li>
-                    <li>Marca</li>
-                    <li>Dimenciones</li>
-                    <li>Modelo</li>
-                    <li>Garantia</li>
-                 </ul> 
-           
+    <div class="details">
+        <h4>Detalles</h4>
+            <ul>
+                <li>Funciones</li>
+                <li>Material</li>
+                <li>Marca</li>
+                <li>Dimenciones</li>
+                <li>Modelo</li>
+                <li>Garantia</li>
+            </ul> 
+    </div>            
       </div>
       <div class="contenedor">
         <footer class="main-footer">
