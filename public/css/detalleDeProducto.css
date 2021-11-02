@@ -1,22 +1,11 @@
-body{
-   background: linear-gradient(to bottom , #03001e, #7303c0, #fdeff9);
+.container-detalle{
+   height: 100%;
+   width: 100%;
+   display: flex;
+   align-items: center;
+   flex-direction: column;
 }
-
-h1{
-   text-align: center;
-   margin: 3px;
-   padding: 3px;
-   color: whitesmoke;
-  font-family:"Bebas Neue", cursive;
+.imagen-detalle{
+   height: 300px;
+   width: 300px;
 }
-
-p{
-   color: whitesmoke;
-   font-family: "Bebas Neue", cursive;
-   text-align: center;
-}
-/*
- ul .botones .li{
-    border-radius: 100;
- }*/
-
