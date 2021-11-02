@@ -1,0 +1,22 @@
+body{
+   background: linear-gradient(to bottom , #03001e, #7303c0, #fdeff9);
+}
+
+h1{
+   text-align: center;
+   margin: 3px;
+   padding: 3px;
+   color: whitesmoke;
+  font-family:"Bebas Neue", cursive;
+}
+
+p{
+   color: whitesmoke;
+   font-family: "Bebas Neue", cursive;
+   text-align: center;
+}
+/*
+ ul .botones .li{
+    border-radius: 100;
+ }*/
+

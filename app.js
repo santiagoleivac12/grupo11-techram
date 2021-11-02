@@ -19,7 +19,12 @@ app.get('/login', function (req, res){
 app.get('/header', function (req, res){
     res.sendFile(path.join(__dirname, './views/header.html'))
 })
-
+app.get('/detalle', function (req, res){
+    res.sendFile(path.join(__dirname, './views/detalleDeProducto.html'))
+})
+app.get('/carrito', function (req, res){
+    res.sendFile(path.join(__dirname, './views/carrito.html'))
+})
 
 //Server
 app.listen(PORT, () => console.log(`
