@@ -72,13 +72,6 @@ a {
     color: white;
 }
 
-.categorias__icon .discount {
-    position: relative;
-    right: 15px;
-    bottom: 7px;
-    align-self: flex-end;
-    font-size: 10px;
-}
 
 .title-card {
     background: #b87cfd; 

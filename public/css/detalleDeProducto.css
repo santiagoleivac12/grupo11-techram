@@ -20,7 +20,7 @@
 }
 
 .botones-detalle,
-button {
+.button-detalle {
   display: flex;
   justify-content: center;
   background-color: #b87cfd;
@@ -92,7 +92,7 @@ button {
   .p-detalle {
     font-size: 18px;
   }
-  .botones-detalle,button{
+  .botones-detalle,.button-detalle{
      width: 20%;
   }
   
