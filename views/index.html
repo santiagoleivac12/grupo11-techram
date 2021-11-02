@@ -6,9 +6,293 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>index</title>
     <link rel="stylesheet" href="css/style.css">
-
+    <link rel="stylesheet" href="https://pro.fontawesome.com/releases/v5.10.0/css/all.css" integrity="sha384-AYmEC3Yw5cVb3ZcuHtOA93w35dYTsvhLPVnYs9eStHfGJvOvKxVfELGroGkvsg+p" crossorigin="anonymous"/>
 </head>
 <body>
-   <h3>Hola</h3> 
+    <header>
+        <nav class="nav-container">
+            <div class="burguer-menu">
+                <input type="checkbox" id="menu">
+                <label for="menu"><i class="fas fa-bars"></i></label>
+                <ul class="nav__ul">
+                    <li class="nav__li"><a href="#" class="nav__a">PRODUCTOS</a></li>
+                    <li class="nav__li"><a href="#" class="nav__a">ARMA TU PC</a></li>
+                    <li class="nav__li"><a href="#" class="nav__a">ENCONTRA TU EQUIPO</a></li>
+                    <li class="nav__li"><a href="#" class="nav__a">MI CUENTA</a></li>
+                    <li class="nav__li"><a href="#" class="nav__a">AYUDAS</a></li>
+                    <li class="nav__li"><a href="#" class="nav__a">MARCAS SPONSOR</a></li>
+                </ul>
+            </div>
+            <div class="container-logo">
+                <div class="logo-imagen">
+                    <img src="images/logos/eva.png" alt="techRam logo">
+                </div>
+            </div>
+            <div class="container-icon">
+                <div class="buscador">
+                    <input type="checkbox" id="search-bar">
+                    <label for="search-bar"><i class="fas fa-search"></i></label>
+                    <ul class="ul-buscador">
+                        <li class="li-buscador"><input type="text" placeholder="Buscar..."></li>
+                        <li class="li-buscador"><button class="boton-mobile"><i class="fas fa-search"></i></button></li>
+                    </ul>
+                </div>
+                <div class="buscador-responsive">
+                    <div id="div-buscador">
+                        <input type="text" placeholder="Buscar...">
+                        <button class="boton-mobile"><i class="fas fa-search"></i></button>
+                    </div>
+                </div>
+                <div class="user">
+                    <i class="fas fa-user"></i>
+                    <p class="user-p">mi cuenta</p>
+                </div>
+                <div class="carrito">
+                    <i class="fas fa-shopping-cart"></i>
+                    <p class="carrito-p">mi carrito</p>
+                </div>
+            </div>
+        </nav>
+        <div class="burguer-responsive">
+            <input type="checkbox" id="menu-responsive">
+                <label for="menu-responsive"><i class="fas fa-bars"></i></label>
+                <ul class="nav__ul">
+                    <li class="nav__li"><a href="#" class="nav__a">PRODUCTOS</a></li>
+                    <li class="nav__li"><a href="#" class="nav__a">ARMA TU PC</a></li>
+                    <li class="nav__li"><a href="#" class="nav__a">MI CUENTA</a></li>
+                    <li class="nav__li"><a href="#" class="nav__a">AYUDAS</a></li>
+                    <li class="nav__li"><a href="register" class="nav__a">REGISTRATE</a></li>
+                    <li class="nav__li"><a href="login" class="nav__a">INGRESA</a></li>
+                </ul>
+            </div>
+        </div>
+    </header>
+    <main class="home-main">
+        <section id="home-carrusel1">
+            <div class="carrusel-div">
+                <div class="carrusel-img" id="item-carrusel1">
+                    <img src="banners-02.png" alt="pc">
+                </div>
+                <ul class="flechas-carrusel">
+                    <a href="#item-carrusel3"><i class="fas fa-arrow-left"></i></a>
+                    <a href="#item-carrusel2"><i class="fas fa-arrow-right"></i></a>
+                </ul>
+            </div>
+            <div class="carrusel-div">
+                <div class="carrusel-img" id="item-carrusel2">
+                    <img src="media_142743c21da8587776506b5971f8e0b14f987c52b.jpeg" alt="pc">
+                </div>
+                <ul class="flechas-carrusel">
+                    <a href="item-carrusel1"><i class="fas fa-arrow-left"></i></a>
+                    <a href="item-carrusel3"><i class="fas fa-arrow-right"></i></a>
+                </ul>
+            </div>
+            <div class="carrusel-div">
+                <div class="carrusel-img" id="item-carrusel3">
+                    <img src="banners-02.png" alt="pc">
+                </div>
+                <ul class="flechas-carrusel">
+                    <a href="item-carrusel2"><i class="fas fa-arrow-left"></i></a>
+                    <a href="item-carrusel1"><i class="fas fa-arrow-right"></i></a>
+                </ul>
+            </div>
+        </section>
+        <section class="categorias">
+            <article class="categorias__icon">
+                <a href="#">
+                    <div class="gamepad">
+                        <i class="fas fa-gamepad"></i>
+                    </div>
+                </a>
+                <div class="discount">
+                    <i class="fas fa-percent"></i>
+                </div>
+                <p>nombre</p>    
+            </article>
+            <article class="categorias__icon">
+                <a href="#">
+                    <div class="gamepad">
+                        <i class="fas fa-gamepad"></i>
+                    </div>
+                </a>
+                <div class="discount">
+                    <i class="fas fa-percent"></i>
+                </div>
+                <p>nombre</p>    
+            </article>
+            <article class="categorias__icon">
+                <a href="#">
+                    <div class="gamepad">
+                        <i class="fas fa-gamepad"></i>
+                    </div>
+                </a>
+                <div class="discount">
+                    <i class="fas fa-percent"></i>
+                </div>
+                <p>nombre</p>    
+            </article>
+            <article class="categorias__icon">
+                <a href="#">
+                    <div class="gamepad">
+                        <i class="fas fa-gamepad"></i>
+                    </div>
+                </a>
+                <div class="discount">
+                    <i class="fas fa-percent"></i>
+                </div>
+                <p>nombre</p>    
+            </article>
+            <article class="categorias__icon">
+                <a href="#">
+                    <div class="gamepad">
+                        <i class="fas fa-gamepad"></i>
+                    </div>
+                </a>
+                <div class="discount">
+                    <i class="fas fa-percent"></i>
+                </div>
+                <p>nombre</p>    
+            </article>
+            <article class="categorias__icon">
+                <a href="#">
+                    <div class="gamepad">
+                        <i class="fas fa-gamepad"></i>
+                    </div>
+                </a>
+                <div class="discount">
+                    <i class="fas fa-percent"></i>
+                </div>
+                <p>nombre</p>    
+            </article>
+        </section>
+        <section class="productos">
+            <h3 class="title-card">Lo mas buscado</h3>
+            <article class="productos-article">
+                <div class="productos-article__card">
+                    <div class="card-img">
+                        <a href="#"><img src="images/productos/producto2.jpg" alt="pc"></a>
+                        <h5 class="descripcion-producto">VANGUARD gabinete</h5>
+                        <p class="price">$25.000</p>
+                    </div>
+                    <div class="button-producto">
+                        <a href="#">VER PRODUCTO</a>
+                    </div>
+                </div>
+                <div class="productos-article__card">
+                    <div class="card-img">
+                        <a href="#"><img src="images/productos/producto1.png" alt="pc"></a>
+                        <h5 class="descripcion-producto">MSI GeForce RTX 3080 Ti 12GB</h5>
+                        <p class="price">$120.000</p>
+                    </div>
+                    <div class="button-producto">
+                        <a href="#">VER PRODUCTO</a>
+                    </div>
+                </div>
+                <div class="productos-article__card">
+                    <div class="card-img">
+                        <a href="#"><img src="images/productos/producto3.jpg" alt="pc"></a>
+                        <h5 class="descripcion-producto">Micro Procesador Amd Ryzen 5 5600g 4.4ghz Am4 16mb C/ Video</h5>
+                        <p class="price">$50.000</p>
+                    </div>
+                    <div class="button-producto">
+                        <a href="#">VER PRODUCTO</a>
+                    </div>
+                </div>
+                <div class="productos-article__card">
+                    <div class="card-img">
+                        <a href="#"><img src="images/productos/producto4.jpeg" alt="pc"></a>
+                        <h5 class="descripcion-producto">Teclado Redragon k552W</h5>
+                        <p class="price">$7.500</p>
+                    </div>
+                    <div class="button-producto">
+                        <a href="#">VER PRODUCTO</a>
+                    </div>
+                </div>
+                <div class="productos-article__card">
+                    <div class="card-img">
+                        <a href="#"><img src="images/productos/producto5 (2).jpg" alt="pc"></a>
+                        <h5 class="descripcion-producto">ASUS TUF GAMING B550-PLUS(Wi-fi)</h5>
+                        <p class="price">$24.000</p>
+                    </div>
+                    <div class="button-producto">
+                        <a href="#">VER PRODUCTO</a>
+                    </div>
+                </div>
+                <div class="productos-article__card">
+                    <div class="card-img">
+                        <a href="#"><img src="images/productos/producto6.jpeg" alt="pc"></a>
+                        <h5 class="descripcion-producto">AURICULAR GAMER RAZER KRAKEN BT KITTY</h5>
+                        <p class="price">$12.500</p>
+                    </div>
+                    <div class="button-producto">
+                        <a href="#">VER PRODUCTO</a>
+                    </div>
+                </div>
+            </article>
+            <h3 class="title-card">Lo que esta en oferta</h3>
+            <article class="productos-article">
+                <div class="productos-article__card">
+                    <div class="card-img">
+                        <a href="#"><img src="images/productos/producto7.jpg" alt="pc"></a>
+                        <h5 class="descripcion-producto">Combo Gamer</h5>
+                        <p class="price">$5.000</p>
+                    </div>
+                    <div class="button-producto">
+                        <a href="#">VER PRODUCTO</a>
+                    </div>
+                </div>
+                <div class="productos-article__card">
+                    <div class="card-img">
+                        <a href="#"><img src="images/productos/producto8.jpg" alt="pc"></a>
+                        <h5 class="descripcion-producto">Monitor AOC 24” Gamer G4D41N-F Full HD 1080p 75 Hz</h5>
+                        <p class="price">$7.000</p>
+                    </div>
+                    <div class="button-producto">
+                        <a href="#">VER PRODUCTO</a>
+                    </div>
+                </div>
+                <div class="productos-article__card">
+                    <div class="card-img">
+                        <a href="#"><img src="images/productos/producto9.jpg" alt="pc"></a>
+                        <h5 class="descripcion-producto">Tira luces LED x10m</h5>
+                        <p class="price">$2.000</p>
+                    </div>
+                    <div class="button-producto">
+                        <a href="#">VER PRODUCTO</a>
+                    </div>
+                </div>
+                <div class="productos-article__card">
+                    <div class="card-img">
+                        <a href="#"><img src="images/productos/producto10.jpg" alt="pc"></a>
+                        <h5 class="descripcion-producto">Tableta Digitalizadora Wacom Intuos Small</h5>
+                        <p class="price">$15.000</p>
+                    </div>
+                    <div class="button-producto">
+                        <a href="#">VER PRODUCTO</a>
+                    </div>
+                </div>
+                <div class="productos-article__card">
+                    <div class="card-img">
+                        <a href="#"><img src="images/productos/producto11.png" alt="pc"></a>
+                        <h5 class="descripcion-producto">Memoria Xpg Spectrix D60g Rgb 16gb (2x8) Ddr4 3000mhz Dual</h5>
+                        <p class="price">$12.500</p>
+                    </div>
+                    <div class="button-producto">
+                        <a href="#">VER PRODUCTO</a>
+                    </div>
+                </div>
+                <div class="productos-article__card">
+                    <div class="card-img">
+                        <a href="#"><img src="images/productos/producto12.png" alt="pc"></a>
+                        <h5 class="descripcion-producto">Cpu Cooler Xigmatek Windpower 963 Intel 1200 Amd Am4</h5>
+                        <p class="price">$3.000</p>
+                    </div>
+                    <div class="button-producto">
+                        <a href="#">VER PRODUCTO</a>
+                    </div>
+                </div>
+            </article>
+        </section>
+    </main>
 </body>
 </html>

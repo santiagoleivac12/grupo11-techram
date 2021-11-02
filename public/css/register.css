@@ -1,57 +1,164 @@
-*{
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
+.register-container {
+  height: 42em;
+  width: 59em;
+  margin: 7em auto;
+  display: flex;
+  justify-content: space-between;
+  border-radius: 20px;
+  overflow: hidden;
+  padding: 0;
+  border: 1px solid black;
 }
-.body-register{
-    background: linear-gradient(to bottom , #03001e, #7303c0, #fdeff9);
+.register-info-cont {
+  width: 50%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  padding-top: 1rem;
+  background-color: var(--inter);
+}
+.images-container {
+  width: 50%;
+  padding: 2rem;
+  background-color: #8c38c3;
+  display: flex;
+  justify-content: space-between;
+  overflow: hidden;
+}
+.title {
+  text-transform: capitalize;
+  font-size: 2.25rem;
+  font-weight: 600;
+  letter-spacing: 0.5px;
+  font-family: var(--font-titulos);
+  color: thistle;
+  padding-top: 70px;
+  padding-bottom: 30px;
+}
+.redes-register {
+  width: 100%;
+  display: flex;
+  justify-content: space-evenly;
+}
+.redes-register-elemnt {
+  width: 12.5rem;
+  height: 3.75rem;
+  font-size: 1.2rem;
+  font-weight: 700;
+  letter-spacing: 0.2px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 7px;
+  border: 3px solid var(--morado);
+  color: thistle;
+  font-family: var(--font-textos);
+}
+.redes-register-elemnt img {
+  width: 1.8rem;
+  height: 1.8rem;
+  position: relative;
+  top: 0;
+  left: -0.6rem;
+}
+
+.redes-register-elemnt:hover {
+  background-color: var(--morado);
+  cursor: pointer;
+}
+.register-info-cont > p {
+  font-size: 1.25em;
+  margin-top: 1.5em;
+}
+
+.inputs-container {
+  height: 55%;
+  width: 85%;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  align-items: center;
+  font-family: var(--font-textos);
+}
+.input-register .btn {
+  width: 90%;
+  height: 3rem;
+  font-size: 1em;
+}
+.input-register {
+  padding-left: 20px;
+  border: none;
+  border-radius: 5px;
+  font-weight: 500;
+  letter-spacing: 0.5px;
+  box-sizing: border-box;
+}
+.btn {
+  width: 70%;
+  height: 3rem;
+  letter-spacing: 1px;
+  text-transform: uppercase;
+  color: thistle;
+  border-radius: 7px;
+  background-color: var(--morado);
+  cursor: pointer;
+  border-radius: 7px;
+}
+.inputs-container p {
+  margin: 0;
+}
+.anexo {
+  color: thistle;
+  font-weight: 600;
+}
+.anexo-a {
+  color: turquoise;
+  font-weight: 600;
+  cursor: pointer;
+}
+
+/*responsive*/
+@media screen and (max-width: 1200px) {
+  .images-container {
+    display: none;
+  }
+  .register-container {
+    width: 700px;
+    margin-top: 3rem;
+  }
+  .register-info-cont {
+    width: 100%;
+  }
+}
+@media screen and (max-width: 650px) {
+  .register-container {
+    width: 90%;
     
+  }
 }
-.form-register{
-    width: 300px;
-    height: 650px;
-    background: purple;
-    padding: 30px;
-    margin: auto;
-    margin-top:80px ;
-    border-radius: 5px;
-    color: white;
-    box-shadow: 7px 13px 37px #000;
-}
+@media screen and (max-width: 500px) {
+  .register-container {
+  
+   height:80%;
+    margin-top: 100px;
 
-
-.form-register h4{
-    font-size: 22px;
-    margin-bottom: 20px;
-}
-
-.controls{
-    width: 100%;
-    background: black;
-    color: white;
-    padding: 5px;
-    margin-bottom: 8px;
-    border: 1px solid black;
-}
-
-.form-register p{
-    height: 30px;
-    text-align: left;
-    font-size: 18px;
-    line-height: 10px;
-    color: white;
-}
-.form-register a:hover{
-    color: white;
-    text-decoration:none;
-}
-.form-register .button{
-    width: 100%;
-    border: none;
-    padding: 12px;
-    background-color: thistle;
-    color: black;
-    margin: 16px 0;
-    font-size: 16px;
-
+  }
+  .redes-register {
+    flex-direction: column;
+    align-items: center;
+    height: 20%;
+  }
+  .register-info-cont p {
+    margin: 0;
+    
+  }
+  .title {
+    padding-top: 0;
+    padding-bottom: 10px;
+  }
+  .register-info-cont{
+     height:43.5em ;
+  }
+  
 }

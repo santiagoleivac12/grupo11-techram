@@ -1,3 +1,335 @@
-body{
-    background-color: black;
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+
+/* Containers*/
+
+.nav-container {
+    display: flex;
+    width: 100%;
+    height:6.7rem;
+    background-color: var(--morado);
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+    align-items: center;
+}
+
+.container-logo { 
+    display: flex;
+    width: 40%;
+    height: 90px;
+    flex-wrap: wrap;
+    justify-self: center; 
+    align-self: center; 
+}
+
+.container-icon {
+    display: flex;
+    width: 30%;
+    justify-content: space-around;
+}
+
+/* Menu hamburguesa*/
+
+.burguer-menu {
+    width: 30%;
+    font-size: 27px;
+    text-align: center;
+    color: #b87cfd;
+}
+
+
+.burguer-menu label i{
+    margin-right: 60%;
+    cursor: pointer;
+}
+
+
+.nav__ul{
+    list-style: none;
+    display: none;
+    background-color: var(--morado);
+    width: 100%;
+    height: 300px;
+    text-align: center; 
+    position: absolute;
+    top: 100px;
+    left: 0; 
+    z-index: 70; 
+} 
+
+
+input:checked  ~ ul{
+    display:block;
+}
+
+.burguer-menu input,.burguer-responsive input {
+    display: none;
+}
+
+.nav__ul .nav__li, .nav__a {
+    margin: 20px;
+    font-size: 13px;
+    color: white;
+    font-weight: 700;
+    line-height: 20px;
+    text-decoration: none;
+    padding-left: 27px;
+    padding: 4px 28px;
+    text-transform: uppercase;
+}
+
+.nav__ul .nav__li:first-child {
+    margin-top: 0px;
+}
+
+/* Menu responsive*/
+.burguer-responsive {
+    display: none;
+    color: #b87cfd;
+}
+
+.burguer-responsive label i {
+    cursor: pointer;
+}
+
+.menu-responsive {
+    background-color: var(--morado);
+    width: 100%;
+    height: 300px;
+    text-align: center; 
+    display: none;
+}
+
+
+/* Logo */
+.logo-imagen {
+    width: 50%;
+    justify-self: flex-end;
+    text-align: center;
+    margin: 0 auto;
+    cursor: pointer;
+}
+
+.logo-imagen img{
+    max-width: 108.95px;
+    max-height: 84.8px;
+}
+
+
+
+
+/* carrito, lupa y usuario*/
+
+.buscador-responsive {
+    display: none;
+}
+
+
+.buscador i {
+    font-size: 24px;
+    text-align: center;
+    color:#b87cfd;
+    cursor: pointer;
+}
+
+.user {
+    font-size: 24px;
+    text-align: center;
+    color:#b87cfd;
+  
+}
+
+.user-p {
+    display: none;
+}
+
+.carrito {
+    font-size: 24px;
+    text-align: center;
+    color:#b87cfd;
+   /*  display: none; */
+}
+
+.carrito-p {
+    display: none;
+}
+
+#search-bar{
+    display: none;
+}
+
+.ul-buscador {
+    display: none;
+    background-color: var(--morado);
+    width: 100%;
+    height: 45px;
+    position: absolute;
+    top: 100px;
+    left: 0;
+    text-align: center;
+    color: white;
+    list-style: none;
+    justify-content: center;
+}
+
+
+.li-buscador input{
+    display: inline-block;
+    margin-top: 5px;
+    width: 250px;
+    height: 30px;
+    align-items: center;
+    border: none;
+    border-radius:5px 0 0 5px; 
+    padding: 12px 0 12px 10px;
+    outline: none;
+}
+
+.buscador input:checked ~ ul{
+    display:flex;
+}
+
+.boton-mobile {
+    position: relative;
+    bottom: -5px;
+    /*left: 120px;
+    bottom: 33px; */
+    height: 30px;
+    border: none;
+    border-radius: 0 5px 5px 0;
+    color: white;
+}
+
+.boton-mobile i {
+    font-size: 18px;
+}
+
+
+
+/* Tablet */
+
+@media (min-width:510px ) {
+    /* Containers*/
+    .nav-container {
+        width:100%;
+        height: 5.3rem;
+    }
+
+    .container-logo {
+        width: 15%;
+        flex-direction: row-reverse;
+        justify-content: center;
+        align-items: flex-start;
+        position: relative;
+    }
+
+    .container-icon {
+        width: 85%;
+        justify-content: space-evenly;
+    }
+
+    .logo-imagen {
+        margin-left: 0;
+    }
+
+
+    /* Menu hamburguesa*/
+
+    .burguer-menu {
+        display: none;
+    }
+
+    .burguer-responsive {
+        display: block;
+        width: 100%;
+        height: 32px;
+        color: white;
+        background-color: black;
+        padding:5px;
+        border: 1px solid var(--morado);
+        font-size: 20px;
+    }
+
+    .burguer-responsive i {
+        text-align: center; 
+    }
+
+    .nav__ul {
+        top: 117px;
+    }
+
+    /* Search bar*/
+    .buscador {
+        display: none;
+    }
+    .buscador-responsive {
+        display: inline-block;
+        width: 75%;
+    }
+
+    .buscador-responsive #div-buscador{
+        display: flex;
+        justify-content: center;
+        flex-wrap: wrap;
+        margin: 0 auto;    
+    }
+
+    .buscador-responsive #div-buscador input{
+        width: 80%;
+        height: 30px;
+        align-items: center;
+        border: none;
+        border-radius:5px 0 0 5px; 
+        padding: 12px 0 12px 10px;
+        outline: none;
+    }
+
+    .buscador-responsive #div-buscador button{
+        position: relative;
+        top: 0;
+        height: 30px;
+        border: none;
+        border-radius: 0 5px 5px 0;
+        font-size: 24px;
+        text-align: center;
+        color:#b87cfd;
+        cursor: pointer;
+    }
+
+    .boton-mobile i {
+        font-size: 22px;
+    }
+}
+
+@media (min-width:790px ) {
+
+    .buscador-responsive {
+        width:70%;
+    }
+
+    .user-p,
+    .carrito-p {
+        display: inline-block;
+        font-size: 10px;
+        font-weight: bold;
+        color: white;
+        text-transform: uppercase;
+    }
+
+    .nav__ul {
+        width: 300px;
+        height: 100%;
+        text-align: start;
+    }
+
+    .nav__ul .nav__li, .nav__a {
+        padding-left: 0;
+        margin-top: 10px;
+        line-height: 30px;
+    }
+
 }
