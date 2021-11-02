@@ -16,8 +16,8 @@ app.get('/register', function (req, res){
 app.get('/login', function (req, res){
     res.sendFile(path.join(__dirname, './views/login.html'))
 })
-app.get('/header', function (req, res){
-    res.sendFile(path.join(__dirname, './views/header.html'))
+app.get('/perfil', function (req, res){
+    res.sendFile(path.join(__dirname, './views/perfil.html'))
 })
 
 

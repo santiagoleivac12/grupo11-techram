@@ -1,0 +1,145 @@
+.mainEdit  {
+    border: 0 none;
+    outline: 0;
+    text-decoration: none;
+    text-align: center;
+    box-sizing: border-box
+
+  }
+  
+  .mainEdit button {
+    background-color: #F05454;
+    color: #fff;
+  }
+  
+  .mainEdit button:hover,
+  .mainEdit button:focus {
+    background-color: #f05980;
+    box-shadow: 0px 15px 20px rgba(0, 0, 0, 0.3);
+  }
+  
+   .mainEdit {
+    clear: both;
+    font-size: 0.75rem;
+    margin:0 auto;
+    overflow: hidden;
+    padding: 1rem 0;
+    width: 60%;
+    margin-bottom: 100px;
+    margin-top: 100px;
+  }
+  .File{width: 25%;}
+  
+ 
+  .Profile{border-radius: 100%;
+  width: 90px;
+  height: 80px;
+  text-align: center;
+}
+  
+  
+  
+  /* Datos Personales */
+  form input{
+    border:solid black 1px;
+    outline: 10px;
+  }
+  .datos-Personales-Edit{
+    border-radius: 10px;
+    line-height: 2.3rem;
+    background-color: var(--inter);
+    border: 1px solid #aaa;
+    padding: 1rem;
+  
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+   
+    margin-bottom: 1rem;
+    width: 48%;
+    margin-top: 9rem
+    ;
+  }
+  
+  .entrega{
+    border-radius: 10px;
+    line-height: 3.3rem;
+    background-color: var(--inter);
+    border: 1px solid #aaa;
+    padding: 1rem;
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+    margin-bottom: 1rem;
+    flex-direction: column;
+    width: 48%;
+    margin-top: 9rem
+    
+  }
+  
+  input {
+      border-radius: 23px;
+  }
+
+hr{
+    color: black;
+}
+
+  .checkout-cta-Edit {
+    display: block;
+    float: none;
+    font-size: 0.75rem;
+    text-align: center;
+    text-transform: uppercase;
+    padding: 0.625rem 0;
+    width: 40%;
+    background-color: var(--morado);
+    margin-left: 30%;
+  }
+ 
+  /* MEDIAS QUERIES */
+  
+  @media (min-width: 1px) and (max-width: 380px) {
+    
+    form input{
+      width: 80%;
+    }
+    .entrega{
+    font-size: 1.0rem;
+    width:100%;
+    }
+    .datos-Personales-Edit{font-size: 0.95rem;
+    width: 100%;
+    }
+  }
+
+  
+  @media (min-width: 380px) and (max-width: 960px){
+   
+    .mainEdit {
+      width: 100%;
+    }
+    .formulario{
+      display: flex;
+      justify-content: space-between
+    }
+  }
+  
+  @media (min-width: 960px) and (max-width: 2000px) {
+    aside {   float: left;
+      position: relative;
+      left: 25%;
+      width: 50%;
+    }
+    .formulario{
+      display: flex;
+      justify-content: space-between
+    }
+    .entrega input {
+      margin: 10px;
+      padding: 3px
+    }
+    .datos-Personales-Edit input{
+      padding: 1px
+    }
+  }
