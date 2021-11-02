@@ -80,13 +80,17 @@ button {
   margin: 10px;
 }
 
+.price-detalle-responsive {
+  display: none;
+}
+
 @media (min-width: 500px) {
   .article-detalle h4 {
     font-size: 35px;
   }
 
   .p-detalle {
-    font-size: 20px;
+    font-size: 18px;
   }
   .botones-detalle,button{
      width: 20%;
@@ -94,5 +98,61 @@ button {
   
 }
 @media(min-width:770px){
-   
+
+  .container-main-detalle {
+    width: 100%;
+    height: fit-content;
+    height: moz-fit-content;
+  }
+  
+  .container-princ {
+    display: flex;
+    justify-content: space-evenly;
+  }
+
+  .container-detalle {
+    width: 45%;
+    
+  }
+
+  .imagen-detalle {
+    width: 380px;
+    height: 380px;
+    margin: 10px;
+    border-radius: 10px;
+  }
+
+  .container-boton {
+    width: 50%;
+    /* justify-content: space-evenly; */
+  }
+  
+  .price-detalle-responsive {
+    display: inline-block;
+    order: 1;
+    margin-bottom: 70px;
+    font-size: 50px;
+    font-weight: bold;
+    color: white;
+  }
+
+  .price-detalle {
+    display: none;
+  }
+
+  .botones-detalle{
+    width: 30%;
+  }
+
+  .selector-cant {
+    width: 30%;
+  }
+
+  .article-detalle h4 {
+    text-align: center;
+  }
+
+  .p-detalle {
+    padding: 15px;
+  }
 }
