@@ -144,7 +144,7 @@ a {
 
 .descripcion-producto {
     font-size: 14px;
-    margin-top: 10px;
+    margin-top: 12px;
 }
 
 
@@ -204,7 +204,11 @@ a {
         width: 7.5rem;
         height: 5.3125rem;
     }
-
-
 }
+
+/* @media (min-width:1200px) {
+    .productos-article__card {
+        width: 20%;
+    }
+} */
 
