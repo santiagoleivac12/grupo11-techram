@@ -189,9 +189,9 @@ a {
 
 }
 
-@media (min-width:800px) {
+@media (min-width:810px) {
     .productos-article__card {
-        width: 16%;
+        width: 15%;
         margin-bottom: 50px;
         margin-top: 50px;
     }
@@ -205,10 +205,3 @@ a {
         height: 5.3125rem;
     }
 }
-
-/* @media (min-width:1200px) {
-    .productos-article__card {
-        width: 20%;
-    }
-} */
-
