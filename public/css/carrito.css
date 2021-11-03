@@ -12,15 +12,6 @@ body{
         background-attachment: fixed;
      }
 
-
-
-
-
-
-
-
-
-
 .nombre p{
    /*  position: relative;
     right: 2.5rem; */
@@ -30,18 +21,10 @@ body{
 .envio span{
     height: 50%;
     color:rgb(67, 170, 67);
-   
 }
-
 .envio{
     margin: 3px 0 3px 0;
-
 }
-
-
-
-
-
 
 .caja{
 width:100%;    
@@ -59,19 +42,17 @@ article.cajita{
     height: 100%;
 }
 
-
 .img1 img {
     width: 90px;
     height: 85px;
     margin-bottom: 10px;
+    /* border: solid 2px rgb(82, 26, 82); */
 }
 .img1{
     width: 90px;
     height: 85px;
+    
 }
-
-
-
 .suma p{
     border: 1px solid black;
     width: 40px;
@@ -94,6 +75,7 @@ margin-top: 2px;
     flex-direction: column;
     width: 100px;
     height: 22px;
+    font-weight: bold;
 }
 
 
@@ -104,36 +86,38 @@ margin-top: 2px;
     height: 50px;
 }
 
-
-
+.cant-disp{
+    margin-left: 5px;
+    width: 100px;
+    border: solid 1px lightgrey;
+    background-color: rgba(255, 182, 246, 0.33);
+    border-radius: 8px;
+}
 .precio{
-
     display: flex;
     justify-content: center;
+    
+    flex-direction: column;
     align-items: center;
-    width:130px;
-
+    width:150px;
+    
 }
 .cajita2{
     width:125px;
 }
-
 article.total1{
    padding-top:10px;
-    background-color: aquamarine;
+    background-color: rgb(162, 81, 194);
     height: 100px;
     padding-top: 40px; 
     text-align: center;
 }
-
 article.total2{
     padding-top:10px;
-     background-color: aquamarine;
+     background-color: rgb(201, 129, 204);
      height: 100px;
-   
-        text-align: center;
+    text-align: center;
  }
-
 section.total-caja{ 
 background-color: rgb(20, 26, 199);
 height: 200px;
@@ -143,7 +127,6 @@ border: solid 1px black;
 
 .comprar{
 padding-top: 10px;
-
 }
 .comprar button{
     background-color: rgb(45, 14, 75);
@@ -162,12 +145,14 @@ padding-top: 10px;
 
 
 
-
 /* ----------------------------- */
 /* tablet */
 @media(min-width:480px){
     .caja{  
         height: 220px;}
+        .cajita3{
+            margin-left: 20px;
+        }
 
      .img1 img {
         width: 130px;
@@ -178,20 +163,23 @@ padding-top: 10px;
         width: 159px;
         height: 150px;
     }
-    
 .eli-com{
     width: 150px;
     margin-top:5px ;
     margin-right: 10px;
+    display: flex;
+    flex-direction: row;
 }
 .cajita{
     padding-left: 20px;
 }
 
-
+.nombre p{
+   
+     font-size: 28px;
+ }
 
 }
-
 
 
 /* -------------------------- */
@@ -200,9 +188,8 @@ padding-top: 10px;
     .caja{ height: 300px;
         }
         .cajita{
-    padding-left: 20px;
+    margin-left: 30px;
         }
-
 
      .img1 img {
         width: 200px;
@@ -216,37 +203,52 @@ padding-top: 10px;
     
     .eli-com{
         width: 150px;
+     
         margin-top:95px ;
         margin-right: 10px;
         padding-top:25px;
+        display: flex;
+    flex-direction: row;
+    font-size: 27px;
+   
     }
-
 
     .envio{
     margin-top: 10px;
     margin-bottom: 10px;
+    font-size: 26px;
     }
-
-
-
 
     .eli-com a{
     margin-bottom:8px;
     width: 200px;
-    
-
-
-
-
+    height: 32px;
 }
     
 div.cajita2{
     width: 200px;
     height: 100px;
-  
+   
 }
-
-
-
-
+.nombre p{   
+    font-size: 38px;
+    font-weight: bold;
+}
+p.descrip{
+    font-size: 26px;
+}
+p.cantidad{
+    font-size: 26px;
+}
+.suma select{
+    font-size: 26px;
+}
+.precio p{
+    font-size: 26px;
+    font-weight: bold;
+}
+.cajita3{
+    padding-left: 60px;
+    margin-left: 35px;
+}
 }
