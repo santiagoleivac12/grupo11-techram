@@ -26,7 +26,7 @@
             </div>
             <div class="container-logo">
                 <div class="logo-imagen">
-                    <img src="images/logos/eva.png" alt="techRam logo" >
+                    <img src="images/logos/eva.png" alt="techRam logo">
                 </div>
             </div>
             <div class="container-icon">
@@ -49,8 +49,8 @@
                     <p class="user-p">mi cuenta</p>
                 </div>
                 <div class="carrito">
-                    <i class="fas fa-shopping-cart"></i>
-                    <p class="carrito-p">mi carrito</p>
+                    <a href="carrito"><i class="fas fa-shopping-cart"></i></a>
+                    <p class="carrito-p"><a href="carrito">mi carrito</a></p>
                 </div>
             </div>
         </nav>
@@ -60,48 +60,80 @@
                 <ul class="nav__ul">
                     <li class="nav__li"><a href="#" class="nav__a">PRODUCTOS</a></li>
                     <li class="nav__li"><a href="#" class="nav__a">ARMA TU PC</a></li>
-                    <li class="nav__li"><a href="#" class="nav__a">MI CUENTA</a></li>
-                    <li class="nav__li"><a href="#" class="nav__a">AYUDA</a></li>
+                    <li class="nav__li"><a href="perfil" class="nav__a">MI CUENTA</a></li>
+                    <li class="nav__li"><a href="#" class="nav__a">AYUDAS</a></li>
                     <li class="nav__li"><a href="register" class="nav__a">REGISTRATE</a></li>
                     <li class="nav__li"><a href="login" class="nav__a">INGRESA</a></li>
                 </ul>
             </div>
         </div>
     </header>
-    <div class="container-detalle"> 
-        <h1 class="h1detalle">Nombre del producto</h1>
-        <img class="imagen-detalle" src="images/productos/producto11.png" alt="producto">
-         <p class="price">$12.500</p>
-    </div>
-
-    <div class="botones-detalle">
-         <ul>
-            <button>Comprar</button>
-            <button>Agregar al carrito</button>
-         </ul>
-    </div class="cantidad-detalle">
-        <label for="cantidad">Cantidad: </label>
-        <input type="number" name="cantidad" id="cantidad">
-    <div>
-    <div class="pago-detalle">
-        <h4>Forma de pago</h4>
-        <label for="debito">Débito <input type="radio" name="pay" id="debito" value="debito" checked></label><br>        
-        <label for="credito">Crédito <input type="radio" name="pay" id="credito" value="credito" ></label><br>        
-        <label for="efectivo">Efectivo <input type="radio" name="pay" id="efectivo" value="efectivo" ></label><br>     
-    </div>
-    <div class="details">
-        <h4>Detalles</h4>
-            <ul>
-                <li>Funciones</li>
-                <li>Material</li>
-                <li>Marca</li>
-                <li>Dimenciones</li>
-                <li>Modelo</li>
-                <li>Garantia</li>
-            </ul> 
-    </div>            
-      </div>
-      <div class="contenedor">
+    <main class="container-main-detalle">
+        <div class="container-princ">
+            <div class="container-detalle"> 
+                <h1 class="h1detalle">Memoria Xpg Spectrix D60g Rgb 16gb (2x8) Ddr4 3000mhz Dual</h1>
+                <img class="imagen-detalle" src="images/productos/producto11.png" alt="producto">
+                 <p class="price-detalle">$12.500</p>
+            </div>
+            <section class="container-boton">
+                <p class="price-detalle-responsive">$12.500</p>
+                <div class="botones-detalle">
+                    <button class="button-detalle">Comprar<a href="carrito"></a></button>
+                    <!-- <button>Agregar al carrito</button> -->
+                    </div class="cantidad-detalle">
+                   <!--  <label for="cantidad">Cantidad: </label> -->
+                    <!--<input type="number" name="cantidad" id="cantidad">-->
+                    <select class="selector-cant" id="dropdown" class="input-register" required>
+                        <option value="1">1</option>
+                        <option value="2">2</option>
+                        <option value="3">3</option>
+                        <option value="4">4</option>
+                        <option value="5">5</option>
+                        <option value="6">6</option>
+                        <option value="7">7</option>
+                        <option value="8">8</option>
+                        <option value="9">9</option>
+                        <option value="10">10</option>
+                     </select> 
+                </div>
+            </section>
+        </div>
+    <section class="details">
+            <article class="article-detalle">
+                <h4>Funciones</h4>
+                    <p class="p-detalle">Lorem ipsum dolor sit amet consectetur adipisicing elit. 
+                        Consequatur architecto ullam, explicabo voluptatibus tempora optio 
+                        harum ab quaerat modi? Maiores mollitia, minus facilis ex porro 
+                        alias delectus vero. Quisquam, eum.
+                    </p>
+            </article>
+            <article class="article-detalle">
+                <h4>Descripción</h4>
+                    <p class="p-detalle">Lorem ipsum dolor sit amet consectetur adipisicing elit. 
+                        Consequatur architecto ullam, explicabo voluptatibus tempora optio 
+                        harum ab quaerat modi? Maiores mollitia, minus facilis ex porro 
+                        alias delectus vero. Quisquam, eum.
+                    </p>
+            </article>
+            <article class="article-detalle">
+                <h4>Marca</h4>
+                    <p class="p-detalle">Lorem ipsum dolor sit amet consectetur adipisicing elit. 
+                        Consequatur architecto ullam, explicabo voluptatibus tempora optio 
+                        harum ab quaerat modi? Maiores mollitia, minus facilis ex porro 
+                        alias delectus vero. Quisquam, eum.
+                    </p>
+            </article>
+            <article class="article-detalle">
+                <h4>Garantía</h4>
+                    <p class="p-detalle">Lorem ipsum dolor sit amet consectetur adipisicing elit. 
+                        Consequatur architecto ullam, explicabo voluptatibus tempora optio 
+                        harum ab quaerat modi? Maiores mollitia, minus facilis ex porro 
+                        alias delectus vero. Quisquam, eum.
+                    </p>
+            </article>
+    </section>    
+</main>        
+    <div class="contenedor">
         <footer class="main-footer">
             <section class="section-footer">
 
@@ -135,9 +167,9 @@
                     <div class="container">
                         <!-- (p>lorem)*20 (código a usar si tienes instalada la extensión emmet)-->
                     </div>
-                   <img src="images/logos/face.png" alt="imagen de facebook">
-                   <img src="images/logos/insta.png" alt="insta imagen">
-                   <img src="images/logos/whatsapp.png" alt="imagen">
+                    <img src="images/logos/face.png" alt="imagen de facebook" style="width: 80px;height: 80px;">
+                   <img src="images/logos/insta.png" alt="insta imagen" style="width: 80px;height: 80px;">
+                   <img src="images/logos/whatsapp.png" alt="imagen" style="width: 80px;height: 80px;">
                    
                 </article>
                 </div>
@@ -152,6 +184,7 @@
 
         </footer>
     </div>
+      
          
         
            
