@@ -13,6 +13,8 @@ a {
 
 
 .carrusel-div {
+    margin-top: 50px;
+    margin-bottom: 25px;
     width: 100%;
     height: fit-content;
     height: -moz-fit-content;
@@ -74,17 +76,18 @@ a {
 
 
 .title-card {
-    background: var(--morado); 
-    background-size: cover;
-    background-attachment: fixed; 
     color: white;
     width: 95%;
     text-align: center;
     margin: 0 auto;
     border-radius: 5px;
-    padding: 1rem;
+    padding: .12rem;
     text-transform: uppercase;
     margin-bottom: .5rem;
+    font-size: 40px;
+    letter-spacing: 3px;
+    font-family: var(--font-titulos);
+    border-bottom:3px solid rgb(170, 80, 200);
 }
 
 .discount {
@@ -116,6 +119,11 @@ a {
     background-size: cover;
     background-attachment: fixed;
     border: 1px solid rgba(160, 102, 218, 0.658);
+    cursor: pointer;
+}
+
+.productos-article__card:hover {
+    box-shadow: 0px 0px 10px rgb(170, 80, 200);
 }
 
 
@@ -140,11 +148,14 @@ a {
     color:#fdeff9;
     font-size: 18px;
     margin: 15px;
+    font-family: var(--font-titulos);
 }
 
 .descripcion-producto {
-    font-size: 14px;
+    font-size: 15px;
     margin-top: 12px;
+    font-family: var(--font-textos);
+    color: white;
 }
 
 
@@ -157,10 +168,12 @@ a {
     text-align: center;
     margin: 0 auto;
     margin-bottom: 7px;
-    padding: .54rem;
+    padding: .53rem;
     text-transform: uppercase;
     border:none;
     cursor: pointer;
+    text-transform: uppercase;
+    font-family: var(--font-textos);
 }
 
 .button-producto a {
