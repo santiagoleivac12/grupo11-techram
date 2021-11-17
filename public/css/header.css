@@ -311,6 +311,45 @@ input:checked  ~ ul{
 
 @media (min-width:790px ) {
 
+    .burguer-responsive {
+        height: 50px;
+        background-color: var(--morado);
+        border-top: 1px solid #b87cfd;
+        border-bottom: 1px solid #b87cfd;
+    }
+
+    #menu-responsive {
+        display: none;
+    }
+
+    .burguer-responsive i {
+        display: none;
+    }
+
+    .nav__ul {
+        display: flex;
+        flex-wrap: wrap;
+        position: static;
+        background-color: var(--morado);
+        height: fit-content;
+        text-align: center;
+        justify-content: space-evenly;
+    }
+
+
+
+    .nav__ul .nav__li, .nav__a {
+        margin: 0;
+        padding: 10px;
+    }
+
+    .nav__ul .nav__li, .nav__a:hover {
+        color:#b87cfd;
+    }
+    
+
+
+
     .buscador-responsive {
         width:70%;
     }
@@ -326,18 +365,6 @@ input:checked  ~ ul{
 
     .carrito-p a {
         color: white;
-    }
-
-    .nav__ul {
-        width: 300px;
-        height: 100%;
-        text-align: start;
-    }
-
-    .nav__ul .nav__li, .nav__a {
-        padding-left: 0;
-        margin-top: 10px;
-        line-height: 30px;
     }
 
 }

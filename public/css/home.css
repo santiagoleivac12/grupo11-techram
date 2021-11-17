@@ -74,7 +74,7 @@ a {
 
 
 .title-card {
-    background: #b87cfd; 
+    background: var(--morado); 
     background-size: cover;
     background-attachment: fixed; 
     color: white;
@@ -190,6 +190,11 @@ a {
 }
 
 @media (min-width:810px) {
+    .productos-article {
+        width: 88%;
+        margin: 0 auto;
+    }
+
     .productos-article__card {
         width: 15%;
         margin-bottom: 50px;
