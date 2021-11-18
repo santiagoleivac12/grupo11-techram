@@ -13,7 +13,6 @@ a {
 
 
 .carrusel-div {
-    margin-top: 50px;
     margin-bottom: 25px;
     width: 100%;
     height: fit-content;
@@ -118,8 +117,7 @@ a {
     background: linear-gradient(to bottom , #03001e, #7303c0, #fdeff9); 
     background-size: cover;
     background-attachment: fixed;
-    border: 1px solid rgba(160, 102, 218, 0.658);
-    cursor: pointer;
+    border: .5px solid rgba(160, 102, 218, 0.658);
 }
 
 .productos-article__card:hover {
@@ -155,12 +153,12 @@ a {
     font-size: 15px;
     margin-top: 12px;
     font-family: var(--font-textos);
-    color: white;
+    color:rgba(255, 255, 255, 0.809);
 }
 
 
 .button-producto {
-    background-color: #b87cfd;
+    background-color: hsla(278, 27%, 57%, 0.99);
     border-radius: .8rem;
     width: 60%;
     height: fit-content;
@@ -221,5 +219,9 @@ a {
     .categorias__icon a {
         width: 7.5rem;
         height: 5.3125rem;
+    }
+
+    .carrusel-div {
+        margin-top: 30px;
     }
 }

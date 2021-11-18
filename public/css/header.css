@@ -4,6 +4,10 @@
     box-sizing: border-box;
 }
 
+.nav__a:hover {
+    border-bottom: 2px solid #b87cfd;
+}
+
 
 /* Containers*/
 
@@ -341,12 +345,11 @@ input:checked  ~ ul{
         padding: 10px;
     }
 
-    .nav__ul .nav__li, .nav__a:hover {
+ /*    .nav__a:hover {
         color:#b87cfd;
-    }
+        border-bottom: 2px solid #b87cfd;
+    } */
     
-
-
 
     .buscador-responsive {
         width:70%;
