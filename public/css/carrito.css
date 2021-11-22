@@ -5,240 +5,286 @@
 }
 
 body{
-        --font-titulos: "Bebas Neue", cursive;
+       --font-titulos: "Bebas Neue", cursive;
         --font-textos:'Source Sans Pro', sans-serif;
-        background-image: linear-gradient(to bottom, #03001e, #7303c0, #fdeff9 );
+        background-image: linear-gradient(to bottom, #03001e, #7303c0, #fdeff9 ); 
         background-size: cover;
         background-attachment: fixed;
      }
 
-.nombre p{
-   /*  position: relative;
-    right: 2.5rem; */
-    height: 50%;
-    font-size: 20px;
-}
-.envio span{
-    height: 50%;
-    color:rgb(67, 170, 67);
-}
-.envio{
-    margin: 3px 0 3px 0;
-}
-
-.caja{
-width:100%;    
-height: 100%;
-background-color: rgba(255, 255, 255, 0.809);
-border: solid 2px black;
-margin-bottom: 10px;
-display: flex;
-padding-top:5px ;
-padding-left: 5px;
-border-radius: 8px;
-}
-
-article.cajita{
-    height: 100%;
-}
-
-.img1 img {
-    width: 90px;
-    height: 85px;
-    margin-bottom: 10px;
-    /* border: solid 2px rgb(82, 26, 82); */
-}
-.img1{
-    width: 90px;
-    height: 85px;
-    
-}
-.suma p{
-    border: 1px solid black;
-    width: 40px;
-    background-color: rgb(252, 183, 252);
-    border-radius: 4px;
-    box-shadow: 0px 3px 0 0 rgb(72, 70, 70);
-margin-bottom:3px ;
-margin-top: 2px;
-}
-
-.eli-com a{
-    border: 1px solid black;
-    background-color: rgb(252, 183, 252);
-    border-radius: 4px;
-    box-shadow: 0px 3px 0 0 rgb(72, 70, 70);
-    padding: 2px;
-    color: black;
-    text-decoration: none;
-    display: flex;
-    flex-direction: column;
-    width: 100px;
-    height: 22px;
-    font-weight: bold;
-}
 
 
-.eli-com{
-    width: 150px;
-    margin-top:15px ;
-    margin-right: 10px;
-    height: 50px;
+.contenedor-carrito{
+    margin-top: 15px;
+    width: 100%;
+ height: 100%;
 }
 
-.cant-disp{
-    margin-left: 5px;
-    width: 100px;
-    border: solid 1px lightgrey;
-    background-color: rgba(255, 182, 246, 0.33);
-    border-radius: 8px;
-}
-.precio{
-    display: flex;
-    justify-content: center;
-    
-    flex-direction: column;
-    align-items: center;
-    width:150px;
-    
-}
-.cajita2{
-    width:125px;
-}
-article.total1{
-   padding-top:10px;
-    background-color: rgb(162, 81, 194);
-    height: 100px;
-    padding-top: 40px; 
+#title-carri {
     text-align: center;
-}
-article.total2{
-    padding-top:10px;
-     background-color: rgb(201, 129, 204);
-     height: 100px;
-    text-align: center;
- }
-section.total-caja{ 
-background-color: rgb(20, 26, 199);
-height: 200px;
-margin-top: 15px;
-border: solid 1px black;
-}
-
-.comprar{
-padding-top: 10px;
-}
-.comprar button{
-    background-color: rgb(45, 14, 75);
     color: white;
+} 
+
+.conte-artic{
+  
     border-radius: 8px;
-    height: 30px;
-    width: 100px;
-    box-shadow: 3px 3px 0 0 black;
-    padding: 4px;
-}
-.suma select{
-    background-color: rgb(252, 183, 252);
-    border-radius:8px ;
-    border:  1px solid black;
+width: 60%;
+background-color: rgba(255, 255, 255, 0.248);
 }
 
+.articulos-carri{
+    width:95%;
+    height: 200px;
+    border: solid 4px rgb(149, 84, 182);
+    background-color: #f5a2e7c7;
+    margin-bottom: 8px;
+  padding-top: 8px;
+  border-radius: 8px;
+}
 
-
-/* ----------------------------- */
-/* tablet */
-@media(min-width:480px){
-    .caja{  
-        height: 220px;}
-        .cajita3{
-            margin-left: 20px;
-        }
-
-     .img1 img {
-        width: 130px;
-        height: 130px;
-        margin-bottom: 10px;
-    }
-    .img1{
-        width: 159px;
-        height: 150px;
-    }
-.eli-com{
-    width: 150px;
-    margin-top:5px ;
-    margin-right: 10px;
+.row-carri{
+    width: 100%;
+    height: 100%;
     display: flex;
     flex-direction: row;
-}
-.cajita{
-    padding-left: 20px;
-}
-
-.nombre p{
-   
-     font-size: 28px;
- }
-
+    justify-content: space-around;
+    flex-wrap: wrap;
 }
 
+article.row-articulos{
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+   align-items: center;
+}
+.caja-descripcion{
+    width: 30%;
+    height: 90%;
+}
+/* caja lateral derecha  */
+.pagar-carri{
+    padding-top: 5px;
+    width: 32%;
+    height: 300px;
+    background-color:rgba(255, 255, 255, 0.248) ;
+    text-align: center;
+    border-radius: 8px;
+    display: flex;
+    justify-content: center;
+}
+.pagar{
+    border: solid 4px rgb(149, 84, 182);
+    border-radius: 8px;
+    background-color:#f5a2e7c7 ;
+}
 
-/* -------------------------- */
-/* escritorio */
-@media(min-width:770px){
-    .caja{ height: 300px;
-        }
-        .cajita{
-    margin-left: 30px;
-        }
 
-     .img1 img {
-        width: 200px;
-        height: 200px;
-        margin-bottom: 10px;
-    }
-    .img1{
-        width: 90px;
-        height: 85px;
-    }
+.precio-total{
+    width: 22%;
+    height: 40px;
+    border-radius: 6px;
+    background-color: rgba(255, 255, 255, 0.412) ;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
 
-    }
-
-    .envio{
-    margin-top: 10px;
-    margin-bottom: 10px;
+/* imagenes y su contenedor */
+.caja-img{
+width: 30%;
+}
+.imagenes img{
+    border-radius: 6px;
+    width: 150px;
+    height: 140px;
+}
+/* -------------- */
+.resu-carr{
+align-items: center;
+    width: 80%;
+}
+.total-carr{
+    height: 80px;
     font-size: 26px;
+    align-items: center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+h2.resu-carr{
+    border-bottom: 2px solid #000000;
+    margin-bottom: 5px;
+   margin-left:30px ;
+}
+
+.botones-carri button{
+    background-color: hsla(278, 27%, 57%, 0.99);
+    color: rgb(255, 255, 255);
+    width: 65px;
+    height: 30px;
+    border-radius: 6px;
+}
+.botones-carri button:hover{
+    background-color: blueviolet;
+    cursor: pointer;
+}
+
+
+.envio{
+    border-radius: 8px;
+    background-color: rgba(255, 255, 255, 0.412);
+    padding-top: 10px;
+    text-align: center;
+    color: green;
+    width: 84px;
+    height: 40px;
+}
+
+.input-register{
+    cursor: pointer;
+}
+
+/* --------------------------------------------------- */
+@media(max-width:865px){
+    .row-carri{
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
     }
 
-    .eli-com a{
-    margin-bottom:8px;
-    width: 200px;
-    height: 32px;
+    .pagar-carri{
+        padding-top: 5px;
+        width: 80%;
+        height: 300px;
+        background-color:rgba(255, 255, 255, 0.248) ;
+        text-align: center;
+        border-radius: 8px;
+        display: flex;
+        justify-content: center;
+
+    }
+    .conte-artic{
+    padding-left: 10px;
+        border-radius: 8px;
+    width: 80%;
+    background-color: rgba(255, 255, 255, 0.248);
+    }
+    .caja-img{
+        width: 30%;
+        }
+        .imagenes img{
+            border-radius: 6px;
+            width: 100px;
+            height: 100px;
+        }
+        .caja-descripcion{
+            width: 30%;
+            height: 90%;
+            font-size: 14px;
+        }
+
+        .precio-total{
+            width: 22%;
+            height: 40px;
+            border-radius: 6px;
+            background-color: rgba(255, 255, 255, 0.412) ;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 10px;
+        }
 }
+
+
+
+
+/* -------------------------------- */
+@media(max-width:418px){
     
-div.cajita2{
-    width: 200px;
-    height: 100px;
-   
-}
-.nombre p{   
-    font-size: 38px;
-    font-weight: bold;
-}
-p.descrip{
-    font-size: 26px;
-}
-p.cantidad{
-    font-size: 26px;
-}
-.suma select{
-    font-size: 26px;
-}
-.precio p{
-    font-size: 26px;
-    font-weight: bold;
-}
-.cajita3{
-    padding-left: 60px;
-    margin-left: 35px;
-}
+
+    .pagar-carri{
+        padding-top: 5px;
+        width: 80%;
+        height: 200px;
+        background-color:rgba(255, 255, 255, 0.248) ;
+        text-align: center;
+        border-radius: 8px;
+        display: flex;
+        justify-content: center;
+
+    }
+    .conte-artic{
+    padding-left: 10px;
+        border-radius: 8px;
+    width: 80%;
+    background-color: rgba(255, 255, 255, 0.248);
+    }
+    .caja-img{
+        width: 30%;
+        }
+        .imagenes img{
+            border-radius: 6px;
+            width: 60px;
+            height: 70px;
+        }
+        .caja-descripcion{
+            width: 30%;
+            height: 90%;
+            font-size: 10px;
+        }
+
+        .precio-total{
+            width: 22%;
+            height: 40px;
+            border-radius: 6px;
+            background-color: rgba(255, 255, 255, 0.412) ;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 7px;
+        }
+
+        .botones-carri button{
+            background-color: hsla(278, 27%, 57%, 0.99);
+            color: rgb(255, 255, 255);
+            width: 40px;
+            height: 25px;
+            border-radius: 6px;
+            font-size: 8px;
+        }
+
+
+        .envio{
+            border-radius: 8px;
+            background-color: rgba(255, 255, 255, 0.412);
+            padding-top: 10px;
+            text-align: center;
+            color: green;
+            width: 50px;
+            height: 30px;
+        }
+        .articulos-carri{
+            width:95%;
+            height: 150px;
+            border: solid 4px rgb(149, 84, 182);
+            background-color: #f5a2e7c7;
+            margin-bottom: 8px;
+          padding-top: 8px;
+          border-radius: 8px;
+        }
+        h2.resu-carr{
+            border-bottom: 2px solid #000000;
+            margin-bottom: 5px;
+          margin-left: 10px;
+        font-size: 14px;
+        text-align: center;
+        
+        }
+        .total-carr{
+           
+            font-size: 14px;
+        }
+        
 }

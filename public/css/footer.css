@@ -3,7 +3,7 @@
 
     background-color: black;
     width: 100%;
-    height: 340px;
+    height: 320px;
     
     display: flex;
     max-width: 1200px;
@@ -13,15 +13,15 @@
         color: #ec38bc;;
         margin-bottom: 5px;
     }
-    a{
+ /*    a{
         font-size: 20px;
-    }
+    } */
     
     
     
     /* -------------------------------- */
     
-    /* tamao para celulares  */
+    /* tamaño para celulares  */
     @media(max-width:478px){ 
         
     .caja1 {
