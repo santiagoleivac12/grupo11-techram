@@ -64,7 +64,7 @@
 }
 
 .redes-register-elemnt:hover {
-  background-color: var(--morado);
+  background-color: blueviolet;
   cursor: pointer;
 }
 .register-info-cont > p {
@@ -95,15 +95,15 @@
   box-sizing: border-box;
 }
 .btn {
-  width: 70%;
-  height: 3rem;
-  letter-spacing: 1px;
-  text-transform: uppercase;
-  color: thistle;
-  border-radius: 7px;
-  background-color: var(--morado);
-  cursor: pointer;
-  border-radius: 7px;
+  background-color: hsla(278, 27%, 57%, 0.99);
+  color: rgb(255, 255, 255);
+  width: 650px;
+  height: 300px;
+  border-radius: 6px;
+}
+.btn:hover{
+  background-color: blueviolet;
+    cursor: pointer;
 }
 .inputs-container p {
   margin: 0;

@@ -5,6 +5,7 @@ let path = require('path')
 
 //middlewares
 app.use(express.static('public'))
+app.set("view engine", ejs)
 
 // Routes
 app.get('/', function (req, res){

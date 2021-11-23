@@ -6,8 +6,8 @@
     height: 320px;
     
     display: flex;
-    max-width: 1200px;
-        margin: 0 auto;
+    /*max-width: 1200px;*/
+       /* margin: 0 auto;*/
     }
     h4.color{
         color: #ec38bc;;
@@ -184,6 +184,10 @@
     /* footer-escritorio(desktop) */
     
     @media(min-width:770px){
+        .contenedor{
+            width: 100%;
+            height: 320px;
+        }
         .section-footer{
            padding-top: 15px;
            justify-content: space-around;
