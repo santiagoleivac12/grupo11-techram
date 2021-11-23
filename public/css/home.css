@@ -114,9 +114,7 @@ a {
     flex-direction: column;
     width: 45%;
     justify-content: space-between;
-    background: linear-gradient(to bottom , #03001e, #7303c0, #fdeff9); 
-    background-size: cover;
-    background-attachment: fixed;
+    background-color: rgba(255, 255, 255, 0.248);
     border: .5px solid rgba(160, 102, 218, 0.658);
 }
 
