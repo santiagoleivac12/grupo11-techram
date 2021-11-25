@@ -29,7 +29,7 @@ ya que ofrecemos ayuda para armar una pc según las necesidades del cliente.
 
 **Ricardo Jose Juturi**
 - 20 años 
-- Estudiante de programación web Full Stack, ciclista y dibujante
+- Estudiante de programación web Full Stack, aprendiendo a tocar guitarra, ciclista y dibujante.
 
 ## Sitios de referencia:
 
