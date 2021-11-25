@@ -8,7 +8,7 @@ app.use(express.static('public'))
 app.set('views', path.join(__dirname, 'views'));
 app.set('view engine', 'ejs');
 
-const indexRouter = require('./routes/indexRouter')
+const indexRouter = require('./src/routes/indexRouter')
 
 // Routes
 app.use('/', indexRouter)
