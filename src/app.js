@@ -5,13 +5,19 @@ let path = require('path')
 
 //middlewares
 app.use(express.static('public'))
-app.set('views', path.join(__dirname, 'views'));
+
 app.set('view engine', 'ejs');
+app.set('views', path.join(__dirname, 'views'));
 
-const indexRouter = require('./src/routes/indexRouter')
 
+let indexRouter = require('./routes/indexRouter')
+let detalleRouter = require('./routes/detalleRouter')
+let carritoRouter = require('./routes/carritoRouter')
 // Routes
 app.use('/', indexRouter)
+app.use('/detalle', detalleRouter)
+app.use('/carrito', carritoRouter)
+
 
 app.get('/register', function (req, res){
     res.sendFile(path.join(__dirname, './views/register.ejs'))
@@ -21,12 +27,6 @@ app.get('/login', function (req, res){
 })
 app.get('/perfil', function (req, res){
     res.sendFile(path.join(__dirname, './views/perfil.ejs'))
-})
-app.get('/detalle', function (req, res){
-    res.sendFile(path.join(__dirname, './views/detalleDeProducto.ejs'))
-})
-app.get('/carrito', function (req, res){
-    res.sendFile(path.join(__dirname, './views/carrito.ejs'))
 })
 
 //Server

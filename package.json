@@ -2,7 +2,7 @@
   "name": "grupo11-techram-master",
   "version": "1.0.0",
   "description": "![Logo de techRam](Logo/logo.jpeg)\r ![Logo de techRam](Logo/techram.jpeg)\r ## Nuestro sitio",
-  "main": "app.js",
+  "main": "src/app.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
   },
