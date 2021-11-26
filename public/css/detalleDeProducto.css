@@ -1,59 +1,74 @@
-.container-detalle {
-  height: 100%;
+.container-detail{
+  display: flex;
+  height: 25em;
+  width: 80em;
+  margin: 5em auto;
+  justify-content: space-between;
+}
+.inf-detail{
   width: 100%;
-  display: flex;
-  align-items: center;
-  flex-direction: column;
-  text-align: center;
+  padding: 20px;
+  padding-top: 10px;
+  margin-top: 20px;
 }
-
-.imagen-detalle {
-  height: 300px;
-  width: 300px;
-}
-
-.container-boton {
-  display: flex;
-  flex-direction: column-reverse;
-  align-items: center;
-  justify-content: center;
-}
-
-.botones-detalle,
-.button-detalle {
-  display: flex;
-  justify-content: center;
-  background-color: #b87cfd;
-  border-radius: 0.8rem;
-  width: 40%;
-  height: fit-content;
-  height: -moz-fit-content;
-  text-align: center;
-  margin: 0 auto;
-  margin-bottom: 7px;
-  padding: 0.4rem;
-  text-transform: uppercase;
-  border: none;
-  cursor: pointer;
-  color: white;
-}
-
-.cantidad-detalle {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-}
-
-.selector-cant {
-  width: 20%;
+.product-detail{
+  margin-left: 5em;
+  margin-right:0px;
   height: 40px;
-  border-radius: 10px;
+  width: 90%;
+}
+.product-small-img img{
+width: 100%;
+border: 1px solid rgba(0, 0, 0, 0.2);
+padding: 8px;
+margin: 10px 10px 15px;
+cursor: pointer;
+}
+.product-small-img{
+  width: 15%;
+  display: flex;
+}
+.img-container-detail img{
+height: 300px;
+}
+.img-container-detail{
+  padding: 10px;
+  width:30% ;
+}
+.detail-name{
+  font-family:var(--font-titulos) ;
+  font-size: 40px;
+  color: thistle;
+  padding-bottom: 20px;
+}
+.price-detail{
+  font-family: var(--font-textos);
+  color: thistle;
+  padding-bottom: 10px;
+  font-size: 20px;
+
+}
+
+.button-detail{
+  background-color: hsla(278, 27%, 57%, 0.99);
+  color: rgb(255, 255, 255);
+  width: 50%;
+  height: 90%;
+  border-radius: 6px;
+  padding: 10px;
+  margin-top:10px;
+  margin-bottom: 10px;
+}
+.button-detail:hover{
+  background-color: blueviolet;
+    cursor: pointer;
 }
 .details {
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: center;
+  padding-bottom: 10px;
 }
 
 .article-detalle {
@@ -67,6 +82,7 @@
   margin-bottom: 8px;
   font-family: var(--font-titulos);
   border-bottom: 3px solid var(--inter);
+  font-size: 30px;
 }
 
 .p-detalle {
@@ -79,12 +95,14 @@
   font-family: var(--font-titulos);
   margin: 10px;
 }
-
-.price-detalle-responsive {
-  display: none;
-}
+ 
 
 @media (min-width: 500px) {
+  .container-detail{
+    display:none;
+
+    
+  }
   .article-detalle h4 {
     font-size: 35px;
   }
