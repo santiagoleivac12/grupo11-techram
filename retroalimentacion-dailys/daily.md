@@ -1,4 +1,4 @@
-## Dailys sprint 2
+## Dailys sprint 3
 # Reunión 23/11/2021
 - Actualización del trello con las tareas del nuevo sprint
 - Repartir las tareas, colocar prioridades, vencimientos.
