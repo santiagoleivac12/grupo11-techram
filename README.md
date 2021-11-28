@@ -53,7 +53,8 @@ Elegimos estas paginas debido a que algunas son pioneras en lo relacionado a ven
 
 ## Retroalimentación
 
-- [Sprint 1](/retroalimentacion/sprint1.md)
-- [Sprint 2](/retroalimentacion/sprint2.md)
+- [Sprint 1](/retroalimentacion-dailys/sprint1.md)
+- [Sprint 2](/retroalimentacion-dailys/sprint2.md)
 
-##
+## Registro Dailys
+- [Dailys sprint 3](/retroalimentacion-dailys/daily.md)
