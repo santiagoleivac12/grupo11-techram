@@ -13,6 +13,6 @@
 
 # Reunión 28/11/2021
 - Solo ingresamos 2 participantes a la reunión.
-- Se habló de:
-    -Página de administrador: en proceso
-    - Repartir la tarea de partials, debido a la falta de avances por parte del responsable y su ausencia en las dailys.
+    - Se habló de:
+        -Página de administrador: en proceso
+        -Repartir la tarea de partials, debido a la falta de avances por parte del responsable y su ausencia en las dailys.
