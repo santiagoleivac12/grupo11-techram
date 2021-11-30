@@ -1,3 +1,6 @@
+
+
+
 .container-detail{
   display: flex;
   height: 100%;
@@ -125,6 +128,7 @@ height: 300px;
   }
   
 }
+/* ------------------------ */
 @media(min-width:770px){
 
   .container-main-detalle {

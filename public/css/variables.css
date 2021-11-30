@@ -8,7 +8,8 @@
     --inter: #7303c0;
     --degradeFondo: linear-gradient(to bottom , #03001e, #7303c0, #fdeff9);
 }
- body{
+
+body{
     --font-titulos: "Bebas Neue", cursive;
     --font-textos:'Source Sans Pro', sans-serif;
     background-image: linear-gradient(to bottom, #03001e, #7303c0, #fdeff9 );
