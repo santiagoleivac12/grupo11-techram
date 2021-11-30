@@ -1,5 +1,6 @@
 
-.contenedor-admin{
+
+ .contenedor-admin{
    width: 100%;
    height: 100%;
    margin: 10px;
@@ -9,11 +10,11 @@
    align-items: center;
    padding-bottom: 8px;
 }
-
-.img-edit{
+ 
+img.img-edit{
 margin-left: 20px;
- height: 80%;
- width: 80%;  
+ height: 50%;
+ width: 50%;  
  padding-bottom: 10px; 
 }
 
@@ -29,7 +30,7 @@ margin-left: 20px;
 }
 .eliminar-todo-btn{
     height: 35px;
-    width: 300px;
+    width: 70%;
     background-color: red;
     color: white;
 }
@@ -64,18 +65,111 @@ margin-left: 20px;
     width: 100%;
     margin: 0px;
     padding-top: 10px;
+    color: #7303c0;
     
 }
+img.logo-tech{
+    width: 35%;
+    height: 100%;
+}
+header.logo{
+    height: 150px;
+    background-color: #150050;
+    text-align: center;
+}
+.product-detail-edit{
+    width: 80%;
+    text-align: center;
+    background-color: #e7d8e8;
+    border-radius: 8px;
+}
+@media (min-width:480px){
+    .eliminar-todo-btn{
+font-size: 18px;
+border-radius: 6px;
+        height: 40px;
+        width: 300px;
+        background-color: red;
+        color: white;
+    }
+    .eliminar-todo-btn1{ 
+        font-size: 18px;
+border-radius: 6px;
+        background-color: red;
+        color: white;
+        height: 40px;
+        width: 110px;
+
+    }
+    .eliminar-todo-btn2{ 
+        font-size: 18px;
+border-radius: 6px;
+        background-color:gray;
+        color: white;
+        height: 40px;
+        width: 110px;
+    }
+    .eliminar-todo-btn3{ 
+        font-size: 18px;
+border-radius: 6px;
+        background-color:green;
+        color: white;
+        height: 40px;
+        width: 110px;
+    }
+    .button-container-edit-admin{
+        justify-content: space-between;
+    }
+    .rellenar-name{
+        margin-bottom: 10px;
+        width: 200px;
+        height: 30px;
+        padding-left: 5px;
+    } 
+    .price-edit{
+        font-family: var(--font-titulos);
+        font-size: 30px;
+        color: thistle;
+        width: 100%;
+        margin: 0px;
+        padding-top: 10px;}
+
+        .product-detail-edit{
+            width: 70%;
+            background-color: #e7d8e8;
+            border-radius: 8px;
+        }
+}
+
+
+
+
 
 @media (min-width:810px){
+    header.logo{
+
+        height: 200px;
+        
+    }
+    img.logo-tech{
+        width: 25%;
+        height: 100%;
+    }
     .contenedor-admin{
+        
         width: 100%;
         height: 100%;
         margin: 10px;
         padding-bottom: 8px;
         display: flex;
         flex-direction: row;
+        text-align: center;
      }
+     .product-detail-edit{
+        text-align: center;
+    background-color: #e7d8e8;
+    border-radius: 8px;
+    }
      .img-edit{
         /* margin-left: 20px; */
          height: 30%;
@@ -84,6 +178,6 @@ margin-left: 20px;
         }
        .edit-inf{
            height: 80%;
-           width: 50%;
+           width: 100%;
        }
 }

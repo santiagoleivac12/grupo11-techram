@@ -1,13 +1,16 @@
 
-
-
-.container-detail{
+ header.logo{
+  height: 100px;
+  background-color: #150050;
+  text-align: center;
+} 
+/.container-detail{
   display: flex;
   height: 100%;
   width: 80em;
   margin: 5em auto;
   justify-content: space-between;
-}
+} 
 .inf-detail{
   width: 50%;
   padding: 20px;
