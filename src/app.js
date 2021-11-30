@@ -1,6 +1,6 @@
 let express = require('express');
 let app = express();
-const PORT = 3000;
+const PORT = 4000;
 let path = require('path')
 
 //middlewares
