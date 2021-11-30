@@ -15,4 +15,7 @@
 - Solo ingresamos 2 participantes a la reunión.
 - Se hablo de:
     - Página de administrador en proceso
-    - Repartir la tarea de partials, debido a la falta de avances por parte del responsable y su ausencia en las dailys.
+
+## Reunión 29/11/2021
+- Se encontraron problemas con partails
+- Se comentó sobre el perfil administrador
