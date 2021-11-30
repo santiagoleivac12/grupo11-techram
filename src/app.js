@@ -14,10 +14,12 @@ let indexRouter = require('./routes/indexRouter');
 let detalleRouter = require('./routes/detalleRouter');
 let carritoRouter = require('./routes/carritoRouter');
 let crearProductoRouter = require('./routes/crearProductoRouter');
+let eliminarProudctoRouter = require('./routes/eliminarProductoAdminRouter')
 
 let login = require('./routes/loginRouter')
 let register = require('./routes/registerRouter')
-let perfil = require('./routes/perfilRouter')
+let perfil = require('./routes/perfilRouter');
+const { eliminarArchivo } = require('./controllers/adminController');
 
 // Routes
 app.use('/', indexRouter);
@@ -26,8 +28,9 @@ app.use('/carrito', carritoRouter);
 
 app.use('/login',login);
 app.use('/perfil',perfil);
-app.use('/register',register)
-app.use('/adminCrear', crearProductoRouter)
+app.use('/register',register);
+app.use('/crearProducto', crearProductoRouter);
+app.use('/eliminarProducto', eliminarProudctoRouter);
 
 
 //Server
