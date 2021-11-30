@@ -1,6 +1,6 @@
 let express = require('express');
 let app = express();
-const PORT = 4000;
+const PORT = 3000;
 let path = require('path')
 
 //middlewares
@@ -13,6 +13,7 @@ app.set('views', path.join(__dirname, 'views'));
 let indexRouter = require('./routes/indexRouter');
 let detalleRouter = require('./routes/detalleRouter');
 let carritoRouter = require('./routes/carritoRouter');
+let crearProductoRouter = require('./routes/crearProductoRouter');
 
 let login = require('./routes/loginRouter')
 let register = require('./routes/registerRouter')
@@ -26,7 +27,7 @@ app.use('/carrito', carritoRouter);
 app.use('/login',login);
 app.use('/perfil',perfil);
 app.use('/register',register)
-
+app.use('/adminCrear', crearProductoRouter)
 
 
 //Server
