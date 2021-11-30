@@ -1,0 +1,89 @@
+
+.contenedor-admin{
+   width: 100%;
+   height: 100%;
+   margin: 10px;
+   display: flex;
+   justify-content: center;
+   flex-direction: column;
+   align-items: center;
+   padding-bottom: 8px;
+}
+
+.img-edit{
+margin-left: 20px;
+ height: 80%;
+ width: 80%;  
+ padding-bottom: 10px; 
+}
+
+.eliminar-todo{
+    width: 100%;
+    height: 100%;
+    padding-top:10px;
+     padding-bottom:10px; 
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    
+}
+.eliminar-todo-btn{
+    height: 35px;
+    width: 300px;
+    background-color: red;
+    color: white;
+}
+.eliminar-todo-btn1{ 
+    background-color: red;
+    color: white;
+    height: 28px;
+    width: 60px;
+}
+.eliminar-todo-btn2{ 
+    background-color:gray;
+    color: white;
+    height: 28px;
+    width: 60px;
+}
+.eliminar-todo-btn3{ 
+    background-color:green;
+    color: white;
+    height: 28px;
+    width: 60px;
+}
+.button-container-edit-admin{
+    justify-content: space-between;
+}
+.rellenar-name{
+    margin-bottom: 10px;
+} 
+.price-edit{
+    font-family: var(--font-titulos);
+    font-size: 30px;
+    color: thistle;
+    width: 100%;
+    margin: 0px;
+    padding-top: 10px;
+    
+}
+
+@media (min-width:810px){
+    .contenedor-admin{
+        width: 100%;
+        height: 100%;
+        margin: 10px;
+        padding-bottom: 8px;
+        display: flex;
+        flex-direction: row;
+     }
+     .img-edit{
+        /* margin-left: 20px; */
+         height: 30%;
+         width: 50%;  
+         padding-bottom: 10px; 
+        }
+       .edit-inf{
+           height: 80%;
+           width: 50%;
+       }
+}
