@@ -4,7 +4,7 @@
   background-color: #150050;
   text-align: center;
 } 
-/.container-detail{
+.container-detail{
   display: flex;
   height: 100%;
   width: 80em;

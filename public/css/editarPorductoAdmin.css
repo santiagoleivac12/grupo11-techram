@@ -2,7 +2,7 @@
 
  .contenedor-admin{
    width: 100%;
-   height: 100%;
+  /*  height: 90vh; */
    margin: 10px;
    display: flex;
    justify-content: center;
@@ -68,15 +68,11 @@ margin-left: 20px;
     color: #7303c0;
     
 }
-img.logo-tech{
+/* img.logo-tech{
     width: 35%;
     height: 100%;
-}
-header.logo{
-    height: 150px;
-    background-color: #150050;
-    text-align: center;
-}
+} */
+
 .product-detail-edit{
     width: 80%;
     text-align: center;
@@ -146,29 +142,19 @@ border-radius: 6px;
 
 
 @media (min-width:810px){
-    header.logo{
 
-        height: 200px;
-        
-    }
-    img.logo-tech{
-        width: 25%;
-        height: 100%;
-    }
     .contenedor-admin{
         
         width: 100%;
-        height: 100%;
         margin: 10px;
         padding-bottom: 8px;
         display: flex;
-        flex-direction: row;
         text-align: center;
      }
      .product-detail-edit{
         text-align: center;
-    background-color: #e7d8e8;
-    border-radius: 8px;
+        background-color: #e7d8e8;
+        border-radius: 8px;
     }
      .img-edit{
         /* margin-left: 20px; */
