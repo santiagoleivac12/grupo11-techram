@@ -19,7 +19,7 @@ let eliminarProudctoRouter = require('./routes/eliminarProductoAdminRouter')
 let login = require('./routes/loginRouter')
 let register = require('./routes/registerRouter')
 let perfil = require('./routes/perfilRouter');
-const { eliminarArchivo } = require('./controllers/adminController');
+
 
 // Routes
 app.use('/', indexRouter);

@@ -4,19 +4,10 @@
     box-sizing: border-box;
 }
 
-/* .logo-admin {
-    width: 100%;
-    object-fit: cover;
-    margin: 0 auto;
-}
-
-.logo-admin img {
-
-} */
-
-.header-admin {
-    background-color: var(--inter);
+.logo-admin {
+    background-color: var(--morado);
     height: 100px;
+    text-align: center;
 }
 
 .main-perfil {
@@ -25,6 +16,7 @@
     height: 100vh;
     color: black;
     padding: 10px;
+    margin-top: 10px;
 }
 
 .creacion-producto {
