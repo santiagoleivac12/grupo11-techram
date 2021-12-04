@@ -58,3 +58,8 @@ Elegimos estas paginas debido a que algunas son pioneras en lo relacionado a ven
 
 ## Registro Dailys
 - [Dailys sprint 3](/retroalimentacion-dailys/daily.md)
+
+
+
+
+

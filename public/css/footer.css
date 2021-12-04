@@ -3,7 +3,7 @@
 
     background-color: black;
     width: 100%;
-    height: 320px;
+    height: 330px;
     
     display: flex;
     /*max-width: 1200px;*/
@@ -12,17 +12,21 @@
     h4.color{
         color: #ec38bc;;
         margin-bottom: 5px;
+        font-family: var(--font-titulos);
     }
  /*    a{
         font-size: 20px;
     } */
     
-    
+    .main-footer{
+        width: 100%;
+        height: 100%;
+    }
     
     /* -------------------------------- */
     
     /* tamaño para celulares  */
-    @media(max-width:478px){ 
+    @media(max-width:495px){ 
         
     .caja1 {
     display: none;
@@ -33,10 +37,11 @@
     }
     .caja3 a{
         
-      
+      font-family: var(--font-textos);
         font-size: 12px;
         width: max-content;
         height: 30%;
+        margin-top: 15px;
     }
     .caja3{
         width: 30%;
@@ -46,9 +51,10 @@
      .caja4 .hijo{
         display: flex;
         flex-direction: row;
-        justify-content: space-around;
-        font:menu;
-        width: 90%;
+        justify-content: space-evenly;
+        /* font:menu; */
+        width: 100%;
+        
         
        
     }
@@ -58,9 +64,11 @@
     .contenedor{
         width: 100%;
         height: 200px;
+        font-family: var(--font-textos);
     }
     .main-footer{
         width:95%;
+        display: flex;
     }
     .section-footer{
         width: 90%;
@@ -79,6 +87,7 @@
          display:inline;
          width: 100%;
          height: 75%;
+         justify-content: space-around;
         
        
     }
@@ -144,15 +153,22 @@
     /* footer-tablet() */
     
     @media(min-width:500px){
-        
+        .contenedor{
+            width: 100%;
+            font-family: var(--font-textos);
+        }
+        .main-footer{
+            width: 100%;
+        }
         
         .section-footer{
-            margin: 10px;
+     
             display:flex;
             flex-direction:row;
-            align-items: flex-start;
+           
             padding-top: 15px;
-            font-size: large
+            font-size: large;
+            justify-content: space-around;
             
         }
         
@@ -165,7 +181,7 @@
         }
         .caja3 a{
             margin-bottom: 10px;
-            
+            font-family: var(--font-textos);
     
         }
         .caja4 a{
@@ -186,7 +202,8 @@
     @media(min-width:770px){
         .contenedor{
             width: 100%;
-            height: 320px;
+            font-family: var(--font-textos);
+            
         }
         .section-footer{
            padding-top: 15px;
@@ -199,3 +216,6 @@
         flex-direction: column;
     }
     
+    .caja3{
+        font-family: var(--font-textos);
+    }
