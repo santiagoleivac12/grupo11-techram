@@ -6,8 +6,9 @@
 
 .logo-admin {
     background-color: var(--morado);
-    height: 100px;
+    height: 110px;
     text-align: center;
+    margin-bottom: 100px;
 }
 
 .main-perfil {

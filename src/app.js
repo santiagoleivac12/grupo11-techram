@@ -6,14 +6,18 @@ let path = require('path')
 //middlewares
 app.use(express.static('public'))
 
+//Para capturar la información de los formularios
+app.use(express.urlencoded({extended: false}));
+app.use(express.json())
+
 app.set('view engine', 'ejs');
 app.set('views', path.join(__dirname, 'views'));
 
 
-let indexRouter = require('./routes/index');
-let productsRouter = require('./routes/products');
-let adminRouter = require('./routes/admin');
-let usersRouter = require('./routes/users')
+const indexRouter = require('./routes/index');
+const productsRouter = require('./routes/products');
+const adminRouter = require('./routes/admin');
+const usersRouter = require('./routes/users')
 
 
 

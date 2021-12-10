@@ -1,0 +1,62 @@
+*{
+    box-sizing: border-box;
+    padding: 0;
+    margin: 0;
+}
+
+.button-admin {
+    display: flex;
+    /* flex-direction: row; */
+}
+
+.button-edit {
+    background-color: hsla(278, 27%, 57%, 0.99);
+    border-radius: .8rem;
+    width: 40%;
+    height: fit-content;
+    height: -moz-fit-content;
+    text-align: center;
+    margin: 0 auto;
+    margin-bottom: 7px;
+    padding: .53rem;
+    text-transform: uppercase;
+    border:none;
+    cursor: pointer;
+    text-transform: uppercase;
+    font-family: var(--font-textos);
+    color: white;
+}
+
+.button-delete {
+    background-color: hsla(278, 27%, 57%, 0.99);
+    border-radius: .8rem;
+    width: 40%;
+    height: fit-content;
+    height: -moz-fit-content;
+    text-align: center;
+    margin: 0 auto;
+    margin-bottom: 7px;
+    padding: .53rem;
+    text-transform: uppercase;
+    border:none;
+    cursor: pointer;
+    text-transform: uppercase;
+    font-family: var(--font-textos);
+    color: white;
+}
+
+.productos-article__card-admin {
+    margin-bottom: 15px;
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: column;
+    width: 45%;
+    justify-content: space-between;
+    background-color: rgba(255, 255, 255, 0.248);
+    border: .5px solid rgba(160, 102, 218, 0.658);
+}
+
+.productos-article .productos-article__card-admin a img{
+    width: 100%;
+    object-fit: cover;
+}

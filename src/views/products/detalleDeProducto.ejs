@@ -71,21 +71,21 @@
     <div class="container-detail">
         <div class="product-detail">
             <div class="img-container-detail">
-                <img id="imageBox" src="/images/productos/producto11.png">
+                <img id="imageBox" src="/images/productos/<%- product.image %>">
             </div>
             <div class="product-small-img">
-                <img src="/images/productos/producto11-2.jpg" onclick="cambiar(this)">
-                <img src="/images/productos/producto11-3.jpg" onclick="cambiar(this)">
-                <img src="/images/productos/producto11-3.jpg" onclick="cambiar(this)">
-                <img src="/images/productos/producto11-3.jpg" onclick="cambiar(this)">
+                <img src="/images/productos/" onclick="cambiar(this)">
+                <img src="/images/productos/" onclick="cambiar(this)">
+                <img src="/images/productos/" onclick="cambiar(this)">
+                <img src="/images/productos/" onclick="cambiar(this)">
             </div>
         </div>
         <div class="inf-detail">
-            <h2 class="detail-name">Nombre Producto</h2>
-            <h3 class="price-detail">$ 70000</h3>
-            <h3 class="text-detail">Stock disponible</h3>
+            <h2 class="detail-name"><%- product.name %></h2>
+            <h3 class="price-detail">$<%- product.price %></h3>
+            <h3 class="text-detail"><%- product.stock %></h3>
             <h3 class="text-detail">Envios a todo el país</h3>
-            <h3 class="text-detail">Garantía 24 meses</h3>
+            <h3 class="text-detail">Garantía <%- product.garantia %></h3>
             <label class="text-detail" for="cantidad">Cantidad: </label> 
                         <select class="selector-cant" id="dropdown" class="input-register" required>
                             <option value="1">1</option>
@@ -107,15 +107,11 @@
     </div>
     <section class="details">
         <article class="article-detalle">
-            <h4>Funciones</h4>
-                <p class="p-detalle">Lorem ipsum dolor sit amet consectetur adipisicing elit. 
-                    Consequatur architecto ullam, explicabo voluptatibus tempora optio 
-                    harum ab quaerat modi? Maiores mollitia, minus facilis ex porro 
-                    alias delectus vero. Quisquam, eum.
-                </p>
+            <h4>Descripción</h4>
+                <p class="p-detalle"><%- product.description %></p>
         </article>
         <article class="article-detalle">
-            <h4>Descripción</h4>
+            <h4>Funciones</h4>
                 <p class="p-detalle">Lorem ipsum dolor sit amet consectetur adipisicing elit. 
                     Consequatur architecto ullam, explicabo voluptatibus tempora optio 
                     harum ab quaerat modi? Maiores mollitia, minus facilis ex porro 
