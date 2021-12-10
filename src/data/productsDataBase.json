@@ -8,9 +8,10 @@
         "price": 12.500,
         "discount": 10,
         "category": "Componentes de PC ",
-        "imagen": "images/productos/producto11.png",
+        "image": "producto11.png",
         "stock available": 50,
-        "subcategory": "componente"
+        "subcategory": "componente",
+        "type": "oferta"
     },
 
 
@@ -22,9 +23,10 @@
         " price ": 25.000,
         " discount ": 10,
         "category": " Componentes de PC ",
-        " imagen ": "images/productos/producto2.jpg",
+        "image": "producto2.jpg",
         "stock available": 10,
-        "subcategory": "      "
+        "subcategory": "      ",
+        "type": "producto destacado"
     },
     {
         "id": 3,
@@ -34,9 +36,10 @@
         " price ": 50.000,
         " discount ": 10,
         "category": "Componentes de PC",
-        " imagen ": "images/productos/producto3.jpg",
+        "image": "producto3.jpg",
         "stock available": 10,
-        "subcategory": "      "
+        "subcategory": "      ",
+        "type": "producto destacado"
     },
     {
         "id": 4,
@@ -55,7 +58,7 @@
         " price ": 7.500,
         " discount ": 10,
         "category": "Periféricos",
-        " imagen ": "images/productos/producto4.jpg",
+        "image": "producto4.jpg",
         "stock available": 10,
         "subcategory": [
             "Teclados Mecanicos",
@@ -73,9 +76,10 @@
         " price ": 24.000,
         " discount ": 10,
         "category": "Componentes de PC  ",
-        " imagen ": "images/productos/producto5 (2).jpg",
+        "image": "images/productos/producto5 (2).jpg",
         "stock available": 10,
-        "subcategory": "      "
+        "subcategory": "      ",
+        "type": "producto destacado"
     },
     {
         "id": 6,
@@ -85,7 +89,7 @@
         " price ": 12.500,
         " discount ": 10,
         "category": " Periféricos",
-        " imagen ": "images/productos/productoAuriculares.jpeg",
+        "image": "images/productos/productoAuriculares.jpeg",
         "stock available": 9,
         "color": "blanaco, negro, etc",
         "subcategory": ["Auriculares Gamer",
@@ -103,9 +107,10 @@
         " price ": 288.000,
         " discount ": 10,
         "category": "     ",
-        " imagen ": "images/productos/producto7.jpg",
+        "image": "images/productos/producto7.jpg",
         "stock available": 10,
-        "subcategory": "      "
+        "subcategory": "      ",
+        "type": "producto destacado"
     },
     {
         "id": 8,
@@ -115,7 +120,7 @@
         " price ": 55.000,
         " discount ": 10,
         "category": "Periféricos",
-        " imagen ": "images/productos/producto8.jpg",
+        "image": "images/productos/producto8.jpg",
         "stock available": 5,
         "subcategory":[
             "Monitores 165Hz",
@@ -132,9 +137,10 @@
         " price ": 2500,
         " discount ": 10,
         "category": " otros productos",
-        " imagen ": "images/productos/producto9.jpg",
+        "image": "producto9.jpg",
         "stock available": 10,
-        "subcategory": "      "
+        "subcategory": "      ",
+        "type": "oferta"
     },
     {
         "id": 10,
@@ -144,9 +150,10 @@
         " price ": 15.000,
         " discount ": 10,
         "category": " Periféricos ",
-        " imagen ": "images/productos/producto10.jpg",
+        "image": "producto10.jpg",
         "stock available": 10,
-        "subcategory": "      "
+        "subcategory": "      ",
+        "type": "producto destacado"
     },
     {
         "id": 11,
@@ -156,9 +163,10 @@
         " price ": 300.000,
         " discount ": 5,
         "category": " Componentes de PC",
-        " imagen ": "images/productos/producto1.png",
+        "image": "producto1.png",
         "stock available": 10,
-        "subcategory": "      "
+        "subcategory": "      ",
+        "type": "producto destacado"
     },
     {
         "id": 12,
@@ -168,9 +176,10 @@
         " price ": 3000,
         " discount ": 10,
         "category": " Componentes de PC ",
-        " imagen ": "images/productos/producto12.png",
+        "image": "producto12.png",
         "stock available": 10,
-        "subcategory": "      "
+        "subcategory": "      ",
+        "type": "oferta"
     }
   
 ]
