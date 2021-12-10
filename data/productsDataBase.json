@@ -1,0 +1,176 @@
+[
+    {
+        "id": 1,
+        "name": "Memoria Ram",
+        "description": "Memoria Xpg Spectrix D60g Rgb 16gb (2x8) Ddr4 3000mhz Dual",
+        "product specifications":[],
+         
+        "price": 12.500,
+        "discount": 10,
+        "category": "Componentes de PC ",
+        "imagen": "images/productos/producto11.png",
+        "stock available": 50,
+        "subcategory": "componente"
+    },
+
+
+    {
+        "id": 2,
+        "name": "Gabinete",
+        " description ": "Vanguardi gabinete",
+        "product specifications":[],
+        " price ": 25.000,
+        " discount ": 10,
+        "category": " Componentes de PC ",
+        " imagen ": "images/productos/producto2.jpg",
+        "stock available": 10,
+        "subcategory": "      "
+    },
+    {
+        "id": 3,
+        "name": "Micro Procesador",
+        " description ": "Micro Procesador Amd Ryzen 5 5600g 4.4ghz Am4 16mb C/ Video",
+        "product specifications":[],
+        " price ": 50.000,
+        " discount ": 10,
+        "category": "Componentes de PC",
+        " imagen ": "images/productos/producto3.jpg",
+        "stock available": 10,
+        "subcategory": "      "
+    },
+    {
+        "id": 4,
+        "name": " ",
+        " description ": "Teclado Redragon k552W< ",
+        "product specifications":[
+            {"Interruptor": "Membrana",
+            "Altura Del Producto" :"32 Mm",
+            "Ancho Del Producto": "440 Mm",
+            "Profundidad Del Producto" :"153 Mm",
+            "Peso Total ":"1,09 Kg",
+            "Tipo De Conexion" :"Cableado",
+            "Especificaciones Del Cable": "Mallado, Reforzado. Soporta 12 Kg Y 10000 Flexiones. USB Enchapado En Oro"
+        }
+        ],
+        " price ": 7.500,
+        " discount ": 10,
+        "category": "Periféricos",
+        " imagen ": "images/productos/producto4.jpg",
+        "stock available": 10,
+        "subcategory": [
+            "Teclados Mecanicos",
+            "Teclados Membrana",
+            "Teclados RGB",
+            "Combo Teclados",
+            "Accesorios para Teclados"
+        ]
+    },
+    {
+        "id": 5,
+        "name": "Matherboard Asus",
+        " description ": "ASUS TUF GAMING B550-PLUS(Wi-fi)",
+        "product specifications":[],
+        " price ": 24.000,
+        " discount ": 10,
+        "category": "Componentes de PC  ",
+        " imagen ": "images/productos/producto5 (2).jpg",
+        "stock available": 10,
+        "subcategory": "      "
+    },
+    {
+        "id": 6,
+        "name": "  AURICULARES GAMER   ",
+        " description ": "     Auriculares Gamer Onikuma K20   ",
+        "product specifications":[],
+        " price ": 12.500,
+        " discount ": 10,
+        "category": " Periféricos",
+        " imagen ": "images/productos/productoAuriculares.jpeg",
+        "stock available": 9,
+        "color": "blanaco, negro, etc",
+        "subcategory": ["Auriculares Gamer",
+                        "Auriculares Estereo",
+                         "Auriculares Surround",
+                         "Soporte de Auriculares",
+                         "Auriculares para Celular"
+                            ]
+    },
+    {
+        "id": 7,
+        "name": "PC Completa",
+        " description ": "Combo gamer con .............. ",
+        "product specifications":[],
+        " price ": 288.000,
+        " discount ": 10,
+        "category": "     ",
+        " imagen ": "images/productos/producto7.jpg",
+        "stock available": 10,
+        "subcategory": "      "
+    },
+    {
+        "id": 8,
+        "name": "Monitor Gamer",
+        " description ": " Monitor AOC 24” Gamer G4D41N-F Full HD 1080p 75 Hz",
+        "product specifications":[],
+        " price ": 55.000,
+        " discount ": 10,
+        "category": "Periféricos",
+        " imagen ": "images/productos/producto8.jpg",
+        "stock available": 5,
+        "subcategory":[
+            "Monitores 165Hz",
+            "Monitores 144Hz",
+            "Monitores LED",
+            "Smart TV"
+        ]
+    },
+    {
+        "id": 9,
+        "name": "Tira Led",
+        " description ": "Tira luces LED x10m",
+        "product specifications":[],
+        " price ": 2500,
+        " discount ": 10,
+        "category": " otros productos",
+        " imagen ": "images/productos/producto9.jpg",
+        "stock available": 10,
+        "subcategory": "      "
+    },
+    {
+        "id": 10,
+        "name": "Tabla Dibujo Digital",
+        " description ": "Tableta Digitalizadora Wacom Intuos Small",
+        "product specifications":[],
+        " price ": 15.000,
+        " discount ": 10,
+        "category": " Periféricos ",
+        " imagen ": "images/productos/producto10.jpg",
+        "stock available": 10,
+        "subcategory": "      "
+    },
+    {
+        "id": 11,
+        "name": "Placa de video",
+        " description ": "MSI GeForce RTX 3080 Ti 12GB",
+        "product specifications":[],
+        " price ": 300.000,
+        " discount ": 5,
+        "category": " Componentes de PC",
+        " imagen ": "images/productos/producto1.png",
+        "stock available": 10,
+        "subcategory": "      "
+    },
+    {
+        "id": 12,
+        "name": "Cooler",
+        " description ": "Cpu Cooler Xigmatek Windpower 963 Intel 1200 Amd Am4",
+        "product specifications":[],
+        " price ": 3000,
+        " discount ": 10,
+        "category": " Componentes de PC ",
+        " imagen ": "images/productos/producto12.png",
+        "stock available": 10,
+        "subcategory": "      "
+    }
+  
+]
