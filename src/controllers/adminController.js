@@ -27,12 +27,12 @@ let controller = {
         let newProduct = {
             ...req.body,
             id:lastId + 1,
-            image: "producto1.png" 
+            image: req.file ? req.file.filename : "imagenqueserompa.png"  
         }
 
         products.push(newProduct);
         writeJson(products);
-        res.redirect('/products')
+        res.redirect('/admin')
 
     },
     eliminarArchivo: (req,res) => {

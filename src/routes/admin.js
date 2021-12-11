@@ -1,5 +1,6 @@
 const express = require('express');
 const router = express.Router();
+const upload = require('../middlewares/uploadProductFiles')
 
 let controller = require('../controllers/adminController');
 
@@ -8,7 +9,7 @@ router.get('/', controller.admin)
 
 //Crear archivo
 router.get('/create', controller.create);
-router.post('/', controller.store);
+router.post('/', upload.single('producto-img'), controller.store);
 
 //Eliminar archivo
 router.get('/update', controller.eliminarArchivo);
