@@ -7,8 +7,7 @@ let controller = require('../controllers/adminController');
 router.get('/', controller.admin)
 
 //Crear archivo
-router.get('/create', controller.crearArchivo);
-
+router.get('/create', controller.create);
 router.post('/', controller.store);
 
 //Eliminar archivo

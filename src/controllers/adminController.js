@@ -12,7 +12,7 @@ let controller = {
         })
     },
     //Muestra la vista para crear el producto
-    crearArchivo: (req,res) => {
+    create: (req,res) => {
         res.render('administrador/perfilAdminCrear');
     },
     store:(req,res)=>{

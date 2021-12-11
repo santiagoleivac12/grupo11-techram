@@ -11,13 +11,13 @@
     margin-bottom: 100px;
 }
 
-.main-perfil {
+.body-admin {
     background: white;
-    width: 100%;
-    height: 100vh;
+/*     width: 100%;
+    height: 100vh; */
     color: black;
-    padding: 10px;
-    margin-top: 10px;
+/*     padding: 10px;
+    margin-top: 10px; */
 }
 
 .creacion-producto {
@@ -26,9 +26,9 @@
     flex-direction: column;
     width: 90%;
     margin: 0 auto;
-    height: 90vh;
     background-color:#e7d8e8;
     border-radius: 8px;
+    margin-bottom: 70px;
 }
 
 .title-creacion-admin {
@@ -52,7 +52,7 @@
 }
 
 .creacion-producto select {
-    width: 150px;
+    width: 80px;
 }
 
 .input-admin {
@@ -62,6 +62,22 @@ label.estilo{
     font-family: var(--font-titulos);
     font-size: 20px;
     color: #360b54;
+}
+
+.button-create {
+    background-color: hsla(278, 27%, 57%, 0.99);
+    border-radius: .8rem;
+    width: 40%;
+    text-align: center;
+    margin: 0 auto;
+    margin-bottom: 7px;
+    padding: 1rem;
+    text-transform: uppercase;
+    border:none;
+    cursor: pointer;
+    text-transform: uppercase;
+    font-family: var(--font-textos);
+    color: white;
 }
 
 
@@ -88,6 +104,10 @@ label.estilo{
     .creacion-producto textarea {
         margin-bottom: 10px;
     }
+
+    .button-create {
+        width: 20%;
+    }
 }
 
 @media (min-width: 800px) {
@@ -101,12 +121,15 @@ label.estilo{
     }
 
     .input-admin {
-        position: relative;
-        left: 250px;
+        display: flex;
     }
     
     .select-admin {
-        position: relative;
-        left: 250px;
+        display: flex;
     }
+
+    .button-create {
+        width: 12%;
+    }
+
 }
