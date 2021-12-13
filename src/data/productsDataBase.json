@@ -147,7 +147,7 @@
     {
         "id": 10,
         "name": "Tabla Dibujo Digital Wacom Intuos Small",
-        "description": "",
+        "description": "Enciende tu imaginación con la nueva Intuos Draw. Incluye la tecnología de pen tablet líder de Wacom, software creativo descargable gratuito y cursos de formación en línea. Independientemente de que tu sueño sea crear bocetos asombrosos, compartir tu trabajo con amigos o comenzar una carpeta de trabajos, Intuos Draw tiene todo lo que necesitas para comenzar a crear inmediatamente.",
         "product specifications": [],
         "price": 15,
         "discount": 10,
@@ -160,7 +160,7 @@
     {
         "id": 11,
         "name": "Placa de video MSI GeForce RTX 3080 Ti 12GB",
-        "description": "",
+        "description": "VENTUS ofrece un diseño centrado en el rendimiento que mantiene lo esencial para realizar cualquier tarea. Una disposición de triple ventilador capaz colocada en un diseño industrial rígido permite que esta tarjeta gráfica de aspecto elegante se adapte a cualquier construcción.",
         "product specifications": [],
         "price": 300,
         "discount": 5,
@@ -173,7 +173,7 @@
     {
         "id": 12,
         "name": "Cpu Cooler Xigmatek Windpower 963 Intel 1200 Amd Am4",
-        "description": "",
+        "description": "Consumo 3, TDP120W, Tipo de refrigeracionAire, Velocidad del Fan 800-1800 RPM, MTTF 35K Horas",
         "product specifications": [],
         "price": 3000,
         "discount": 10,
