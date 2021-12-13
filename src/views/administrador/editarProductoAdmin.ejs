@@ -22,14 +22,14 @@
         </div>
     </header>
     <main class="main-perfil">
-        <div class="contenedor-admin">
+        <div class="contenedor-admin" action="/admin/product/edit/<%= product.id %>?_method=PUT" method="POST">
             <div class="product-detail-edit">
                 <div class="img-container-edit">
-                    <img class="img-edit" src="/images/productos/producto1.png" alt="a">
+                    <img class="img-edit" src="/images/productos/producto1.png" alt="a" value="<% product.image %>">
                     <div class="button-edit-product">
                         <div class="button-container-edit-admin">
                             <button class="eliminar-todo-btn2" >Editar</button>
-                            <button class="eliminar-todo-btn1">Eliminar</button>
+                            <button class="eliminar-todo-btn1" action="/admin/product/delete/<%- product.id %>?_method=DELETE" method="POST">Eliminar</button>
                             <button class="eliminar-todo-btn3" >Agregar</button>
         
                         </div>
@@ -37,24 +37,24 @@
             
             </div>
             <div class="edit-inf">
-                <h3 class="price-edit">Nombre Producto</h3>
-                <input class="rellenar-name" type="text" placeholder="Nombre Producto">
+                <h3 class="price-edit">Nombre Producto <i><%product.name%></i></h3>
+                <input class="rellenar-name" type="text" placeholder="Nombre Producto" value="<% product.name %>">
                 <div class="button-container-edit-admin">
                     <button class="eliminar-todo-btn2">Editar</button>
-                    <button class="eliminar-todo-btn1">Eliminar</button>
+                    <button class="eliminar-todo-btn1" action="/admin/product/delete/<%- product.id %>?_method=DELETE" method="POST">Eliminar</button>
                 </div>
                 <h3 class="price-edit">Precio</h3>
-                <input class="rellenar-name" type="text" placeholder="Precio">
+                <input class="rellenar-name" type="text" placeholder="Precio" value="<% product.price %>">
                 <div class="button-container-edit-admin">
-                    <button class="eliminar-todo-btn2">Editar</button>
-                    <button class="eliminar-todo-btn1">Eliminar</button>
+                    <button class="eliminar-todo-btn2"href="/admin/product/edit/<%= product.id" %>>Editar</button>
+                    <button class="eliminar-todo-btn1" action="/admin/product/delete/<%- product.id %>?_method=DELETE" method="POST">Eliminar</button>
                 </div>
                 <h3 class="price-edit">Stock</h3>
-                <input class="rellenar-name" type="text" placeholder="Stock">
+                <input class="rellenar-name" type="text" placeholder="Stock" value="<% product.stock %>">
             
                 <div class="button-container-edit-admin">
-                    <button class="eliminar-todo-btn2" >Editar</button>
-                    <button class="eliminar-todo-btn1">Eliminar</button>
+                    <button class="eliminar-todo-btn2" href="/admin/product/edit/<%= product.id %> "> Editar </button>
+                    <button class="eliminar-todo-btn1" action="/admin/product/delete/<%- product.id %>?_method=DELETE" method="POST">Eliminar</button>
                 </div>
             </div>
 
