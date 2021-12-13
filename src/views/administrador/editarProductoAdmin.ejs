@@ -38,20 +38,22 @@
             </div>
             <div class="edit-inf">
                 <h3 class="price-edit"><i><%product.name%></i></h3>
-                <label ></label>
-                <input class="rellenar-name" type="text" placeholder="Nombre Producto" value="<%= product.name %>">
+                <label for="name"></label>
+                <input class="rellenar-name" type="text" id="name" placeholder="Nombre Producto" value="<%= product.name %>">
                 <div class="button-container-edit-admin">
 <!--                     <button class="eliminar-todo-btn2">Editar</button>
                     <button class="eliminar-todo-btn1" action="/admin/product/delete/<%- product.id %>?_method=DELETE" method="POST">Eliminar</button> -->
                 </div>
                 <h3 class="price-edit">Precio</h3>
-                <input class="rellenar-name" type="text" placeholder="Precio" value="<% product.price %>">
+                <label for="price"></label>
+                <input class="rellenar-name" type="text" id="price" placeholder="Precio" value="<% product.price %>">
                 <div class="button-container-edit-admin">
 <!--                     <button class="eliminar-todo-btn2" href="/admin/product/edit/<%= product.id %>">Editar</button>
                     <button class="eliminar-todo-btn1" action="/admin/product/delete/<%- product.id %>?_method=DELETE" method="POST">Eliminar</button> -->
                 </div>
                 <h3 class="price-edit">Stock</h3>
-                <input class="rellenar-name" type="text" placeholder="Stock" value="<% product.stock %>">
+                <label for="editt"></label>
+                <input class="rellenar-name" type="text" id="editt" placeholder="Stock" value="<% product.stock %>">
             
                 <div class="button-container-edit-admin">
 <!--                     <button class="eliminar-todo-btn2" href="/admin/product/edit/<%= product.id %> "> Editar </button>

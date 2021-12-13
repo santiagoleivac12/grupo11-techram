@@ -1,7 +1,6 @@
 const express = require('express');
 const router = express.Router();
 const upload = require('../middlewares/uploadProductFiles')
-
 let controller = require('../controllers/adminController');
 
 //Index admin
@@ -20,10 +19,10 @@ router.get('/edit/:id', controller.edit);
 
 
 /* PUT - Update a product */
-router.put('/:id', upload.single('producto-img'), controller.update);
+router.put('/:id',upload.single('producto-img'),controller.update);
 
 /* DELETE - Delete one product */
-router.delete('/:id', controller.destroy)
+router.delete('/:id',controller.destroy)
 
 
 
