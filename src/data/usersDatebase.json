@@ -1,0 +1,72 @@
+[
+    {
+    "id": 1,
+    "firstName": "santiago" ,
+    "lastName": "leiva",
+    "email": "santyleiva53@gmail.com",
+    "password":"Hola1234",
+    "category":"masculino",
+    "image": "user.png"
+
+},
+{
+    "id": 2,
+    "firstName": "brian" ,
+    "lastName": "garcia",
+    "email": "briangarcia53@.com",
+    "password":"hola123",
+    "category":"masculino",
+    "image": "user.png"
+
+},
+{
+    "id": 3,
+    "firstName": "ricardo" ,
+    "lastName": "juturi",
+    "email": "ricardojuturi53@gmail.com",
+    "password":"hola12345",
+    "category":"masculino",
+    "image": "user.png"
+
+},
+{
+    "id": 4,
+    "firstName": "micaela" ,
+    "lastName": "sosa",
+    "email": "micaelasosa53@gmail.com",
+    "password":"hola4321",
+    "category":"femenino",
+    "image": "user.png"
+
+},
+{
+    "id": 5,
+    "firstName": "mara" ,
+    "lastName": "leiva",
+    "email": "maraleiva53@gmail.com",
+    "password":"hola43211",
+    "category":"femenino",
+    "image": "user.png"
+
+},
+{
+    "id": 6,
+    "firstName": "celeste" ,
+    "lastName": "otazo",
+    "email": "celesteotazo53@gmail.com",
+    "password":"hola54321",
+    "category":"femenino",
+    "image": "user.png"
+
+},
+{
+    "id": 7,
+    "firstName": "lautaro" ,
+    "lastName": "bozzolo",
+    "email": "lautarobozzolo53@gmail.com",
+    "password":"hola1234567",
+    "category":"masculino",
+    "image": "user.png"
+
+}
+]
