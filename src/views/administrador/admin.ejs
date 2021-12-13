@@ -15,11 +15,11 @@
             </div>
         </div>
     </header>
-    <main class="main-perfil">
+    <main>
         <h3 class="title-card">Todos los productos</h3>
         <article class="productos-article">
             <% products.forEach(product => { %>
-                <div class="productos-article__card-admin">
+                <div class="productos-article__card">
                     <div class="card-img">                        
                         <a href="/products/detail/<%- product.id %>"><img src="images/productos/<%- product.image %>" alt="pc"></a>
                         <h5 class="descripcion-producto"><%- product.name %> </h5>

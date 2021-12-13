@@ -45,7 +45,12 @@
     color: white;
 }
 
-.productos-article__card-admin {
+.button-edit a,
+.button-delete a{
+    color: white;
+}
+
+/* .productos-article__card-admin {
     margin-bottom: 15px;
     display: flex;
     flex-wrap: wrap;
@@ -59,4 +64,4 @@
 .productos-article .productos-article__card-admin a img{
     width: 100%;
     object-fit: cover;
-}
+} */
