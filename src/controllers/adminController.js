@@ -42,16 +42,16 @@ let controller = {
     /* -------------------------------------- */
 
 
-    edit: (req,res)=> {
+    edit: (req, res) => {
         let productId = +req.params.id;
 
         let product = products.find(product => product.id = productId)
-res.render("administrador/editarProductoAdmin",{
-    product,
+        res.render("administrador/editarProductoAdmin", {
+            product,
 
-})
-},
-update: (req, res) => {
+        })
+    },
+    update: (req, res) => {
     let productId = +req.params.id;
 
     const {name, price, category, subcategory, description, discount} = req.body
