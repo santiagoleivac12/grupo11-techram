@@ -4,12 +4,12 @@
         <% productsDestacados.forEach(product => { %>
             <div class="productos-article__card">
                 <div class="card-img">                        
-                    <a href="/products/detail/<%- product.id %>"><img src="images/productos/<%= product.image %>" alt="pc"></a>
+                    <a><img src="images/productos/<%= product.image %>" alt="pc"></a>
                     <h5 class="descripcion-producto"><%- product.name %> </h5>
                     <p class="price">$<%- product.price %></p>
                 </div>
                 <div class="button-producto">
-                    <a href="detalle">VER PRODUCTO</a>
+                    <a href="/products/detail/<%- product.id %>">VER PRODUCTO</a>
                 </div>
             </div>
         <% }) %>
@@ -19,12 +19,12 @@
         <% productsInSale.forEach(product => { %>
             <div class="productos-article__card">
                 <div class="card-img">                        
-                    <a href="/products/detail/<%- product.id %>"><img src="images/productos/<%= product.image %>" alt="pc"></a>
+                    <a><img src="images/productos/<%= product.image %>" alt="pc"></a>
                     <h5 class="descripcion-producto"><%= product.name %> </h5>
                     <p class="price">$<%= product.price %> </p>
                 </div>
                 <div class="button-producto">
-                    <a href="detalle">VER PRODUCTO</a>
+                    <a  href="/products/detail/<%- product.id %>">VER PRODUCTO</a>
                 </div>
             </div>
         <% }) %>
