@@ -37,9 +37,9 @@ let controller = {
         res.redirect('/admin')
 
     },
-    eliminarArchivo: (req,res) => {
+/*     eliminarArchivo: (req,res) => {
         res.render('administrador/editarProductoAdmin');
-    },
+    }, */
     /* -------------------------------------- */
 
 
@@ -48,8 +48,7 @@ let controller = {
 
         let product = products.find(product => product.id = productId)
         res.render("administrador/editarProductoAdmin", {
-            product,
-
+            product
         })
     },
     update: (req, res) => {
@@ -72,7 +71,7 @@ let controller = {
 
     writeProductsJSON(products)
 
-    res.redirect('products')
+    res.redirect('/admin')
 },
 
 destroy: (req, res) => {
@@ -96,7 +95,7 @@ destroy: (req, res) => {
     })
 
     writeProductsJSON(products)
-    res.redirect('products')
+    res.redirect('/admin')
 }
   
 }

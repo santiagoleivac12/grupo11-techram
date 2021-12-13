@@ -12,18 +12,18 @@ router.get('/create', controller.create);
 router.post('/', upload.single('producto-img'), controller.store);
 
 //Eliminar archivo
-router.get('/update', controller.eliminarArchivo);
+//router.get('/update', controller.eliminarArchivo);
 
 
 /* GET - Show product edit form */
-router.get('/product/edit/:id', controller.edit);
+router.get('/:id/edit', controller.edit);
 
 
 /* PUT - Update a product */
-router.put('/product/:id', controller.update);
+router.put('/:id', upload.single('producto-img'), controller.update);
 
 /* DELETE - Delete one product */
-router.delete('/product/delete/:id', controller.destroy)
+router.delete('/:id', controller.destroy)
 
 
 
