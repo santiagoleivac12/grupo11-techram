@@ -22,7 +22,7 @@
         </div>
     </header>
     <main class="main-perfil">
-        <div class="contenedor-admin" action="/admin/edit/<%= product.id %>?_method=PUT" method="POST">
+        <form class="contenedor-admin" action="/admin/edit/<%= product.id %>?_method=PUT" method="POST">
             <div class="product-detail-edit">
                 <div class="img-container-edit">
                     <img class="img-edit" src="/images/productos/producto1.png" alt="a" value="<% product.image %>">
@@ -65,7 +65,7 @@
             </div>
 
             </div>
-        </div>
+        </form>
         
     </main>
 </body>
