@@ -37,7 +37,18 @@ let controller = {
     },
     eliminarArchivo: (req,res) => {
         res.render('administrador/editarProductoAdmin');
-    }
+    },
+    /* -------------------------------------- */
+    edit: (req,res)=> {
+        let product = products.find(product => product)
+res.render("admin/product/adminProductEditForm")
+    },
+
+
+
+
+    
+    
 }
 
 module.exports = controller;
