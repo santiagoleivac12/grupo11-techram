@@ -2,14 +2,15 @@ const fs = require('fs');
 const path = require('path');
 
 
-const productsFilePath = path.join(__dirname, '../data/productsDataBase.json')
+const productsFilePath = path.join(__dirname, '../data/productsDataBase.json') 
 const products = JSON.parse(fs.readFileSync(productsFilePath, 'utf-8'));
 const writeJson = dataBase => fs.writeFileSync(productsFilePath, JSON.stringify(dataBase), 'utf-8')
 
 let controller = {
     admin: (req,res) => {
         res.render('administrador/admin',{
-            products
+            products,
+            categories
         })
     },
 
@@ -69,7 +70,7 @@ let controller = {
         }
     })
 
-    writeProductsJSON(products)
+    writeJson(products);
 
     res.redirect('/admin')
 },
@@ -94,7 +95,7 @@ destroy: (req, res) => {
         }
     })
 
-    writeProductsJSON(products)
+    writeJson(products)
     res.redirect('/admin')
 }
   
