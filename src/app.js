@@ -3,6 +3,10 @@ let app = express();
 const PORT = 3000;
 let path = require('path')
 
+//
+const methodOverride = require('method-override');
+app.use(methodOverride('_method')); 
+
 //middlewares
 app.use(express.static('public'))
 
