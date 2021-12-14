@@ -70,7 +70,8 @@
 
             </div>
         </form>
-        <form action="/admin/<%- product.id %>/delete?_method=delete" method="POST"><button class="eliminar-todo-btn">Eliminar Producto</button>
+        <form action="/admin/<%- product.id %>?_method=DELETE" method="POST">
+            <button class="eliminar-todo-btn" type="submit">Eliminar Producto</button>
         </form>
         
     </main>

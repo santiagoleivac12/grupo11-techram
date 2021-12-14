@@ -64,8 +64,8 @@ destroy: (req, res) => {
     let productId = +req.params.id;
     products.forEach(product => {
         if(product.id === productId){
-            if(fs.existsSync("./public/images/productos/", product.image[0])){
-                fs.unlinkSync(`./public/images/productos/${product.image[0]}`)
+            if(fs.existsSync("./public/images/productos/", product.image)){
+                fs.unlinkSync(`./public/images/productos/${product.image}`)
             }else{
                 console.log('No encontré el archivo')
             }

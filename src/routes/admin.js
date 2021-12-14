@@ -22,7 +22,7 @@ router.get('/:id/edit', controller.edit);
 router.put('/:id/edit',upload.single('producto-img'),controller.update);
 
 /* DELETE - Delete one product */
-router.delete('/:id/delete',controller.destroy)
+router.delete('/:id',controller.destroy)
 
 
 
