@@ -45,8 +45,7 @@ let controller = {
 
     edit: (req, res) => {
         let productId = +req.params.id;
-
-        let product = products.find(product => product.id = productId)
+        let product = products.find(product => product.id === productId)
         res.render("administrador/editarProductoAdmin", {
             product
         })
@@ -54,18 +53,20 @@ let controller = {
     update: (req, res) => {
     let productId = +req.params.id;
 
-    const {name, price, category, subcategory, description, discount} = req.body
+    const {name, price, category/* , description, discount, stock, type, specifications */} = req.body;
 
     products.forEach(product => {
         if(product.id === productId){
             product.id = product.id,
             product.name = name.trim(),
             product.price = +price.trim(),
-            product.category = +category,
-            product.subcategory = subcategory,
-            product.description = description.trim(),
+            product.category = +category
+/*             product.description = description.trim(),
             product.discount = +discount,
-            product.image = req.file ? [req.file.filename] : product.image
+            product.stock = stock,
+            product.type = type,
+            product.specifications = specifications,
+            product.image = req.file ? [req.file.filename] : product.image */
         }
     })
 
