@@ -22,7 +22,7 @@
         </div>
     </header>
     <main class="main-perfil">
-        <form class="contenedor-admin" action="/admin/edit/<%= product.id %>?_method=PUT" method="POST">
+        <form class="contenedor-admin" action="/admin/edit/<%= product.id %>?_method=PUT" method="POST" enctype="multipart/form-data">
             <div class="product-detail-edit">
                 <div class="img-container-edit">
                     <img class="img-edit" src="/images/productos/producto1.png" alt="a" value="<% product.image %>">
@@ -59,13 +59,25 @@
 <!--                     <button class="eliminar-todo-btn2" href="/admin/product/edit/<%= product.id %> "> Editar </button>
                     <button class="eliminar-todo-btn1" action="/admin/product/delete/<%- product.id %>?_method=DELETE" method="POST">Eliminar</button> -->
                 </div>
+
+                <label class="estilo" for="categoria-admin">Elige la categoria:</label>
+                <select id="categoria-admin" class="select-admin" required>
+                    <option value="<%- product.category %>">categoria</option>
+                    <option value="<%- product.category %>">categoria</option>
+                    <option value="<%- product.category %>">categoria</option>
+                    <option value="<%- product.category %>">categoria</option>
+                    <option value="<%- product.category %>">categoria</option>
+                    <option value="<%- product.category %>">categoria</option>
+                </select>
             </div>
 
 
             <div class="eliminar-todo">
+
                 <button class="eliminar-todo-btn2" type="submit">Guardar</button>
-                <button class="eliminar-todo-btn">Eliminar Producto</button>
-            </div>
+                <form action="/admin/delete/<%- product.id %>?_method=delete" method="POST"><button class="eliminar-todo-btn">Eliminar Producto</button>
+                </form>
+                </div>
 
             </div>
         </form>

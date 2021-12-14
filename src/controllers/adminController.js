@@ -9,8 +9,7 @@ const writeJson = dataBase => fs.writeFileSync(productsFilePath, JSON.stringify(
 let controller = {
     admin: (req,res) => {
         res.render('administrador/admin',{
-            products,
-            categories
+            products
         })
     },
 
