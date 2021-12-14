@@ -19,10 +19,10 @@ router.get('/:id/edit', controller.edit);
 
 
 /* PUT - Update a product */
-router.put('/:id',/* upload.single('producto-img') */controller.update);
+router.put('/:id/edit',upload.single('producto-img'),controller.update);
 
 /* DELETE - Delete one product */
-router.delete('/:id',controller.destroy)
+router.delete('/:id/delete',controller.destroy)
 
 
 
