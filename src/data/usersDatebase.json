@@ -5,7 +5,7 @@
     "lastName": "leiva",
     "email": "santyleiva53@gmail.com",
     "password":"Hola1234",
-    "category":"masculino",
+    "genero":"masculino",
     "image": "user.png"
 
 },
@@ -15,7 +15,7 @@
     "lastName": "garcia",
     "email": "briangarcia53@.com",
     "password":"hola123",
-    "category":"masculino",
+    "genero":"masculino",
     "image": "user.png"
 
 },
@@ -25,7 +25,7 @@
     "lastName": "juturi",
     "email": "ricardojuturi53@gmail.com",
     "password":"hola12345",
-    "category":"masculino",
+    "genero":"masculino",
     "image": "user.png"
 
 },
@@ -35,7 +35,7 @@
     "lastName": "sosa",
     "email": "micaelasosa53@gmail.com",
     "password":"hola4321",
-    "category":"femenino",
+    "genero":"femenino",
     "image": "user.png"
 
 },
@@ -45,7 +45,7 @@
     "lastName": "leiva",
     "email": "maraleiva53@gmail.com",
     "password":"hola43211",
-    "category":"femenino",
+    "genero":"femenino",
     "image": "user.png"
 
 },
@@ -55,7 +55,7 @@
     "lastName": "otazo",
     "email": "celesteotazo53@gmail.com",
     "password":"hola54321",
-    "category":"femenino",
+    "genero":"femenino",
     "image": "user.png"
 
 },
@@ -65,7 +65,7 @@
     "lastName": "bozzolo",
     "email": "lautarobozzolo53@gmail.com",
     "password":"hola1234567",
-    "category":"masculino",
+    "genero":"masculino",
     "image": "user.png"
 
 }
