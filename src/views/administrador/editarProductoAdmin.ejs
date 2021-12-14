@@ -22,7 +22,7 @@
         </div>
     </header>
     <main class="main-perfil">
-        <form class="contenedor-admin" method="POST" action="/admin/edit/<%= product.id %>?_method=PUT" enctype="multipart/form-data">
+        <form class="contenedor-admin" method="POST" action="/admin/<%= product.id %>/edit?_method=PUT" enctype="multipart/form-data">
             <div class="product-detail-edit">
                 <div class="img-container-edit">
                     <img class="img-edit" src="/images/productos/<%- product.image %>" alt="producto">
@@ -41,24 +41,24 @@
                 </div>
                 <h3 class="price-edit">Precio</h3>
                 <label for="price"></label>
-                <input name="price" class="rellenar-name" type="text" id="price" placeholder="Precio" value="<%- product.price %>">
+                <input name="price" class="rellenar-name" type="number" id="price" placeholder="Precio" value="<%= product.price %>">
                 <div class="button-container-edit-admin">
                 </div>
                 <h3 class="price-edit">Stock</h3>
-                <label for="edit"></label>
-                <input name="edit" class="rellenar-name" type="text" id="editt" placeholder="Stock" value="<%- product.stock %>">
+                <label for="stock"></label>
+                <input name="stock" class="rellenar-name" type="text" id="stock" placeholder="Stock" value="<%= product.stock %>">
             
                 <div class="button-container-edit-admin">
                 </div>
 
                 <label class="estilo" for="category">Elige la categoria:</label>
                 <select name="category" id="categoria-admin" class="select-admin" required>
-                    <option value="<%- product.category %>">categoria</option>
-                    <option value="<%- product.category %>">categoria</option>
-                    <option value="<%- product.category %>">categoria</option>
-                    <option value="<%- product.category %>">categoria</option>
-                    <option value="<%- product.category %>">categoria</option>
-                    <option value="<%- product.category %>">categoria</option>
+                    <option value="<%= product.category %>">categoria</option>
+                    <option value="<%= product.category %>">categoria</option>
+                    <option value="<%= product.category %>">categoria</option>
+                    <option value="<%= product.category %>">categoria</option>
+                    <option value="<%= product.category %>">categoria</option>
+                    <option value="<%= product.category %>">categoria</option>
                 </select>
             </div>
 
