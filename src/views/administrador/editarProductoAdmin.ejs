@@ -22,7 +22,7 @@
         </div>
     </header>
     <main class="main-perfil">
-        <form class="contenedor-admin" method="POST" action="/admin/edit/<%= product.id %>?_method=PUT" enctype="multipart/form-data">
+        <form class="contenedor-admin" method="POST" action="/admin/<%- product.id %>/edit?_method=PUT" enctype="multipart/form-data">
             <div class="product-detail-edit">
                 <div class="img-container-edit">
                     <img class="img-edit" src="/images/productos/<%- product.image %>" alt="producto">
@@ -70,7 +70,7 @@
 
             </div>
         </form>
-        <form action="/admin/delete/<%- product.id %>?_method=delete" method="POST"><button class="eliminar-todo-btn">Eliminar Producto</button>
+        <form action="/admin/<%- product.id %>/delete?_method=delete" method="POST"><button class="eliminar-todo-btn">Eliminar Producto</button>
         </form>
         
     </main>
