@@ -7,7 +7,9 @@
     border-bottom: 2px solid #b87cfd;
 }
 
-
+a {
+    text-decoration: none;
+}
 /* Containers*/
 /* header{
     position:fixed;
@@ -162,7 +164,8 @@ input:checked  ~ ul{
    /*  display: none; */
 }
 
-.carrito a {
+.carrito a ,
+.user a{
     color:#b87cfd;
 }
 
@@ -365,7 +368,8 @@ input:checked  ~ ul{
         font-family: var(--font-textos);
     }
 
-    .carrito-p a {
+    .carrito-p a ,
+    .user-p a{
         color: white;
     }
 
