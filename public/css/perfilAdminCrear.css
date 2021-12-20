@@ -9,15 +9,20 @@
     color: black;
 }
 
-.creacion-producto {
+.creacion-producto {  
+    width: 90%;
+    margin: 0 auto;
+    background: rgba(184, 169, 196, 0.6);
+    border-radius: 8px;
+    border: 3px solid #8D05F8;
+    margin-bottom: 70px;
+    text-align: center;
+}
+
+.form-create {
     padding: 10px;
     display: flex;
     flex-direction: column;
-    width: 90%;
-    margin: 0 auto;
-    background-color:#e7d8e8;
-    border-radius: 8px;
-    margin-bottom: 70px;
 }
 
 .title-creacion-admin {
@@ -34,27 +39,30 @@
 
 .creacion-producto input,
 .creacion-producto textarea {
-    margin-bottom: 20px;
+    width: 80%;
+}
+
+.creacion-producto input,
+.creacion-producto textarea,
+.creacion-producto select {
+    margin: 0 auto;
     padding: 10px;
     border-radius: 5px;
     border: 2px solid #8D05F8;
 }
 
-.creacion-producto select {
-    width: 80px;
-}
-
-.input-admin {
-    max-width: 265px;
-}
 label.estilo{
     font-family: var(--font-titulos);
     font-size: 20px;
     color: #360b54;
 }
 
+.div-button-create{
+    margin-top: 10px;
+}
+
 .button-create {
-    background-color: hsla(278, 27%, 57%, 0.99);
+    background-color: black;
     border-radius: .8rem;
     width: 40%;
     text-align: center;
@@ -72,21 +80,11 @@ label.estilo{
 
 @media (min-width: 550px){
     .creacion-producto .inputdos,
-    .creacion-producto label,
+    .creacion-producto input,
     .creacion-producto textarea {
         width: 90%;
         margin-left: auto;
         margin-right: auto;
-    }
-    
-    .input-admin {
-        position: relative;
-        left: 40px;
-    }
-    
-    .select-admin {
-        position: relative;
-        left: 40px;
     }
 
     .creacion-producto input,
@@ -100,25 +98,27 @@ label.estilo{
 }
 
 @media (min-width: 800px) {
+    .creacion-producto {
+        display: flex;
+        flex-direction: row;
+        flex-wrap: wrap;
+    }
 
-    
-    .creacion-producto .inputdos,
-    .creacion-producto label,
+    .form-create {
+        width: 45%;
+    }
+
+    .creacion-producto input,
     .creacion-producto textarea {
-        width:90%;
-
-    }
-
-    .input-admin {
-        display: flex;
+        margin-bottom: 5px;
     }
     
-    .select-admin {
-        display: flex;
+    .div-button-create {
+        margin: 0 auto;
     }
 
     .button-create {
-        width: 12%;
+        width: 100%;
     }
 
 }
