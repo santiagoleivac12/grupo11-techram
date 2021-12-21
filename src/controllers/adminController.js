@@ -49,7 +49,7 @@ let controller = {
         res.render("administrador/editarProductoAdmin", {
             product
         })
-    },
+    }, 
     update: (req, res) => {
     let productId = +req.params.id;
 
@@ -68,7 +68,7 @@ let controller = {
             product.specifications = specifications,
             product.image = req.file ? [req.file.filename] : product.image */
         }
-    })
+    })                                                                  
 
     writeJson(products);
 

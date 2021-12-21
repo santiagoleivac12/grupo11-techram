@@ -61,6 +61,7 @@ article.row-articulos{
 .caja-descripcion{
     width: 30%;
     height: 90%;
+    font-family: var(--font-textos);
 }
 /* caja lateral derecha  */
 .pagar-carri{
@@ -79,7 +80,9 @@ article.row-articulos{
     color: #fdeff9;
     background-color: rgba(255, 255, 255, 0.412);
 }
-
+.cant-disp{
+font-family: var(--font-textos);
+}
 
 .precio-total{
     width: 22%;
@@ -104,6 +107,7 @@ width: 30%;
 .resu-carr{
 align-items: center;
     width: 80%;
+    font-family: var(--font-titulos);
 }
 .total-carr{
     height: 80px;
@@ -117,8 +121,11 @@ h2.resu-carr{
     border-bottom: 2px solid #000000;
     margin-bottom: 5px;
    margin-left:30px ;
-}
 
+}
+.botones-carri{
+    font-family: var(--font-titulos);
+}
 .botones-carri button{
     background-color: hsla(278, 27%, 57%, 0.99);
     color: rgb(255, 255, 255);
@@ -129,6 +136,7 @@ h2.resu-carr{
 .botones-carri button:hover{
     background-color: blueviolet;
     cursor: pointer;
+    font-family: var(--font-titulos);
 }
 
 
@@ -140,12 +148,16 @@ h2.resu-carr{
     color: green;
     width: 84px;
     height: 40px;
+    font-family: var(--font-textos);
 }
 
 .input-register{
     cursor: pointer;
 }
 
+.burguer-responsive{
+    font-family: var(--font-titulos);
+}
 /* --------------------------------------------------- */
 @media(max-width:865px){
     .row-carri{
