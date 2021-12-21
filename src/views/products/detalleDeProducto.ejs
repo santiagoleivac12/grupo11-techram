@@ -1,182 +1,80 @@
 <!DOCTYPE html>
 <html lang="es">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="/css/style.css">
-    <link rel="stylesheet" href="https://pro.fontawesome.com/releases/v5.10.0/css/all.css" integrity="sha384-AYmEC3Yw5cVb3ZcuHtOA93w35dYTsvhLPVnYs9eStHfGJvOvKxVfELGroGkvsg+p" crossorigin="anonymous"/>
-    <title>Detalle de producto</title>
-    
-</head>
-<body>
-    <header>
-        <nav class="nav-container">
-            <div class="burguer-menu">
-                <input type="checkbox" id="menu">
-                <label for="menu"><i class="fas fa-bars"></i></label>
-                <ul class="nav__ul">
-                    <li class="nav__li"><a href="#" class="nav__a">PRODUCTOS</a></li>
-                    <li class="nav__li"><a href="#" class="nav__a">ARMA TU PC</a></li>
-                    <li class="nav__li"><a href="#" class="nav__a">MI CUENTA</a></li>
-                    <li class="nav__li"><a href="#" class="nav__a">AYUDA</a></li>
-                    <li class="nav__li"><a href="register" class="nav__a">REGISTRATE</a></li>
-                    <li class="nav__li"><a href="login" class="nav__a">INGRESA</a></li>
-                </ul>
-            </div>
-            <div class="container-logo">
-                <div class="logo-imagen">
-                    <img src="/images/logos/eva.png" alt="techRam logo">
-                </div>
-            </div>
-            <div class="container-icon">
-                <div class="buscador">
-                    <input type="checkbox" id="search-bar">
-                    <label for="search-bar"><i class="fas fa-search"></i></label>
-                    <ul class="ul-buscador">
-                        <li class="li-buscador"><input type="text" placeholder="Buscar..."></li>
-                        <li class="li-buscador"><button class="boton-mobile"><i class="fas fa-search"></i></button></li>
-                    </ul>
-                </div>
-                <div class="buscador-responsive">
-                    <div id="div-buscador">
-                        <input type="text" placeholder="Buscar...">
-                        <button class="boton-mobile"><i class="fas fa-search"></i></button>
+<%- include('../partials/head') %>
+
+    <body>
+        <%- include('../partials/header') %>
+            <div class="container-detail">
+                <div class="product-detail">
+                    <div class="img-container-detail">
+                        <img id="imageBox" src="/images/productos/<%- product.image %>">
                     </div>
-                </div>
-                <div class="user">
-                    <i class="fas fa-user"></i>
-                    <p class="user-p">mi cuenta</p>
-                </div>
-                <div class="carrito">
-                    <a href="carrito"><i class="fas fa-shopping-cart"></i></a>
-                    <p class="carrito-p"><a href="carrito">mi carrito</a></p>
-                </div>
-            </div>
-        </nav>
-        <div class="burguer-responsive">
-            <input type="checkbox" id="menu-responsive">
-                <label for="menu-responsive"><i class="fas fa-bars"></i></label>
-                <ul class="nav__ul">
-                    <li class="nav__li"><a href="#" class="nav__a">PRODUCTOS</a></li>
-                    <li class="nav__li"><a href="#" class="nav__a">ARMA TU PC</a></li>
-                    <li class="nav__li"><a href="perfil" class="nav__a">MI CUENTA</a></li>
-                    <li class="nav__li"><a href="#" class="nav__a">AYUDA</a></li>
-                    <li class="nav__li"><a href="register" class="nav__a">REGISTRATE</a></li>
-                    <li class="nav__li"><a href="login" class="nav__a">INGRESA</a></li>
-                </ul>
-            </div>
-        </div>
-    </header>
-    <div class="container-detail">
-        <div class="product-detail">
-            <div class="img-container-detail">
-                <img id="imageBox" src="/images/productos/<%- product.image %>">
-            </div>
-<!--             <div class="product-small-img">
+                    <!--             <div class="product-small-img">
                 <img src="/images/productos/" onclick="cambiar(this)">
                 <img src="/images/productos/" onclick="cambiar(this)">
                 <img src="/images/productos/" onclick="cambiar(this)">
                 <img src="/images/productos/" onclick="cambiar(this)">
             </div> -->
-        </div>
-        <div class="inf-detail">
-            <h2 class="detail-name"><%- product.name %></h2>
-            <h3 class="price-detail">$<%- product.price %></h3>
-            <h3 class="text-detail"><%- product.stock %></h3>
-            <h3 class="text-detail">Envios a todo el país</h3>
-            <h3 class="text-detail">Garantía <%- product.garantia %></h3>
-            <label class="text-detail" for="cantidad">Cantidad: </label> 
-                        <select class="selector-cant" id="dropdown" class="input-register" required>
-                            <option value="1">1</option>
-                            <option value="2">2</option>
-                            <option value="3">3</option>
-                            <option value="4">4</option>
-                            <option value="5">5</option>
-                            <option value="6">6</option>
-                            <option value="7">7</option>
-                            <option value="8">8</option>
-                            <option value="9">9</option>
-                            <option value="10">10</option>
-                         </select> 
-            <div class="button-container-detail">
-<!--                 <button class="button-detail">Agregar al carrito</button> -->
-                <button class="button-detail">Comprar</button>
+                </div>
+                <div class="inf-detail">
+                    <h2 class="detail-name">
+                        <%- product.name %>
+                    </h2>
+                    <h3 class="price-detail">$<%- product.price %>
+                    </h3>
+                    <h3 class="text-detail">
+                        <%- product.stock %>
+                    </h3>
+                    <h3 class="text-detail">Envios a todo el país</h3>
+                    <h3 class="text-detail">Garantía <%- product.garantia %>
+                    </h3>
+                    <label class="text-detail" for="cantidad">Cantidad: </label>
+                    <select class="selector-cant" id="dropdown" class="input-register" required>
+                        <option value="1">1</option>
+                        <option value="2">2</option>
+                        <option value="3">3</option>
+                        <option value="4">4</option>
+                        <option value="5">5</option>
+                        <option value="6">6</option>
+                        <option value="7">7</option>
+                        <option value="8">8</option>
+                        <option value="9">9</option>
+                        <option value="10">10</option>
+                    </select>
+                    <div class="button-container-detail">
+                        <!--                 <button class="button-detail">Agregar al carrito</button> -->
+                        <button class="button-detail">Comprar</button>
+                    </div>
+                </div>
             </div>
-        </div>
-    </div>
-    <section class="details">
-        <article class="article-detalle">
-            <h4>Descripción</h4>
-                <p class="p-detalle"><%- product.description %></p>
-        </article>
-        <article class="article-detalle">
-            <h4>Especificaciones del producto:</h4>
-                <p class="p-detalle"><%- product.specifications %></p>
-        </article>
-    </section>    
-        <script type="text/javascript">
-            function cambiar(smallImg){
-              var fullImg=document.getElementById("imageBox");
-              fullImg.src=smallImg.src;
-            }
-        </script>
-<div class="contenedor">
-    <footer class="main-footer">
-        <section class="section-footer">
-
-            <div class="caja1">
-            <article class="hijo">
-               <h4 class="color">Marcas</h4>
-                <a href="intel">Intel</a>
-                <a href="amd">AMD</a>
-                <a href="asus">ASUS</a>
-                <a href="nvidia">Nvidia</a>
-                <a href="asrock">Asrock</a>
-            </article></div>
-
-            <!-- <hr class="linea"> -->
-
-            <div class="caja2">
-                <h4 class="color">Lo Más Buscado</h4>
-            <article class="hijo">
-               
-                <a href="placas de video nvidia">Placas De Video Nvidia</a>
-                <a href="placas de video amd">Placas De Video AMD</a>
-                <a href="gabinetes">Gabinetes</a>
-                <a href="monitores">Monitores</a>
-                <a href="teclado mecánico">Teclados Mecánicos</a>
-                <a href="mouse gamer">Mouse Gamer</a>
-            </article></div>
-
-            <!-- <hr class="linea"> -->
+            <section class="details">
+                <article class="article-detalle">
+                    <h4>Descripción</h4>
+                    <p class="p-detalle">
+                        <%- product.description %>
+                    </p>
+                </article>
+                <article class="article-detalle">
+                    <h4>Especificaciones del producto:</h4>
+                    <p class="p-detalle">
+                        <%- product.specifications %>
+                    </p>
+                </article>
+            </section>
+            <script type="text/javascript">
+                function cambiar(smallImg) {
+                    var fullImg = document.getElementById("imageBox");
+                    fullImg.src = smallImg.src;
+                }
+            </script>
 
 
-            <div class="caja4">
-                <h4 class="color">Contactos</h4>
-            <article class="hijo">
-            
-              <div><img src="/images/logos/face.png" alt="imagen de facebook" style="width: 80px;height: 80px;"></div> 
-              <div><img src="/images/logos/insta.png" alt="insta imagen" style="width: 80px;height: 80px;"></div> 
-              <div><img src="/images/logos/whatsapp.png" alt="imagen" style="width: 80px;height: 80px;"></div>
-               
-            </article>
-            </div>
-
-            <div class="caja3"><article class="hijo">
-                <a href="TODOS LOS DERECHOS RESERVADOS DEL GRUPO 11">TODOS LOS DERECHOS RESERVADOS DEL GRUPO 11</a> 
-            </article></div>
+            <%- include('../partials/footer') %>
 
 
 
-        </section>
 
-    </footer>
-</div>
-        
-           
-            
-       
-    
-</body>
+
+    </body>
+
 </html>

@@ -3,18 +3,13 @@
     padding: 0;
     box-sizing: border-box;
 }
-
 .nav__a:hover {
     border-bottom: 2px solid #b87cfd;
 }
 
-
-/* Containers*/
-/* header{
-    position:fixed;
-    width: 100%;
-    
-} */
+a {
+    text-decoration: none;
+}
 
 .nav-container {
     display: flex;
@@ -163,7 +158,8 @@ input:checked  ~ ul{
    /*  display: none; */
 }
 
-.carrito a {
+.carrito a ,
+.user a{
     color:#b87cfd;
 }
 
@@ -366,7 +362,8 @@ input:checked  ~ ul{
         font-family: var(--font-textos);
     }
 
-    .carrito-p a {
+    .carrito-p a ,
+    .user-p a{
         color: white;
     }
 

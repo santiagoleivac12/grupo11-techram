@@ -1,55 +1,42 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
-    <link rel="stylesheet" href="/css/style.css">
-
-</head>
+    <%- include('../partials/head') %>
 <body class="body-admin">
-   <header class="logo-admin">
-        <img src="/images/logos/eva.png" alt="techRam logo" width="10%" height="100%">
-        <div class="burguer-responsive">
-            <input type="checkbox" id="menu-responsive">
-                <label for="menu-responsive"><i class="fas fa-bars"></i></label>
-                <ul class="nav__ul">
-                    <li class="nav__li"><a href="admin/" class="nav__a">PRODUCTOS</a></li>
-                    <li class="nav__li"><a href="admin/create" class="nav__a">CREAR PRODUCTO</a></li>
-                    <li class="nav__li"><a href="perfil" class="nav__a">NO SE</a></li>
-                </ul>
-            </div>
-        </div>
-   </header>
+    <%- include('../partials/header-admin') %>
     <main class="main-perfil">
         <h3 class="title-creacion-admin">Creación de productos</h3>
         <div>
             <form class="creacion-producto" action="/admin" method="POST" enctype="multipart/form-data">
-                <label class="estilo" for="name-admin">Nombre del producto</label>
-                <input type="text" name="name" id="name-admin" class="inputdos">
-                <label class="estilo" for="categoria-admin">Elige la categoria:</label>
-                <select id="categoria-admin" class="select-admin" required>
-                    <option value="no se">categoria</option>
-                    <option value="no se">categoria</option>
-                    <option value="no se">categoria</option>
-                    <option value="no se">categoria</option>
-                    <option value="no se">categoria</option>
-                    <option value="no se">categoria</option>
-                </select>
-                <label class="estilo" for="color-admin">Color del producto:</label>
-                <input type="text" name="color" id="color-admin" class="inputdos">
-                <label class="estilo" for="price-admin">Precio:</label>
-                <input type="text" name="price" id="price-admin" class="inputdos">
-                <label class="estilo" for="discount-admin">Descuento:</label>
-                <input type="text" name="discount" id="discount-admin" class="inputdos">
-                <label class="estilo" for="garantia-admin">Garantía</label>
-                <input type="text" name="garantia" id="garantia-admin" class="inputdos">
-                <label class="estilo" for="producto-img">Agregue foto del producto</label>
-                <input type="file" name="producto-img" accept="jpg" class="input-admin">  
-                <label class="estilo" for="descripcion-admin">Descripción del producto</label>              
-                <textarea name="descripcion" id="descripcion-admin" cols="30" rows="10"></textarea>
-                <button type="submit" class="button-create">Guardar</button>
+                <div class="form-create">
+                    <label class="estilo" for="name-admin">Nombre del producto</label>
+                    <input type="text" name="name" id="name-admin" class="inputdos">
+                    <label class="estilo" for="color-admin">Color del producto:</label>
+                    <input type="text" name="color" id="color-admin" class="inputdos">
+                    <label class="estilo" for="price-admin">Precio:</label>
+                    <input type="text" name="price" id="price-admin" class="inputdos">
+                    <label class="estilo" for="discount-admin">Descuento:</label>
+                    <input type="text" name="discount" id="discount-admin" class="inputdos">
+                    <label class="estilo" for="garantia-admin">Garantía</label>
+                    <input type="text" name="garantia" id="garantia-admin" class="inputdos">
+                </div>
+                <div class="form-create">
+                    <label class="estilo" for="producto-img">Agregue foto del producto</label>
+                    <input type="file" name="producto-img" accept="jpg" class="input-admin">
+                    <label class="estilo" for="categoria-admin">Elige la categoria:</label>
+                    <select id="categoria-admin" class="select-admin" required>
+                        <option value="no se">categoria</option>
+                        <option value="no se">categoria</option>
+                        <option value="no se">categoria</option>
+                        <option value="no se">categoria</option>
+                        <option value="no se">categoria</option>
+                        <option value="no se">categoria</option>
+                    </select>  
+                    <label class="estilo" for="descripcion-admin">Descripción del producto</label>              
+                    <textarea name="descripcion" id="descripcion-admin" cols="30" rows="10"></textarea>
+                    <div class="div-button-create">
+                        <button type="submit" class="button-create">Guardar</button>
+                    </div>
+                </div>
             </form>
         </div>
     </main>

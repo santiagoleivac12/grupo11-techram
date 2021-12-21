@@ -12,25 +12,13 @@
         "type": "oferta"
     },
     {
-        "id": 2,
-        "name": "Gabinete Vanguardi",
-        " description ": "Xigmatek EROS, una nueva carcasa para PC con LED arcoíris multimodo dinámico programado, también viene con un vidrio templado en el lado izquierdo perfecto para la visualización de la construcción del sistema, estructura de chasis de carcasa con todas las funciones y fácil administración de cables, admitirá placas base ATX, M-ATX con CPU Espacio más fresco a 158 mm y longitud máxima de la tarjeta VGA a 290 mm, esta es una carcasa de PC genial con todas las características que necesitará para construir la PC de sus sueños.",
-        "specifications": "Factor MotherATX/Micro-ATX/ITX,Ventana Si, Tipo de ventana,Ventana de acrílico, ColoresNegro",
-        "price": 25,
-        "discount": 10,
-        "category": " Componentes de PC ",
-        "image": "producto2.jpg",
-        "stock": 10,
-        "type": "producto destacado"
-    },
-    {
         "id": 3,
         "name": "Micro Procesador Amd Ryzen 5 5600g 4.4ghz Am4 16mb C/ Video",
         "description": "Sin lugar a dudas, los procesadores para computadoras de escritorio AMD Ryzen serie 5000 elevan el nivel de expectativa para jugadores y artistas por igual.",
         "specifications": "MarcaAMD,Línea Ryzen 5, Modelo 5600X, Modelo alfanumérico 100-100000065BOX",
-        "price": 50,
+        "price": 54,
         "discount": 10,
-        "category": "Componentes de PC",
+        "category": 0,
         "image": "producto3.jpg",
         "stock": 10,
         "type": "producto destacado"
@@ -71,18 +59,6 @@
         "stock": 9,
         "color": "blanaco, negro, etc",
         "type": "oferta"
-    },
-    {
-        "id": 7,
-        "name": "Combo gamer",
-        "description": "Gabinete vanguardi, 4 coolers con leds rgb y kit de perifericos redragon",
-        "specifications": "Factor MotherATX/Micro-ATX/ITX,Ventana Si, Tipo de ventana,Ventana de acrílico, Colores:Negro",
-        "price": 288,
-        "discount": 10,
-        "category": "",
-        "image": "producto7.jpg",
-        "stock": 10,
-        "type": "producto destacado"
     },
     {
         "id": 8,

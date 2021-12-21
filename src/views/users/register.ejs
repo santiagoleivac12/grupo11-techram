@@ -1,78 +1,8 @@
 <!DOCTYPE html>
 <html lang="es">
-  <head>
-    <meta charset="UTF-8" />
-    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <link
-    rel="stylesheet"
-    href="https://pro.fontawesome.com/releases/v5.10.0/css/all.css"
-    integrity="sha384-AYmEC3Yw5cVb3ZcuHtOA93w35dYTsvhLPVnYs9eStHfGJvOvKxVfELGroGkvsg+p"
-    crossorigin="anonymous"
-  />
-    <link rel="stylesheet" href="/css/style.css" />
-    <title>Registrate</title>
-  </head>
+  <%- include('../partials/head') %>
   <body>
-    <header>
-      <nav class="nav-container">
-          <div class="burguer-menu">
-              <input type="checkbox" id="menu">
-              <label for="menu"><i class="fas fa-bars"></i></label>
-              <ul class="nav__ul">
-                  <li class="nav__li"><a href="#" class="nav__a">PRODUCTOS</a></li>
-                  <li class="nav__li"><a href="#" class="nav__a">ARMA TU PC</a></li>
-                  <li class="nav__li"><a href="#" class="nav__a">MI CUENTA</a></li>
-                  <li class="nav__li"><a href="#" class="nav__a">AYUDA</a></li>
-                  <li class="nav__li"><a href="register" class="nav__a">REGISTRATE</a></li>
-                  <li class="nav__li"><a href="login" class="nav__a">INGRESA</a></li>
-              </ul>
-          </div>
-          <div class="container-logo">
-              <div class="logo-imagen">
-                  <img src="/images/logos/eva.png" alt="techRam logo">
-              </div>
-          </div>
-          <div class="container-icon">
-              <div class="buscador">
-                  <input type="checkbox" id="search-bar">
-                  <label for="search-bar"><i class="fas fa-search"></i></label>
-                  <ul class="ul-buscador">
-                      <li class="li-buscador"><input type="text" placeholder="Buscar..."></li>
-                      <li class="li-buscador"><button class="boton-mobile"><i class="fas fa-search"></i></button></li>
-                  </ul>
-              </div>
-              <div class="buscador-responsive">
-                  <div id="div-buscador">
-                      <input type="text" placeholder="Buscar...">
-                      <button class="boton-mobile"><i class="fas fa-search"></i></button>
-                  </div>
-              </div>
-              <div class="user">
-                  <i class="fas fa-user"></i>
-                  <p class="user-p">mi cuenta</p>
-              </div>
-              <div class="carrito">
-                  <a href="carrito"><i class="fas fa-shopping-cart"></i></a>
-                  <p class="carrito-p"><a href="carrito">mi carrito</a></p>
-              </div>
-          </div>
-      </nav>
-      <div class="burguer-responsive">
-          <input type="checkbox" id="menu-responsive">
-              <label for="menu-responsive"><i class="fas fa-bars"></i></label>
-              <ul class="nav__ul">
-                  <li class="nav__li"><a href="#" class="nav__a">PRODUCTOS</a></li>
-                  <li class="nav__li"><a href="#" class="nav__a">ARMA TU PC</a></li>
-                  <li class="nav__li"><a href="perfil" class="nav__a">MI CUENTA</a></li>
-                  <li class="nav__li"><a href="#" class="nav__a">AYUDA</a></li>
-                  <li class="nav__li"><a href="register" class="nav__a">REGISTRATE</a></li>
-                  <li class="nav__li"><a href="login" class="nav__a">INGRESA</a></li>
-              </ul>
-          </div>
-      </div>
-  </header>
-   
+    <%- include('../partials/header') %>
     <div class="register-container">
       <div class="register-info-cont">
         <h1 class="title">Registrate con</h1>
@@ -154,58 +84,7 @@
         <img src="/images/logos/eva.png" alt="Logo techRam" />
       </div>
     </div>
-    <div class="contenedor">
-      <footer class="main-footer">
-          <section class="section-footer">
-
-              <div class="caja1">
-              <article class="hijo">
-                 <h4 class="color">Marcas</h4>
-                  <a href="intel">Intel</a>
-                  <a href="amd">AMD</a>
-                  <a href="asus">ASUS</a>
-                  <a href="nvidia">Nvidia</a>
-                  <a href="asrock">Asrock</a>
-              </article></div>
-
-              <!-- <hr class="linea"> -->
-
-              <div class="caja2">
-                  <h4 class="color">Lo Más Buscado</h4>
-              <article class="hijo">
-                 
-                  <a href="placas de video nvidia">Placas De Video Nvidia</a>
-                  <a href="placas de video amd">Placas De Video AMD</a>
-                  <a href="gabinetes">Gabinetes</a>
-                  <a href="monitores">Monitores</a>
-                  <a href="teclado mecánico">Teclados Mecánicos</a>
-                  <a href="mouse gamer">Mouse Gamer</a>
-              </article></div>
-
-              <!-- <hr class="linea"> -->
-
-
-              <div class="caja4">
-                  <h4 class="color">Contactos</h4>
-              <article class="hijo">
-              
-                <div><img src="/images/logos/face.png" alt="imagen de facebook" style="width: 80px;height: 80px;"></div> 
-                <div><img src="/images/logos/insta.png" alt="insta imagen" style="width: 80px;height: 80px;"></div> 
-                <div><img src="/images/logos/whatsapp.png" alt="imagen" style="width: 80px;height: 80px;"></div>
-                 
-              </article>
-              </div>
-
-              <div class="caja3"><article class="hijo">
-                  <a href="TODOS LOS DERECHOS RESERVADOS DEL GRUPO 11">TODOS LOS DERECHOS RESERVADOS DEL GRUPO 11</a> 
-              </article></div>
-
-
-
-          </section>
-
-      </footer>
-  </div>
-    
+   
+    <%- include('../partials/footer') %>
   </body>
 </html>
