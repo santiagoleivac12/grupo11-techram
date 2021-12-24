@@ -7,6 +7,7 @@
 .button-admin {
     display: flex;
     /* flex-direction: row; */
+    width: 100%;
 }
 
 .button-edit {
@@ -30,7 +31,7 @@
 .button-delete {
     background-color: hsla(278, 27%, 57%, 0.99);
     border-radius: .8rem;
-    width: 40%;
+    width: 50%;
     height: fit-content;
     height: -moz-fit-content;
     text-align: center;

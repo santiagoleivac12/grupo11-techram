@@ -10,14 +10,12 @@
    align-items: center;
    padding-bottom: 8px;
 }
- 
 img.img-edit{
 margin-left: 20px;
  height: 50%;
  width: 50%;  
  padding-bottom: 10px; 
 }
-
 .eliminar-todo{
     width: 100%;
     height: 100%;
@@ -26,13 +24,13 @@ margin-left: 20px;
     display: flex;
     justify-content: center;
     align-items: center;
-    
 }
-.eliminar-todo-btn{
-    height: 35px;
-    width: 70%;
+button.eliminar-todo-btn{
+    height: 38px;
+    width: 40%;
     background-color: red;
     color: white;
+  
 }
 .eliminar-todo-btn1{ 
     background-color: red;
@@ -61,7 +59,7 @@ margin-left: 20px;
 .price-edit{
     font-family: var(--font-titulos);
     font-size: 30px;
-    color: thistle;
+    color: rgb(211, 155, 211);
     width: 100%;
     margin: 0px;
     padding-top: 10px;
@@ -87,6 +85,7 @@ border-radius: 6px;
         width: 300px;
         background-color: red;
         color: white;
+    
     }
     .eliminar-todo-btn1{ 
         font-size: 18px;
