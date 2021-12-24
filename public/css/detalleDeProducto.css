@@ -87,6 +87,54 @@ height: 300px;
   border-top: .5px solid rgba(160, 102, 218, 0.658)
 }
 
+.cantidad, .cantidad button {
+  align-items: center;
+  display: flex;
+  justify-content: center;
+}
+
+.cantidad {
+  margin-left: auto;
+  margin-right: auto;
+  margin-top: 2em;
+  max-width: 220px;
+  width: 100%;
+}
+
+.cantidad button:first-child {
+  border-radius: 5px 0 0 5px;
+}
+
+.cantidad button {
+  border-radius: 0 5px 5px 0;
+}
+
+.cantidad button, .cantidad #count{
+  color: #7e7e83;
+  height: 36px;
+  margin: 0;
+  background-color: azure;
+}
+
+.cantidad button {
+  background-color: thistle;
+  border: none;
+  font-size: 10px;
+  padding: 7.5px 15px;
+}
+
+.cantidad #count {
+  -moz-appearance: textfield;
+  border: 1px solid rgba(126,126,131,.15);
+  border-radius: 0;
+  cursor: pointer;
+  max-width: 95px;
+  padding: 7.5px 0;
+  text-align: center;
+  width: 100%;
+  color: black;
+}
+
 .button-container-detail {
   text-align: center;
 }

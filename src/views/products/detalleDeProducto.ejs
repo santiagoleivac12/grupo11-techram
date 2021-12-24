@@ -29,18 +29,15 @@
                     <h3 class="text-detail">Garantía <%- product.garantia %>
                     </h3>
                     <label class="text-detail" for="cantidad">Cantidad: </label>
-                    <select class="selector-cant" id="dropdown" class="input-register" required>
-                        <option value="1">1</option>
-                        <option value="2">2</option>
-                        <option value="3">3</option>
-                        <option value="4">4</option>
-                        <option value="5">5</option>
-                        <option value="6">6</option>
-                        <option value="7">7</option>
-                        <option value="8">8</option>
-                        <option value="9">9</option>
-                        <option value="10">10</option>
-                    </select>
+                    <div class="cantidad">
+                        <button type="button" class="btn-subtract" onclick="subtract();">
+                            -
+                        </button> 
+                            <div id="count">1</div> 
+                        <button type="button" class="btn-add" onclick="add();">
+                            +
+                        </button>
+                    </div>
                     <div class="button-container-detail">
                         <!--                 <button class="button-detail">Agregar al carrito</button> -->
                         <button class="button-detail">Comprar</button>
@@ -70,7 +67,7 @@
 
 
             <%- include('../partials/footer') %>
-
+            <script src="/js/productDetail.js"></script>
 
 
 
