@@ -2,17 +2,16 @@ let express = require('express');
 let app = express();
 const PORT = 3000;
 let path = require('path')
-
-//
 const methodOverride = require('method-override');
-app.use(methodOverride('_method')); 
+const cookieParser = require('cookie-parser')
+
 
 //middlewares
+app.use(methodOverride('_method')); 
 app.use(express.static('public'))
-
-//Para capturar la información de los formularios
-app.use(express.urlencoded({extended: false}));
+app.use(express.urlencoded({extended: false}));//Para capturar la información de los formularios
 app.use(express.json())
+app.use(cookieParser())
 
 app.set('view engine', 'ejs');
 app.set('views', path.join(__dirname, 'views'));
