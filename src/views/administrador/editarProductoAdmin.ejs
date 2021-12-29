@@ -8,32 +8,21 @@
             <div class="product-detail-edit">
                 <div class="img-container-edit">
                     <img class="img-edit" src="/images/productos/<%- product.image %>" alt="producto">
-                    <div class="button-edit-product">
-                        <div class="button-container-edit-admin">
-        
-                        </div>
-               </div>
-            
+               </div>           
             </div>
             <div class="edit-inf">
-                <h3 class="price-edit"><i><%-product.name%></i></h3>
-                <label for="name"></label>
+                <label class="estilo" for="name">Nombre</label>
                 <input name="name" class="rellenar-name" type="text" id="name" placeholder="Nombre Producto" value="<%= product.name %>">
-                <div class="button-container-edit-admin">
-                </div>
-                <h3 class="price-edit">Precio</h3>
-                <label for="price"></label>
+                <label class="estilo" for="price">Precio</label>
                 <input name="price" class="rellenar-name" type="number" id="price" placeholder="Precio" value="<%= product.price %>">
-                <div class="button-container-edit-admin">
-                </div>
-                <h3 class="price-edit">Stock</h3>
-                <label for="stock"></label>
-                <input name="stock" class="rellenar-name" type="text" id="stock" placeholder="Stock" value="<%= product.stock %>">
-            
-                <div class="button-container-edit-admin">
-                </div>
-
-                <label class="estilo" for="category">Elige la categoria:</label>
+                <label class="estilo" for="stock">Stock</label>
+                <input name="stock" class="rellenar-name" type="number" id="stock" placeholder="Stock" value="<%= product.stock %>">
+                <label class="estilo" for="discount">Descuento</label>
+                <input name="discount" class="rellenar-name" type="number" id="stock" value="<%= product.discount %>">
+                <label class="estilo" class="estilo" for="producto-img">Agregue foto del producto</label>
+                <input type="file" name="producto-img" accept="jpg" class="input-admin">
+                <h3 class="price-edit">Elige la categoria:</h3>
+                <label class="estilo" for="category"></label>
                 <select name="category" id="categoria-admin" class="select-admin" required>
                     <option value="<%= product.category %>">categoria</option>
                     <option value="<%= product.category %>">categoria</option>
@@ -42,6 +31,7 @@
                     <option value="<%= product.category %>">categoria</option>
                     <option value="<%= product.category %>">categoria</option>
                 </select>
+                <textarea name="descripcion" id="descripcion-admin" cols="30" rows="10"><%= product.description %></textarea>
             </div>
 
 

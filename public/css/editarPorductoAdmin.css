@@ -1,21 +1,64 @@
+.contenedor-admin{
+    width: 90%;
+    margin: 0 auto;
+    background: rgba(184, 169, 196, 0.6);
+    border-radius: 8px;
+    border: 3px solid #8D05F8;
+    margin-bottom: 70px;
+    /* text-align: center; */
+    margin-top: 50px;
+}
+
+.edit-inf {
+    padding: 10px;
+    display: flex;
+    flex-direction: column;
+}
+
+.contenedor-admin label {
+    margin-top: 10px;
+    font-family: var(--font-textos);
+    font-size: 20px;
+}
+
+.contenedor-admin input,
+.contenedor-admin textarea {
+    width: 95%;
+}
+
+.contenedor-admin input,
+.contenedor-admin textarea,
+.contenedor-admin select {
+    /* margin: 0 auto; */
+    padding: 10px;
+    border-radius: 5px;
+    border: 2px solid #8D05F8;
+}
+
+label.estilo{
+    font-family: var(--font-titulos);
+    font-size: 20px;
+    color: #360b54;
+}
+
+.product-detail-edit{
+    width: 100%;
+    text-align: center;
+    border-radius: 8px;
+}
+
+.img-container-edit{
+    width:80%;
+    margin: 0 auto;
+}
+
+.img-container-edit img {
+    width: 100%;
+    object-fit: cover;
+}
 
 
- .contenedor-admin{
-   width: 100%;
-  /*  height: 90vh; */
-   margin: 10px;
-   display: flex;
-   justify-content: center;
-   flex-direction: column;
-   align-items: center;
-   padding-bottom: 8px;
-}
-img.img-edit{
-margin-left: 20px;
- height: 50%;
- width: 50%;  
- padding-bottom: 10px; 
-}
+
 .eliminar-todo{
     width: 100%;
     height: 100%;
@@ -44,39 +87,14 @@ button.eliminar-todo-btn{
     height: 28px;
     width: 60px;
 }
-.eliminar-todo-btn3{ 
-    background-color:green;
-    color: white;
-    height: 28px;
-    width: 60px;
-}
 .button-container-edit-admin{
     justify-content: space-between;
 }
 .rellenar-name{
     margin-bottom: 10px;
-} 
-.price-edit{
-    font-family: var(--font-titulos);
-    font-size: 30px;
-    color: rgb(211, 155, 211);
-    width: 100%;
-    margin: 0px;
-    padding-top: 10px;
-    color: #7303c0;
-    
 }
-/* img.logo-tech{
-    width: 35%;
-    height: 100%;
-} */
 
-.product-detail-edit{
-    width: 80%;
-    text-align: center;
-    background-color: #e7d8e8;
-    border-radius: 8px;
-}
+
 @media (min-width:480px){
     .eliminar-todo-btn{
 font-size: 18px;
