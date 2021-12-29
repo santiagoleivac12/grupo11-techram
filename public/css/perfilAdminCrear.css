@@ -4,9 +4,8 @@
     box-sizing: border-box;
 }
 
-.body-admin {
-    background: white;
-    color: black;
+.main-create {
+    margin-top: 100px;
 }
 
 .creacion-producto {  
@@ -23,12 +22,6 @@
     padding: 10px;
     display: flex;
     flex-direction: column;
-}
-
-.title-creacion-admin {
-    text-align: center;
-    font-family: var(--font-titulos);
-    font-size: 25px;
 }
 
 .creacion-producto label {

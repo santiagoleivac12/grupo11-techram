@@ -1,17 +1,17 @@
 <!DOCTYPE html>
 <html lang="en">
     <%- include('../partials/head') %>
-<body>
+<body class="body-admin">
     <%- include('../partials/header-admin') %>
-    <main>
-        <h3 class="title-card">Todos los productos</h3>
-        <article class="productos-article">
+    <main class="products">
+        <h3 class="title-admin">Todos los productos</h3>
+        <article class="productos-article-admin">
             <% products.forEach(product => { %>
-                <div class="productos-article__card">
+                <div class="productos-article__card-admin">
                     <div class="card-img">                        
                         <a href="/products/detail/<%- product.id %>"><img src="/images/productos/<%- product.image %>" alt="pc"></a>
-                        <h5 class="descripcion-producto"><%- product.name %> </h5>
-                        <p class="price">$<%- product.price %></p>
+                        <h5 class="description-product"><%- product.name %> </h5>
+                        <p class="price-admin">$<%- product.price %></p>
                     </div>
                     <div class="button-admin">
                         <button class="button-edit"><a href="/admin/<%- product.id %>/edit">Editar</a></button>

@@ -9,6 +9,7 @@
     --degradeFondo: linear-gradient(to bottom , #03001e, #7303c0, #fdeff9);
 }
 
+/* estilos generales */
 body{
     --font-titulos: "Bebas Neue", cursive;
     --font-textos:'Source Sans Pro', sans-serif;
@@ -16,5 +17,10 @@ body{
     background-size: cover;
     background-attachment: fixed;
    
+}
+
+.body-admin {
+    background: white;
+    color: black;
 }
   
