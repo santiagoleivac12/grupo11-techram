@@ -1,5 +1,5 @@
 const{check,body}=require('express-validator')
-const res= require('express/lib/response')
+/* const res= require('express/lib/response') */
 const {users}= require('../data/usersDataBase')
 
 module.exports= [
@@ -14,10 +14,10 @@ module.exports= [
     .withMessage('Escribe tu contraseña'),
 
     body('custom')
-    .custom(value,(req)=>{
-        let users= users.find(user=> user.email==req.body.email)
+    .custom((value, {req}) => {
+        let users = users.find(user=> user.email==req.body.email);
 
-        if(user){
+        if(users){
             if(user.pass=== req.body.pass){
                 return true
             }else{
