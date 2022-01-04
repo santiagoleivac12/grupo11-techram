@@ -4,6 +4,7 @@ const PORT = 3000;
 let path = require('path')
 const methodOverride = require('method-override');
 const cookieParser = require('cookie-parser')
+const cookieSession = require('./middlewares/cookieSession')
 const session= require('express-session')
 
 
@@ -13,6 +14,7 @@ app.use(express.static('public'))
 app.use(express.urlencoded({extended: false}));//Para capturar la información de los formularios
 app.use(express.json())
 app.use(cookieParser())
+app.use(cookieSession)
 app.use(session({
     secret:'techram',
     resave: false,
