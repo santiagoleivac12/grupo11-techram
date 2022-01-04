@@ -14,7 +14,17 @@ const controller = {
         let errors= validationsResults(req);
 
         if(errors.isEmpty()) {
-            res.send('Te logueaste!')
+           let user= users.find(user=>user.email)
+           req.session.user={
+               id: user.id,
+               name: user.name,
+               email: user.email,
+               avatar: user.avatar,
+               rol: user.rol
+           }
+           res.locals.user= req.session.user;
+
+           res.redirect('/')
         }else{
             res.render('login',{
                 validationErrors: errors.mapped()
