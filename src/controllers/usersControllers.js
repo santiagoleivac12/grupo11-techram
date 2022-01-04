@@ -37,6 +37,43 @@ const controller = {
     },
     register3: (req, res) =>{
         res.render('users/register')
+    },
+    processRegister: (req,res) =>{
+        let error = validationResult(req);
+
+        if(errors.isEmpty()){
+            let lastId = 1;
+
+            users.forEach(user => {
+            if(lastId < user.id){
+                lastId = user.id;
+            }
+        })
+
+        let newUser = {
+            ...req.body,
+            id:lastId + 1,
+            password: bcrypt.hashSync(password, 10),//pedirle a mica que ponga los names o preguntarle si lo puedo hacer yo
+            image: req.file ? req.file.filename : "imagenqueserompa.png"  
+        }
+
+        users.push(newUser);
+        writeUsersJSON(users);
+        res.redirect('/users/login')
+        }else{
+            res.render('register', {
+                errors: errors.mapped(),
+                session: req.session
+            })
+        }
+    },
+    logout: (req,res) =>{
+        req.session.destroy();
+        if(req.cookies.userTechram){
+            res.cookie('userTechram', "", { maxAge: -1})
+        }
+
+        res.redirect('products/index')
     }
 }
 
