@@ -1,17 +1,24 @@
 let express = require('express');
 let app = express();
 const PORT = 3000;
-let path = require('path')
+let path = require('path');
 const methodOverride = require('method-override');
-const cookieParser = require('cookie-parser')
-
+const cookieParser = require('cookie-parser');
+const session = require('express-session')
 
 //middlewares
 app.use(methodOverride('_method')); 
-app.use(express.static('public'))
+app.use(express.static('public'));
 app.use(express.urlencoded({extended: false}));//Para capturar la información de los formularios
-app.use(express.json())
-app.use(cookieParser())
+app.use(express.json());
+app.use(cookieParser());
+
+app.use(session({
+     secret:"techRam365",
+     resave: false,
+     saveUninitialized: true,
+     cookie: {secure: true}  
+}))
 
 app.set('view engine', 'ejs');
 app.set('views', path.join(__dirname, 'views'));
