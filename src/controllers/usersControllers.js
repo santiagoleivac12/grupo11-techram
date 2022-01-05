@@ -63,13 +63,13 @@ const controller = {
         let newUser = {
             ...req.body,
             id:lastId + 1,
-            password: bcrypt.hashSync(password, 10),//pedirle a mica que ponga los names o preguntarle si lo puedo hacer yo
+            password: bcrypt.hashSync(password, 10),
             image: req.file ? req.file.filename : "imagenqueserompa.png"  
         }
 
         users.push(newUser);
         writeUsersJSON(users);
-        res.redirect('/users/login')
+        res.redirect('users/login')
         }else{
             res.render('register', {
                 errors: errors.mapped(),
