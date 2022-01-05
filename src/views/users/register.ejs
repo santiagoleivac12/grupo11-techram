@@ -30,18 +30,21 @@
           <input
             class="input-register"
             type="text"
-            name="lastname"
+            name="apellido"
             id="apellido"
             placeholder="Ingrese su apellido"
             required
           />
-          <input class="input-register" type="email" placeholder="email" />
-          <input class="input-register" type="password" placeholder="Contraseña" />
+          <input class="input-register" type="email" name="email" placeholder="email" />
+          <input class="input-register" type="password" name="password" placeholder="Contraseña" />
           <input
             class="input-register"
             type="password"
+            name="password"
             placeholder="Repite la Contraseña"
           />
+          <label for="user-img">Agregue su foto del perfil</label>
+          <input type="file" name="image" id="user-img" accept="jpg">
 
           <label class="anexo" for="dropdown" id="provincia">Elige tu Provincia</label>
           <select id="dropdown" class="input-register" required>
@@ -74,7 +77,7 @@
             >Acepto los <a class="anexo-a" href="#">Terminos y Condiciones</a> y autorizo el uso
             de mis datos de acuerdo a la Declaración de Privacidad</p
           >
-          <button class="btn">Registrate</button>
+          <button class="btn" type="submit">Registrate</button>
 
           <p class="anexo">tienes una cuenta? <a class="anexo-a" href="/login">Ingresa aquí</a></p>
         </form>

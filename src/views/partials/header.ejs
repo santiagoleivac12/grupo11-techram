@@ -56,3 +56,6 @@
         </div>
     </div>
 </header>
+<% if (locals.user){%>
+    <h1><%=session.user.name %></h1>
+    <%}%>
