@@ -1,7 +1,8 @@
 const express = require('express');
 const router = express.Router();
 let loginValidator = require('../validations/loginValidator');
-const upload = require('../middlewares/uploadProductFiles')
+let registerValidator = require('../validations/registerValidator')
+const upload = require('../middlewares/uploadUserFiles')
 
 let controller = require('../controllers/usersControllers');
 //login
@@ -11,7 +12,7 @@ router.post('/login',loginValidator, controller.processLogin);
 
 //register
 router.get('/register', controller.register3);
-router.post('/', upload.single('user-img'), controller.processRegister);
+router.post('/register', upload.single('user-img'), registerValidator , controller.processRegister);
 
 //perfil
 router.get('/perfil', controller.perfil2);

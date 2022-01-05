@@ -1,17 +1,13 @@
-const fs = require('fs');
-const path = require('path')
-
-const productsFilePath = path.join(__dirname, '../data/usersDataBase.json')
-const users = JSON.parse(fs.readFileSync(productsFilePath, 'utf-8'));
-const writeUsersJSON = dataBase => fs.writeFileSync(productsFilePath, JSON.stringify(dataBase), "utf-8");
-const{validationsResult}= require('express-validator')
+const { users,writeUsersJSON } = require('../data/dataBase')
+const { validationResult } = require('express-validator')
+const bcrypt = require('bcryptjs');
 
 const controller = {
     login1: (req, res) =>{
         res.render('users/login')
     },
     processLogin: (req, res) =>{
-        let errors= validationsResult(req);
+        let errors= validationResult(req);
 
         if(errors.isEmpty()) {
            let user= users.find(user=>user.email)
@@ -55,25 +51,29 @@ const controller = {
             let lastId = 1;
 
             users.forEach(user => {
-            if(lastId < user.id){
+            if(user.id > lastId){
                 lastId = user.id;
             }
         })
 
+        let { firstName, lastName, email, password } = req.body
+
         let newUser = {
-            ...req.body,
-            id:lastId + 1,
+            id: lastId + 1,
+            firstName,
+            lastName,
+            email, 
             password: bcrypt.hashSync(password, 10),
-            image: req.file ? req.file.filename : "imagenqueserompa.png"  
+            image: req.file ? req.file.filename : "default-image.png"
         }
 
         users.push(newUser);
         writeUsersJSON(users);
-        res.redirect('users/login')
+        res.redirect('/users/login')
         }else{
-            res.render('register', {
-                errors: errors.mapped(),
-                session: req.session
+            res.render('/users/register', {
+                errors: errors.mapped()/* ,
+                session: req.session */
             })
         }
     },

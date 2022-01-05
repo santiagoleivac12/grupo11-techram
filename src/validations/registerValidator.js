@@ -1,5 +1,5 @@
-const {check, body } = require('express-validator');
-const { users } = require('../data/usersDataBase.json')
+const { check, body } = require('express-validator');
+const { users } = require('../data/dataBase')
 
 module.exports = [
     check('firstName')
@@ -14,11 +14,17 @@ module.exports = [
     .isEmail()
     .withMessage('debes ingresar un email válido'),
 
-    body('email').custom(value =>{
-        let user = users.filter(user =>{
+    body('email').custom((value) => {
+        let user = users.find(user =>{
             return user.email == value
         })
-    }),
+
+        if(user){
+            return false
+        }else{
+            return true
+        }
+    }).withMessage('Email ya registrado'),
 
     check('passWord')
     .notEmpty()
@@ -27,10 +33,10 @@ module.exports = [
         min: 6,
         max: 12
     })
-    .withMessage('La contraseña debe tener entre 6 y 8 caracteres')
+    .withMessage('La contraseña debe tener entre 6 y 12 caracteres')
 ,
-    body('passWord').custom((value, {req})=> value !== req.body.passWord ? false : true)
-    .withMessage('las contraseñas no coinciden'),
+/*     body('passWord').custom((value, {req})=> value !== req.body.passWord ? false : true)
+    .withMessage('las contraseñas no coinciden'), */
 
     check('terms')
     .isString('on')
