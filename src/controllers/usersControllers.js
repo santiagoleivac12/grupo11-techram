@@ -4,14 +4,14 @@ const path = require('path')
 const productsFilePath = path.join(__dirname, '../data/usersDataBase.json')
 const users = JSON.parse(fs.readFileSync(productsFilePath, 'utf-8'));
 const writeUsersJSON = dataBase => fs.writeFileSync(productsFilePath, JSON.stringify(dataBase), "utf-8");
-const{validationsResults}= require('express-validator')
+const{validationsResult}= require('express-validator')
 
 const controller = {
     login1: (req, res) =>{
         res.render('users/login')
     },
     processLogin: (req, res) =>{
-        let errors= validationsResults(req);
+        let errors= validationsResult(req);
 
         if(errors.isEmpty()) {
            let user= users.find(user=>user.email)

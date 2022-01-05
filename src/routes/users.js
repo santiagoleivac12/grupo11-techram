@@ -11,7 +11,7 @@ router.post('/login',loginValidator, controller.processLogin);
 
 //register
 router.get('/register', controller.register3);
-router.post('/register', upload.single('user-img'), controller.processRegister);
+router.post('/', upload.single('user-img'), controller.processRegister);
 
 //perfil
 router.get('/perfil', controller.perfil2);
