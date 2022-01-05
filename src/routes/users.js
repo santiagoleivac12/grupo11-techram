@@ -19,4 +19,10 @@ router.get('/perfil', controller.perfil2);
 // get logout
 router.get('/logout', controller.logout);
 
+
+
+
+//rutas accecibles para todos = sin cambios
+//rutas accesibles solo sin login = redirigen al perfil
+// requiere estar logueado = redirecciona al login 
 module.exports = router
