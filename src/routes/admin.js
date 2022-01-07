@@ -5,7 +5,7 @@ let controller = require('../controllers/adminController');
 0
 let userAdmin = require('../middlewares/userAdmin');
 //Index admin
-router.get('/', controller.admin)
+router.get('/',userAdmin, controller.admin)
 
 //Crear archivo
 router.get('/create',userAdmin, controller.create);
@@ -16,7 +16,7 @@ router.post('/', upload.single('producto-img'), controller.store);
 
 
 /* GET - Show product edit form */
-router.get('/:id/edit', controller.edit);
+router.get('/:id/edit',userAdmin, controller.edit);
 
 
 /* PUT - Update a product */
