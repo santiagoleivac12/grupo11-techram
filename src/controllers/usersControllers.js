@@ -4,23 +4,25 @@ const bcrypt = require('bcryptjs');
 
 const controller = {
     login1: (req, res) =>{
-        res.render('users/login')
+        res.render('users/login', {
+            session: req.session
+        })
     },
     processLogin: (req, res) =>{
         let errors= validationResult(req);
 
         if(errors.isEmpty()) {
-           let user= users.find(user=>user.email)
+           let user= users.find(user=>user.email === req.body.email)
            req.session.user={
                id: user.id,
-               name: user.name,
+               firstName: user.firstName,
                email: user.email,
-               avatar: user.avatar,
-               rol: user.rol
+               image: user.image/* ,
+               rol: user.rol */
            }
 
            if(req.body.recordar){
-            const TIME_IN_MILISECONDS = 60000;
+            const TIME_IN_MILISECONDS = 600000;
             res.cookie("userTechram", req.session.user, {
                 expires: new Date(Date.now() + TIME_IN_MILISECONDS),
                 httpOnly: true, 
@@ -28,21 +30,22 @@ const controller = {
             })
         }
 
-           res.locals.user= req.session.user;
+           res.locals.user = req.session.user;
 
            res.redirect('/')
         }else{
-            res.render('login',{
-                validationErrors: errors.mapped()
+            res.render('users/login',{
+                errors: errors.mapped(),
+                session: req.session,
+                old: req.body
             })
         }
         
     },
-    perfil2: (req, res) =>{
-        res.render('users/perfil')
-    },
     register3: (req, res) =>{
-        res.render('users/register')
+        res.render('users/register', {
+            session: req.session
+        })
     },
     processRegister: (req,res) =>{
         let errors = validationResult(req);
@@ -67,13 +70,13 @@ const controller = {
             image: req.file ? req.file.filename : "default-image.png"
         }
 
-        users.push(newUser);
-        writeUsersJSON(users);
+        users.push(newUser)
+        writeUsersJSON(users)
         res.redirect('/users/login')
         }else{
-            res.render('/users/register', {
-                errors: errors.mapped()/* ,
-                session: req.session */
+            res.render('users/register', {
+                errors: errors.mapped(),
+                session: req.session 
             })
         }
     },
@@ -84,6 +87,9 @@ const controller = {
         }
 
         res.redirect('products/index')
+    },
+    perfil2: (req, res) =>{
+        res.render('users/perfil')
     }
 }
 

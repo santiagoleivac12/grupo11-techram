@@ -55,7 +55,7 @@
             </ul>
         </div>
     </div>
-</header>
-<% if (locals.user){%>
-    <h1><%=session.user.name %></h1>
+    <% if (locals.user){%>
+        <h3><%= locals.user.firstName %></h3>
     <%}%>
+</header>
