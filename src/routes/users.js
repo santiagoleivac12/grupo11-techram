@@ -4,7 +4,10 @@ let loginValidator = require('../validations/loginValidator');
 let registerValidator = require('../validations/registerValidator')
 const upload = require('../middlewares/uploadUserFiles')
 
+
+
 let controller = require('../controllers/usersControllers');
+/* let rolUser = require('../middlewares/rolUser'); */
 //login
 router.get('/login', controller.login1);
 //login-post-data

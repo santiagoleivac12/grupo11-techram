@@ -4,6 +4,8 @@ const upload = require('../middlewares/uploadProductFiles')
 let controller = require('../controllers/adminController');
 
 let userAdmin = require('../middlewares/userAdmin');
+/* const rolUser = require('../middlewares/rolUser'); */
+
 //Index admin
 router.get('/',userAdmin, controller.admin)
 

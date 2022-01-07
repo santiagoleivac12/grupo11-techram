@@ -1,7 +1,8 @@
 let express = require('express');
 let router = express.Router();
-
+/* let rolUser = require('../middlewares/rolUser'); */
 let controller = require('../controllers/productsController');
+
 //detalle
 router.get('/detail/:id/', controller.detail);
 
