@@ -17,8 +17,8 @@ const controller = {
                id: user.id,
                firstName: user.firstName,
                email: user.email,
-               image: user.image/* ,
-               rol: user.rol */
+               image: user.image,
+               rol: user.rol
            }
 
            if(req.body.recordar){

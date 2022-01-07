@@ -16,7 +16,8 @@ function userAdmin(req, res, next){
     if(USER_ROL === 'USER_ADMIN'){
         next()
     }else{
-        res.redirect("/users/login")
+        /* res.redirect("/users/login") */
+        res.status().redirect('/users/login')
         /* send('') */
     }
 }
