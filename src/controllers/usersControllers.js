@@ -47,7 +47,7 @@ const controller = {
         let errors = validationResult(req);
 
         if(errors.isEmpty()){
-            let lastId = 1;
+            let lastId = 0;
 
             users.forEach(user => {
             if(user.id > lastId){
@@ -66,8 +66,8 @@ const controller = {
             image: req.file ? req.file.filename : "default-image.png"
         }
 
-        users.push(newUser);
-        writeUsersJSON(users);
+        users.push(newUser)
+        writeUsersJSON(users)
         res.redirect('users/login')
         }else{
             res.render('users/register', {

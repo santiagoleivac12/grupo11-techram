@@ -26,7 +26,7 @@ module.exports = [
         }
     }).withMessage('Email ya registrado'),
 
-    check('passWord')
+    check('password')
     .notEmpty()
     .withMessage('debes escribir tu contraseña')
     .isLength({

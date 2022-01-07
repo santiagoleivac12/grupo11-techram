@@ -1,93 +1,77 @@
 <!DOCTYPE html>
 <html lang="es">
-  <%- include('../partials/head') %>
+<%- include('../partials/head') %>
+
   <body>
     <%- include('../partials/header') %>
-    <div class="register-container">
-      <div class="register-info-cont">
-        <h1 class="title">Registrate con</h1>
-        <div class="redes-register">
-          <div class="redes-register-elemnt">
-            <img src="/images/logos/facebook.svg" alt="Google" />
-            <span>Facebook</span>
+      <div class="register-container">
+        <div class="register-info-cont">
+          <h1 class="title">Registrate con</h1>
+          <div class="redes-register">
+            <div class="redes-register-elemnt">
+              <img src="/images/logos/facebook.svg" alt="Google" />
+              <span>Facebook</span>
+            </div>
+            <div class="redes-register-elemnt">
+              <img src="/images/logos/google.svg" alt="Google" />
+              <span>Google</span>
+            </div>
           </div>
-          <div class="redes-register-elemnt">
-            <img src="/images/logos/google.svg" alt="Google" />
-            <span>Google</span>
-          </div>
+          <p class="anexo">ó</p>
+          <form action="/users/register" class="inputs-container" method="POST" enctype="multipart/form-data">
+            <label for="nombre"></label>
+            <input class="input-register" type="text" name="firstName" id="nombre" placeholder="Ingrese su nombre" required/>
+            <label for="apellido"></label>
+            <input class="input-register" type="text" name="lastName" id="apellido" placeholder="Ingrese su apellido" required/>
+            <label for="email"></label>
+            <input class="input-register" type="email" name="email" placeholder="email"/>
+            <label for="password"></label>
+            <input class="input-register" type="password" name="password" placeholder="Contraseña"/>
+            <!-- <input class="input-register" type="password" name="password" placeholder="Repite la Contraseña"/> -->
+            <label for="user-img">Agregue su foto del perfil</label>
+            <input type="file" name="user-img" id="user-img" accept="jpg">
+
+            <label class="anexo" for="dropdown" id="provincia">Elige tu Provincia</label>
+            <select id="dropdown" class="input-register" required>
+              <option value="Buenos Aires">Buenos Aires</option>
+              <option value="Capital Federal">Capital Federal</option>
+              <option value="Catamarca">Catamarca</option>
+              <option value="Chaco">Chaco</option>
+              <option value="Chubut">Chubut</option>
+              <option value="Cordoba">Córdoba</option>
+              <option value="Corrientes">Corrientes</option>
+              <option value="Entre Rios">Entre Ríos</option>
+              <option value="Formosa">Formosa</option>
+              <option value="Jujuy">Jujuy</option>
+              <option value="La Pampa">La Pampa</option>
+              <option value="La Rioja">La Rioja</option>
+              <option value="Mendoza">Mendoza</option>
+              <option value="Misiones">Misiones</option>
+              <option value="Neuquen">Neuquén</option>
+              <option value="Rio Negro">Río Negro</option>
+              <option value="Salta">Salta</option>
+              <option value="San Juan">San Juan</option>
+              <option value="San Luis">San Luis</option>
+              <option value="Santa Cruz">Santa Cruz</option>
+              <option value="Santa Fe">Santa Fe</option>
+              <option value="Santiago del Estero">Santiago del Estero</option>
+              <option value="Tierra del Fuego">Tierra del Fuego</option>
+              <option value="Tucuman">Tucumán</option>
+            </select>
+            <p class="anexo">Acepto los <a class="anexo-a" href="#">Terminos y Condiciones</a> y autorizo el uso
+              de mis datos de acuerdo a la Declaración de Privacidad</p>
+            <button type="submit" class="btn">Registrate</button>
+
+            <p class="anexo">tienes una cuenta? <a class="anexo-a" href="/login">Ingresa aquí</a></p>
+          </form>
         </div>
-        <p class="anexo">ó</p>
-        <form action="/users/register" class="inputs-container" method="POST" enctype="multipart/form-data">
-          <input
-            class="input-register"
-            type="text"
-            name="firstName"
-            id="nombre"
-            placeholder="Ingrese su nombre"
-            required
-          />
 
-          <input
-            class="input-register"
-            type="text"
-            name="lastName"
-            id="apellido"
-            placeholder="Ingrese su apellido"
-            required
-          />
-          <input class="input-register" type="email" name="email" placeholder="email" />
-          <input class="input-register" type="password" name="password" placeholder="Contraseña" />
-          <input
-            class="input-register"
-            type="password"
-            name="password"
-            placeholder="Repite la Contraseña"
-          />
-          <label for="user-img">Agregue su foto del perfil</label>
-          <input type="file" name="user-img" id="user-img" accept="jpg">
-
-          <label class="anexo" for="dropdown" id="provincia">Elige tu Provincia</label>
-          <select id="dropdown" class="input-register" required>
-            <option value="Buenos Aires">Buenos Aires</option>
-            <option value="Capital Federal">Capital Federal</option>
-            <option value="Catamarca">Catamarca</option>
-            <option value="Chaco">Chaco</option>
-            <option value="Chubut">Chubut</option>
-            <option value="Cordoba">Córdoba</option>
-            <option value="Corrientes">Corrientes</option>
-            <option value="Entre Rios">Entre Ríos</option>
-            <option value="Formosa">Formosa</option>
-            <option value="Jujuy">Jujuy</option>
-            <option value="La Pampa">La Pampa</option>
-            <option value="La Rioja">La Rioja</option>
-            <option value="Mendoza">Mendoza</option>
-            <option value="Misiones">Misiones</option>
-            <option value="Neuquen">Neuquén</option>
-            <option value="Rio Negro">Río Negro</option>
-            <option value="Salta">Salta</option>
-            <option value="San Juan">San Juan</option>
-            <option value="San Luis">San Luis</option>
-            <option value="Santa Cruz">Santa Cruz</option>
-            <option value="Santa Fe">Santa Fe</option>
-            <option value="Santiago del Estero">Santiago del Estero</option>
-            <option value="Tierra del Fuego">Tierra del Fuego</option>
-            <option value="Tucuman">Tucumán</option>
-          </select>
-          <p class="anexo"
-            >Acepto los <a class="anexo-a" href="#">Terminos y Condiciones</a> y autorizo el uso
-            de mis datos de acuerdo a la Declaración de Privacidad</p
-          >
-          <button type="submit" class="btn">Registrate</button>
-
-          <p class="anexo">tienes una cuenta? <a class="anexo-a" href="/login">Ingresa aquí</a></p>
-        </form>
+        <div class="images-container">
+          <img src="/images/logos/eva.png" alt="Logo techRam" />
+        </div>
       </div>
-    
-      <div class="images-container">
-        <img src="/images/logos/eva.png" alt="Logo techRam" />
-      </div>
-    </div>
-   
-    <%- include('../partials/footer') %>
+
+      <%- include('../partials/footer') %>
   </body>
+
 </html>
