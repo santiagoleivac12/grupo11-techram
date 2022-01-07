@@ -2,12 +2,13 @@ const express = require('express');
 const router = express.Router();
 const upload = require('../middlewares/uploadProductFiles')
 let controller = require('../controllers/adminController');
-
+0
+let userAdmin = require('../middlewares/userAdmin');
 //Index admin
 router.get('/', controller.admin)
 
 //Crear archivo
-router.get('/create', controller.create);
+router.get('/create',userAdmin, controller.create);
 router.post('/', upload.single('producto-img'), controller.store);
 
 //Eliminar archivo

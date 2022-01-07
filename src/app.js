@@ -12,9 +12,9 @@ const session= require('express-session')
 app.use(methodOverride('_method')); 
 app.use(express.static('public'));
 app.use(express.urlencoded({extended: false}));//Para capturar la información de los formularios
-app.use(express.json())
-app.use(cookieParser())
-app.use(cookieSession)
+app.use(express.json());
+app.use(cookieParser());
+app.use(cookieSession);
 app.use(session({
     secret:'techram',
     resave: false,
@@ -40,9 +40,18 @@ app.use('/admin', adminRouter);
 app.use('/users', usersRouter);
 
 
+//error 404
+/* app.use((req, res ,next)=>{
+res.status(404)
+}) */
 
 //Server
 app.listen(PORT, () => console.log(`
 Servidor escuchando en el puerto ${PORT}
 http://localhost:${PORT}
 `))
+/* ----------------------------------------
+<% if (session.user.rol === 'Admin'){%>
+
+<% } %>//PARA PERMITIR O NO PERMITIR EL INGRESO
+---------------------------------------- */

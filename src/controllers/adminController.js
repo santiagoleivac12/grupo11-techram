@@ -8,7 +8,9 @@ const writeJson = dataBase => fs.writeFileSync(productsFilePath, JSON.stringify(
 let controller = {
     admin: (req,res) => {
         res.render('administrador/admin',{
-            products
+         products
+   /*  session: req.session  */
+
         })
     },
     //Muestra la vista para crear el producto
