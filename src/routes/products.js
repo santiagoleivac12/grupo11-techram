@@ -1,12 +1,13 @@
 let express = require('express');
 let router = express.Router();
-/* let rolUser = require('../middlewares/rolUser'); */
+let userCheck = require('../middlewares/userCheck');
+
 let controller = require('../controllers/productsController');
 
 //detalle
 router.get('/detail/:id/', controller.detail);
 
 //carrito
-router.get('/carrito', controller.carrito);
+router.get('/carrito', userCheck, controller.carrito);
 
 module.exports = router;

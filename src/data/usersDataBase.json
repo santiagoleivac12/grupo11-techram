@@ -80,6 +80,6 @@
         "email": "cleo@gmail.com",
         "password": "$2a$10$LbkN9j6sI2CHvogBKem1k.yYjJa.dGVlcMrQ.WrdZumXlqoB/ynOu",
         "image": "default-image.png",
-        "rol": "USER_ADMIN"
+        "rol": "USER_USER"
     }
 ]
