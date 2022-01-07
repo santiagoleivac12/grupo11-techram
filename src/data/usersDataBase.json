@@ -5,7 +5,8 @@
         "lastName": "leiva",
         "email": "santyleiva53@gmail.com",
         "password": "Hola1234",
-        "image": "user.png"
+        "image": "user.png",
+        "rol": "ROL_ADMIN"
     },
     {
         "id": 2,
@@ -13,7 +14,8 @@
         "lastName": "garcia",
         "email": "garciabrianalejandro@gmail.com",
         "password": "hola123",
-        "image": "user.png"
+        "image": "user.png",
+        "rol": "ROL_USER"
     },
     {
         "id": 3,
@@ -21,7 +23,8 @@
         "lastName": "juturi",
         "email": "ricardojuturi53@gmail.com",
         "password": "hola12345",
-        "image": "user.png"
+        "image": "user.png",
+        "rol": "ROL_USER"
     },
     {
         "id": 4,
@@ -30,7 +33,8 @@
         "email": "micaelasosa53@gmail.com",
         "password": "hola4321",
         "genero": "femenino",
-        "image": "user.png"
+        "image": "user.png",
+        "rol": "ROL_USER"
     },
     {
         "id": 5,
@@ -39,7 +43,8 @@
         "email": "maraleiva53@gmail.com",
         "password": "hola43211",
         "genero": "femenino",
-        "image": "user.png"
+        "image": "user.png",
+        "rol": "ROL_USER"
     },
     {
         "id": 6,
@@ -47,7 +52,8 @@
         "lastName": "otazo",
         "email": "celesteotazo53@gmail.com",
         "password": "hola54321",
-        "image": "user.png"
+        "image": "user.png",
+        "rol": "ROL_USER"
     },
     {
         "id": 7,
@@ -55,7 +61,8 @@
         "lastName": "bozzolo",
         "email": "lautarobozzolo53@gmail.com",
         "password": "hola1234567",
-        "image": "user.png"
+        "image": "user.png",
+        "rol": "ROL_USER"
     },
     {
         "id": 8,
@@ -63,7 +70,8 @@
         "lastName": "decime",
         "email": "queanda@gmail.com",
         "password": "$2a$10$XvAytc7yF7KbrdeCQ8KpoOXcm9g40r50520YJWJ1D6/toO7El0VNO",
-        "image": "1641574372804_img_.jpg"
+        "image": "1641574372804_img_.jpg",
+        "rol": "ROL_USER"
     },
     {
         "id": 9,
@@ -71,6 +79,7 @@
         "lastName": "garcia",
         "email": "cleo@gmail.com",
         "password": "$2a$10$LbkN9j6sI2CHvogBKem1k.yYjJa.dGVlcMrQ.WrdZumXlqoB/ynOu",
-        "image": "default-image.png"
+        "image": "default-image.png",
+        "rol": "ROL_USER"
     }
 ]
