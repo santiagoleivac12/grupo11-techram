@@ -20,17 +20,31 @@
           <p class="anexo">ó</p>
           <form action="/users/register" class="inputs-container" method="POST" enctype="multipart/form-data">
             <label for="nombre"></label>
-            <input class="input-register" type="text" name="firstName" id="nombre" placeholder="Ingrese su nombre" required/>
+            <input class="input-register" type="text" name="firstName" id="nombre" placeholder="Ingrese su nombre" value="<%= locals.old && old.firstName %>"/>
+            <% if (locals.errors && errors.firstName) { %>
+              <small class="text-danger"><%= errors.firstName.msg %> </small>
+            <% } %>
             <label for="apellido"></label>
-            <input class="input-register" type="text" name="lastName" id="apellido" placeholder="Ingrese su apellido" required/>
+            <input class="input-register" type="text" name="lastName" id="apellido" placeholder="Ingrese su apellido" value="<%= locals.old && old.lastName %>"/>
+            <% if (locals.errors && errors.lastname) { %>
+              <small class="text-danger"><%= errors.lastName.msg %> </small>
+            <% } %>
             <label for="email"></label>
             <input class="input-register" type="email" name="email" placeholder="email"/>
+            <% if (locals.errors && errors.email) { %>
+              <small class="text-danger"><%= errors.email.msg %> </small>
+            <% } %>
             <label for="password"></label>
             <input class="input-register" type="password" name="password" placeholder="Contraseña"/>
+            <% if (locals.errors && errors.password) { %>
+              <small class="text-danger"><%= errors.password.msg %> </small>
+            <% } %>
             <!-- <input class="input-register" type="password" name="password" placeholder="Repite la Contraseña"/> -->
             <label for="user-img">Agregue su foto del perfil</label>
             <input type="file" name="user-img" id="user-img" accept="jpg">
-
+            <% if (locals.errors && errors.image) { %>
+              <small class="text-danger"><%= errors.image.msg %> </small>
+            <% } %>
             <label class="anexo" for="dropdown" id="provincia">Elige tu Provincia</label>
             <select id="dropdown" class="input-register" required>
               <option value="Buenos Aires">Buenos Aires</option>

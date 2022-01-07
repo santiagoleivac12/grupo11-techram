@@ -30,7 +30,7 @@ const controller = {
             })
         }
 
-           res.locals.user= req.session.user;
+           res.locals.user = req.session.user;
 
            res.redirect('/')
         }else{
