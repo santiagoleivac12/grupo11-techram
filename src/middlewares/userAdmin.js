@@ -1,24 +1,10 @@
-
-
-/* function userAdminCheck(req, res, next){
-    if(req.session.user && req.session.user.rol === "USER_ADMIN"){
-        next()
-    }else{
-        res.redirect("/users/login")
-    }
-}
-
-module.export = userAdminCheck */
-
-const USER_ROL = "USER_ADMIN";
+const session = require('express-session');
 
 function userAdmin(req, res, next){
-    if(USER_ROL === 'USER_ADMIN'){
+    if (req.session.user && req.session.user.rol == "USER_ADMIN") {
         next()
-    }else{
-        /* res.redirect("/users/login") */
-        res.status().redirect('/users/login')
-        /* send('') */
+    } else {
+        res.redirect('/')
     }
 }
 module.exports = userAdmin
