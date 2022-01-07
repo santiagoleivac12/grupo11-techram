@@ -13,14 +13,13 @@ app.use(methodOverride('_method'));
 app.use(express.static('public'));
 app.use(express.urlencoded({extended: false}));//Para capturar la información de los formularios
 app.use(express.json())
-app.use(cookieParser())
-app.use(cookieSession)
 app.use(session({
     secret:'techram',
     resave: false,
-    saveUninitialized: true,
-    cookie: {secure:true}
+    saveUninitialized: true
 }))
+app.use(cookieParser())
+app.use(cookieSession)
 
 app.set('view engine', 'ejs');
 app.set('views', path.join(__dirname, 'views'));

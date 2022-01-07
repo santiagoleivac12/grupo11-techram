@@ -18,7 +18,7 @@
                 </div>
             </div>
             <p>ó</p>
-            <form action="/users/login" method="POST"  class="inputs-container">
+            <form action="/users/login" method="POST" class="inputs-container">
                 <input class="input" name="email" type="email" placeholder="email" >
                 <% if(locals.errors && errors.email){%>
                     <small class='text-danger'><%=errors.email.msg%></small>
