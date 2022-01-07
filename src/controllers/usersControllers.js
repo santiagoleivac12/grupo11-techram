@@ -4,19 +4,21 @@ const bcrypt = require('bcryptjs');
 
 const controller = {
     login1: (req, res) =>{
-        res.render('users/login')
+        res.render('users/login', {
+            session: req.session
+        })
     },
     processLogin: (req, res) =>{
         let errors= validationResult(req);
 
         if(errors.isEmpty()) {
-           let user= users.find(user=>user.email)
+           let user= users.find(user=>user.email === req.body.email)
            req.session.user={
                id: user.id,
-               name: user.name,
+               firstName: user.firstName,
                email: user.email,
-               avatar: user.avatar,
-               rol: user.rol
+               image: user.image/* ,
+               rol: user.rol */
            }
 
            if(req.body.recordar){
@@ -32,8 +34,9 @@ const controller = {
 
            res.redirect('/')
         }else{
-            res.render('login',{
-                validationErrors: errors.mapped()
+            res.render('users/login',{
+                errors: errors.mapped(),
+                session: req.session
             })
         }
         
@@ -47,7 +50,7 @@ const controller = {
         let errors = validationResult(req);
 
         if(errors.isEmpty()){
-            let lastId = 0;
+            let lastId = 1;
 
             users.forEach(user => {
             if(user.id > lastId){

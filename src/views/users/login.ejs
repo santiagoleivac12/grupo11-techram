@@ -18,14 +18,14 @@
                 </div>
             </div>
             <p>ó</p>
-            <form action="/src/views/users/login" method="POST"  class="inputs-container">
+            <form action="/users/login" method="POST"  class="inputs-container">
                 <input class="input" name="email" type="email" placeholder="email" >
                 <% if(locals.errors && errors.email){%>
                     <small class='text-danger'><%=errors.email.msg%></small>> 
                     <% }%>
                 <input class="input"name='pass' type="password" placeholder="Contraseña">
                 <% if(locals.errors && errors.password){%>
-                    <small class='text-danger'><%=errors.pass.msg%></small>> 
+                    <small class='text-danger'><%=errors.password.msg%></small>> 
                     <% }%>
                 <p class="anexo"><input id="checkbox" type="checkbox" name="recordar" value="recordar-contraseña">Recordar contraseña</p>
                 <p class="anexo">Olvidaste tu contraseña? <a class="span">Click aquí</a></p>

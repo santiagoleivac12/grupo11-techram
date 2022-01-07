@@ -15,7 +15,7 @@ module.exports= [
 
     body('custom')
     .custom((value, {req}) => {
-        let user = users.find(user=> user.email==req.body.email);
+        let user = users.find(user=> user.email === req.body.email);
 
         if(user){
             if(user.password === req.body.password){
