@@ -36,7 +36,8 @@ const controller = {
         }else{
             res.render('users/login',{
                 errors: errors.mapped(),
-                session: req.session
+                session: req.session,
+                old: req.body
             })
         }
         
@@ -71,7 +72,7 @@ const controller = {
 
         users.push(newUser)
         writeUsersJSON(users)
-        res.redirect('users/login')
+        res.redirect('/users/login')
         }else{
             res.render('users/register', {
                 errors: errors.mapped(),
