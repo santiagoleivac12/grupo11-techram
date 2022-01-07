@@ -38,11 +38,10 @@ const controller = {
         }
         
     },
-    perfil2: (req, res) =>{
-        res.render('users/perfil')
-    },
     register3: (req, res) =>{
-        res.render('users/register')
+        res.render('users/register', {
+            session: req.session
+        })
     },
     processRegister: (req,res) =>{
         let errors = validationResult(req);
@@ -69,11 +68,11 @@ const controller = {
 
         users.push(newUser);
         writeUsersJSON(users);
-        res.redirect('/users/login')
+        res.redirect('users/login')
         }else{
-            res.render('/users/register', {
-                errors: errors.mapped()/* ,
-                session: req.session */
+            res.render('users/register', {
+                errors: errors.mapped(),
+                session: req.session 
             })
         }
     },
@@ -84,6 +83,9 @@ const controller = {
         }
 
         res.redirect('products/index')
+    },
+    perfil2: (req, res) =>{
+        res.render('users/perfil')
     }
 }
 
