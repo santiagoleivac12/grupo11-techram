@@ -55,7 +55,17 @@
             </ul>
         </div>
     </div>
-    <% if (locals.user){%>
-        <h3><%= locals.user.firstName %></h3>
+  <% if (locals.user){%>
+        <h3 class="usuario" style="
+        color: white;
+        margin-left: 15px;
+        margin-top: 10px;
+        background-color: darkmagenta;
+        width: 200px;
+        height: 28px;
+        padding-left: 5px;
+        font-family: 'Source Sans Pro';
+        border-radius: 6px;
+    "><%= locals.user.firstName %></h3>
     <%}%>
 </header>

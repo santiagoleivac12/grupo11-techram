@@ -64,11 +64,16 @@ a {
     left: 0; 
     z-index: 70; 
 } 
-
+h3.usario{
+  
+   color: white;
+   
+    
+}
 
 input:checked  ~ ul{
     display:block;
-}
+} 
 
 .burguer-menu input,.burguer-responsive input {
     display: none;
