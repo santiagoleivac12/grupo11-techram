@@ -1,15 +1,23 @@
-const fs = require('fs');
+/* const fs = require('fs');
 const path = require('path');
 const productsFilePath = path.join(__dirname, '../data/productsDataBase.json')
 const products = JSON.parse(fs.readFileSync(productsFilePath, 'utf-8'));
 const writeJson = dataBase => fs.writeFileSync(productsFilePath, JSON.stringify(dataBase), 'utf-8')
+ */
+const db = require('../data/models');
+
+const Products = db.Product;
+const ProductImages = db.ProductImage;
 
 
 let controller = {
     admin: (req,res) => {
-        res.render('administrador/admin',{
-         products
-   /*  session: req.session  */
+        Products.findAll()
+        .then(products => {
+            res.render('administrador/admin',{
+             products
+       /*  session: req.session  */
+            })
 
         })
     },
@@ -18,19 +26,17 @@ let controller = {
         res.render('administrador/perfilAdminCrear');
     },
     store:(req,res)=>{
-        let lastId = 0;
-        products.forEach(product => {
-            if(lastId < product.id){
-                lastId = product.id;
-            }
+        Products.create({
+            ...req.body
         })
-        let newProduct = {
-            ...req.body,
-            id:lastId + 1,
-            image: req.file ? req.file.filename : "imagenqueserompa.png"  
-        }
-        products.push(newProduct);
-        writeJson(products);
+        .then(product => {
+            ProductImages.create({
+                image: req.file ? req.file.filename : 'default-image.png',
+                productId: product.id
+            }) 
+        })
+
+
         res.redirect('/admin')
     },
     /* -------------------------------------- */
