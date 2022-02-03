@@ -1,13 +1,16 @@
-/* const fs = require('fs');
+/* 
 const path = require('path');
 const productsFilePath = path.join(__dirname, '../data/productsDataBase.json')
 const products = JSON.parse(fs.readFileSync(productsFilePath, 'utf-8'));
 const writeJson = dataBase => fs.writeFileSync(productsFilePath, JSON.stringify(dataBase), 'utf-8')
  */
+const fs = require('fs');
 const db = require('../data/models');
 
 const Products = db.Product;
 const ProductImages = db.ProductImage;
+const Categories = db.Category;
+const Subcategories = db.Subcategory;
 
 
 let controller = {
@@ -33,38 +36,56 @@ let controller = {
             ProductImages.create({
                 image: req.file ? req.file.filename : 'default-image.png',
                 productId: product.id
+            })
+            .then(() => {
+                res.redirect('/admin')
             }) 
         })
-
-
-        res.redirect('/admin')
+        .catch(error => console.log(error))       
     },
     /* -------------------------------------- */
     edit: (req, res) => {
-        let productId = +req.params.id;
-        let product = products.find(product => product.id === productId)
-        res.render("administrador/editarProductoAdmin", {
-            product
+        const productPromise = Products.findByPk(req.params.id);
+        const categoriesPromise = Categories.findAll();
+        const subcategoriesPromise = Subcategories.findAll();
+        Promise.all([productPromise, categoriesPromise, subcategoriesPromise])
+        .then(([product, categories, subcategories]) => {
+            res.render("administrador/editarProductoAdmin", {
+                product
+            })
         })
     }, 
     update: (req, res) => {
-    let productId = +req.params.id;
-    const {name, price, category/* , description, discount, stock, type, specifications */} = req.body;
-    products.forEach(product => {
-        if(product.id === productId){
-            product.id = product.id,
-            product.name = name.trim(),
-            product.price = +price.trim(),
-            product.category = +category
-/*             product.description = description.trim(),
-            product.discount = +discount,
-            product.stock = stock,
-            product.type = type,
-            product.specifications = specifications,
-            product.image = req.file ? [req.file.filename] : product.image */
+    const {name, price, category, description, discount, stock, type, specifications} = req.body;
+    Products.update({
+        name,
+        price,
+        category,
+        description,
+        discount,
+        stock,
+        type,
+        specifications
+    }, {
+        where: {
+            id:req.params.id
         }
-    }),+
-    writeJson(products);
+    })
+    .then((result) => {
+        if(result){
+            ProductImages.findAll({
+                where:{
+                    productId: req.params.id
+                }
+            })
+            .then((images) =>{
+                images.forEach((image) => {
+
+                })
+            })
+        }
+    })  
+    /* writeJson(products); */
     res.redirect('/admin')
 },
 destroy: (req, res) => {
