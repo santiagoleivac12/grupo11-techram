@@ -1,1 +1,6 @@
 
+id
+general
+conectivity
+characteristics
+illumination
