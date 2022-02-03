@@ -11,9 +11,6 @@ module.exports = (sequelize, dataTypes) => {
             type: dataTypes.STRING(45),
             allowNull: false
         },
-        description: {
-            type: dataTypes.STRING(800),
-        },
         specificationId: {
             type: dataTypes.STRING(11)
         },

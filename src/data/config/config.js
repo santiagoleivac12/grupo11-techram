@@ -2,7 +2,7 @@ module.exports= {
   "development": {
     "username": "techram",
     "password": null,
-    "database": "dump-techram-",
+    "database": "techram",
     "host": "127.0.0.1",
     "dialect": "mysql"
   },
