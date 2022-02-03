@@ -31,11 +31,10 @@ let controller = {
         })
         .then(product => {
             ProductImages.create({
-                image: req.file ? req.file.filename : 'default-image.png',
+                image: req.file ? [req.file.filename] : ['default-image.png'],
                 productId: product.id
             }) 
         })
-
 
         res.redirect('/admin')
     },
