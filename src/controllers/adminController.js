@@ -54,6 +54,7 @@ let controller = {
                 product
             })
         })
+        .catch(error => console.log(error))
     }, 
     update: (req, res) => {
     const {name, price, category, description, discount, stock, type, specifications} = req.body;
@@ -80,33 +81,55 @@ let controller = {
             })
             .then((images) =>{
                 images.forEach((image) => {
-
+                    fs.existsSync('./public/images/productos/', image.image)
+                    ? fs.unlinkSync(`./public/images/productos/${image.image}`)
+                    : console.log('No se encontro el archivo')
+                })
+                ProductImages.destroy({
+                    where: {
+                        productId: req.params.id
+                    }
+                })
+                .then(() =>{
+                    ProductImages.create({
+                        where: {
+                            image: req.file ? req.file.filename : 'default-image-png',
+                            productId: req.params.id
+                        }
+                    })
+                    .then(()=> res.redirect('/admin'))
                 })
             })
         }
-    })  
-    /* writeJson(products); */
-    res.redirect('/admin')
-},
-destroy: (req, res) => {
-    let productId = +req.params.id;
-    products.forEach(product => {
-        if(product.id === productId){
-            if(fs.existsSync("./public/images/productos/", product.image)){
-                fs.unlinkSync(`./public/images/productos/${product.image}`)
-            }else{
-                console.log('No encontré el archivo')
-            }
-            let productToDestroyIndex = products.indexOf(product) // si lo encuentra devuelve el indice si no -1
-            if(productToDestroyIndex !== -1) {
-                products.splice(productToDestroyIndex, 1)
-            }else{  // primer parámetro es el indice del elemento a borrar, el segundo, la cantidad a eliminar
-                console.log('No encontré el producto')
-            }
-        }
     })
-    writeJson(products)
-    res.redirect('/admin')
-}
+    .catch(error => console.log(error))    
+},
+    destroy: (req, res) => {
+        ProductImages.findAll({
+            where: {
+                productId: req.params.id
+            }
+        })
+        .then((images) => {
+            images.forEach((image) => {
+                fs.existsSync('./public/images/productos/', image.image)
+                ? fs.unlinkSync(`./public/images/productos/${image.image}`)
+                : console.log('No se encontro el archivo')
+            })
+        })
+        ProductImages.destroy({
+            where: {
+                productId: req.params.id
+            }
+        })
+        .then((result) => {
+            Products.destroy({
+                where: {
+                    id: req.params.id
+                }
+            })
+            .then(res.redirect())
+        })
+    }
 }
 module.exports = controller
