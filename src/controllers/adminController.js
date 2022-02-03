@@ -45,7 +45,7 @@ let controller = {
     },
     /* -------------------------------------- */
     edit: (req, res) => {
-        const productPromise = Products.findByPk(req.params.id);
+        const productPromise = Products.findByPk(+req.params.id);
         const categoriesPromise = Categories.findAll();
         const subcategoriesPromise = Subcategories.findAll();
         Promise.all([productPromise, categoriesPromise, subcategoriesPromise])
@@ -128,8 +128,10 @@ let controller = {
                     id: req.params.id
                 }
             })
-            .then(res.redirect())
+            .then(res.redirect('/admin'))
+            .catch(error => console.log(error))
         })
+        .catch(error => console.log(error))
     }
 }
 module.exports = controller
