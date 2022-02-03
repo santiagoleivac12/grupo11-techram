@@ -5,7 +5,7 @@ const products = JSON.parse(fs.readFileSync(productsFilePath, 'utf-8'));
 const writeJson = dataBase => fs.writeFileSync(productsFilePath, JSON.stringify(dataBase), 'utf-8')
  */
 const fs = require('fs');
-const db = require('../database/models');
+const db = require('../data/models');
 
 const Products = db.Product;
 const ProductImages = db.ProductImage;
