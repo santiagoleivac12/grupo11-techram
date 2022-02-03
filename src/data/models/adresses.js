@@ -17,14 +17,14 @@ module.exports = (sequelize, dataTypes) => {
             type: dataTypes.STRING(100)
         },
         number: {
-            type: dataTypes.INTEGER
+            type: dataTypes.INTEGER(11)
         },
         postal_code: {
-            type: dataTypes.INTEGER
+            type: dataTypes.INTEGER(11)
         },
         userId: {
-            type: dataTypes.INTEGER,
-            allowNull: false
+            type: dataTypes.INTEGER(11),
+            allowNull: true
         },
     }
 

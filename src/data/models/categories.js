@@ -8,8 +8,8 @@ module.exports = (sequelize, dataTypes) => {
             allowNull: false 
         },
         name: {
-            type: dataTypes.STRING,
-            allowNull: false
+            type: dataTypes.STRING(45),
+            allowNull: true
         },
       
     }

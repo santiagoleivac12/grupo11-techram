@@ -15,24 +15,24 @@ module.exports = (sequelize, dataTypes) => {
             type: dataTypes.STRING(800),
         },
         specificationId: {
-            type: dataTypes.STRING(300)
+            type: dataTypes.STRING(11)
         },
         price: {
-            type: dataTypes.INTEGER,
+            type: dataTypes.INTEGER(11),
             allowNull: false
         },
         discount: {
-            type: dataTypes.INTEGER,
+            type: dataTypes.INTEGER(11)
         },
         subcategoryId: {
-            type: dataTypes.INTEGER,
+            type: dataTypes.INTEGER(11),
             allowNull: false
         },
         images:{
-
+           type: dataTypes.text
         },
         stock: {
-
+            type: dataTypes.INTEGER(11)
         },
         
     }

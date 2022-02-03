@@ -1,6 +1,6 @@
 module.exports= {
   "development": {
-    "username": "root",
+    "username": "techram",
     "password": null,
     "database": "dump-techram-",
     "host": "127.0.0.1",
