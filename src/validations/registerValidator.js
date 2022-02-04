@@ -37,8 +37,7 @@ module.exports = [
         max: 12
     })
     .withMessage('La contraseña debe tener entre 6 y 12 caracteres')
-/*     body('passWord').custom((value, {req})=> value !== req.body.passWord ? false : true)
-    .withMessage('las contraseñas no coinciden'), */
+
 /* 
     check('terms')
     .isString('on')

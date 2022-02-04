@@ -65,29 +65,19 @@ const controller = {
                 firstName,
                 lastname,
                 email,
-                pass: bcrypt.hashSync(pass1, 10),
+                pass: bcrypt.hashSync(pass, 10),
                 avatar: req.file ? req.file.filename:"default-image.png",
                 rol: 0
             })
             .then(()=>{
                 res.redirect('/users/login')
             })
-            if(errors.isEmpty()){
-                let lastId = 1;
-    
-                users.forEach(user => {
-                if(user.id > lastId){
-                    lastId = user.id;
-                }
+        }else{
+            res.render('users/register', {
+                errors: errors.mapped(),
+                old: req.body,
+                session: req.session 
             })
-    
-            }else{
-                res.render('users/register', {
-                    errors: errors.mapped(),
-                    session: req.session 
-                })
-        }
-       
         }
     },
 
