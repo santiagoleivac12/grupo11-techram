@@ -7,11 +7,11 @@ module.exports = (sequelize, dataTypes) => {
             autoIncrement: true,
             allowNull: false,
         },
-        name: {
+        firstName: {
             type: dataTypes.STRING(45),
             allowNull: false,
         },
-        last_name: {
+        lastname: {
             type: dataTypes.STRING(45),
             allowNull: false,
         }, 
@@ -42,11 +42,16 @@ module.exports = (sequelize, dataTypes) => {
     }
     const User = sequelize.define(alias, cols,config)
 
-    User.associate = (models) => {
+   /* User.associate = (models) => {
         User.hasMany(models.addresses,{
-
+            as: 'addresses',
+            foreignKey: 'userId',
+        })
+        User.hosOne(models.Order,{
+            as:"order",
+            foreignKey
         })
         
-    }
+    }*/
     return User 
 }

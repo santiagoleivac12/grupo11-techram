@@ -26,7 +26,7 @@ module.exports = (sequelize, dataTypes) => {
             allowNull: false
         },
         images:{
-           type: dataTypes.text
+           type: dataTypes.TEXT
         },
         stock: {
             type: dataTypes.INTEGER(11)

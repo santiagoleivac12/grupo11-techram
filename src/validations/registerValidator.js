@@ -7,7 +7,7 @@ module.exports = [
     .notEmpty()
     .withMessage('debe ingresar un nombre'),
 
-    check('lastName')
+    check('lastname')
     .notEmpty()
     .withMessage('El apellido es requerido'),
 
@@ -29,7 +29,7 @@ module.exports = [
 
     }),
 
-    check('password')
+    check('pass')
     .notEmpty()
     .withMessage('debes escribir tu contraseña')
     .isLength({
