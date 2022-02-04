@@ -18,8 +18,8 @@ let controller = {
         Products.findAll()
         .then(products => {
             res.render('administrador/admin',{
-             products
-       /*  session: req.session  */
+            products,
+            session: req.session  
             })
 
         })
@@ -30,7 +30,10 @@ let controller = {
     },
     store:(req,res)=>{
         Products.create({
-            ...req.body
+            ...req.body,
+            specificationsId: 5,
+            subcategoryId: 3,
+            stock: 5
         })
         .then(product => {
             ProductImages.create({
