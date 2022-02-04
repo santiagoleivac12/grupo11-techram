@@ -40,20 +40,20 @@ module.exports = (sequelize, dataTypes) => {
 
     const Product = sequelize.define(alias, cols, config)
 
-/*     Product.associate = models => {
-        Product.belongsTo(models.Subcategory, {
+    Product.associate = models => {
+/*         Product.belongsTo(models.Subcategory, {
             as:"subcategories",
             foreignKey: "subcategoryId"
-        })
-        Product.hasMany(models.ProductImage, {
-            as: "productImages",
+        }) */
+        Product.hasMany(models.Product_images, {
+            as: "products_images",
             foreignKey: "productId"
         })
-        Product.hasMany(models.Order_item, {
+/*         Product.hasMany(models.Order_item, {
             as: "order_items",
             foreignKey: "productId"
-        })
-    } */
+        }) */
+    }
 
     return Product;
 }

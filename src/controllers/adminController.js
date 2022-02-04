@@ -15,7 +15,11 @@ const Subcategories = db.Subcategory;
 
 let controller = {
     admin: (req,res) => {
-        Products.findAll()
+        Products.findAll({
+            include: [
+                {association: "products_images"}
+            ]
+        })
         .then(products => {
             res.render('administrador/admin',{
             products,
@@ -54,12 +58,15 @@ let controller = {
         Promise.all([productPromise, categoriesPromise, subcategoriesPromise])
         .then(([product, categories, subcategories]) => {
             res.render("administrador/editarProductoAdmin", {
-                product
+                product,
+                categories,
+                subcategories
             })
         })
         .catch(error => console.log(error))
     }, 
     update: (req, res) => {
+        console.log(req.body)
     const {name, price, category, description, discount, stock, type, specifications} = req.body;
     Products.update({
         name,
