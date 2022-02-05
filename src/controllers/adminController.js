@@ -47,29 +47,29 @@ let controller = {
         const productPromise = Products.findByPk(req.params.id);
         const categoriesPromise = Categories.findAll();
         const subcategoriesPromise = Subcategories.findAll();
-        Promise.all([productPromise, categoriesPromise, subcategoriesPromise])
-        .then(([product, categories, subcategories]) => {
+        const specificationsPromise = Specificationes.findAll();
+        Promise.all([productPromise, categoriesPromise, subcategoriesPromise, specificationsPromise])
+        .then(([product, categories, subcategories, specifications]) => {
             /* res.send(product, categories, subcategories) */
             res.render("administrador/editarProductoAdmin", {
                 product,
                 categories,
-                subcategories
+                subcategories,
+                specifications
             })
         })
         .catch(error => console.log(error))
     }, 
     update: (req, res) => {
         /* console.log(req.body) */
-    const {name, price, category, description, discount, stock, type, specifications} = req.body;
+    const {name, specifications, price, discount, subcategory} = req.body;
     Products.update({
         name,
+        specificationsId: specifications,
         price,
-        category,
-        description,
         discount,
-        stock,
-        type,
-        specifications
+        subcategoryId: subcategory,
+        stock
     }, {
         where: {
             id:req.params.id
@@ -84,7 +84,7 @@ let controller = {
             })
             .then((images) =>{
                 images.forEach((image) => {
-                    fs.existsSync('./public/images/productos/', image.image)
+                    fs.existsSync('./public/images/productos', image.image)
                     ? fs.unlinkSync(`./public/images/productos/${image.image}`)
                     : console.log('No se encontro el archivo')
                 })
