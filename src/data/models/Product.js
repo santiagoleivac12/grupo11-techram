@@ -48,6 +48,10 @@ module.exports = (sequelize, dataTypes) => {
         Product.hasMany(models.ProductImage, {
             as: "productImages",
             foreignKey: "productId"
+        }),
+        Product.hasMany(models.Specification, {
+            as: "specifications",
+            foreignKey: "specificationsId"
         })
 /*         Product.hasMany(models.Order_item, {
             as: "order_items",
