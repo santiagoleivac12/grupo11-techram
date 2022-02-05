@@ -15,11 +15,11 @@ let controller = {
             where: {
                 id: req.params.id,
             },
-            include: [{association: 'productImages'}]
+            include: [{association: 'products_images'}]
         })
         .then(((product) => {
             Products.findAll({
-                include: [{association: 'productImages'}],
+                include: [{association: 'products_images'}],
                 where: {
                     subcategoryId: product.subcategoryId
                 }

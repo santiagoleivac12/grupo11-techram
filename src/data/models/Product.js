@@ -25,9 +25,9 @@ module.exports = (sequelize, dataTypes) => {
             type: dataTypes.INTEGER(11),
             allowNull: false
         },
-        images:{
+/*         images:{
            type: dataTypes.TEXT
-        },
+        }, */
         stock: {
             type: dataTypes.INTEGER(11)
         },
@@ -45,8 +45,8 @@ module.exports = (sequelize, dataTypes) => {
             as:"subcategories",
             foreignKey: "subcategoryId"
         }) */
-        Product.hasMany(models.Product_images, {
-            as: "products_images",
+        Product.hasMany(models.ProductImage, {
+            as: "productImages",
             foreignKey: "productId"
         })
 /*         Product.hasMany(models.Order_item, {

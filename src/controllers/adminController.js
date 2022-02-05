@@ -1,9 +1,3 @@
-/* 
-const path = require('path');
-const productsFilePath = path.join(__dirname, '../data/productsDataBase.json')
-const products = JSON.parse(fs.readFileSync(productsFilePath, 'utf-8'));
-const writeJson = dataBase => fs.writeFileSync(productsFilePath, JSON.stringify(dataBase), 'utf-8')
- */
 const fs = require('fs');
 const db = require('../data/models');
 
@@ -16,11 +10,10 @@ const Subcategories = db.Subcategory;
 let controller = {
     admin: (req,res) => {
         Products.findAll({
-            include: [
-                {association: "products_images"}
-            ]
+            include: [{association: "productImages"}]
         })
         .then(products => {
+            /* res.send(products) */
             res.render('administrador/admin',{
             products,
             session: req.session  
