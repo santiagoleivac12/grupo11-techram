@@ -11,7 +11,7 @@ module.exports = (sequelize, dataTypes) => {
             type: dataTypes.STRING(45),
             allowNull: false
         },
-        specificationId: {
+        specificationsId: {
             type: dataTypes.STRING(11)
         },
         price: {
@@ -25,9 +25,9 @@ module.exports = (sequelize, dataTypes) => {
             type: dataTypes.INTEGER(11),
             allowNull: false
         },
-        images:{
-           type: dataTypes.text
-        },
+/*         images:{
+           type: dataTypes.TEXT
+        }, */
         stock: {
             type: dataTypes.INTEGER(11)
         },
@@ -41,18 +41,18 @@ module.exports = (sequelize, dataTypes) => {
     const Product = sequelize.define(alias, cols, config)
 
     Product.associate = models => {
-        Product.belongsTo(models.Subcategory, {
+/*         Product.belongsTo(models.Subcategory, {
             as:"subcategories",
             foreignKey: "subcategoryId"
-        })
+        }) */
         Product.hasMany(models.ProductImage, {
             as: "productImages",
             foreignKey: "productId"
         })
-        Product.hasMany(models.Order_item, {
+/*         Product.hasMany(models.Order_item, {
             as: "order_items",
             foreignKey: "productId"
-        })
+        }) */
     }
 
     return Product;

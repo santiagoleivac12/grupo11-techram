@@ -1,9 +1,3 @@
-/* 
-const path = require('path');
-const productsFilePath = path.join(__dirname, '../data/productsDataBase.json')
-const products = JSON.parse(fs.readFileSync(productsFilePath, 'utf-8'));
-const writeJson = dataBase => fs.writeFileSync(productsFilePath, JSON.stringify(dataBase), 'utf-8')
- */
 const fs = require('fs');
 const db = require('../data/models');
 
@@ -15,11 +9,14 @@ const Subcategories = db.Subcategory;
 
 let controller = {
     admin: (req,res) => {
-        Products.findAll()
+        Products.findAll({
+            include: [{association: "productImages"}]
+        })
         .then(products => {
+            /* res.send(products) */
             res.render('administrador/admin',{
-             products
-       /*  session: req.session  */
+            products,
+            session: req.session  
             })
 
         })
@@ -30,7 +27,10 @@ let controller = {
     },
     store:(req,res)=>{
         Products.create({
-            ...req.body
+            ...req.body,
+            specificationsId: 5,
+            subcategoryId: 3,
+            stock: 5
         })
         .then(product => {
             ProductImages.create({
@@ -51,12 +51,15 @@ let controller = {
         Promise.all([productPromise, categoriesPromise, subcategoriesPromise])
         .then(([product, categories, subcategories]) => {
             res.render("administrador/editarProductoAdmin", {
-                product
+                product,
+                categories,
+                subcategories
             })
         })
         .catch(error => console.log(error))
     }, 
     update: (req, res) => {
+        console.log(req.body)
     const {name, price, category, description, discount, stock, type, specifications} = req.body;
     Products.update({
         name,

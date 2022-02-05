@@ -44,6 +44,4 @@ Address.associate = (models) => {
 }
 
 return Address;
-
-
 }

@@ -7,7 +7,7 @@ module.exports = [
     .notEmpty()
     .withMessage('debe ingresar un nombre'),
 
-    check('lastName')
+    check('lastname')
     .notEmpty()
     .withMessage('El apellido es requerido'),
 
@@ -29,7 +29,7 @@ module.exports = [
 
     }),
 
-    check('password')
+    check('pass')
     .notEmpty()
     .withMessage('debes escribir tu contraseña')
     .isLength({
@@ -37,8 +37,7 @@ module.exports = [
         max: 12
     })
     .withMessage('La contraseña debe tener entre 6 y 12 caracteres')
-/*     body('passWord').custom((value, {req})=> value !== req.body.passWord ? false : true)
-    .withMessage('las contraseñas no coinciden'), */
+
 /* 
     check('terms')
     .isString('on')

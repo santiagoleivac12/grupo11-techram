@@ -15,7 +15,7 @@ const controller = {
         let errors= validationResult(req);
 
         if(errors.isEmpty()) {
-           User.findOne({
+           Users.findOne({
                where:{
                     email: req.body.email
                }
@@ -25,7 +25,7 @@ const controller = {
                 id: user.id,
                 firstName: user.firstName,
                 email: user.email,
-                image: user.image,
+                avatar: user.avatar,
                 rol: user.rol
             }
  
@@ -59,33 +59,28 @@ const controller = {
     },
     processRegister: (req,res) =>{
         let errors = validationResult(req);
-        Users.create({
-            firstname,
-            lastName,
-            email,
-            pass: bcrypt.hashSync(pass1, 10),
-            avatar: req.file ? req.file.filename:"default-image.png",
-            rol: 0
-        })
-        .then(()=>{
-            res.redirect('/users/login')
-        })
         if(errors.isEmpty()){
-            let lastId = 1;
-
-            users.forEach(user => {
-            if(user.id > lastId){
-                lastId = user.id;
-            }
-        })
-
+            let{firstName,lastname,email,pass}= req.body;
+            Users.create({
+                firstName,
+                lastname,
+                email,
+                pass: bcrypt.hashSync(pass, 10),
+                avatar: req.file ? req.file.filename:"default-image.png",
+                rol: 0
+            })
+            .then(()=>{
+                res.redirect('/users/login')
+            })
         }else{
             res.render('users/register', {
                 errors: errors.mapped(),
+                old: req.body,
                 session: req.session 
             })
         }
     },
+
     logout: (req,res) =>{
         req.session.destroy();
         if(req.cookies.userTechram){
@@ -100,3 +95,4 @@ const controller = {
 }
 
 module.exports = controller
+

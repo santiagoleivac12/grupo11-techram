@@ -8,6 +8,6 @@ let controller = require('../controllers/productsController');
 router.get('/detail/:id/', controller.detail);
 
 //carrito
-router.get('/carrito', userCheck, controller.carrito);
+/*router.get('/carrito', userCheck, controller.carrito);*/
 
 module.exports = router;
