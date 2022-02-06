@@ -87,6 +87,8 @@
   font-size: 1em;
 }
 .input-register {
+  width: 90%;
+  height: 32px;
   padding-left: 20px;
   border: none;
   border-radius: 5px;
