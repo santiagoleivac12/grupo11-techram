@@ -18,8 +18,8 @@ let controller = {
             },
             include: [{association: 'productImages'}]
         })
-        .then((product) => {
-            res.render('productDetail',{
+        .then(product => {
+            res.render('products/detalleDeProducto',{
             product,
             session: req.session  
             })
