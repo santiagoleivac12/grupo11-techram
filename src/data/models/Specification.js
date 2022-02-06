@@ -34,12 +34,12 @@ module.exports = (sequelize, dataTypes) => {
 
     const Specification = sequelize.define(alias, cols, config)
 
-    Specification.associate = models => {
+/*     Specification.associate = models => {
         Specification.hasMany(models.Product, {
             as: "products",
             foreignKey: "specificationsId"
         })
-    }
+    } */
 
     return Specification;
 }

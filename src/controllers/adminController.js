@@ -47,15 +47,14 @@ let controller = {
         const productPromise = Products.findByPk(req.params.id);
         const categoriesPromise = Categories.findAll();
         const subcategoriesPromise = Subcategories.findAll();
-        const specificationsPromise = Specificationes.findAll();
-        Promise.all([productPromise, categoriesPromise, subcategoriesPromise, specificationsPromise])
-        .then(([product, categories, subcategories, specifications]) => {
+       /*  const specificationsPromise = Specifications.findAll(); */
+        Promise.all([productPromise, categoriesPromise, subcategoriesPromise/* , specificationsPromise */])
+        .then(([product, categories, subcategories/* , specifications */]) => {
             /* res.send(product, categories, subcategories) */
             res.render("administrador/editarProductoAdmin", {
                 product,
                 categories,
-                subcategories,
-                specifications
+                subcategories
             })
         })
         .catch(error => console.log(error))
