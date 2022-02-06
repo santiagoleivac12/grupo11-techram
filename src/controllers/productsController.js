@@ -1,9 +1,10 @@
 const fs = require('fs');
 const path = require('path')
+const { Op } = require('sequelize');
 const db =require("../data/models")
-const Products= db.Products;
-const Categories= db.Categories;
-const Subcategories= db.Subcategories;
+const Products= db.Product;
+const Categories= db.Category;
+const Subcategories= db.Subcategory;
 
 //const productsFilePath = path.join(__dirname, '../data/productsDataBase.json')
 //const products = JSON.parse(fs.readFileSync(productsFilePath, 'utf-8'));
@@ -15,11 +16,18 @@ let controller = {
             where: {
                 id: req.params.id,
             },
-            include: [{association: 'products_images'}]
+            include: [{association: 'productImages'}]
         })
-        .then(((product) => {
+        .then((product) => {
+            res.render('productDetail',{
+            product,
+            session: req.session  
+            })
+
+        })
+        /* .then(((product) => {
             Products.findAll({
-                include: [{association: 'products_images'}],
+                include: [{association: 'productImages'}],
                 where: {
                     subcategoryId: product.subcategoryId
                 }
@@ -32,9 +40,9 @@ let controller = {
                     session: req.session
                 })
             })
-        }))
+        })) */
     },
-    category: (req, res) => {
+/*     category: (req, res) => {
         Categories.findOne({
             where: {
                 id: req.params.id
@@ -65,7 +73,7 @@ let controller = {
             });
         })
         .catch(error => console.log(error))
-    },
+    } *//* ,
     subcategory: (req, res) => {
         Subcategories.findByPk(req.params.subcategory, {
             include: [{
@@ -88,7 +96,7 @@ let controller = {
                 })
             })
         })
-    },
+    } *//* ,
     search: (req, res) => {
         Products.findAll({
             where: {
@@ -105,7 +113,7 @@ let controller = {
                 session: req.session
             })
         })
-    }
+    } */
 }
 
 module.exports = controller

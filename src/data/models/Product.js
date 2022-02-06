@@ -11,9 +11,9 @@ module.exports = (sequelize, dataTypes) => {
             type: dataTypes.STRING(800),
             allowNull: false
         },
-        specificationsId: {
+/*         specificationsId: {
             type: dataTypes.INTEGER(11)
-        },
+        }, */
         price: {
             type: dataTypes.INTEGER(11),
             allowNull: false
@@ -49,11 +49,7 @@ module.exports = (sequelize, dataTypes) => {
         Product.hasMany(models.ProductImage, {
             as: "productImages",
             foreignKey: "productId"
-        })/* ,
-        Product.hasMany(models.Specification, {
-            as: "specifications",
-            foreignKey: "specificationsId"
-        }) */
+        })/
         Product.hasMany(models.Order_item, {
             as: "order_items",
             foreignKey: "productId"

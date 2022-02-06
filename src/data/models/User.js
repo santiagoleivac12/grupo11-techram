@@ -47,7 +47,7 @@ module.exports = (sequelize, dataTypes) => {
             as: 'addresses',
             foreignKey: 'userId',
         })
-        User.hosOne(models.Order,{
+        User.hasOne(models.Order,{
             as:"order",
             foreignKey: 'userId'
         })

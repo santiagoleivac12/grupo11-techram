@@ -61,7 +61,7 @@ let controller = {
     }, 
     update: (req, res) => {
         /* console.log(req.body) */
-    const {name, specifications, price, discount, subcategory} = req.body;
+    const {name, specifications, price, discount, subcategory, stock} = req.body;
     Products.update({
         name,
         specificationsId: specifications,
