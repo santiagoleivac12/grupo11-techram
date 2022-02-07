@@ -23,9 +23,9 @@
                 <% if(locals.errors && errors.email){%>
                     <small class='text-danger'><%=errors.email.msg%></small>
                     <% }%>
-                <input class="input" name='password' type="password" placeholder="Contraseña">
-                <% if(locals.errors && errors.password){%>
-                    <small class='text-danger'><%=errors.password.msg%></small>
+                <input class="input" name='pass' type="password" placeholder="Contraseña">
+                <% if(locals.errors && errors.pass){%>
+                    <small class='text-danger'><%=errors.pass.msg%></small>
                     <% }%>
                 <p class="anexo"><input id="checkbox" type="checkbox" name="recordar">Recordar contraseña</p>
                 <p class="anexo">Olvidaste tu contraseña? <a class="span">Click aquí</a></p>

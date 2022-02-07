@@ -1,6 +1,9 @@
-const { users,writeUsersJSON } = require('../data/dataBase')
+///const { users,writeUsersJSON } = require('../data/dataBase')
 const { validationResult } = require('express-validator')
 const bcrypt = require('bcryptjs');
+const db= require('../data/models')
+
+const Users=db.User;
 
 const controller = {
     login1: (req, res) =>{
@@ -12,27 +15,34 @@ const controller = {
         let errors= validationResult(req);
 
         if(errors.isEmpty()) {
-           let user= users.find(user=>user.email === req.body.email)
-           req.session.user={
-               id: user.id,
-               firstName: user.firstName,
-               email: user.email,
-               image: user.image,
-               rol: user.rol
-           }
-
-           if(req.body.recordar){
-            const TIME_IN_MILISECONDS = 60000;
-            res.cookie("userTechram", req.session.user, {
-                expires: new Date(Date.now() + TIME_IN_MILISECONDS),
-                httpOnly: true, 
-                secure: true
-            })
-        }
-
-           res.locals.user = req.session.user;
-
-           res.redirect('/')
+           Users.findOne({
+               where:{
+                    email: req.body.email
+               }
+           })
+           .then(user=>{
+            req.session.user={
+                id: user.id,
+                firstName: user.firstName,
+                email: user.email,
+                avatar: user.avatar,
+                rol: user.rol
+            }
+ 
+            if(req.body.recordar){
+             const TIME_IN_MILISECONDS = 60000;
+             res.cookie("userTechram", req.session.user, {
+                 expires: new Date(Date.now() + TIME_IN_MILISECONDS),
+                 httpOnly: true, 
+                 secure: true
+             })
+         }
+ 
+            res.locals.user = req.session.user;
+ 
+            res.redirect('/')
+           })
+          
         }else{
             res.render('users/login',{
                 errors: errors.mapped(),
@@ -49,37 +59,28 @@ const controller = {
     },
     processRegister: (req,res) =>{
         let errors = validationResult(req);
-
         if(errors.isEmpty()){
-            let lastId = 1;
-
-            users.forEach(user => {
-            if(user.id > lastId){
-                lastId = user.id;
-            }
-        })
-
-        let { firstName, lastName, email, password } = req.body
-
-        let newUser = {
-            id: lastId + 1,
-            firstName,
-            lastName,
-            email, 
-            password: bcrypt.hashSync(password, 10),
-            image: req.file ? req.file.filename : "default-image.png"
-        }
-
-        users.push(newUser)
-        writeUsersJSON(users)
-        res.redirect('/users/login')
+            let{firstName,lastname,email,pass}= req.body;
+            Users.create({
+                firstName,
+                lastname,
+                email,
+                pass: bcrypt.hashSync(pass, 10),
+                avatar: req.file ? req.file.filename:"default-image.png",
+                rol: 0
+            })
+            .then(()=>{
+                res.redirect('/users/login')
+            })
         }else{
             res.render('users/register', {
                 errors: errors.mapped(),
+                old: req.body,
                 session: req.session 
             })
         }
     },
+
     logout: (req,res) =>{
         req.session.destroy();
         if(req.cookies.userTechram){
@@ -94,3 +95,4 @@ const controller = {
 }
 
 module.exports = controller
+
