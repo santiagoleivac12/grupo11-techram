@@ -32,16 +32,16 @@ module.exports = (sequelize, dataTypes) => {
         timestamps: false
     }
 
-    const Category = sequelize.define(alias, cols, config)
+    const Specification = sequelize.define(alias, cols, config)
 
-/*     Category.associate = models => {
-        Category.hasMany(models.Subcategory, {
-            as: "subcategories",
-            foreignKey: "categoryId"
+/*     Specification.associate = models => {
+        Specification.hasMany(models.Product, {
+            as: "products",
+            foreignKey: "specificationsId"
         })
     } */
 
-    return Category;
+    return Specification;
 }
 
 

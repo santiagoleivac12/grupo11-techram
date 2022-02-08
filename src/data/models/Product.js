@@ -8,12 +8,12 @@ module.exports = (sequelize, dataTypes) => {
             allowNull: false 
         },
         name: {
-            type: dataTypes.STRING(45),
+            type: dataTypes.STRING(800),
             allowNull: false
         },
-        specificationsId: {
-            type: dataTypes.STRING(11)
-        },
+/*         specificationsId: {
+            type: dataTypes.INTEGER(11)
+        }, */
         price: {
             type: dataTypes.INTEGER(11),
             allowNull: false
@@ -29,8 +29,9 @@ module.exports = (sequelize, dataTypes) => {
            type: dataTypes.TEXT
         }, */
         stock: {
-            type: dataTypes.INTEGER(11)
-        },
+            type: dataTypes.INTEGER(11),
+            allowNull: false
+        }
         
     }
     let config = {
@@ -41,18 +42,18 @@ module.exports = (sequelize, dataTypes) => {
     const Product = sequelize.define(alias, cols, config)
 
     Product.associate = models => {
-/*         Product.belongsTo(models.Subcategory, {
+        Product.belongsTo(models.Subcategory, {
             as:"subcategories",
             foreignKey: "subcategoryId"
-        }) */
+        })
         Product.hasMany(models.ProductImage, {
             as: "productImages",
             foreignKey: "productId"
-        })
-/*         Product.hasMany(models.Order_item, {
+        })/
+        Product.hasMany(models.Order_item, {
             as: "order_items",
             foreignKey: "productId"
-        }) */
+        })
     }
 
     return Product;
