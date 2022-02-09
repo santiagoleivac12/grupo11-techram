@@ -66,6 +66,7 @@ const controller = {
                 lastname,
                 email,
                 pass: bcrypt.hashSync(pass, 10),
+                phone,
                 avatar: req.file ? req.file.filename:"default-image.png",
                 rol: 0
             })

@@ -39,6 +39,12 @@
             <% if (locals.errors && errors.pass) { %>
               <small class="text-danger"><%= errors.pass.msg %> </small>
             <% } %>
+            <label for="phone"></label>
+            <input class="input-register" type="number" name="phone" placeholder="telefono"/>
+            <% if (locals.errors && errors.phone) { %>
+              <small class="text-danger"><%= errors.phone.msg %> </small>
+            <% } %>
+
             <!-- <input class="input-register" type="password" name="password" placeholder="Repite la Contraseña"/> -->
             <label for="user-img">Agregue su foto del perfil</label>
             <input type="file" name="user-img" id="user-img" accept="jpg">
