@@ -161,7 +161,7 @@ CREATE TABLE `products` (
 
 LOCK TABLES `products` WRITE;
 /*!40000 ALTER TABLE `products` DISABLE KEYS */;
-INSERT INTO `products` VALUES (1,'MÃ³dulo de memoria SPECTRIX D60G DDR4 RGB',1,14000,10,1,NULL,50),(2,'Micro Procesador Amd Ryzen 5 5600g 4.4ghz Am4 16mb C/ Video',2,35000,5,2,NULL,10),(3,'Teclado Redragon k552w',3,555555,5,3,NULL,25),(4,'Motherboard Asus Tuf Gaming Z590-plus Wifi Socket 1200',4,31000,10,4,NULL,15),(5,'onikuma k20',5,4000,5,3,NULL,5),(6,'Monitor AOC 27\"',6,28900,10,3,NULL,8),(7,'Luces Led 10m',7,1500,NULL,7,NULL,20),(8,'Tableta digital Wacom INtuos Small',8,30000,5,5,NULL,3),(9,'Placa de video MSI GeForce RTX 3080 Ti 12GB',9,340000,10,6,NULL,6),(10,'Cpu Cooler Xigmatek Windpower 963 Intel 1200 Amd Am4',10,8000,5,8,NULL,17),(11,'cleo',5,555,5,3,NULL,5);
+INSERT INTO `products` VALUES (1,'Modulo de memoria SPECTRIX D60G DDR4 RGB',1,14000,10,1,NULL,50),(2,'Micro Procesador Amd Ryzen 5 5600g 4.4ghz Am4 16mb C/ Video',2,35000,5,2,NULL,10),(3,'Teclado Redragon k552w',3,555555,5,3,NULL,25),(4,'Motherboard Asus Tuf Gaming Z590-plus Wifi Socket 1200',4,31000,10,4,NULL,15),(5,'onikuma k20',5,4000,5,3,NULL,5),(6,'Monitor AOC 27\"',6,28900,10,3,NULL,8),(7,'Luces Led 10m',7,1500,NULL,7,NULL,20),(8,'Tableta digital Wacom INtuos Small',8,30000,5,5,NULL,3),(9,'Placa de video MSI GeForce RTX 3080 Ti 12GB',9,340000,10,6,NULL,6),(10,'Cpu Cooler Xigmatek Windpower 963 Intel 1200 Amd Am4',10,8000,5,8,NULL,17);
 /*!40000 ALTER TABLE `products` ENABLE KEYS */;
 UNLOCK TABLES;
 
