@@ -90,7 +90,12 @@ const controller = {
         res.redirect('products/index')
     },
     perfil2: (req, res) =>{
-        res.render('users/perfil')
+        if (req.session.user){
+            res.render('users/perfil',{
+                session: req.session
+            })
+        }
+        else {res.render('users/perfil')}
     }
 }
 
