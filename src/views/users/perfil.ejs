@@ -5,58 +5,32 @@
 
     <body>
         <%- include('../partials/header') %>
-
-
-            <form id="form" action="/users/profile?_method=PUT" method="POST" enctype="multipart/form-data">
-                <div class="formulario">
-                    <!-- 1.Datos Personales -->
-                    <div class="datos-Personales-Edit">
-                        <h2>Datos Personales</h2>
-
-                        <label for="name"><b>Nombre</b></label>
-                        <input type="text" placeholder="Nombre " name="firstName" id="firstName">
-
-
-
-                        <p class="error" id="firstNameError"></p>
-                        <br>
-                        <label for="name"><b>Apellido</b></label>
-                        <input type="text" placeholder="Apellido" name="lastName" id="lastName">
-                        <p class="error" id="lastNameError"></p>
-
-
-
-                        <br>
-                        <label for="Email"><b>Email</b></label>
-                        <input type="email" placeholder="Ingrese su Email" disabled name="email" id="email">
-                        <br>
-
-                        <br>
-                        <label for="Perfil"><b>Cambiar foto de Perfil</b></label>
-                        <input class="File" type="file" name="Perfil" accept="jpg">
-
-                    </div>
-
-                    <!-- Datos de envio -->
-                    <div class="entrega">
-                        <h2>Datos de envio</h2>
-
-                        <label for="Dirrecion"><b>Dirrecion</b></label>
-                        <input type="text" placeholder="Direccion" name="address" id="name">.
-                        <br>
-                        <label for="Numero"><b>C.Postal</b></label>
-                        <input type="number" placeholder="Codigo Postal" name="cp" id="Numero">
-                        <br>
-                        <label for="name"><b>Provincia</b></label>
-                        <input type="text" placeholder="Provincia" name="provincia" id="provincia">
-                        <br>
-                        <label for="name"><b>Localidad</b></label>
-                        <input type="text" placeholder="Localidad" name="localidad" id="name">
-                    </div>
-                </div>
-                <button type='submit' class="checkout-cta-Edit">Editar</button><br>
-                <span class="error" id="mistakes"></span>
-            </form>
+        <main>
+            <p class="containerAvatar"><img class="avatarProfile" src="/images/users/2.png" alt="avatar"></p>
+            <p class="bienvenido">Tu perfil <b> <% if (typeof session.user != "undefined") { %>
+                <span> <%= session.user.name %> </span>  
+                <div class="datosPersonales">
+                    <p class="titleProfile">Datos Personales</p>
+                  <p class="firstNameProfile"> <h4 class="nameProfile">Nombre:</h4><%= session.user.firstName %> </p>
+                  <p class="lastNameProfile"><h4 class="nameProfile">Apellido:</h4> <%= session.user.lastname %> </p>
+                  <p class="emailProfile"><h4 class="nameProfile">Email:</h4> <%= session.user.email %></p> 
+                  <p class="phoneProfile"><h4 class="nameProfile">Teléfono:</h4> <%= session.user.phone %></p>
+                  </div>
+              <% } else {%>
+                Usuario
+              <% } %> 
+           </div>
+           <div class="datosPersonales" >
+               <p class='titleProfile'>Datos de Envio</p>
+            <p class="streetProfile"><h4 class="nameProfile">Dirección:</h4> <%= session.user.address %></p>
+            <p class="numberProfile"><h4 class="nameProfile">Número:</h4> <%= session.user.address %></p>
+            <p class="cityProfile"><h4 class="nameProfile">Ciudad:</h4> <%= session.user.address %></p>
+            <p class="provinceProfile"><h4 class="nameProfile">Provincia:</h4> <%= session.user.address %></p>
+            <p class="postalCodeProfile"><h4 class="nameProfile">Código Postal:</h4> <%= session.user.address %></p>
+            
+           </div>
+           <button class="buttonProfile">Editar Información</button>
+        </main>
 
 
 
