@@ -44,7 +44,12 @@ let controller = {
     },
     /* -------------------------------------- */
     edit: (req, res) => {
-        const productPromise = Products.findByPk(req.params.id);
+        const productPromise = Products.findOne({
+            where: {
+                id: req.params.id,
+            },
+            include: [{association: 'productImages'}]
+        });
         const categoriesPromise = Categories.findAll();
         const subcategoriesPromise = Subcategories.findAll();
        /*  const specificationsPromise = Specifications.findAll(); */
