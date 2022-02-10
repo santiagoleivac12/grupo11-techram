@@ -25,6 +25,10 @@ let controller = {
             })
 
         })
+      },
+    carrito:(req,res)=>{
+        res.render('products/carrito')
+    }
         /* .then(((product) => {
             Products.findAll({
                 include: [{association: 'productImages'}],
@@ -41,7 +45,7 @@ let controller = {
                 })
             })
         })) */
-    },
+    
 /*     category: (req, res) => {
         Categories.findOne({
             where: {
