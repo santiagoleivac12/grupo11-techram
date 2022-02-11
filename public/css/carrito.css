@@ -141,11 +141,11 @@ h2.resu-carr{
 
 
 .envio{
-    border-radius: 8px;
-    background-color: rgba(255, 255, 255, 0.412);
+   /*  border-radius: 8px;
+    background-color: rgba(255, 255, 255, 0.412); */
     padding-top: 10px;
     text-align: center;
-    color: green;
+    color: rgb(96, 195, 96);
     width: 84px;
     height: 40px;
     font-family: var(--font-textos);
@@ -157,6 +157,10 @@ h2.resu-carr{
 
 .burguer-responsive{
     font-family: var(--font-titulos);
+}
+.titulosCarrito{
+    font-family: var(--font-titulos);
+    color: thistle;
 }
 /* --------------------------------------------------- */
 @media(max-width:865px){
