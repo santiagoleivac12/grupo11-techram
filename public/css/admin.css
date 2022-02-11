@@ -4,7 +4,20 @@
     margin: 0;
 }
 
-.products{
+.rows{
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    margin-top: 20px;
+    width: 100%;
+    margin: 0 auto;
+}
+
+.rows-div {
+    border: 3px solid rebeccapurple;
+}
+
+/* .products{
     display: flex;
     flex-direction: column;
     flex-wrap: wrap;
@@ -124,4 +137,4 @@
         margin-bottom: 50px;
         margin-top: 50px;
     }
-}
+} */
