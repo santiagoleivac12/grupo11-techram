@@ -32,7 +32,7 @@ const controller = {
                     }
 
                     if (req.body.recordar) {
-                        const TIME_IN_MILISECONDS = 60000;
+                        const TIME_IN_MILISECONDS = 600000;
                         res.cookie("userTechram", req.session.user, {
                             expires: new Date(Date.now() + TIME_IN_MILISECONDS),
                             httpOnly: true,
@@ -89,8 +89,7 @@ const controller = {
         if (req.cookies.userTechram) {
             res.cookie('userTechram', "", { maxAge: -1 })
         }
-
-        res.redirect('products/index')
+        res.redirect('/')
     },
     perfil2: (req, res) => {
         Users.findByPk(req.session.user.id, {

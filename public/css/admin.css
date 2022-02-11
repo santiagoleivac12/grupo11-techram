@@ -4,7 +4,7 @@
     margin: 0;
 }
 
-.rows{
+/* .rows{
     display: flex;
     flex-direction: row;
     flex-wrap: wrap;
@@ -15,7 +15,7 @@
 
 .rows-div {
     border: 3px solid rebeccapurple;
-}
+} */
 
 /* .products{
     display: flex;

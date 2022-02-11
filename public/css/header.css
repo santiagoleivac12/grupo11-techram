@@ -373,4 +373,41 @@ input:checked  ~ ul{
         color: white;
     }
 
+    .logout-ul{
+        display: none;
+        width: 50px;
+        height: 20px;
+    }
+      
+    #logout input:checked  ~ ul{
+        display:block;
+    }
+      
+    .input-user{
+        display: none;
+    }
+
+    .label-logout {
+        box-sizing: border-box;
+        display: inline-block;
+        width: 30px;
+        height: 30px;
+        line-height: 30px;
+        font-weight: bold;
+        text-align: center;
+        user-select: none;
+    }
+      
+    .li-logout{
+        display: block;
+        background: var(--morado);
+        font-size: 15px;
+        color: white;
+        font-weight: bold;
+        line-height: 30px;
+        margin: 0;
+        list-style: none;
+        font-family: var(--font-textos);
+    }
+      
 }

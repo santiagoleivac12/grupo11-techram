@@ -42,7 +42,11 @@
             </div>
             <div class="user">
                 <% if (locals.user){%>
-                    <p class="user-p"> <a href="/users/perfil"><%=locals.user.firstName%></a></p>
+                    <input type="checkbox" id="logout" class="input-user">
+                    <label for="logout" class="label-logout"><p class="user-p"><%=locals.user.firstName%></p></label>
+                    <ul class="logout-ul">
+                        <li class="li-logout"><a href="/users/logout">cerrar sesión</a></li>
+                    </ul>
                 <% } else {%>
                     <a href="/users/perfil"> <i class="fas fa-user"></i></a>
                     <p class="user-p"> <a href="/users/perfil">mi cuenta</a></p>
