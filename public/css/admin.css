@@ -4,20 +4,8 @@
     margin: 0;
 }
 
-/* .rows{
-    display: flex;
-    flex-direction: row;
-    flex-wrap: wrap;
-    margin-top: 20px;
-    width: 100%;
-    margin: 0 auto;
-}
 
-.rows-div {
-    border: 3px solid rebeccapurple;
-} */
-
-/* .products{
+.products{
     display: flex;
     flex-direction: column;
     flex-wrap: wrap;
@@ -95,7 +83,7 @@
     color: #fff;
 }
 
-.button-delete {
+/* .button-delete {
     background-color: #000;
     border-radius: .8rem;
     width: 50%;
@@ -111,7 +99,7 @@
     text-transform: uppercase;
     font-family: var(--font-textos);
     color: #fff;
-}
+} */
 
 .button-edit a,
 .button-delete a{
@@ -137,4 +125,22 @@
         margin-bottom: 50px;
         margin-top: 50px;
     }
-} */
+ 
+    .button-delete {
+        background-color: #000;
+        border-radius: .8rem;
+        width: 90%;
+        height: fit-content;
+        height: -moz-fit-content;
+        text-align: center;
+        margin: 0 auto;
+        margin-bottom: 7px;
+        padding: .53rem;
+        text-transform: uppercase;
+        border:none;
+        cursor: pointer;
+        text-transform: uppercase;
+        font-family: var(--font-textos);
+        color: #fff;
+    } 
+}
