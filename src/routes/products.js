@@ -10,4 +10,7 @@ router.get('/detail/:id/', controller.detail);
 //carrito
 router.get('/carrito', controller.carrito);
 
+//categorias
+router.get('/categories',controller.Categories)
+
 module.exports = router;

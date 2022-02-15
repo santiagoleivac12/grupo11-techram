@@ -1,0 +1,35 @@
+* {
+    margin: 0px;
+    padding: 0px;
+    box-sizing: border-box;
+}
+.containerCategories{
+    display: flex;
+    width: 100%;
+    height: 100%;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+    margin-top: 30px;
+    margin-bottom: 30px;
+}
+.oneBlock{
+    display: flex;
+    flex-direction: column;
+    border: 3px solid thistle;
+    justify-content: space-evenly;
+    border-radius: 6px;
+    width: 20%;
+    height: 50%;
+    margin: 10px;
+    cursor: pointer;
+}
+.oneBlock:hover{
+    background-color: var(--morado);
+  cursor: pointer;
+}
+.catH2{
+    color: thistle;
+    font-family: var(--font-titulos);
+    align-items: center;
+    text-align: center;
+}
