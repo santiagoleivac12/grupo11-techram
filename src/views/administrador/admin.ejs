@@ -15,7 +15,7 @@
                     </div>
                     <div class="button-admin">
                         <button class="button-edit"><a href="/admin/<%- product.id %>/edit">Editar</a></button>
-                        <form action="/admin/product/delete/<%- product.id %>?_method=DELETE" method="POST">
+                        <form action="/admin/<%- product.id %>?_method=DELETE" method="POST">
                             <button class="button-delete" type="submit"><a href="/admin/<%- product.id %>/edit">Eliminar</a></button>
                         </form>
                     </div>
