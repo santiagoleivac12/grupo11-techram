@@ -62,13 +62,13 @@ const controller = {
     processRegister: (req, res) => {
         let errors = validationResult(req);
         if (errors.isEmpty()) {
-            let { firstName, lastname, email, pass } = req.body;
+            let { firstName, lastname, email, pass} = req.body;
             Users.create({
                 firstName,
                 lastname,
                 email,
                 pass: bcrypt.hashSync(pass, 10),
-                phone,
+                phone: 55555555,
                 avatar: req.file ? req.file.filename : "default-image.png",
                 rol: 0
             })
