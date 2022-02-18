@@ -9,8 +9,8 @@
     height: 100%;
     flex-wrap: wrap;
     justify-content: space-evenly;
-    margin-top: 30px;
-    margin-bottom: 30px;
+    margin-top: 80px;
+    margin-bottom: 40px;
 }
 .oneBlock{
     display: flex;
@@ -25,11 +25,20 @@
 }
 .oneBlock:hover{
     background-color: var(--morado);
-  cursor: pointer;
+    cursor: pointer;
+
 }
 .catH2{
     color: thistle;
     font-family: var(--font-titulos);
     align-items: center;
     text-align: center;
+    padding-bottom: 10px;
+    font-size: 45px;
+}
+.imgCategories{
+    display: flex;
+    align-items: center;
+    padding: 30px;
+    
 }
