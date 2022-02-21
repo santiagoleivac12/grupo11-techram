@@ -119,8 +119,8 @@ let controller = {
         })
         .then((images) => {
             images.forEach((image) => {
-                fs.existsSync('./public/images/productos/', image.image)
-                ? fs.unlinkSync(`./public/images/productos/${image.image}`)
+                fs.existsSync('../public/images/productos/', image.image)
+                ? fs.unlinkSync(`../public/images/productos/${image.image}`)
                 : console.log('No se encontro el archivo')
             })
         })
