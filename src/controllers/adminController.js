@@ -100,7 +100,7 @@ let controller = {
                 .then(() =>{
                     ProductImages.create({
                         where: {
-                            image: req.file ? req.file.filename : 'default-image-png',
+                            image: req.file ? req.file.filename : 'default-image.png',
                             productId: req.params.id
                         }
                     })
