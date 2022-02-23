@@ -39,13 +39,15 @@
             <% if (locals.errors && errors.pass) { %>
               <small class="text-danger"><%= errors.pass.msg %> </small>
             <% } %>
+<!--             <label for="phone"></label> -->
+ <!--            <input class="input-register" type="text" name="phone" placeholder="telefono"/>
+            <% if (locals.errors && errors.phone) { %>
+              <small class="text-danger"><%= errors.phone.msg %> </small>
+            <% } %> -->
+
             <!-- <input class="input-register" type="password" name="password" placeholder="Repite la Contraseña"/> -->
-            <label for="user-img">Agregue su foto del perfil</label>
-            <input type="file" name="user-img" id="user-img" accept="jpg">
-            <% if (locals.errors && errors.image) { %>
-              <small class="text-danger"><%= errors.image.msg %> </small>
-            <% } %>
-            <label class="anexo" for="dropdown" id="provincia">Elige tu Provincia</label>
+            
+            <label class="anexo" for="dropdown" id="provincia"></label>
             <select id="dropdown" class="input-register" required>
               <option value="Buenos Aires">Buenos Aires</option>
               <option value="Capital Federal">Capital Federal</option>
@@ -72,6 +74,22 @@
               <option value="Tierra del Fuego">Tierra del Fuego</option>
               <option value="Tucuman">Tucumán</option>
             </select>
+
+            <label for="name"></label>
+            <input  class="input-register" type="text" placeholder="Localidad" name="localidad" id="name">
+
+            <label for="Numero"></label>
+            <input class="input-register" type="number" placeholder="Codigo Postal" name="cp" id="Numero">
+
+            <label for="Dirrecion"></label>
+            <input class="input-register" type="text" placeholder="Direccion" name="address" id="name">.
+
+            <label for="user-img">Agregue su foto del perfil</label>
+            <input type="file" name="user-img" id="user-img" accept="jpg">
+            <% if (locals.errors && errors.image) { %>
+              <small class="text-danger"><%= errors.image.msg %> </small>
+            <% } %>
+
             <p class="anexo">Acepto los <a class="anexo-a" href="#">Terminos y Condiciones</a> y autorizo el uso
               de mis datos de acuerdo a la Declaración de Privacidad</p>
             <button type="submit" class="btn">Registrate</button>
@@ -81,7 +99,12 @@
         </div>
 
         <div class="images-container">
-          <img src="/images/logos/eva.png" alt="Logo techRam" />
+          <img src="/images/logos/eva.png" alt="Logo techRam"
+          style="
+    width: 90%;
+    height: 82%;
+    padding-top: 30px;
+" />
         </div>
       </div>
 

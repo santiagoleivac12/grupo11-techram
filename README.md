@@ -55,10 +55,15 @@ Elegimos estas paginas debido a que algunas son pioneras en lo relacionado a ven
 
 - [Sprint 1](/retroalimentacion-dailys/sprint1.md)
 - [Sprint 2](/retroalimentacion-dailys/sprint2.md)
+- [Sprint 3](/retroalimentacion-dailys/sprint3.md)
+- [Sprint 4](/retroalimentacion-dailys/sprint4.md)
+- [Sprint 5](/retroalimentacion-dailys/sprint5.md)
 
 ## Registro Dailys
 - [Dailys sprint 3](/retroalimentacion-dailys/daily.md)
 - [Dailys sprint 4](/retroalimentacion-dailys/daily4.md)
+- [Dailys sprint 5](/retroalimentacion-dailys/daily5.md)
+- [Dailys sprint 6](/retroalimentacion-dailys/daily6.md)
 
 
 

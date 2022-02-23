@@ -4,7 +4,6 @@ const path = require('path')
 const db = require('../data/models');
 
 const Products = db.Product;
-const ProductImages = db.ProductImage;
 
 
 let controller = {
@@ -13,6 +12,7 @@ let controller = {
             include: [{association: "productImages"}]
         })
         .then(products => {
+            /* res.send(products) */
             res.render('products/index',{
             products,
             session: req.session  

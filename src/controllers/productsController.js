@@ -25,6 +25,13 @@ let controller = {
             })
 
         })
+      },
+    carrito:(req,res)=>{
+        res.render('products/carrito')
+    },
+    Categories:(req,res)=>{
+        res.render('products/categories')
+    }
         /* .then(((product) => {
             Products.findAll({
                 include: [{association: 'productImages'}],
@@ -41,7 +48,8 @@ let controller = {
                 })
             })
         })) */
-    },
+    
+    
 /*     category: (req, res) => {
         Categories.findOne({
             where: {
@@ -114,6 +122,7 @@ let controller = {
             })
         })
     } */
+    
 }
 
 module.exports = controller

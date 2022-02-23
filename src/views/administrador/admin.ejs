@@ -9,13 +9,15 @@
             <% products.forEach(product => { %>
                 <div class="productos-article__card-admin">
                     <div class="card-img">                        
-                        <a href="/products/detail/<%- product.id %>"><img src="/images/productos/<%- product/* .productImages[0] */.image %>" alt="pc"></a>
+                        <a href="/products/detail/<%- product.id %>"><img src="images/productos/<%- product.productImages[0].image %>" alt="pc"></a>
                         <h5 class="description-product"><%- product.name %></h5>
                         <p class="price-admin">$<%- product.price %></p>
                     </div>
                     <div class="button-admin">
                         <button class="button-edit"><a href="/admin/<%- product.id %>/edit">Editar</a></button>
-                        <button class="button-delete"><a href="/admin/<%- product.id %>/edit">Eliminar</a></button>
+                        <form action="/admin/<%- product.id %>?_method=DELETE" method="POST">
+                            <button class="button-delete" type="submit">Eliminar</button>
+                        </form>
                     </div>
                 </div>
             <% }) %>
