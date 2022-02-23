@@ -65,7 +65,7 @@ let controller = {
         .catch(error => console.log(error))
     }, 
     update: (req, res) => {
-        /* console.log(req.body) */
+        res.send(req.body)
     const {name, specifications, price, discount, subcategory, stock} = req.body;
     Products.update({
         name,
