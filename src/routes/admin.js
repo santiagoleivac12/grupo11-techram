@@ -7,15 +7,15 @@ let userAdmin = require('../middlewares/userAdmin');
 /* const rolUser = require('../middlewares/rolUser'); */
 
 //Index admin
-router.get('/',userAdmin, controller.admin) // el usuario no puede 
+router.get('/',userAdmin, controller.admin)
 
 //Crear archivo
-router.get('/create',userAdmin, controller.create);//  el usuario tampoco puede acceder a la creacion de productos
+router.get('/create',userAdmin, controller.create);
 router.post('/', upload.single('producto-img'), controller.store);
 
 
 /* GET - Show product edit form */
-router.get('/:id/edit',userAdmin, controller.edit);// a la edicion de los producctos 
+router.get('/:id/edit',userAdmin, controller.edit); 
 
 
 /* PUT - Update a product */
