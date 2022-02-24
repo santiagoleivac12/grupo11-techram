@@ -44,7 +44,7 @@
                 <% if (locals.user){%>
                     <input type="checkbox" id="logout" class="input-user">
                     <label for="logout" class="label-logout"><p class="user-p"><%=locals.user.firstName%></p></label>
-                    <ul class="logout-ul">
+                    <ul class="logout-ul" style="display: contents;    word-spacing: 3px;" >
                         <li class="li-logout"><a href="/users/logout">cerrar sesión</a></li>
                     </ul>
                 <% } else {%>

@@ -2,6 +2,7 @@
 <html lang="es">
     <%- include('../partials/head') %>
 <body>
+   
     <%- include('../partials/header') %>
 
       <div class="login-container">
@@ -19,13 +20,13 @@
             </div>
             <p>ó</p>
             <form action="/users/login" method="POST" class="inputs-container">
-                <input class="input" name="email" type="email" placeholder="email" >
+                <input class="input" name="email" type="email" placeholder="email" id="emailFront">
                 <% if(locals.errors && errors.email){%>
-                    <small class='text-danger'><%=errors.email.msg%></small>
+                    <small class='text-danger' id="emailError"><%=errors.email.msg%></small>
                     <% }%>
-                <input class="input" name='pass' type="password" placeholder="Contraseña">
+                <input class="input" name='pass' type="password" placeholder="Contraseña" id="inputPass"> 
                 <% if(locals.errors && errors.pass){%>
-                    <small class='text-danger'><%=errors.pass.msg%></small>
+                    <small class='text-danger' id="passError"><%=errors.pass.msg%></small>
                     <% }%>
                 <p class="anexo"><input id="checkbox" type="checkbox" name="recordar">Recordar contraseña</p>
                 <p class="anexo">Olvidaste tu contraseña? <a class="span">Click aquí</a></p>
