@@ -22,14 +22,20 @@
                 <label class="estilo" class="estilo" for="producto-img">Agregue foto del producto</label>
                 <input type="file" name="producto-img" accept="png" class="input-admin" multiple>
                 <h3 class="estilo">Elige la categoria:</h3>
-                <label class="estilo" for="category"></label>
-                <select name="category" id="categoria-admin" class="select-admin" required>
+                <label class="estilo" for="categoria-edit"></label>
+                <select name="category" id="categoria-edit" class="select-admin" required>
                     <option value="<%= product.category %>">categoria</option>
-                    <option value="<%= product.category %>">categoria</option>
-                    <option value="<%= product.category %>">categoria</option>
-                    <option value="<%= product.category %>">categoria</option>
-                    <option value="<%= product.category %>">categoria</option>
-                    <option value="<%= product.category %>">categoria</option>
+                    <% categories.forEach(category => { %>
+                        <option value="<%- category.id %>" <%- locals.old && old.category == category.id ? "selected" : category.id == product.category ? "selected" : "" %>><%- category.name %></option>
+                     <% }) %>
+                </select>
+                <h3 class="estilo">Elige la subcategoria:</h3>
+                <label class="estilo" for="subcategory-edit"></label>
+                <select name="category" id="subcategory-edit" class="select-admin" required>
+                    <option value="<%= product.category %>">subcategoria</option>
+                    <% categories.forEach(category => { %>
+                        <option value="<%- category.id %>" <%- locals.old && old.category == category.id ? "selected" : category.id == product.category ? "selected" : "" %>><%- category.name %></option>
+                     <% }) %>
                 </select>
                 <textarea name="descripcion" id="descripcion-admin" cols="30" rows="10"><%= product.description %></textarea>
             </div>

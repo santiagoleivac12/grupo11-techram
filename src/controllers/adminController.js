@@ -94,7 +94,8 @@ let controller = {
             res.render("administrador/editarProductoAdmin", {
                 product,
                 categories,
-                subcategories
+                subcategories,
+                session:req.session
             })
         })
         .catch(error => console.log(error))
