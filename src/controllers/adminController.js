@@ -22,16 +22,51 @@ let controller = {
     },
     //Muestra la vista para crear el producto
     create: (req,res) => {
-        res.render('administrador/perfilAdminCrear');
+        let allCategories = Categories.findAll();
+        let allSubcategories = Subcategories.findAll();
+        Promise.all([allCategories, allSubcategories])
+        .then(([categories, subcategories]) => {
+            res.render('administrador/perfilAdminCrear', {
+                categories,
+                subcategories,
+                session: req.session
+            })
+        })
     },
     store:(req,res)=>{
+        let arrayImages = [];
+        if(req.files){
+            req.files.forEach((image) => {
+                arrayImages.push(image.filename)
+            })
+        }
+
         Products.create({
             ...req.body,
             specificationsId: 5,
-            subcategoryId: 3,
-            stock: 5
+            subcategoryId: subcategory
         })
-        .then(product => {
+        .then((product) => {
+            if(arrayImages.length > 0){
+                let images = arrayImages.map((image) => {
+                    return {
+                        image: image,
+                        productId: product.id
+                    }
+                });
+                ProductImages.bulkCreate(images)
+                .then(() => res.redirect('/admin'))
+                .catch(error => console.log(error))
+            }else {
+                ProductImages.create({
+                    image: 'default-image.png',
+                    productId: product.id
+                })
+                .then(() => {res.redirect('/admin')})
+                .catch(error => console.log(error))
+            }
+        })
+/*         .then(product => {
             ProductImages.create({
                 image: req.file ? [req.file.filename] : ['default-image.png'],
                 productId: product.id
@@ -39,7 +74,7 @@ let controller = {
             .then(() => {
                 res.redirect('/admin')
             }) 
-        })
+        }) */
         .catch(error => console.log(error))       
     },
     /* -------------------------------------- */

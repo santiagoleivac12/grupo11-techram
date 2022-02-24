@@ -16,21 +16,26 @@
                     <input type="text" name="price" id="price-admin" class="inputdos">
                     <label class="estilo" for="discount-admin">Descuento:</label>
                     <input type="text" name="discount" id="discount-admin" class="inputdos">
-<!--                     <label class="estilo" for="garantia-admin">Garantía</label>
-                    <input type="text" name="garantia" id="garantia-admin" class="inputdos"> -->
+                    <label class="estilo" for="stock-admin">Cantidad:</label>
+                    <input type="text" name="stock" id="stock-admin" class="inputdos">
                 </div>
                 <div class="form-create">
                     <label class="estilo" for="producto-img">Agregue foto del producto</label>
                     <input type="file" name="producto-img" accept="jpg" class="input-admin" multiple>
                     <label class="estilo" for="categoria-admin">Elige la categoria:</label>
-                    <select id="categoria-admin" class="select-admin" required>
+                    <select id="categoria-admin" class="select-admin" name="category">
                         <option value="no se">categoria</option>
-                        <option value="no se">categoria</option>
-                        <option value="no se">categoria</option>
-                        <option value="no se">categoria</option>
-                        <option value="no se">categoria</option>
-                        <option value="no se">categoria</option>
-                    </select>  
+                        <% categories.forEach(category => { %>
+                            <option value="<%- category.id %>" <%= locals.old && old.category == category.id ? "selected" : "" %> ><%- category.name %> </option>
+                        <% }) %>
+                    </select>
+                    <label class="estilo" for="categoria-admin">Elige la subcategoria:</label>
+                    <select id="categoria-admin" class="select-admin" name="subcategory">
+                        <option value="no se">subcategorias</option>
+                        <% subcategories.forEach(subcategory => { %>
+                            <option value="<%- subcategory.id %>" <%= locals.old && old.subcategory == subcategory.id ? "selected" : ""  %> ><%- subcategory.name %> </option>
+                          <% }) %>
+                    </select> 
                     <label class="estilo" for="descripcion-admin">Descripción del producto</label>              
                     <textarea name="descripcion" id="descripcion-admin" cols="30" rows="10"></textarea>
                     <div class="div-button-create">
