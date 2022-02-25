@@ -10,14 +10,24 @@
                 <div class="form-create">
                     <label class="estilo" for="name-admin">Nombre del producto</label>
                     <input type="text" name="name" id="name-admin" class="inputdos">
-<!--                     <label class="estilo" for="color-admin">Color del producto:</label>
-                    <input type="text" name="color" id="color-admin" class="inputdos"> -->
+                    <% if (locals.errors && errors.name) { %>
+                        <small class="text-danger"><%= errors.name.msg %> </small>
+                    <% } %>
                     <label class="estilo" for="price-admin">Precio:</label>
                     <input type="text" name="price" id="price-admin" class="inputdos">
+                    <% if (locals.errors && errors.price) { %>
+                        <small class="text-danger"><%= errors.price.msg %> </small>
+                    <% } %>
                     <label class="estilo" for="discount-admin">Descuento:</label>
                     <input type="text" name="discount" id="discount-admin" class="inputdos">
+                    <% if (locals.errors && errors.discount) { %>
+                        <small class="text-danger"><%= errors.discount.msg %> </small>
+                    <% } %>
                     <label class="estilo" for="stock-admin">Cantidad:</label>
                     <input type="text" name="stock" id="stock-admin" class="inputdos">
+<!--                     <% if (locals.errors && errors.stock) { %>
+                        <small class="text-danger"><%= errors.stock.msg %> </small>
+                    <% } %> -->
                 </div>
                 <div class="form-create">
                     <label class="estilo" for="producto-img">Agregue foto del producto</label>
@@ -29,6 +39,9 @@
                             <option value="<%- category.id %>" <%= locals.old && old.category == category.id ? "selected" : "" %> ><%- category.name %> </option>
                         <% }) %>
                     </select>
+                    <% if (locals.errors && errors.category) { %>
+                        <small class="text-danger"><%= errors.category.msg %></small>
+                    <% } %>
                     <label class="estilo" for="categoria-admin">Elige la subcategoria:</label>
                     <select id="categoria-admin" class="select-admin" name="subcategory">
                         <option value="no se">subcategorias</option>
@@ -36,6 +49,9 @@
                             <option value="<%- subcategory.id %>" <%= locals.old && old.subcategory == subcategory.id ? "selected" : ""  %> ><%- subcategory.name %> </option>
                           <% }) %>
                     </select> 
+                    <% if (locals.errors && errors.subcategory) { %>
+                        <small class="text-danger"><%= errors.subcategory.msg %></small>
+                    <% } %>
                     <label class="estilo" for="descripcion-admin">Descripción del producto</label>              
                     <textarea name="descripcion" id="descripcion-admin" cols="30" rows="10"></textarea>
                     <div class="div-button-create">

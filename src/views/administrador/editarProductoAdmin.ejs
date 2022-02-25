@@ -13,8 +13,14 @@
             <div class="edit-inf">
                 <label class="estilo" for="name">Nombre</label>
                 <input name="name" class="rellenar-name" type="text" id="name" placeholder="Nombre Producto" value="<%= product.name %>">
+                <% if (locals.errors && errors.name) { %>
+                    <small class="text-danger"><%= errors.name.msg %></small>
+                <% } %>
                 <label class="estilo" for="price">Precio</label>
                 <input name="price" class="rellenar-name" type="number" id="price" placeholder="Precio" value="<%= product.price %>">
+                <% if (locals.errors && errors.price) { %>
+                    <small class="text-danger"><%= errors.price.msg %></small>
+                <% } %>
                 <label class="estilo" for="stock">Stock</label>
                 <input name="stock" class="rellenar-name" type="number" id="stock" placeholder="Stock" value="<%= product.stock %>">
                 <label class="estilo" for="discount">Descuento</label>
@@ -29,6 +35,9 @@
                         <option value="<%- category.id %>" <%- locals.old && old.category == category.id ? "selected" : category.id == product.category ? "selected" : "" %>><%- category.name %></option>
                      <% }) %>
                 </select>
+                <% if (locals.errors && errors.category) { %>
+                    <small class="text-danger"><%= errors.category.msg %></small>
+                <% } %>
                 <h3 class="estilo">Elige la subcategoria:</h3>
                 <label class="estilo" for="subcategory-edit"></label>
                 <select name="category" id="subcategory-edit" class="select-admin" required>
@@ -37,6 +46,9 @@
                         <option value="<%- category.id %>" <%- locals.old && old.category == category.id ? "selected" : category.id == product.category ? "selected" : "" %>><%- category.name %></option>
                      <% }) %>
                 </select>
+                <% if (locals.errors && errors.subcategory) { %>
+                    <small class="text-danger"><%= errors.subcategory.msg %></small>
+                <% } %>
                 <textarea name="descripcion" id="descripcion-admin" cols="30" rows="10"><%= product.description %></textarea>
             </div>
 

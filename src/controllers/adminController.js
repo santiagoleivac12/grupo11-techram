@@ -1,5 +1,6 @@
 const fs = require('fs');
 const db = require('../data/models');
+let { validationResult } = require('express-validator')
 
 const Products = db.Product;
 const ProductImages = db.ProductImage;
@@ -34,6 +35,7 @@ let controller = {
         })
     },
     store:(req,res)=>{
+        let errors = validationResult(req)
         let arrayImages = [];
         if(req.files){
             req.files.forEach((image) => {
@@ -41,31 +43,50 @@ let controller = {
             })
         }
 
-        Products.create({
-            ...req.body,
-            specificationsId: 5,
-            subcategoryId: subcategory
-        })
-        .then((product) => {
-            if(arrayImages.length > 0){
-                let images = arrayImages.map((image) => {
-                    return {
-                        image: image,
+        if (errors.isEmpty()) {
+            Products.create({
+                ...req.body,
+                specificationsId: 5,
+                subcategoryId: subcategory
+            })
+            .then((product) => {
+                if(arrayImages.length > 0){
+                    let images = arrayImages.map((image) => {
+                        return {
+                            image: image,
+                            productId: product.id
+                        }
+                    });
+                    ProductImages.bulkCreate(images)
+                    .then(() => res.redirect('/admin'))
+                    .catch(error => console.log(error))
+                }else {
+                    ProductImages.create({
+                        image: 'default-image.png',
                         productId: product.id
-                    }
-                });
-                ProductImages.bulkCreate(images)
-                .then(() => res.redirect('/admin'))
-                .catch(error => console.log(error))
-            }else {
-                ProductImages.create({
-                    image: 'default-image.png',
-                    productId: product.id
+                    })
+                    .then(() => {res.redirect('/admin')})
+                    .catch(error => console.log(error))
+                }
+            })
+            .catch(error => console.log(error))
+        } else {
+            let allCategories = Categories.findAll();
+            let allSubcategories = Subcategories.findAll();
+            Promise.all([allCategories, allSubcategories])
+            .then(([categories, subcategories]) => {
+            res.render('admin/perfilAdminCrear', {
+                categories,
+                subcategories,
+                errors: errors.mapped(),
+                old: req.body,
+                session: req.session
                 })
-                .then(() => {res.redirect('/admin')})
-                .catch(error => console.log(error))
-            }
-        })
+            })
+            .catch(error => console.log(error))
+        }
+
+
 /*         .then(product => {
             ProductImages.create({
                 image: req.file ? [req.file.filename] : ['default-image.png'],
@@ -75,7 +96,7 @@ let controller = {
                 res.redirect('/admin')
             }) 
         }) */
-        .catch(error => console.log(error))       
+        /* .catch(error => console.log(error)) */       
     },
     /* -------------------------------------- */
     edit: (req, res) => {
