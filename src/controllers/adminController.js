@@ -6,6 +6,7 @@ const Products = db.Product;
 const ProductImages = db.ProductImage;
 const Categories = db.Category;
 const Subcategories = db.Subcategory;
+const Order_items = db.Order_item;
 
 
 let controller = {
@@ -126,7 +127,9 @@ let controller = {
         .catch(error => console.log(error))
     }, 
     update: (req, res) => {
-        /* res.send(req.body) */
+        console.log(req.body)
+       /*  console.log(req.file) */
+        console.log(req.files)
         let errors = validationResult(req)
         if(errors.isEmpty()){
             const {name, price, discount,category, subcategory, stock} = req.body;
@@ -142,6 +145,13 @@ let controller = {
                 }
             })
             .then((result) => {
+                if(req.files.length > 0){
+                    let arrayImages = [];
+                    if(req.files){
+                        req.files.forEach((image) => {
+                            arrayImages.push(image.filename)
+                        })
+                    }
                     ProductImages.findAll({
                         where:{
                             productId: req.params.id
@@ -159,16 +169,29 @@ let controller = {
                             }
                         })
                         .then(() =>{
-                            ProductImages.create({
+                            let images = arrayImages.map((image) => {
+                                return {
+                                    image: image,
+                                    productId: req.params.id
+                                }
+                            });
+                            ProductImages.bulkCreate(images)
+                            .then(() => res.redirect('/admin'))
+                            .catch(error => console.log(error))
+/*                             ProductImages.create({
                                 image: req.file ? req.file.filename : 'default-image.png',
                                 productId: req.params.id
-                            })
-                            .then(()=> {
+                            }) */
+/*                             .then(()=> {
                                 res.redirect('/admin')
-                            })
+                            }) */
                         })
                     })
-                .catch(error => console.log(error)) 
+                .catch(error => console.log(error))
+                }else {
+                    res.redirect('/admin')
+                }
+ 
             })
             
         }else{
@@ -192,6 +215,11 @@ let controller = {
    
     },
     destroy: (req, res) => {
+/*         Order_items.findAll()
+        .then((result)=> {
+            res.send(result)
+        }) */
+        
         ProductImages.findAll({
             where: {
                 productId: req.params.id
@@ -210,13 +238,20 @@ let controller = {
             }
         })
         .then((result) => {
-            Products.destroy({
+            Order_items.destroy({
                 where: {
-                    id: req.params.id
+                    productId: req.params.id
                 }
             })
-            .then(res.redirect('/admin'))
-            .catch(error => console.log(error))
+            .then(()=>{
+                Products.destroy({
+                    where: {
+                        id: req.params.id
+                    }
+                })
+                .then(res.redirect('/admin'))
+                .catch(error => console.log(error))
+            })
         })
         .catch(error => console.log(error))
     }
