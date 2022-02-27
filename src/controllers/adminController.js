@@ -80,7 +80,7 @@ let controller = {
             let allSubcategories = Subcategories.findAll();
             Promise.all([allCategories, allSubcategories])
             .then(([categories, subcategories]) => {
-            res.render('admin/perfilAdminCrear', {
+            res.render('administrador/perfilAdminCrear', {
                 categories,
                 subcategories,
                 errors: errors.mapped(),
@@ -127,9 +127,6 @@ let controller = {
         .catch(error => console.log(error))
     }, 
     update: (req, res) => {
-        console.log(req.body)
-       /*  console.log(req.file) */
-        console.log(req.files)
         let errors = validationResult(req)
         if(errors.isEmpty()){
             const {name, price, discount,category, subcategory, stock} = req.body;
