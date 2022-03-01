@@ -15,7 +15,7 @@ router.post('/', upload.array('producto-img'), controller.store);
 
 
 /* GET - Show product edit form */
-router.get('/:id/edit',userAdmin, controller.edit);
+router.get('/:id/edit',userAdmin, controller.edit); 
 
 
 /* PUT - Update a product */
