@@ -1,5 +1,5 @@
-function qs(e) {
-    return document.querySelector(e)
+function qs(element) {
+    return document.querySelector(element)
 }
 
 window.addEventListener('load', () => {
@@ -15,10 +15,15 @@ window.addEventListener('load', () => {
     $categoryErrors = qs("#categoryErrors"),
     $subcategory = qs("#subcategoria-admin"),
     $subcategoryErrors = qs("#subcategoryErrors"),
+    $checkName = qs("#input-name"),
+    $checkPrice = qs("#input-price"),
+    $checkDiscount = qs("#input-discount"),
+    $checkStock = qs("#input-stock"),
     $form = qs("#formCreate"),
-    $file = qs("#fileCreate"),
-    $fileErrors = qs("#")
-    regExAlpha = /^[0-9a-zA-Z]+$/;
+    $submitErrors = qs("#submitErrors"),
+/*     $file = qs("#fileCreate"),
+    $fileErrors = qs("#fileErrors"), */
+    regExAlpha = /^[0-9a-zA-Z]+$/,
     regExNumber = /^[0-9]+$/;
 
     let validationsErrors = false
@@ -27,22 +32,22 @@ window.addEventListener('load', () => {
         switch(true) {
             case !$name.value.trim():
                 $nameErrors.innerHTML = "El campo nombre esta vacio";
-                /* $name.classList.add('') hacer clase con estilos*/
+                $nameErrors.classList.add('msg-error')
                 validationsErrors = true;
                 break;
-            case !$name.value < 4:
+            case $name.value.length < 5:
                 $nameErrors.innerHTML = "Tiene que tener al menos 5 caracteres";
-                /* $name.classList.add('') hacer clase con estilos*/
+                $nameErrors.classList.add('msg-error')
                 validationsErrors = true;
                 break;
             case !regExAlpha.test($name.value):
                 $nameErrors.innerHTML = "Ingrese un nombre valido";
-                /* $name.classList.add('') hacer clase con estilos*/
+                $nameErrors.classList.add('msg-error')
                  validationsErrors = true;
                  break;
             default: 
-                /* $name.classList.remove('') */
-                /* $name.classList.add('') clase para mostrar que esta bien lo que escribio*/
+                $name.classList.remove('msg-error')
+                $checkName.style.display= "inline-block"
                 $nameErrors.innerHTML = "";
                 validationsErrors = false;
                 break;        
@@ -53,17 +58,17 @@ window.addEventListener('load', () => {
         switch(true) {
             case !$price.value.trim():
                 $priceErrors.innerHTML = "El campo precio esta vacio";
-                /* $price.classList.add('') hacer clase con estilos*/
+                $priceErrors.classList.add('msg-error') 
                 validationsErrors = true;
                 break;
             case !regExNumber.test($price.value):
-                $nameErrors.innerHTML = "Ingrese solo números";
-                /* $price.classList.add('') hacer clase con estilos*/
+                $priceErrors.innerHTML = "Ingrese solo números";
+                $priceErrors.classList.add('msg-error')
                 validationsErrors = true;
                 break;
             default:
-                /* $price.classList.remove('') */
-                /* $price.classList.add('') clase para mostrar que esta bien lo que escribio*/
+                $price.classList.remove('msg-error')
+                $checkPrice.style.display= "inline-block"
                 $priceErrors.innerHTML = "";
                 validationsErrors = false;
                 break;
@@ -72,13 +77,13 @@ window.addEventListener('load', () => {
 
     $discount.addEventListener('blur', () => {
         switch(true) {
-            case !regExNumber.test($stock.value):
-                $stockErrors.innerHTML = "Ingrese solo números";
-                /* $discount.classList.add('') hacer clase con estilos*/
+            case regExNumber.test($discount.value):
+                $discountErrors.innerHTML = "Ingrese solo números";
+                $discountErrors.classList.add('msg-error') 
                 validationsErrors = true;
             default:
-                /* $discount.classList.remove('') */
-                 /* $discount.classList.add('') clase para mostrar que esta bien lo que escribio*/
+                $discount.classList.remove('msg-error')
+                $checkDiscount.style.display= "inline-block"
                  $discountErrors.innerHTML = "";
                  validationsErrors = false;
                  break;
@@ -89,37 +94,62 @@ window.addEventListener('load', () => {
         switch(true) {
             case !$stock.value.trim():
                 $stockErrors.innerHTML = "El campo de stock esta vacio";
-                /* $stock.classList.add('') hacer clase con estilos*/
+                $stockErrors.classList.add('msg-error') 
                 validationsErrors = true;
                 break;
             case !regExNumber.test($stock.value):
                 $stockErrors.innerHTML = "Ingrese solo números";
-                /* $stock.classList.add('') hacer clase con estilos*/
+                $stockErrors.classList.add('msg-error') 
                 validationsErrors = true;
                 break;
             default:
-                /* $stock.classList.remove('') */
-                /* $stock.classList.add('') clase para mostrar que esta bien lo que escribio*/
+                $stock.classList.remove('msg-error')
+                $checkStock.style.display= "inline-block"
                 $stockErrors.innerHTML = "";
                 validationsErrors = false;
                 break;
         }
     })
 
-    
-    $form.addEventListener('submit', (event) => {
-        event.preventDeFault();
+    $category.addEventListener('blur', () => {
+        if($category.value == ""){
+            $categoryErrors.innerHTML = "Debe elegir una categoría";
+            $categoryErrors.classList.add('msg-error') 
+            validationsErrors = true;
+        }else{
+            $subcategory.classList.remove('msg-error')
+            $subcategoryErrors.innerHTML = "";
+            validationsErrors = false;
+        }
+    })
 
+    $subcategory.addEventListener('blur', () => {
+        if($subcategory.value == ""){
+            $subcategoryErrors.innerHTML = "Debe elegir una subcategoría";
+            $subcategoryErrors.classList.add('msg-error')
+            validationsErrors = true;
+        }else{
+            $subcategory.classList.remove('msg-error')
+            $subcategoryErrors.innerHTML = "";
+            validationsErrors = false;
+        }
+    })
+
+    
+    $form.addEventListener('submit', function(event) {
         let error = false;
+        event.preventDeFault()
+
+
         let elementsForm = this.elements;
         
         for (let index = 0; index < elementsForm.length - 1; index++){
             if(elementsForm[index].value == ''
-            && elementsForm[index].type !== "file"
-            && elementsForm[index].name !== "discount"
+            && elementsForm[index].type != "file"
+            && elementsForm[index].name != "discount"
             ){
                 /* elementsForm[index].classList.add('') */
-                submitErrors.innerHTML = "Los campos señalados son obligatorios";
+                $submitErrors.innerHTML = "Los campos señalados son obligatorios";
                 error = true;
             }
         }
@@ -128,6 +158,7 @@ window.addEventListener('load', () => {
             $form.submit()
         }
     })
+
 
 /*     $file.addEventListener('change', function fileValidation(){
         let filePath = $file.value;

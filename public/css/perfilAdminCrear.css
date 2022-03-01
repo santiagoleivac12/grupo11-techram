@@ -71,11 +71,25 @@ label.estilo{
 }
 
 
+ .msg-error {
+    color: #dd2211;
+    font-family: var(--font-textos); 
+    font-size: 15px;
+}
+
+#input-name, #input-price, #input-discount, #input-stock {
+    display: none;
+    font-size: 22px;
+    color: #51ad23d2;
+    width: 20px;
+    margin-left: 5px;
+}
+
 @media (min-width: 550px){
     .creacion-producto .inputdos,
     .creacion-producto input,
     .creacion-producto textarea {
-        width: 90%;
+        width: 85%;
         margin-left: auto;
         margin-right: auto;
     }

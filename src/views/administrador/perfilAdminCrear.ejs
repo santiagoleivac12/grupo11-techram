@@ -9,31 +9,44 @@
             <form class="creacion-producto" id="formCreate" action="/admin" method="POST" enctype="multipart/form-data">
                 <div class="form-create">
                     <label class="estilo" for="name-admin">Nombre del producto</label>
-                    <input type="text" name="name" id="name-admin" class="inputdos">
+                    <div>
+                        <input type="text" name="name" id="name-admin" class="inputdos"><i class="fas fa-check-circle" id="input-name"></i>
+                    </div>
+                    <span id="nameErrors"></span>
                     <% if (locals.errors && errors.name) { %>
-                        <small class="msg-error" id="nameErrors"><%= errors.name.msg %> </small>
+                        <small class="msg-error"><%= errors.name.msg %> </small>
                     <% } %>
                     <label class="estilo" for="price-admin">Precio:</label>
-                    <input type="text" name="price" id="price-admin" class="inputdos">
+                    <div class="div-i">
+                        <input type="text" name="price" id="price-admin" class="inputdos"><i class="fas fa-check-circle" id="input-price"></i>
+                    </div>
+                    <span id="priceErrors"></span>
                     <% if (locals.errors && errors.price) { %>
-                        <small class="msg-error" id="priceErrors"><%= errors.price.msg %> </small>
+                        <small class="msg-error"><%= errors.price.msg %> </small>
                     <% } %>
                     <label class="estilo" for="discount-admin">Descuento:</label>
-                    <input type="text" name="discount" id="discount-admin" class="inputdos">
+                    <div>
+                        <input type="text" name="discount" id="discount-admin" class="inputdos"><i class="fas fa-check-circle" id="input-discount"></i>
+                    </div>
+                    <span id="discountErrors"></span>
                     <% if (locals.errors && errors.discount) { %>
-                        <small class="msg-error" id="discountErrors"><%= errors.discount.msg %> </small>
+                        <small class="msg-error"><%= errors.discount.msg %> </small>
                     <% } %>
                     <label class="estilo" for="stock-admin">Cantidad:</label>
-                    <input type="text" name="stock" id="stock-admin" class="inputdos">
+                    <div>
+                        <input type="text" name="stock" id="stock-admin" class="inputdos"><i class="fas fa-check-circle" id="input-stock"></i>
+                    </div>
+                    <span id="stockErrors"></span>
                     <% if (locals.errors && errors.stock) { %>
-                        <small class="msg-error" id="stockErrors"><%= errors.stock.msg %></small>
+                        <small class="msg-error"><%= errors.stock.msg %></small>
                     <% } %>
                 </div>
                 <div class="form-create">
                     <label class="estilo" for="producto-img">Agregue foto del producto</label>
                     <input type="file" id="fileCreate" name="producto-img" accept="jpg" class="input-admin" multiple>
+                    <span id="fileErrors"></span>
                     <% if (locals.errors && errors.image) { %>
-                        <small class="msg-error" id="fileErrors"><%= errors.image.msg %></small>
+                        <small class="msg-error"><%= errors.image.msg %></small>
                     <% } %>
                     <label class="estilo" for="categoria-admin">Elige la categoria:</label>
                     <select id="categoria-admin" class="select-admin" name="category">
@@ -42,8 +55,9 @@
                             <option value="<%- category.id %>" <%= locals.old && old.category == category.id ? "selected" : "" %> ><%- category.name %> </option>
                         <% }) %>
                     </select>
+                    <span id="categoryErrors"></span>
                     <% if (locals.errors && errors.category) { %>
-                        <small class="msg-error" id="categoryErrors"><%= errors.category.msg %> </small>
+                        <small class="msg-error"><%= errors.category.msg %> </small>
                     <% } %>
                     <label class="estilo" for="subcategoria-admin">Elige la subcategoria:</label>
                     <select id="subcategoria-admin" class="select-admin" name="subcategory">
@@ -52,18 +66,20 @@
                             <option value="<%- subcategory.id %>" <%= locals.old && old.subcategory == subcategory.id ? "selected" : ""  %> ><%- subcategory.name %> </option>
                           <% }) %>
                     </select> 
+                    <span id="subcategoryErrors"></span>
                     <% if (locals.errors && errors.subcategory) { %>
-                        <small class="msg-error" id="subcategoryErrors"><%= errors.subcategory.msg %> </small>
+                        <small class="msg-error"><%= errors.subcategory.msg %> </small>
                     <% } %>
                     <label class="estilo" for="descripcion-admin">Descripción del producto</label>              
                     <textarea name="description" id="descripcion-admin" cols="30" rows="10"></textarea>
                     <div class="div-button-create">
-                        <small class="msg-error" id="submitErrors"></small>
+                        <span class="msg-error" id="submitErrors"></span>
                         <button type="submit" class="button-create">Guardar</button>
                     </div>
                 </div>
             </form>
         </div>
     </main>
+    <script src="/js/createProductValidator.js"></script>
 </body> 
 </html>
