@@ -65,7 +65,7 @@ let controller = {
         .catch(error => console.log(error))
     }, 
     update: (req, res) => {
-        /* console.log(req.body) */
+        res.send(req.body)
     const {name, specifications, price, discount, subcategory, stock} = req.body;
     Products.update({
         name,
@@ -100,7 +100,7 @@ let controller = {
                 .then(() =>{
                     ProductImages.create({
                         where: {
-                            image: req.file ? req.file.filename : 'default-image-png',
+                            image: req.file ? req.file.filename : 'default-image.png',
                             productId: req.params.id
                         }
                     })
@@ -119,8 +119,8 @@ let controller = {
         })
         .then((images) => {
             images.forEach((image) => {
-                fs.existsSync('./public/images/productos/', image.image)
-                ? fs.unlinkSync(`./public/images/productos/${image.image}`)
+                fs.existsSync('../public/images/productos/', image.image)
+                ? fs.unlinkSync(`../public/images/productos/${image.image}`)
                 : console.log('No se encontro el archivo')
             })
         })
