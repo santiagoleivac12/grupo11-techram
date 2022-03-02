@@ -1,6 +1,7 @@
+
 window.onload = () => {
 
-    let $form = document.querySelector('#form');
+    let $form = document.querySelector('form');
     let $emailFront = document.querySelector('#emailFront');
     let $passFront = document.querySelector('#passFront');
 
@@ -12,7 +13,7 @@ window.onload = () => {
     $emailFront.addEventListener('blur', (event) => {
         let value =event.target.value;
         if (value.length == 0) {
-            let mensajeError = 'Debe ingresar un email'
+            let mensajeError = 'Debe ingresar un emailllllll'
             error.emailFrontError = mensajeError
             emailError.innerHTML = mensajeError //cuando hace click en el campo ,sale y no lo completa se muestra el msg de error
         }else{
