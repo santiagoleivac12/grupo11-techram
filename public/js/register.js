@@ -54,11 +54,11 @@ window.addEventListener('load', () => {
         console.log($inputSurname.value.trim())
         switch (true) {
             case !$inputSurname.value.trim():
-                $surnameErrors.innerHTML = 'The Last Name field is required'
+                $surnameErrors.innerHTML = 'Ingresa tu apellido'
                 $inputSurname.classList.add('is-invalid')
                 break;
             case !regExAlpha.test($inputSurname.value):
-                $surnameErrors.innerHTML = 'The Last Name valid is required'
+                $surnameErrors.innerHTML = 'TIngresa tu apellido'
                 $inputSurname.classList.add('is-invalid')
                 break;
             default:
@@ -71,11 +71,11 @@ window.addEventListener('load', () => {
     $email.addEventListener('blur', function () {
         switch (true) {
             case !$email.value.trim():
-                $emailErrors.innerHTML = 'The email field is required';
+                $emailErrors.innerHTML = 'Coloca tu email';
                 $email.classList.add('is-invalid')
                 break;
             case !regExEmail.test($email.value):
-                $emailErrors.innerHTML = 'The email valid is required';
+                $emailErrors.innerHTML = 'Coloca tu email';
                 $email.classList.add('is-invalid')
                 break
             default:
@@ -89,11 +89,11 @@ window.addEventListener('load', () => {
     $password.addEventListener('blur', function () {
         switch (true) {
             case !$password.value.trim():
-                $passwordErrors.innerHTML = 'The password field is required';
+                $passwordErrors.innerHTML = 'Coloca tu contraseña';
                 $password.classList.add('is-invalid')
                 break;
             case !regExPass.test($password.value):
-                $passwordErrors.innerHTML = 'The password must have: between 6 or 12 characters, at least one uppercase, one lowercase and a number';
+                $passwordErrors.innerHTML = 'Tu contraseña debe tener entre 8 a 12 caracteres';
                 $password.classList.add('is-invalid')
                 break;
             default:
@@ -107,11 +107,11 @@ window.addEventListener('load', () => {
     $password2.addEventListener('blur', function () {
         switch (true) {
             case !$password2.value.trim():
-                $password2Errors.innerHTML = 'The Confirm Password field is required';
+                $password2Errors.innerHTML = 'Debes confirmar tu contraseña';
                 $password2.classList.add('is-invalid')
                 break;
             case $password2.value != $password2.value:
-                $password2Errors.innerHTML = 'The Confirm Password field you entered does not match';
+                $password2Errors.innerHTML = 'Las contraseñas no concuerdan';
                 $password2.classList.add('is-invalid')
                 break;
             default:
