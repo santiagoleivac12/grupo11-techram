@@ -54,7 +54,7 @@ let controller = {
                 discount,
                 stock,
                 subcategoryId: subcategory,
-                specificationId: general,conectivity, illumination,
+                specificationsId: general,conectivity, illumination,
             })
             .then((product) => {
                 if(arrayImages.length > 0){

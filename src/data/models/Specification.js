@@ -8,16 +8,16 @@ module.exports = (sequelize, dataTypes) => {
             allowNull: false 
         },
         general: {
-            type: dataTypes.STRING(60),
+            type: dataTypes.STRING(800),
             allowNull: false,
             autoIncrement: false,
         },
         conectivity: {
-        type : dataTypes.STRING(60),
+        type : dataTypes.STRING(360),
         autoIncrement: false
         },
         characteristics: {
-            type : dataTypes.STRING(60),
+            type : dataTypes.STRING(360),
             autoIncrement: false
         },
         illumination : {
