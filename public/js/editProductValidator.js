@@ -51,6 +51,7 @@ window.addEventListener('load', () => {
                  break;
             default: 
                 $name.classList.remove('msg-error')
+                $price.style.boxShadow= "none";
                 $checkName.style.display= "inline-block"
                 $nameErrors.innerHTML = "";
                 validationsErrors = false;
@@ -74,6 +75,7 @@ window.addEventListener('load', () => {
                 break;
             default:
                 $price.classList.remove('msg-error')
+                $price.style.boxShadow= "none";
                 $checkPrice.style.display= "inline-block"
                 $priceErrors.innerHTML = "";
                 validationsErrors = false;
@@ -90,6 +92,7 @@ window.addEventListener('load', () => {
                 validationsErrors = true;
             default:
                 $discount.classList.remove('msg-error')
+                $discount.style.boxShadow= "none";
                 $checkDiscount.style.display= "inline-block"
                  $discountErrors.innerHTML = "";
                  validationsErrors = false;
@@ -113,6 +116,7 @@ window.addEventListener('load', () => {
                 break;
             default:
                 $stock.classList.remove('msg-error')
+                $stock.style.boxShadow= "none";
                 $checkStock.style.display= "inline-block"
                 $stockErrors.innerHTML = "";
                 validationsErrors = false;
@@ -126,8 +130,9 @@ window.addEventListener('load', () => {
             $categoryErrors.classList.add('msg-error') 
             validationsErrors = true;
         }else{
-            $subcategory.classList.remove('msg-error')
-            $subcategoryErrors.innerHTML = "";
+            $category.classList.remove('msg-error')
+            $category.style.boxShadow= "none";
+            $categoryErrors.innerHTML = "";
             validationsErrors = false;
         }
     })
@@ -139,15 +144,15 @@ window.addEventListener('load', () => {
             validationsErrors = true;
         }else{
             $subcategory.classList.remove('msg-error')
+            $subcategory.style.boxShadow= "none";
             $subcategoryErrors.innerHTML = "";
             validationsErrors = false;
         }
     })
 
     
-    $form.addEventListener('submit', (event) =>{
+    $form.addEventListener('submit', function(event){
         event.preventDefault()
-        /* console.log(this.Element) */
         let error = false;
         let elementsForm = this.elements;
         
@@ -156,15 +161,17 @@ window.addEventListener('load', () => {
             && elementsForm[index].type !== 'file'
             && elementsForm[index].name !== 'discount'
             ){
-                elementsForm[index].classList.add('msg-error');
+            /*     elementsForm[index].style.borderColor = ('#dd2211'); */
+                elementsForm[index].style.boxShadow= ("0px 0px 2px 3px rgba(227,3,3,0.60)");
                 $submitErrors.innerHTML = "Los campos señalados son obligatorios";
+                $submitErrors.classList.add('msg-error')
                 error = true;
             }
         }
 
-/*         if(!error && !validationsErrors){
+        if(!error && !validationsErrors){
             $form.submit()
-        } */
+        }
     })
 
 

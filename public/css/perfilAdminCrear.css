@@ -32,6 +32,7 @@
 
 .creacion-producto input,
 .creacion-producto textarea {
+    outline: none;
     width: 80%;
 }
 
@@ -98,6 +99,11 @@ label.estilo{
     width: 100%;
     object-fit: cover;
 }
+
+/* .submit-error {
+    border: 3px solid red;
+    outline: red;
+} */
 
 @media (min-width: 550px){
     .creacion-producto .inputdos,
