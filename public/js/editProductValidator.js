@@ -19,9 +19,9 @@ window.addEventListener('load', () => {
     $checkPrice = qs("#input-price"),
     $checkDiscount = qs("#input-discount"),
     $checkStock = qs("#input-stock"),
-    $form = qs("#formCreate"),
+    $form = qs("#formEdit"),
     $submitErrors = qs("#submitErrors"),
-    $file = qs("#fileCreate"),
+    $file = qs("#fileEdit"),
     $fileErrors = qs("#fileErrors"),
     $imagePreview = qs("#img-preview")
     regExAlpha = /^[0-9a-zA-Z]+$/,
@@ -162,9 +162,9 @@ window.addEventListener('load', () => {
             }
         }
 
-        if(!error && !validationsErrors){
+/*         if(!error && !validationsErrors){
             $form.submit()
-        }
+        } */
     })
 
 
@@ -184,7 +184,7 @@ window.addEventListener('load', () => {
                 };
                 reader.readAsDataURL($file.files[0]);
                 $fileErrors.innerHTML = '';
-                /* $file.classList.remove(''); */
+                $file.classList.remove('');
             }
         }
     }) 
