@@ -136,19 +136,18 @@ window.addEventListener('load', () => {
     })
 
     
-    $form.addEventListener('submit', function(event) {
+    $form.addEventListener('submit', (event) =>{
+        event.preventDefault()
+        /* console.log(this.Element) */
         let error = false;
-        event.preventDeFault()
-
-
         let elementsForm = this.elements;
         
         for (let index = 0; index < elementsForm.length - 1; index++){
             if(elementsForm[index].value == ''
-            && elementsForm[index].type != "file"
-            && elementsForm[index].name != "discount"
+            && elementsForm[index].type !== 'file'
+            && elementsForm[index].name !== 'discount'
             ){
-                /* elementsForm[index].classList.add('') */
+                elementsForm[index].classList.add('msg-error');
                 $submitErrors.innerHTML = "Los campos señalados son obligatorios";
                 error = true;
             }
