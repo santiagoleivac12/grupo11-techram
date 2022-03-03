@@ -1,8 +1,9 @@
 ///const { users,writeUsersJSON } = require('../data/dataBase')
-const { validationResult } = require('express-validator')
+//const { validationResult } = require('express-validator')
 const bcrypt = require('bcryptjs');
 const db = require('../data/models')
-
+const {check,validationResult,body} = require('express-validator');
+const { Op } = require("sequelize");
 const Users = db.User;
 const Addresses = db.Address
 
@@ -63,16 +64,28 @@ const controller = {
         let errors = validationResult(req);
         if (errors.isEmpty()) {
             let { firstName, lastname, email, pass} = req.body;
-            Users.create({
-                firstName,
-                lastname,
+            db.Users.create({
+                firstName: firstName.trim(),
+                lastname: lastname.trim(),
                 email,
-                pass: bcrypt.hashSync(pass, 10),
+                pass: bcrypt.hashSync(pass1, 10),
                 phone: 55555555,
                 avatar: req.file ? req.file.filename : "default-image.png",
                 rol: 0
             })
-                .then(() => {
+                .then((user) => {
+                    req.session.user={
+                        id: user.id,
+                        name: user.firstName,
+                        lastname: user.lastname,
+                        email: user.email,
+                        avatar: user.avatar,
+                        rol: user.rol,
+                        Address: user.address,
+                        phone: user.phone,
+
+
+                    }
                     res.redirect('/users/login')
                 })
         } else {
@@ -92,14 +105,15 @@ const controller = {
         res.redirect('/')
     },
     perfil2: (req, res) => {
-        Users.findByPk(req.session.user.id, {
+        Users.findByPk( req.session.user.id, {
             include: [{ association: 'addresses' }]
         })
             .then((user) => {
                 res.render('users/perfil', {
                     user,
                     session: req.session
-                })
+                }) 
+            
             })
     }
 

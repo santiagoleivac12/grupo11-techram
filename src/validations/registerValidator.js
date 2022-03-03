@@ -3,11 +3,11 @@ const db= require('../data/models')
 const Users= db.User;
 
 module.exports = [
-    check('firstName')
+    check('firstName').isLength({min:2})
     .notEmpty()
     .withMessage('debe ingresar un nombre'),
 
-    check('lastname')
+    check('lastname').isLength({min:2})
     .notEmpty()
     .withMessage('El apellido es requerido'),
 
@@ -29,17 +29,17 @@ module.exports = [
 
     }),
 
-    check('pass')
+    check('pass1')
     .notEmpty()
     .withMessage('debes escribir tu contraseña')
     .isLength({
-        min: 6,
+        min: 8,
         max: 12
     })
-    .withMessage('La contraseña debe tener entre 6 y 12 caracteres')
+    .withMessage('La contraseña debe tener entre 8 y 12 caracteres'),
 
-/* 
-    check('terms')
-    .isString('on')
-    .withMessage('debes aceptar las bases y condiciones') */
+    body('pass2').custom((value,{req})=> value !== req.body.pass1 ? false :true)
+    .withMessage('Las contraseñas no coinciden')
+
+
 ]
