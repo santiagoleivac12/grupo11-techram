@@ -20,9 +20,11 @@
           <p class="anexo">ó</p>
           <form action="/users/register" class="inputs-container" method="POST" enctype="multipart/form-data">
             <label for="nombre"></label>
-            <input class="input-register" type="text" name="firstName" id="nombre" placeholder="Ingrese su nombre" value="<%= locals.old && old.firstName %>"/>
+            <input class="input-register" type="text" name="firstName" id="name" placeholder="Ingrese su nombre" value="<%= (typeof old != 'undefined' && old.name) ? old.name : ""%>"/>
+            <span class="error" id="nameErrors"></span>
             <% if (locals.errors && errors.firstName) { %>
               <small class="text-danger"><%= errors.firstName.msg %> </small>
+              
             <% } %>
             <label for="apellido"></label>
             <input class="input-register" type="text" name="lastname" id="apellido" placeholder="Ingrese su apellido" value="<%= locals.old && old.lastname %>"/>
