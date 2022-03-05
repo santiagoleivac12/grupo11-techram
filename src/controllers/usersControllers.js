@@ -1,11 +1,10 @@
-///const { users,writeUsersJSON } = require('../data/dataBase')
-//const { validationResult } = require('express-validator')
+const { validationResult } = require('express-validator')
 const bcrypt = require('bcryptjs');
 const db = require('../data/models')
-const {check,validationResult,body} = require('express-validator');
-const { Op } = require("sequelize");
+/* const {check,validationResult,body} = require('express-validator'); */
+/* const { Op } = require("sequelize"); */
 const Users = db.User;
-const Addresses = db.Address
+/* const Addresses = db.Address */
 
 
 const controller = {
@@ -49,8 +48,7 @@ const controller = {
         } else {
             res.render('users/login', {
                 errors: errors.mapped(),
-                session: req.session,
-                old: req.body
+                session: req.session
             })
         }
 
@@ -62,8 +60,8 @@ const controller = {
     },
     processRegister: (req, res) => {
         let errors = validationResult(req);
-        if (errors.isEmpty()) {
-            let { firstName, lastname, email, pass} = req.body;
+        if(errors.isEmpty()) {
+            let { firstName, lastname, email, pass1} = req.body;
             db.Users.create({
                 firstName: firstName.trim(),
                 lastname: lastname.trim(),
@@ -73,7 +71,10 @@ const controller = {
                 avatar: req.file ? req.file.filename : "default-image.png",
                 rol: 0
             })
-                .then((user) => {
+            .then(() => {
+                res.redirect('/users/login')
+            })
+                /* .then((user) => {
                     req.session.user={
                         id: user.id,
                         name: user.firstName,
@@ -85,9 +86,7 @@ const controller = {
                         phone: user.phone,
 
 
-                    }
-                    res.redirect('/users/login')
-                })
+                    } */
         } else {
             res.render('users/register', {
                 errors: errors.mapped(),

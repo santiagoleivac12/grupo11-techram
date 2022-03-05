@@ -74,10 +74,10 @@
 
 .inputs-container {
   height: 65%;
-  width: 85%;
+  width: 95%;
   display: flex;
   flex-direction: column;
-  justify-content: space-around;
+  justify-content: space-between;
   align-items: center;
   font-family: var(--font-textos);
 }
@@ -88,14 +88,14 @@
   font-size: 1em;
 }
 .input-register {
-  width: 90%;
-  height: 29px;
+  width: 280px;
+  height: 35px;
   padding-left: 20px;
   border: none;
   border-radius: 5px;
   font-weight: 500;
   letter-spacing: 0.5px;
-  box-sizing: border-box;
+  outline: none;
 }
 .btn {
   background-color: hsla(278, 27%, 57%, 0.99);
@@ -119,6 +119,14 @@
   color: turquoise;
   font-weight: 600;
   cursor: pointer;
+}
+
+#input-lastName, #input-email, #input-pass {
+  display: none;
+  font-size: 22px;
+  color: #51ad23d2;
+  width: 20px;
+  margin-left: 5px;
 }
 
 /*responsive*/
@@ -164,4 +172,7 @@
      height:43.5em ;
   }
   
+  .input-register {
+    width: 170px;
+  }
 }

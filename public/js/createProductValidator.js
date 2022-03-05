@@ -23,7 +23,7 @@ window.addEventListener('load', () => {
     $submitErrors = qs("#submitErrors"),
     $file = qs("#fileCreate"),
     $fileErrors = qs("#fileErrors"),
-    $imagePreview = qs("#img-preview")
+    $imagePreview = qs("#img-preview"),
     regExAlpha = /^[0-9a-zA-Z]+$/,
     regExNumber = /^[0-9]+$/;
 
