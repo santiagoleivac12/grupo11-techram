@@ -22,16 +22,18 @@
                     </div>
                     <p>ó</p>
                     <form action="/users/login" method="POST" class="inputs-container">
-                        <input class="input" name="email" type="email" placeholder="email" id="emailFront">
+                        <span id="form-error"></span>
+                        <input id="email-front" class="input" name="email" type="email" placeholder="email" >
+                       <span  id="emailErrors"></span>
                         <% if(locals.errors && errors.email){%>
-                            <small class='text-danger' id="emailError">
+                            <small class='text-danger'>
                                 <%=errors.email.msg%>
                             </small>
                             <% }%>
-                                <input class="input" name='pass' type="password" placeholder="Contraseña"
-                                    id="passFront">
+                                <input id="passFront" class="input" name='pass' type="password" placeholder="Contraseña" >
+                                <span id="passError"></span>
                                 <% if(locals.errors && errors.pass){%>
-                                    <small class='text-danger' id="passError">
+                                    <small class='text-danger'>
                                         <%=errors.pass.msg%>
                                     </small>
                                     <% }%>
@@ -46,50 +48,9 @@
                 </div>
                 <img class="image-container" src="/images/logos/eva.png" alt="Logo techRam">
             </div>
-
+            <script src="/js/loginFront.js"></script>
             <%- include('../partials/footer') %>
-                <script>
-                window.onload = () => {
-                    let $form = document.querySelector('form');
-                    let $emailFront = document.querySelector('#emailFront');
-                    let $passFront = document.querySelector('#passFront');
-
-                    //exprecion regular para email 
-                    /* let regEx = /^[a-z0-9!#$%&'*+/=?^_`{|}~-]+(?:\.[a-z0-9!#$%&'*+/=?^_`{|}~-]+)*@(?:[a-z0-9](?:[a-z0-9-]*[a-z0-9])?\.)+[a-z0-9](?:[a-z0-9-]*[a-z0-9])?$/ */
-
-
-                    //que el campo email no este vacio
-                    $emailFront.addEventListener('change', (event) => {
-                        console.log(event.target.value)
-                       /*  let value = event.target.value; */
-                       /*  if (value.length == 0) {
-                            let mensajeError = 'Debe ingresar un email'
-                            error.emailFrontError = mensajeError
-                            emailError.innerHTML = mensajeError */ //cuando hace click en el campo ,sale y no lo completa se muestra el msg de error
-                      /*   } else {
-                            emailError.innerHTML = ""
-                        } */
-                    })
-                    //contraseña 
-                    $passFront.addEventListener('blur', (event) => {
-                        let value = event.target.value;
-                        if (value.length == 0) {
-                            let mensajeError = 'Debe ingresar una contraceña'
-                            error.passFrontError = mensajeError
-                            passError.innerHTML = mensajeError
-                        } else {
-                            passError.innerHTML = ""
-                        }
-                    })
-
-                    //para que el form no se envie incompleto.
-                    $form.addEventListener('submit', (event) => {
-                        event.preventDefault()
-                        alert('Tenes que completar los campos requeridos')
-                    })
-
-                }
-                </script>
+           
     </body>
 
 </html>

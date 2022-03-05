@@ -50,7 +50,7 @@ window.addEventListener('load', () => {
                 $checkName.style.display= "inline-block"
                 $nameErrors.innerHTML = "";
                 validationsErrors = false;
-                break;        
+                break;
         }
     })
 
