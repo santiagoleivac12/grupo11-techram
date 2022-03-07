@@ -1,4 +1,4 @@
-# Dailys sprint 5
+# Dailys sprint 6
 ## Reunión 22/01/2022
 - Actualización del trello con las tareas del nuevo sprint
 - Repartir las tareas, colocar prioridades, vencimientos.
