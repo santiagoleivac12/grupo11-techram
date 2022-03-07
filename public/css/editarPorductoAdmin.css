@@ -23,6 +23,7 @@
 .contenedor-admin input,
 .contenedor-admin textarea {
     width: 95%;
+    outline: none;
 }
 
 .contenedor-admin input,

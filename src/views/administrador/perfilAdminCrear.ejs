@@ -40,14 +40,43 @@
                     <% if (locals.errors && errors.stock) { %>
                         <small class="msg-error"><%= errors.stock.msg %></small>
                     <% } %>
+ <!--                    <label class="estilo" for="general-admin">Detalles generales:</label>
+                    <div>
+                        <input type="text" name="stock" id="general-admin" class="inputdos"><i class="fas fa-check-circle" id="input-general"></i>
+                    </div>
+                    <span id="generalErrors"></span>
+                    <% if (locals.errors && errors.general) { %>
+                        <small class="msg-error"><%= errors.general.msg %></small>
+                    <% } %>
+                    <label class="estilo" for="conectivity-admin">Conectividad:</label>
+                    <div>
+                        <input type="text" name="conectivity" id="conectivity-admin" class="inputdos"><i class="fas fa-check-circle" id="input-conectivity"></i>
+                    </div>
+                    <span id="conectivityErrors"></span>
+                    <% if (locals.errors && errors.conectivity) { %>
+                        <small class="msg-error"><%= errors.conectivity.msg %></small>
+                    <% } %>
+                    <label class="estilo" for="illumination-admin">Iluminación:</label>
+                    <div>
+                        <input type="text" name="illumination" id="illumination-admin" class="inputdos"><i class="fas fa-check-circle" id="input-illumination"></i>
+                    </div>
+                    <span id="illuminationErrors"></span>
+                    <% if (locals.errors && errors.illumination) { %>
+                        <small class="msg-error"><%= errors.illumination.msg %></small>
+                    <% } %> -->
                 </div>
                 <div class="form-create">
                     <label class="estilo" for="producto-img">Agregue foto del producto</label>
-                    <input type="file" id="fileCreate" name="producto-img" accept="jpg" class="input-admin" multiple>
-                    <span id="fileErrors"></span>
-                    <% if (locals.errors && errors.image) { %>
-                        <small class="msg-error"><%= errors.image.msg %></small>
-                    <% } %>
+                    <div class="box-2 mt-3">
+                        <div id="img-preview">
+
+                        </div>
+                        <input type="file" id="fileCreate" name="producto-img" accept="jpg" class="input-admin" multiple>
+                        <span class="msg-error" id="fileErrors"></span>
+                        <% if (locals.errors && errors.image) { %>
+                            <small class="msg-error"><%= errors.image.msg %></small>
+                        <% } %>
+                    </div>
                     <label class="estilo" for="categoria-admin">Elige la categoria:</label>
                     <select id="categoria-admin" class="select-admin" name="category">
                         <option selected hidden value="">categoria</option>
@@ -59,7 +88,7 @@
                     <% if (locals.errors && errors.category) { %>
                         <small class="msg-error"><%= errors.category.msg %> </small>
                     <% } %>
-                    <label class="estilo" for="subcategoria-admin">Elige la subcategoria:</label>
+                    <label class="estilo" for="subcategory">Elige la subcategoria:</label>
                     <select id="subcategoria-admin" class="select-admin" name="subcategory">
                         <option selected hidden value="">subcategorias</option>
                         <% subcategories.forEach(subcategory => { %>
@@ -80,6 +109,7 @@
             </form>
         </div>
     </main>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta2/dist/js/bootstrap.bundle.min.js" integrity="sha384-b5kHyXgcpbZJO/tY9Ul7kGkf1S0CWuKcCD38l8YkeH8z8QjE0GmW1gYU5S9FOnJ0" crossorigin="anonymous"></script>
     <script src="/js/createProductValidator.js"></script>
 </body> 
 </html>

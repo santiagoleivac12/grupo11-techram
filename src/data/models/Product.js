@@ -11,9 +11,6 @@ module.exports = (sequelize, dataTypes) => {
             type: dataTypes.STRING(800),
             allowNull: false
         },
-/*         specificationsId: {
-            type: dataTypes.INTEGER(11)
-        }, */
         price: {
             type: dataTypes.INTEGER(11),
             allowNull: false
@@ -25,12 +22,22 @@ module.exports = (sequelize, dataTypes) => {
             type: dataTypes.INTEGER(11),
             allowNull: false
         },
-/*         images:{
-           type: dataTypes.TEXT
-        }, */
         stock: {
             type: dataTypes.INTEGER(11),
             allowNull: false
+        },
+        description: {
+            type: dataTypes.STRING(800),
+            allowNull: false,
+            autoIncrement: false,
+        },
+        conectivity: {
+        type : dataTypes.STRING(360),
+        autoIncrement: false
+        },
+        illumination : {
+            type : dataTypes.STRING(60),
+            autoIncrement: false
         }
         
     }
@@ -53,10 +60,6 @@ module.exports = (sequelize, dataTypes) => {
         Product.hasMany(models.Order_item, {
             as: "order_items",
             foreignKey: "productId"
-        })
-        Product.hasMany(models.Specification, {
-            as: "specifications",
-            foreignKey: "specificationsId"
         })
     }
 

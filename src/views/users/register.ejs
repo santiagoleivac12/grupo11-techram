@@ -18,26 +18,38 @@
             </div>
           </div>
           <p class="anexo">ó</p>
-          <form action="/users/register" class="inputs-container" method="POST" enctype="multipart/form-data">
+          <form action="/users/register" id="formRegister" class="inputs-container" method="POST" enctype="multipart/form-data">
             <label for="nombre"></label>
-            <input class="input-register" type="text" name="firstName" id="nombre" placeholder="Ingrese su nombre" value="<%= locals.old && old.firstName %>"/>
+            <div>
+              <input class="input-register" type="text" name="firstName" id="name" placeholder="Ingrese su nombre" value="<%= locals.old && old.firstName %>"/><i class="fas fa-check-circle" id="input-name"></i>
+            </div>
+            <span id="nameErrors"></span>
             <% if (locals.errors && errors.firstName) { %>
-              <small class="text-danger"><%= errors.firstName.msg %> </small>
+              <small class="msg-error"><%= errors.firstName.msg %></small>             
             <% } %>
             <label for="apellido"></label>
-            <input class="input-register" type="text" name="lastname" id="apellido" placeholder="Ingrese su apellido" value="<%= locals.old && old.lastname %>"/>
+            <div>
+              <input class="input-register" type="text" name="lastname" id="apellido" placeholder="Ingrese su apellido" value="<%= locals.old && old.lastname %>"/><i class="fas fa-check-circle" id="input-lastName"></i>
+            </div>
+            <span id="lastNameErrors"></span>
             <% if (locals.errors && errors.lastname) { %>
-              <small class="text-danger"><%= errors.lastname.msg %> </small>
+              <small class="msg-error"><%= errors.lastname.msg %></small>
             <% } %>
             <label for="email"></label>
-            <input class="input-register" type="email" name="email" placeholder="email"/>
+            <div>
+              <input class="input-register" type="email" name="email" id="inputEmail" placeholder="email"/><i class="fas fa-check-circle" id="input-email"></i>
+            </div>
+            <span id="emailErrors"></span>
             <% if (locals.errors && errors.email) { %>
-              <small class="text-danger"><%= errors.email.msg %> </small>
+              <small class="msg-error"><%= errors.email.msg %> </small>
             <% } %>
             <label for="password"></label>
-            <input class="input-register" type="password" name="pass" placeholder="Contraseña"/>
+            <div>
+              <input class="input-register" type="password" id="password" name="pass1" placeholder="Contraseña"/><i class="fas fa-check-circle" id="input-pass"></i>
+            </div>
+            <span id="passwordErrors"></span>
             <% if (locals.errors && errors.pass) { %>
-              <small class="text-danger"><%= errors.pass.msg %> </small>
+              <small class="msg-error"><%= errors.pass.msg %> </small>
             <% } %>
 <!--             <label for="phone"></label> -->
  <!--            <input class="input-register" type="text" name="phone" placeholder="telefono"/>
@@ -47,7 +59,7 @@
 
             <!-- <input class="input-register" type="password" name="password" placeholder="Repite la Contraseña"/> -->
             
-            <label class="anexo" for="dropdown" id="provincia"></label>
+<!--             <label class="anexo" for="dropdown" id="provincia"></label>
             <select id="dropdown" class="input-register" required>
               <option value="Buenos Aires">Buenos Aires</option>
               <option value="Capital Federal">Capital Federal</option>
@@ -82,16 +94,18 @@
             <input class="input-register" type="number" placeholder="Codigo Postal" name="cp" id="Numero">
 
             <label for="Dirrecion"></label>
-            <input class="input-register" type="text" placeholder="Direccion" name="address" id="name">.
+            <input class="input-register" type="text" placeholder="Direccion" name="address" id="name">. -->
 
             <label for="user-img">Agregue su foto del perfil</label>
             <input type="file" name="user-img" id="user-img" accept="jpg">
+            <span id="fileErrors"></span>
             <% if (locals.errors && errors.image) { %>
-              <small class="text-danger"><%= errors.image.msg %> </small>
+              <small class="msg-error"><%= errors.image.msg %> </small>
             <% } %>
 
             <p class="anexo">Acepto los <a class="anexo-a" href="#">Terminos y Condiciones</a> y autorizo el uso
               de mis datos de acuerdo a la Declaración de Privacidad</p>
+            <span id="submitErrors"></span>
             <button type="submit" class="btn">Registrate</button>
 
             <p class="anexo">tienes una cuenta? <a class="anexo-a" href="/login">Ingresa aquí</a></p>
@@ -109,6 +123,7 @@
       </div>
 
       <%- include('../partials/footer') %>
+      <script src="/js/registerValidator.js"></script>
   </body>
 
 </html>

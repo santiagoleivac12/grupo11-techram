@@ -7,6 +7,7 @@ const ProductImages = db.ProductImage;
 const Categories = db.Category;
 const Subcategories = db.Subcategory;
 const Order_items = db.Order_item;
+const Specifications = db.Specification;
 
 
 let controller = {
@@ -45,7 +46,7 @@ let controller = {
         }
 
         if (errors.isEmpty()) {
-            const {name, price, category, subcategory, description, discount,stock} = req.body
+            const {name, price, category, subcategory, description, discount, stock, general, conectivity, illumination} = req.body
             Products.create({
                 name, 
                 price, 
@@ -53,6 +54,7 @@ let controller = {
                 discount,
                 stock,
                 subcategoryId: subcategory,
+                specificationsId: general,conectivity, illumination,
             })
             .then((product) => {
                 if(arrayImages.length > 0){

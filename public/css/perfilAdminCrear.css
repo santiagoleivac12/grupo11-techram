@@ -32,6 +32,7 @@
 
 .creacion-producto input,
 .creacion-producto textarea {
+    outline: none;
     width: 80%;
 }
 
@@ -84,6 +85,25 @@ label.estilo{
     width: 20px;
     margin-left: 5px;
 }
+
+#img-preview {
+    width:80%;
+    height: 200px;
+    margin: 0 auto;
+    max-width: 250px;
+    border: 3px solid #8D05F8;
+    margin-bottom: 5px;
+}
+
+#img-preview img {
+    width: 100%;
+    object-fit: cover;
+}
+
+/* .submit-error {
+    border: 3px solid red;
+    outline: red;
+} */
 
 @media (min-width: 550px){
     .creacion-producto .inputdos,

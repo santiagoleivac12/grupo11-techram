@@ -4,7 +4,7 @@
 <body class="body-admin">
     <%- include('../partials/header-admin') %>
     <main class="main-perfil">
-        <form id="form" class="contenedor-admin" method="POST" action="/admin/<%- product.id %>/edit?_method=PUT" enctype="multipart/form-data">
+        <form id="formEdit" class="contenedor-admin" method="POST" action="/admin/<%- product.id %>/edit?_method=PUT" enctype="multipart/form-data">
             <div class="product-detail-edit">
                 <div class="img-container-edit">
                     <img class="img-edit" src="/images/productos/<%- product/* .productImages[0] */.image %>" alt="producto">
@@ -12,35 +12,48 @@
             </div>
             <div class="edit-inf">
                 <label class="estilo" for="name">Nombre</label>
-                <input name="name" class="rellenar-name" type="text" id="name-admin" placeholder="Nombre Producto" value="<%= locals.old ? old.name : product.name %>">
+                <div>
+                    <input name="name" class="rellenar-name" type="text" id="name-admin" placeholder="Nombre Producto" value="<%= locals.old ? old.name : product.name %>"><i class="fas fa-check-circle" id="input-name"></i>
+                </div>
                 <span id="nameErrors"></span>
                 <% if (locals.errors && errors.name) { %>
                     <small class="text-danger"><%= errors.name.msg %></small>
                 <% } %>
                 <label class="estilo" for="price">Precio</label>
-                <input name="price" class="rellenar-name" type="text" id="price-admin" placeholder="Precio" value="<%= locals.old ? old.price : product.price %>">
+                <div>
+                    <input name="price" class="rellenar-name" type="text" id="price-admin" placeholder="Precio" value="<%= locals.old ? old.price : product.price %>"><i class="fas fa-check-circle" id="input-price"></i>
+                </div>
                 <span id="priceErrors"></span>
                 <% if (locals.errors && errors.price) { %>
                     <small class="text-danger"><%= errors.price.msg %></small>
                 <% } %>
                 <label class="estilo" for="stock">Stock</label>
-                <input name="stock" class="rellenar-name" type="text" id="stock-admin" placeholder="Stock" value="<%= product.stock %>">
+                <div>
+                    <input name="stock" class="rellenar-name" type="text" id="stock-admin" placeholder="Stock" value="<%= product.stock %>"><i class="fas fa-check-circle" id="input-stock"></i>
+                </div>
                 <span id="stockErrors"></span>
                 <% if (locals.errors && errors.stock) { %>
                     <small class="text-danger"><%= errors.stock.msg %></small>
                 <% } %>
                 <label class="estilo" for="discount">Descuento</label>
-                <input name="discount" class="rellenar-name" type="text" id="discount-admin" value="<%= locals.old ? old.discount : product.discount %>">
+                <div>
+                    <input name="discount" class="rellenar-name" type="text" id="discount-admin" value="<%= locals.old ? old.discount : product.discount %>"><i class="fas fa-check-circle" id="input-discount"></i>
+                </div>
                 <span id="discountErrors"></span>
                 <% if (locals.errors && errors.discount) { %>
                     <small class="text-danger"><%= errors.discount.msg %></small>
                 <% } %>
                 <label class="estilo" class="estilo" for="producto-img">Agregue foto del producto</label>
-                <input type="file" name="producto-img" accept="png" class="input-admin" multiple>
-                <span id="fileErrors"></span>
+                <div class="box-2 mt-3">
+                    <div id="img-preview">
+
+                    </div>
+                    <input type="file" name="producto-img" accept="png" id="fileEdit" class="input-admin" multiple>
+                    <span class="msg-error" id="fileErrors"></span>
+                </div>
                 <h3 class="estilo">Elige la categoria:</h3>
-                <label class="estilo" for="categoria"></label>
-                <select name="categoria" id="categoria-admin" class="select-admin">
+                <label class="estilo" for="category"></label>
+                <select name="category" id="categoria-admin" class="select-admin">
                     <option selected hidden value="">categoria</option>
                     <% categories.forEach(category => { %>
                         <option value="<%- category.id %>" <%- locals.old && old.category == category.id ? "selected" : category.id == product.category ? "selected" : "" %>><%- category.name %></option>
@@ -67,13 +80,13 @@
 
 
             <div class="div-button-create">
-
+                <span id="submitErrors"></span>
                 <button class="button-create" type="submit">Guardar</button>
                 </div>
 
             </div>
         </form>       
     </main>
-    <script src="/js/createProductValidator.js"></script>
+    <script src="/js/editProductValidator.js"></script>
 </body>
 </html>

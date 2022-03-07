@@ -1,10 +1,10 @@
-///const { users,writeUsersJSON } = require('../data/dataBase')
 const { validationResult } = require('express-validator')
 const bcrypt = require('bcryptjs');
 const db = require('../data/models')
-
+/* const {check,validationResult,body} = require('express-validator'); */
+/* const { Op } = require("sequelize"); */
 const Users = db.User;
-const Addresses = db.Address
+/* const Addresses = db.Address */
 
 
 const controller = {
@@ -48,8 +48,7 @@ const controller = {
         } else {
             res.render('users/login', {
                 errors: errors.mapped(),
-                session: req.session,
-                old: req.body
+                session: req.session
             })
         }
 
@@ -61,20 +60,33 @@ const controller = {
     },
     processRegister: (req, res) => {
         let errors = validationResult(req);
-        if (errors.isEmpty()) {
-            let { firstName, lastname, email, pass} = req.body;
-            Users.create({
-                firstName,
-                lastname,
+        if(errors.isEmpty()) {
+            let { firstName, lastname, email, pass1} = req.body;
+            db.Users.create({
+                firstName: firstName.trim(),
+                lastname: lastname.trim(),
                 email,
-                pass: bcrypt.hashSync(pass, 10),
+                pass: bcrypt.hashSync(pass1, 10),
                 phone: 55555555,
                 avatar: req.file ? req.file.filename : "default-image.png",
                 rol: 0
             })
-                .then(() => {
-                    res.redirect('/users/login')
-                })
+            .then(() => {
+                res.redirect('/users/login')
+            })
+                /* .then((user) => {
+                    req.session.user={
+                        id: user.id,
+                        name: user.firstName,
+                        lastname: user.lastname,
+                        email: user.email,
+                        avatar: user.avatar,
+                        rol: user.rol,
+                        Address: user.address,
+                        phone: user.phone,
+
+
+                    } */
         } else {
             res.render('users/register', {
                 errors: errors.mapped(),
@@ -92,14 +104,15 @@ const controller = {
         res.redirect('/')
     },
     perfil2: (req, res) => {
-        Users.findByPk(req.session.user.id, {
+        Users.findByPk( req.session.user.id, {
             include: [{ association: 'addresses' }]
         })
             .then((user) => {
                 res.render('users/perfil', {
                     user,
                     session: req.session
-                })
+                }) 
+            
             })
     }
 

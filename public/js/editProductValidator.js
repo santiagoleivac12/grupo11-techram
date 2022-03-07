@@ -19,11 +19,11 @@ window.addEventListener('load', () => {
     $checkPrice = qs("#input-price"),
     $checkDiscount = qs("#input-discount"),
     $checkStock = qs("#input-stock"),
-    $form = qs("#formCreate"),
+    $form = qs("#formEdit"),
     $submitErrors = qs("#submitErrors"),
-    $file = qs("#fileCreate"),
+    $file = qs("#fileEdit"),
     $fileErrors = qs("#fileErrors"),
-    $imagePreview = qs("#img-preview"),
+    $imagePreview = qs("#img-preview")
     regExAlpha = /^[0-9a-zA-Z]+$/,
     regExNumber = /^[0-9]+$/;
 
@@ -51,11 +51,11 @@ window.addEventListener('load', () => {
                  break;
             default: 
                 $name.classList.remove('msg-error')
-                $name.style.boxShadow= "none";
+                $price.style.boxShadow= "none";
                 $checkName.style.display= "inline-block"
                 $nameErrors.innerHTML = "";
                 validationsErrors = false;
-                break;
+                break;        
         }
     })
 
@@ -130,9 +130,9 @@ window.addEventListener('load', () => {
             $categoryErrors.classList.add('msg-error') 
             validationsErrors = true;
         }else{
-            $subcategory.classList.remove('msg-error')
+            $category.classList.remove('msg-error')
             $category.style.boxShadow= "none";
-            $subcategoryErrors.innerHTML = "";
+            $categoryErrors.innerHTML = "";
             validationsErrors = false;
         }
     })
@@ -191,7 +191,7 @@ window.addEventListener('load', () => {
                 };
                 reader.readAsDataURL($file.files[0]);
                 $fileErrors.innerHTML = '';
-                /* $file.classList.remove(''); */
+                $file.classList.remove('');
             }
         }
     }) 
