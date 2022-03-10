@@ -140,17 +140,17 @@ DROP TABLE IF EXISTS `products`;
 CREATE TABLE `products` (
   `id` int(11) NOT NULL AUTO_INCREMENT,
   `name` varchar(800) NOT NULL,
-  `specificationsId` int(11) NOT NULL,
   `price` int(11) NOT NULL,
   `discount` int(11) DEFAULT NULL,
   `subcategoryId` int(11) NOT NULL,
   `images` text DEFAULT NULL,
   `stock` int(11) NOT NULL,
+  `description` varchar(800) DEFAULT NULL,
+  `conectivity` varchar(360) DEFAULT NULL,
+  `illumination` varchar(60) DEFAULT NULL,
   PRIMARY KEY (`id`),
   UNIQUE KEY `id_UNIQUE` (`id`),
-  KEY `specifications_FK` (`specificationsId`),
   KEY `subcategory_FK_1` (`subcategoryId`),
-  CONSTRAINT `specifications_FK` FOREIGN KEY (`specificationsId`) REFERENCES `specifications` (`id`),
   CONSTRAINT `subcategory_FK_1` FOREIGN KEY (`subcategoryId`) REFERENCES `subcategories` (`id`)
 ) ENGINE=InnoDB AUTO_INCREMENT=15 DEFAULT CHARSET=utf8mb4;
 /*!40101 SET character_set_client = @saved_cs_client */;
@@ -161,7 +161,7 @@ CREATE TABLE `products` (
 
 LOCK TABLES `products` WRITE;
 /*!40000 ALTER TABLE `products` DISABLE KEYS */;
-INSERT INTO `products` VALUES (1,'Modulo de memoria SPECTRIX D60G DDR4 RGB',1,14000,10,1,NULL,50),(2,'Micro Procesador Amd Ryzen 5 5600g 4.4ghz Am4 16mb C/ Video',2,35000,5,2,NULL,10),(3,'Teclado Redragon k552w',3,555555,5,3,NULL,25),(4,'Motherboard Asus Tuf Gaming Z590-plus Wifi Socket 1200',4,31000,10,4,NULL,15),(5,'onikuma k20',5,4000,5,3,NULL,5),(6,'Monitor AOC 27\"',6,28900,10,3,NULL,8),(7,'Luces Led 10m',7,1500,NULL,7,NULL,20),(8,'Tableta digital Wacom INtuos Small',8,30000,5,5,NULL,3),(9,'Placa de video MSI GeForce RTX 3080 Ti 12GB',9,340000,10,6,NULL,6),(10,'Cpu Cooler Xigmatek Windpower 963 Intel 1200 Amd Am4',10,8000,5,8,NULL,17);
+INSERT INTO `products` VALUES (1,'Modulo de memoria SPECTRIX D60G DDR4 RGB',14000,10,1,NULL,50,'Si notás que tu computadora tiene bajo rendimiento o que su capacidad no se adapta a tus necesidades de uso, es momento de renovar su memoria RAM. Aumentarás su productividad y podrás trabajar de manera rápida y en simultáneo con múltiples aplicaciones.Con su tecnología DDR4, mejorará el desempeño de tu equipo, ya que opera en 3 y 4 canales, generando mayor fluidez y velocidad en la transferencia de datos. ¡Optimizá al máximo el rendimiento de tu computadora!','asdad','asdad'),(2,'Micro Procesador Amd Ryzen 5 5600g 4.4ghz Am4 16mb C/ Video',35000,5,2,NULL,10,'Clave en el rendimiento de tu computadora de escritorio, ya no tenés que pensar en cómo distribuir el tiempo y acciones porque ahora las tareas en simultáneo son posibles.AMD cuenta con un catálogo de productos que se adaptan a los requerimientos de todo tipo de usuarios: juegos en línea, edición a gran escala, contenido en múltiples plataformas y más.','dddd','dddd'),(3,'Teclado Redragon k552w',55555,5,3,NULL,25,'teclas al mismo tiempo','USB','RGB rojo'),(4,'Motherboard Asus Tuf Gaming Z590-plus Wifi Socket 1200',31000,10,4,NULL,15,'Tarjeta madre para juegos AMD B550 (Ryzen AM4) ATX con PCIe 4.0, doble M.2, 10 fases de poder DrMOS, Intel Wi-Fi 6, 2.5 Gb Ethernet, HDMI, DisplayPort, SATA 6 Gbps, USB 3.2 Gen 2 Type-A y Type -C, puerto ThunderboltÃƒÂ¢Ã¢â‚¬Å¾Ã‚Â¢ 3 y compatibilidad con iluminaciÃƒÆ’Ã‚Â³n Aura Sync RGB','Conectores EATX de 4 y 8 contactos','adadad'),(5,'onikuma k20',4000,5,3,NULL,5,'ExperimentÃƒÆ’Ã‚Â¡ la adrenalina de sumergirte en la escena de otra manera! Tener auriculares especÃƒÆ’Ã‚Â­ficos para jugar cambia completamente tu experiencia en cada partida. Con los Onikuma K20 no te perdÃƒÆ’Ã‚Â©s ningÃƒÆ’Ã‚Âºn detalle y escuchÃƒÆ’Ã‚Â¡s el audio tal y como fue diseÃƒÆ’Ã‚Â±ado por los creadores. El formato perfecto para vos. Al ser headset vas a poder escuchar tu mÃƒÆ’Ã‚Âºsica preferida, mantener llamadas telefÃƒÆ’Ã‚Â³nicas y jugar en lÃƒÆ’Ã‚Â­nea desde tu pc sin perderte ningÃƒÆ’Ã‚Âºn detalle.','Conector jack 3.5mm','rgb led'),(6,'Monitor AOC 27\"',28900,10,3,NULL,8,'Una experiencia visual de calidad Este monitor de 23.8 te va a resultar de gran comodidad para estudiar, trabajar o ver una pelÃƒÆ’Ã‚Â­cula en tus tiempos de ocio. Asimismo, su resoluciÃƒÆ’Ã‚Â³n de 1920 x 1080 te permite disfrutar de momentos ÃƒÆ’Ã‚Âºnicos gracias a una imagen con gran nitidez.','HDMI','asdadasd'),(7,'Luces Led 10m',1500,NULL,7,NULL,20,'Tira de LED RGB 5050 de 5mts con controlador y control','adasdasd','LED'),(8,'Tableta digital Wacom INtuos Small',35000,5,5,NULL,3,'Enciende tu imaginaciÃƒÆ’Ã‚Â³n con la nueva Intuos Draw. Incluye la tecnologÃƒÆ’Ã‚Â­a de pen tablet lÃƒÆ’Ã‚Â­der de Wacom, software creativo descargable gratuito y cursos de formaciÃƒÆ’Ã‚Â³n en lÃƒÆ’Ã‚Â­nea. Independientemente de que tu sueÃƒÆ’Ã‚Â±o sea crear bocetos asombrosos, compartir tu trabajo con amigos o comenzar una carpeta de trabajos, Intuos Draw tiene todo lo que necesitas para comenzar a crear inmediatamente.','USB','aadsda'),(9,'Placa de video MSI GeForce RTX 3080 Ti 12GB',340000,10,6,NULL,6,'VENTUS ofrece un diseÃƒÆ’Ã‚Â±o centrado en el rendimiento que mantiene lo esencial para realizar cualquier tarea. Una disposiciÃƒÆ’Ã‚Â³n de triple ventilador capaz colocada en un diseÃƒÆ’Ã‚Â±o industrial rÃƒÆ’Ã‚Â­gido permite que esta tarjeta grÃƒÆ’Ã‚Â¡fica de aspecto elegante se adapte a cualquier construcciÃƒÆ’Ã‚Â³n.','DisplayPort(v1.4a)','adsadds'),(10,'Cpu Cooler Xigmatek Windpower 963 Intel 1200 Amd Am4',8000,5,8,NULL,17,'Consumo 3, TDP120W, Tipo de refrigeracionAire, Velocidad del Fan 800-1800 RPM, MTTF 35K Horas','amd am4','RGB');
 /*!40000 ALTER TABLE `products` ENABLE KEYS */;
 UNLOCK TABLES;
 
@@ -190,33 +190,6 @@ LOCK TABLES `products_images` WRITE;
 /*!40000 ALTER TABLE `products_images` DISABLE KEYS */;
 INSERT INTO `products_images` VALUES (1,'producto11.png',1),(2,'producto3.jpg',2),(3,'producto4.png',3),(4,'producto5(2).jpg',4),(5,'productoAuriculares.jpeg',5),(6,'producto8.jpg',6),(7,'producto9.jpg',7),(8,'producto10.jpg',8),(9,'producto1.png',9),(10,'producto12.png',10),(11,'default-image.png',11);
 /*!40000 ALTER TABLE `products_images` ENABLE KEYS */;
-UNLOCK TABLES;
-
---
--- Table structure for table `specifications`
---
-
-DROP TABLE IF EXISTS `specifications`;
-/*!40101 SET @saved_cs_client     = @@character_set_client */;
-/*!40101 SET character_set_client = utf8 */;
-CREATE TABLE `specifications` (
-  `id` int(11) NOT NULL AUTO_INCREMENT,
-  `general` varchar(800) DEFAULT NULL,
-  `conectivity` varchar(360) DEFAULT NULL,
-  `characteristics` varchar(360) DEFAULT NULL,
-  `illumination` varchar(60) DEFAULT NULL,
-  PRIMARY KEY (`id`)
-) ENGINE=InnoDB AUTO_INCREMENT=11 DEFAULT CHARSET=utf8mb4;
-/*!40101 SET character_set_client = @saved_cs_client */;
-
---
--- Dumping data for table `specifications`
---
-
-LOCK TABLES `specifications` WRITE;
-/*!40000 ALTER TABLE `specifications` DISABLE KEYS */;
-INSERT INTO `specifications` VALUES (1,'La memoria XPG SPECTRIX D60G DDR4 cuenta con un diseÃƒÂ±o de tira de luz RGB doble excepcional que le da la mayor ÃƒÂ¡rea superficial RGB de cualquier mÃƒÂ³dulo de memoria! AdemÃƒÂ¡s, cuenta con una amplia gama de frecuencias de 3000 a 4133 MHz y admite los perfiles IntelÃ‚Â® XMP 2.0 para facilitar el aumento de la velocidad del reloj','frecuencias de 3000 a 4133 MHz y admite los perfiles IntelÃ‚Â® XMP 2.0','CL 14: latencia ultrabaja,','RGB programable'),(2,'Sin lugar a dudas, los procesadores para computadoras de escritorio AMD Ryzen serie 5000 elevan el nivel de expectativa para jugadores y artistas por igual.','ZÃƒÂ³calos compatibles: AM4,Tipos de memoria RAM soportadas: DDR4,','Cantidad de nÃƒÂºcleos de CPU: 6,Frecuencia mÃƒÂ¡xima de reloj: 4.4 GHz','-'),(3,'DisfrutÃƒÂ¡ de tus partidas en otro nivel con Redragon, marca reconocida que se especializa en brindar la mejor experiencia de juego al pÃƒÂºblico gamer desde hace mÃƒÂ¡s de 20 aÃƒÂ±os. Sus teclados se adaptan a todo tipo de jugadores y esto los convierten en un fiel reflejo de la alta gama y calidad que la compaÃƒÂ±ÃƒÂ­a ofrece. DistinciÃƒÂ³n a todo color Su retroiluminaciÃƒÂ³n le da un toque diferente a tu equipo y resalta su composiciÃƒÂ³n cuando es utilizado en espacios poco iluminados. TecnologÃƒÂ­a antighosting Este dispositivo tiene teclas antighosting. Esta cualidad es indispensable si requerÃƒÂ­s de un uso intensivo del perifÃƒÂ©rico. Gracias a esto podrÃƒÂ¡s evitar fallas al tocar varias teclas al mismo tiempo','USB','ErgonÃƒÂ³mico, reisstente a salpicaduras, antigosthing, mecÃƒÂ¡nico.','RGB rojo'),(4,'Tarjeta madre para juegos AMD B550 (Ryzen AM4) ATX con PCIe 4.0, doble M.2, 10 fases de poder DrMOS, Intel Wi-Fi 6, 2.5 Gb Ethernet, HDMI, DisplayPort, SATA 6 Gbps, USB 3.2 Gen 2 Type-A y Type -C, puerto ThunderboltÃ¢â€žÂ¢ 3 y compatibilidad con iluminaciÃƒÂ³n Aura Sync RGB','Conectores EATX de 4 y 8 contactos','Para mas especificaciones consulte a su tecnico','-'),(5,'ExperimentÃƒÂ¡ la adrenalina de sumergirte en la escena de otra manera! Tener auriculares especÃƒÂ­ficos para jugar cambia completamente tu experiencia en cada partida. Con los Onikuma K20 no te perdÃƒÂ©s ningÃƒÂºn detalle y escuchÃƒÂ¡s el audio tal y como fue diseÃƒÂ±ado por los creadores. El formato perfecto para vos. Al ser headset vas a poder escuchar tu mÃƒÂºsica preferida, mantener llamadas telefÃƒÂ³nicas y jugar en lÃƒÂ­nea desde tu pc sin perderte ningÃƒÂºn detalle.','Conector jack 3.5mm','MicrÃƒÂ³fono, respuesta de frecuencia 20Hx-20kHz, Largo de cable 2.2m','rgb led'),(6,'Una experiencia visual de calidad Este monitor de 23.8 te va a resultar de gran comodidad para estudiar, trabajar o ver una pelÃƒÂ­cula en tus tiempos de ocio. Asimismo, su resoluciÃƒÂ³n de 1920 x 1080 te permite disfrutar de momentos ÃƒÂºnicos gracias a una imagen con gran nitidez.','HDMI','27\",  pantalla curva, reclinable, resoluciÃƒÂ³n HD','-'),(7,'Tira de LED RGB 5050 de 5mts con controlador y control','220V','Marca TBCin,Modelo ES-WW10,Tipo de LED 220,Voltaje 220V,Largo 10m','LED'),(8,'Enciende tu imaginaciÃƒÂ³n con la nueva Intuos Draw. Incluye la tecnologÃƒÂ­a de pen tablet lÃƒÂ­der de Wacom, software creativo descargable gratuito y cursos de formaciÃƒÂ³n en lÃƒÂ­nea. Independientemente de que tu sueÃƒÂ±o sea crear bocetos asombrosos, compartir tu trabajo con amigos o comenzar una carpeta de trabajos, Intuos Draw tiene todo lo que necesitas para comenzar a crear inmediatamente.','USB','Largo del ÃƒÂ¡rea de trabajo: 95 mm, Incluye lÃƒÂ¡piz: SÃƒÂ­, Es multi-touch: No, Ancho del ÃƒÂ¡rea de trabajo: 152 mm','-'),(9,'VENTUS ofrece un diseÃƒÂ±o centrado en el rendimiento que mantiene lo esencial para realizar cualquier tarea. Una disposiciÃƒÂ³n de triple ventilador capaz colocada en un diseÃƒÂ±o industrial rÃƒÂ­gido permite que esta tarjeta grÃƒÂ¡fica de aspecto elegante se adapte a cualquier construcciÃƒÂ³n.','DisplayPort(v1.4a)','Fabricante: Nvidia, Tipo de memoria grÃƒÂ¡fica: GDDR6X, Interfaz con la placa madre: PCI-Express 4.0, TamaÃƒÂ±o de memoria: 8 GB, Contectividad: DisplayPort x 3 (v1.4a) HDMI x 1 (Supports 4K@120Hz as specified in HDMI 2.1)','-'),(10,'Consumo 3, TDP120W, Tipo de refrigeracionAire, Velocidad del Fan 800-1800 RPM, MTTF 35K Horas','amd am4','Marca Xigmatek,LÃƒÂ­nea Windpower,Modelo WP964 RGB','RGB');
-/*!40000 ALTER TABLE `specifications` ENABLE KEYS */;
 UNLOCK TABLES;
 
 --

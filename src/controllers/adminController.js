@@ -46,15 +46,16 @@ let controller = {
         }
 
         if (errors.isEmpty()) {
-            const {name, price, category, subcategory, description, discount, stock, general, conectivity, illumination} = req.body
+            const {name, price, category, subcategory, description, discount, stock, conectivity, illumination} = req.body
             Products.create({
                 name, 
                 price, 
-                description,
                 discount,
                 stock,
+                description,
+                conectivity,
+                illumination,
                 subcategoryId: subcategory,
-                specificationsId: general,conectivity, illumination,
             })
             .then((product) => {
                 if(arrayImages.length > 0){
@@ -131,13 +132,16 @@ let controller = {
     update: (req, res) => {
         let errors = validationResult(req)
         if(errors.isEmpty()){
-            const {name, price, discount,category, subcategory, stock} = req.body;
+            const {name, price, category, subcategory, description, discount, stock, conectivity, illumination} = req.body
             Products.update({
-                name,
-                price,
+                name, 
+                price, 
                 discount,
+                stock,
+                description,
+                conectivity,
+                illumination,
                 subcategoryId: subcategory,
-                stock
             }, {
                 where: {
                     id:req.params.id
