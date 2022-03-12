@@ -5,17 +5,28 @@
     <body>
         <%- include('../partials/header') %>
             <main class="home-main">
-                <div class="carrusel-div">
-                    <div class="carrusel-img">
-                        <img src="images/logos/banner.jpg" alt="pc">
-                        <img src="#" alt="banner2">
+                <section class="carousel-container">
+                    <div class="slides fade">
+                        <img src="images/logos/baner-1.jpg" alt="pc" class="carrusel-img-div ">
                     </div>
-                    <ul class="points">
-                        <li class="points-li"></li>
-                        <li class="points-li"></li>
-                        <li class="points-li"></li>
-                    </ul>
-                </div>
+                    <div class="slides fade">
+                        <img src="images/logos/banner.jpg" alt="banner1" class="carrusel-img-div ">
+                    </div>
+                    <div class="slides fade">
+                        <img src="images/logos/baner-1.jpg" alt="banner2" class="carrusel-img-div ">
+                    </div>   
+                    <div class="slides fade">
+                        <img src="images/logos/baner-1.jpg" alt="banner2" class="carrusel-img-div ">
+                    </div>       
+                    <a class="prev" onclick="plusSlides(-1)">&#10094;</a>
+                    <a class="next" onclick="plusSlides(1)">&#10095;</a>
+                    <div class="dots">
+                        <span class="dot" onclick="currentSlide(1)"></span>
+                        <span class="dot" onclick="currentSlide(2)"></span>
+                        <span class="dot" onclick="currentSlide(3)"></span>
+                        <span class="dot" onclick="currentSlide(4)"></span>
+                    </div>
+                </section>
             </main>
             <section class="productos">
                 <h3 class="title-card">Productos destacados</h3>
@@ -34,9 +45,8 @@
                     <% }) %>
                 </article>
             </section>
-
-
-                <%- include('../partials/footer') %>
+        <%- include('../partials/footer') %>
+        <script src="/js/carrusel.js"></script>
     </body>
 
 </html>
