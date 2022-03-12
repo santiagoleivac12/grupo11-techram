@@ -1,8 +1,22 @@
+.containerGeneral{
+  width: 85%;
+  height: 60%;
+  background:#ec38bc3c;
+  border-radius: 10px;
+  margin-top: 15px;
+  margin-bottom: 5px;
+  box-shadow: 10px 5px 5px rgba(0, 0, 0, 0.281);
+}
+.containerGen{
+width: 100%;
+display: flex;
+justify-content: center;
+}
 .containerAvatar{
   display: flex;
   justify-content: center;
   justify-items: center;
-  padding-top: 20px;
+  padding-top: 10px;
 }
 .avatarProfile{
   width: 100px;
@@ -36,7 +50,7 @@
 .buttonProfile {
   margin-top: 10px;
   margin-bottom: 10px;
-  width: 100%;
+  width: 45%;
   height: 2rem;
   letter-spacing: 1px;
   text-transform: uppercase;
@@ -46,13 +60,23 @@
   cursor: pointer;
   border-radius: 7px;
 }
-
+.botonCaja{
+  display: flex;
+  justify-content: center;
+  width: 100%;
+}
+.cajaContenedor{
+  width: 100%;
+}
 .nameProfile{
   font-family: var(--font-titulos);
   color: thistle;
   font-size: 15px;
+  width: 40%;
 }
 .datosPersonales{
+  padding-left: 20%;
   margin: 10px;
   padding-bottom: 5px;
+ width: 75%;
 }
