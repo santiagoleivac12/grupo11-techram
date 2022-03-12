@@ -371,8 +371,11 @@ input:checked  ~ ul{
     .carrito-p a ,
     .user-p a{
         color: white;
+       
     }
-
+p.user-p{
+    display: table;
+}
     .logout-ul{
         display: none;
         width: 50px;
