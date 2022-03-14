@@ -5,7 +5,115 @@
 }
 
 
-.products{
+#main-container{
+	/* margin: 150px auto; */
+	/* width: 600px; */
+    width: 100%;
+}
+
+table{
+	background-color: white;
+	text-align: center;
+	border-collapse: collapse;
+	width: 90%;
+    margin: 0 auto;
+}
+
+th, td{
+	padding: 5px;
+    font-size: 12px;
+    font-family: var(--font-textos);
+}
+
+thead{
+	background-color: var(--inter);
+	border-bottom: solid 5px #0F362D;
+	color: white;
+}
+
+tr:nth-child(even){
+	background-color: #ddd;
+}
+
+tr:hover td{
+	background-color: rgba(92, 46, 130, 0.59);
+	color: white;
+}
+
+
+.button-edit ,
+.button-delete {
+    color: white;
+    /* background-color: black; */
+    padding: 6px;
+    border: none;
+}
+
+.button-edit a i{
+    color: black;
+    font-size: 13.3px;
+}
+
+.button-edit  {
+    background-color: white;
+}
+
+.button-edit:hover {
+    background-color: rgba(92, 46, 130, 0.59);
+}
+
+.button-delete {
+    background-color: white; 
+    color: black
+}
+
+.button-delete i {
+    font-size: 17px;
+}
+
+.button-delete:nth-child(even){
+	background-color: #ddd;
+}
+
+@media (min-width: 450px){
+    th, td {
+        padding: 12px;
+        font-size: 14px;
+    }
+
+    .button-edit ,
+    .button-delete {
+        padding: 13px;
+    }
+}
+
+@media (min-width: 710px){
+    table {
+        margin-top: 35px;
+        width: 80%;
+    }
+
+    th, td {
+        padding: 16px;
+        font-size: 18px;
+    }
+
+    .button-edit ,
+    .button-delete {
+        padding: 11px;
+    }
+
+    .button-edit a i{
+        font-size: 18px;
+    }
+
+    .button-delete i {
+        font-size: 22px;
+    }
+
+}
+
+/* .products{
     display: flex;
     flex-direction: column;
     flex-wrap: wrap;
@@ -81,27 +189,10 @@
     text-transform: uppercase;
     font-family: var(--font-textos);
     color: #fff;
-}
-
-/* .button-delete {
-    background-color: #000;
-    border-radius: .8rem;
-    width: 50%;
-    height: fit-content;
-    height: -moz-fit-content;
-    text-align: center;
-    margin: 0 auto;
-    margin-bottom: 7px;
-    padding: .53rem;
-    text-transform: uppercase;
-    border:none;
-    cursor: pointer;
-    text-transform: uppercase;
-    font-family: var(--font-textos);
-    color: #fff;
 } */
 
-.button-edit a,
+
+/* .button-edit a,
 .button-delete a{
     color: white;
 }
@@ -143,4 +234,4 @@
         font-family: var(--font-textos);
         color: #fff;
     } 
-}
+} */

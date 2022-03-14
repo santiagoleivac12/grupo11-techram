@@ -6,13 +6,12 @@
     <body>
         <%- include('../partials/header') %>
         <main>
-            <div class="containerAvatar">
-                <img id="imagenPrevisualizacion" src="/images/avatars/<%= user.avatar %>" alt="" class="w-full cover">
-                <input type="file" name="avatar" id="seleccionArchivos" value="<%= user.avatar %>" accept="image/png, image/jpg, image/jpeg, image/gif">
-              </div>
-            <!-- /*<p class="containerAvatar"><img class="avatarProfile" src="/images/avatars/<%user.id %>?_method=PUT" method="post" enctype="multipart/form-data" alt="avatar"></p> -->
+            <div class="containerGen">
+            <div class="containerGeneral">
+            <p class="containerAvatar"><img class="avatarProfile" src="/images/users/2.png" alt="avatar"></p>
             <p class="bienvenido">Tu perfil <b> <% if (typeof session.user != "undefined") { %>
                 <span> <%= session.user.name %> </span>  
+               <div class="cajaContenedor">
                 <div class="datosPersonales">
                     <p class="titleProfile">Datos Personales</p>
                   <p class="firstNameProfile"> <h4 class="nameProfile">Nombre:</h4><%= user.firstName %> </p>
@@ -23,7 +22,7 @@
               <% } else {%>
                 Usuario
               <% } %> 
-           </div>
+           
            <div class="datosPersonales" >
                <p class='titleProfile'>Datos de Envio</p>
             <p class="streetProfile"><h4 class="nameProfile">Dirección:</h4> <%= user.addresses.street %></p>
@@ -31,9 +30,16 @@
             <p class="cityProfile"><h4 class="nameProfile">Ciudad:</h4> <%= session.user.address %></p>
             <p class="provinceProfile"><h4 class="nameProfile">Provincia:</h4> <%= session.user.address %></p>
             <p class="postalCodeProfile"><h4 class="nameProfile">Código Postal:</h4> <%= session.user.address %></p>
-            
+
            </div>
-           <button class="buttonProfile">Editar Información</button>
+        </div>
+
+           <div class="botonCaja"><button class="buttonProfile">Editar Información</button></div>
+
+         </div>
+        </div>
+
+
         </main>
 
 

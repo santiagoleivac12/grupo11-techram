@@ -42,15 +42,21 @@
             </div>
             <div class="user">
                 <% if (locals.user){%>
+                    <p class="cajaAvatar"><img class="avatarUsuario" src="/images/users/avatar.png" alt="img-avatar" ></p>
+                    
                     <input type="checkbox" id="logout" class="input-user">
                     <label for="logout" class="label-logout"><p class="user-p"><%=locals.user.firstName%></p></label>
                     <ul class="logout-ul" style="display: contents;    word-spacing: 3px;" >
                         <li class="li-logout"><a href="/users/logout">cerrar sesión</a></li>
                     </ul>
+                   
                 <% } else {%>
                     <a href="/users/perfil"> <i class="fas fa-user"></i></a>
                     <p class="user-p"> <a href="/users/perfil">mi cuenta</a></p>
                 <% } %>
+                
+               
+               
             </div>
             <div class="carrito">
                 <a href="/products/carrito"><i class="fas fa-shopping-cart"></i></a>

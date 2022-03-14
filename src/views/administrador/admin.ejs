@@ -5,7 +5,37 @@
     <%- include('../partials/header-admin') %>
     <main class="products">
         <h3 class="title-admin">Todos los productos</h3>
-        <article class="productos-article-admin">
+        <div id="main-container">
+                <table>
+                    <thead>
+                        <tr>
+                            <th>Id</th>
+                            <th>Nombre</th>
+                            <th>Categoria</th>
+                            <th>Precio</th>
+                            <th>Stock</th>
+                            <th></th>
+                        </tr>
+                    </thead>
+                    <% products.forEach(product => { %>
+                    <tr>
+                        <td><%- product.id %></td>
+                        <td><%- product.name %></td>
+                        <td><%- product.discount %></td>
+                        <td><%- product.price %></td>
+                        <td><%- product.stock %></td>
+                        <td><button class="button-edit">
+                                <a href="/admin/<%- product.id %>/edit"><i class="fas fa-edit"></i></a>
+                            </button>
+                            <form action="/admin/<%- product.id %>?_method=DELETE" method="POST">
+                                <button class="button-delete" type="submit"><i class="fas fa-trash-alt"></i></button>
+                            </form>
+                        </td>
+                    </tr>
+                    <% }) %>
+                </table>
+        </div>
+<!--         <article class="productos-article-admin">
             <% products.forEach(product => { %>
                 <div class="productos-article__card-admin">
                     <div class="card-img">                        
@@ -21,7 +51,7 @@
                     </div>
                 </div>
             <% }) %>
-        </article>
+        </article> -->
     </main>
 </body>
 </html>
