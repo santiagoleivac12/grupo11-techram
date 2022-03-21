@@ -50,6 +50,9 @@
                     </div>
                     <input type="file" name="producto-img" accept="png" id="fileEdit" class="input-admin" multiple>
                     <span class="msg-error" id="fileErrors"></span>
+                    <% if (locals.errors && errors.image) { %>
+                        <small class="msg-error"><%= errors.image.msg %></small>
+                    <% } %>
                 </div>
                 <h3 class="estilo">Elige la categoria:</h3>
                 <label class="estilo" for="category"></label>

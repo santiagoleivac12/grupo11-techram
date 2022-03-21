@@ -26,7 +26,7 @@ module.exports = (sequelize, dataTypes) => {
             type: dataTypes.INTEGER(11),
             allowNull: false
         },
-/*         description: {
+        description: {
             type: dataTypes.STRING(800),
             allowNull: false,
             autoIncrement: false,
@@ -38,7 +38,7 @@ module.exports = (sequelize, dataTypes) => {
         illumination : {
             type : dataTypes.STRING(60),
             autoIncrement: false
-        } */
+        }
         
     }
     let config = {
@@ -60,10 +60,6 @@ module.exports = (sequelize, dataTypes) => {
         Product.hasMany(models.Order_item, {
             as: "order_items",
             foreignKey: "productId"
-        })
-        Product.hasMany(models.Specification, {
-            as: "specifications",
-            foreignKey: "specificationsId"
         })
     }
 

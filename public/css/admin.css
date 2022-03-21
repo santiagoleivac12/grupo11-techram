@@ -5,142 +5,119 @@
 }
 
 
-.products{
-    display: flex;
-    flex-direction: column;
-    flex-wrap: wrap;
-    justify-content: space-evenly;
-    margin-top: 60px;
-}
-
-.productos-article-admin{
-    display: flex;
-    flex-wrap: wrap;
-    flex-direction: row;
-    justify-content: space-evenly;
-}
-
-.title-admin {
-    text-align: center;
-    font-family: var(--font-titulos);
-    font-size: 32px;
-}
-
-.productos-article__card-admin{
-    margin-bottom: 15px;
-    display: flex;
-    flex-wrap: wrap;
-    flex-direction: column;
-    width: 45%;
-    justify-content: space-between;
-    background: rgba(184, 169, 196, 0.6);
-    border-radius: 8px;
-    border: 3px solid #8D05F8;
-}
-
-.productos-article-admin .productos-article__card-admin a img{
-    width: 100%;
-    object-fit: cover;
-}
-
-.description-product{
-    font-size: 15px;
-    margin-top: 12px;
-    font-family: var(--font-textos);
-    color: #360b54;
-}
-
-
-.price-admin {
-    display: block;
-    font-weight: bold;
-    color: #360b54;
-    font-size: 18px;
-    margin: 15px;
-    font-family: var(--font-titulos);
-}
-
-.button-admin {
-    display: flex;
+#main-container{
+	/* margin: 150px auto; */
+	/* width: 600px; */
     width: 100%;
 }
 
-.button-edit {
-    background-color: #000;
-    border-radius: .8rem;
-    width: 40%;
-    height: fit-content;
-    height: -moz-fit-content;
-    text-align: center;
+table{
+	background-color: white;
+	text-align: center;
+	border-collapse: collapse;
+	width: 90%;
     margin: 0 auto;
-    margin-bottom: 7px;
-    padding: .53rem;
-    text-transform: uppercase;
-    border:none;
-    cursor: pointer;
-    text-transform: uppercase;
-    font-family: var(--font-textos);
-    color: #fff;
 }
 
-/* .button-delete {
-    background-color: #000;
-    border-radius: .8rem;
-    width: 50%;
-    height: fit-content;
-    height: -moz-fit-content;
-    text-align: center;
-    margin: 0 auto;
-    margin-bottom: 7px;
-    padding: .53rem;
-    text-transform: uppercase;
-    border:none;
-    cursor: pointer;
-    text-transform: uppercase;
+th, td{
+	padding: 5px;
+    font-size: 12px;
     font-family: var(--font-textos);
-    color: #fff;
-} */
+}
 
-.button-edit a,
-.button-delete a{
+thead{
+	background-color: var(--inter);
+	border-bottom: solid 5px #0F362D;
+	color: white;
+}
+
+tr:nth-child(even){
+	background-color: #ddd;
+}
+
+tr:hover td{
+	background-color: rgba(92, 46, 130, 0.59);
+	color: white;
+}
+
+
+.button-edit ,
+.button-delete {
+    color: white;
+    /* background-color: black; */
+    padding: 6px;
+    border: none;
+}
+
+.button-edit a i{
+    color: black;
+    font-size: 13.3px;
+}
+
+.button-edit  {
+    background-color: transparent;
+}
+
+.button-edit:hover {
+    cursor: pointer;
+}
+
+.button-edit a i:hover {
     color: white;
 }
 
-@media (min-width: 500px) {
-    .productos-article__card-admin {
-        width: 37%;
-        margin-bottom: 30px;
-        margin-top: 30px;
-    }
+.button-delete {
+    background-color: transparent; 
+    color: black
 }
 
-@media (min-width: 700px) {
-    .productos-article-admin {
-        width: 95%;
-        margin: 0 auto;
+.button-delete i {
+    font-size: 17px;
+}
+
+.button-delete:hover {
+    cursor: pointer;
+}
+
+.button-delete i:hover {
+    color: white;
+}
+
+@media (min-width: 450px){
+    th, td {
+        padding: 12px;
+        font-size: 14px;
     }
 
-    .productos-article__card-admin {
-        max-width: 210px;
-        margin-bottom: 50px;
-        margin-top: 50px;
-    }
- 
+    .button-edit ,
     .button-delete {
-        background-color: #000;
-        border-radius: .8rem;
-        width: 90%;
-        height: fit-content;
-        height: -moz-fit-content;
-        text-align: center;
-        margin: 0 auto;
-        margin-bottom: 7px;
-        padding: .53rem;
-        text-transform: uppercase;
-        border:none;
-        cursor: pointer;
-        text-transform: uppercase;
-        font-family: var(--font-textos);
-        color: #fff;
-    } 
+        padding: 13px;
+    }
 }
+
+@media (min-width: 710px){
+    table {
+        margin-top: 35px;
+        width: 80%;
+    }
+
+    th, td {
+        padding: 16px;
+        font-size: 18px;
+    }
+
+    .button-edit ,
+    .button-delete {
+        padding: 11px;
+    }
+
+    .button-edit a i{
+        font-size: 18px;
+    }
+
+    .button-delete i {
+        font-size: 22px;
+    }
+
+}
+
