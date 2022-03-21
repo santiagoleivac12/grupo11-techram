@@ -55,15 +55,19 @@ tr:hover td{
 }
 
 .button-edit  {
-    background-color: white;
+    background-color: transparent;
 }
 
 .button-edit:hover {
-    background-color: rgba(92, 46, 130, 0.59);
+    cursor: pointer;
+}
+
+.button-edit a i:hover {
+    color: white;
 }
 
 .button-delete {
-    background-color: white; 
+    background-color: transparent; 
     color: black
 }
 
@@ -71,8 +75,12 @@ tr:hover td{
     font-size: 17px;
 }
 
-.button-delete:nth-child(even){
-	background-color: #ddd;
+.button-delete:hover {
+    cursor: pointer;
+}
+
+.button-delete i:hover {
+    color: white;
 }
 
 @media (min-width: 450px){

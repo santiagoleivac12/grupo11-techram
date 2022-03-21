@@ -198,6 +198,16 @@ let controller = {
             })
             
         }else{
+            errors = errors.mapped()
+            if(req.fileValidationError) {
+                //console.log(req.fileValidationError)
+                errors = {
+                    ...errors,
+                    image : {
+                        msg: req.fileValidationError
+                    }
+                }
+            }
             let productId = Number(req.params.id);
             const productPromise = Products.findByPk(productId);
             const categoriesPromise = Categories.findAll();
@@ -208,7 +218,7 @@ let controller = {
                     product,
                     categories, 
                     subcategories,
-                    errors: errors.mapped(),
+                    errors,
                     old: req.body,
                     session: req.session
                 })
