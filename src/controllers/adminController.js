@@ -7,7 +7,6 @@ const ProductImages = db.ProductImage;
 const Categories = db.Category;
 const Subcategories = db.Subcategory;
 const Order_items = db.Order_item;
-const Specifications = db.Specification;
 
 
 let controller = {
@@ -44,17 +43,17 @@ let controller = {
                 arrayImages.push(image.filename)
             })
         }
-
-        if (errors.isEmpty()) {
-            const {name, price, category, subcategory, description, discount, stock, general, conectivity, illumination} = req.body
+        if(errors.isEmpty()){
+            const {name, price, category, subcategory, description, discount, stock, conectivity, illumination} = req.body
             Products.create({
                 name, 
                 price, 
-                description,
                 discount,
                 stock,
+                description,
+                conectivity,
+                illumination,
                 subcategoryId: subcategory,
-                specificationsId: general,conectivity, illumination,
             })
             .then((product) => {
                 if(arrayImages.length > 0){
@@ -77,7 +76,16 @@ let controller = {
                 }
             })
             .catch(error => console.log(error))
-        } else {
+        }else{
+            errors = errors.mapped()
+            if(req.fileValidationError) {
+                errors = {
+                    ...errors,
+                    image : {
+                        msg: req.fileValidationError
+                    }
+                }
+            }
             let allCategories = Categories.findAll();
             let allSubcategories = Subcategories.findAll();
             Promise.all([allCategories, allSubcategories])
@@ -85,25 +93,13 @@ let controller = {
             res.render('administrador/perfilAdminCrear', {
                 categories,
                 subcategories,
-                errors: errors.mapped(),
+                errors,
                 old: req.body,
                 session: req.session
                 })
             })
             .catch(error => console.log(error))
-        }
-
-
-/*         .then(product => {
-            ProductImages.create({
-                image: req.file ? [req.file.filename] : ['default-image.png'],
-                productId: product.id
-            })
-            .then(() => {
-                res.redirect('/admin')
-            }) 
-        }) */
-        /* .catch(error => console.log(error)) */       
+        }      
     },
     /* -------------------------------------- */
     edit: (req, res) => {
@@ -115,10 +111,8 @@ let controller = {
         });
         const categoriesPromise = Categories.findAll();
         const subcategoriesPromise = Subcategories.findAll();
-       /*  const specificationsPromise = Specifications.findAll(); */
-        Promise.all([productPromise, categoriesPromise, subcategoriesPromise/* , specificationsPromise */])
-        .then(([product, categories, subcategories/* , specifications */]) => {
-            /* res.send(product, categories, subcategories) */
+        Promise.all([productPromise, categoriesPromise, subcategoriesPromise])
+        .then(([product, categories, subcategories]) => {
             res.render("administrador/editarProductoAdmin", {
                 product,
                 categories,
@@ -131,13 +125,16 @@ let controller = {
     update: (req, res) => {
         let errors = validationResult(req)
         if(errors.isEmpty()){
-            const {name, price, discount,category, subcategory, stock} = req.body;
+            const {name, price, category, subcategory, description, discount, stock, conectivity, illumination} = req.body
             Products.update({
-                name,
-                price,
+                name, 
+                price, 
                 discount,
+                stock,
+                description,
+                conectivity,
+                illumination,
                 subcategoryId: subcategory,
-                stock
             }, {
                 where: {
                     id:req.params.id
@@ -194,6 +191,15 @@ let controller = {
             })
             
         }else{
+            errors = errors.mapped()
+            if(req.fileValidationError) {
+                errors = {
+                    ...errors,
+                    image : {
+                        msg: req.fileValidationError
+                    }
+                }
+            }
             let productId = Number(req.params.id);
             const productPromise = Products.findByPk(productId);
             const categoriesPromise = Categories.findAll();
@@ -204,21 +210,15 @@ let controller = {
                     product,
                     categories, 
                     subcategories,
-                    errors: errors.mapped(),
+                    errors,
                     old: req.body,
                     session: req.session
                 })
             })
             .catch(error => console.log(error)) 
-        }
-   
+        }  
     },
     destroy: (req, res) => {
-/*         Order_items.findAll()
-        .then((result)=> {
-            res.send(result)
-        }) */
-        
         ProductImages.findAll({
             where: {
                 productId: req.params.id

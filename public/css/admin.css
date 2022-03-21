@@ -55,15 +55,19 @@ tr:hover td{
 }
 
 .button-edit  {
-    background-color: white;
+    background-color: transparent;
 }
 
 .button-edit:hover {
-    background-color: rgba(92, 46, 130, 0.59);
+    cursor: pointer;
+}
+
+.button-edit a i:hover {
+    color: white;
 }
 
 .button-delete {
-    background-color: white; 
+    background-color: transparent; 
     color: black
 }
 
@@ -71,8 +75,12 @@ tr:hover td{
     font-size: 17px;
 }
 
-.button-delete:nth-child(even){
-	background-color: #ddd;
+.button-delete:hover {
+    cursor: pointer;
+}
+
+.button-delete i:hover {
+    color: white;
 }
 
 @media (min-width: 450px){
@@ -113,125 +121,3 @@ tr:hover td{
 
 }
 
-/* .products{
-    display: flex;
-    flex-direction: column;
-    flex-wrap: wrap;
-    justify-content: space-evenly;
-    margin-top: 60px;
-}
-
-.productos-article-admin{
-    display: flex;
-    flex-wrap: wrap;
-    flex-direction: row;
-    justify-content: space-evenly;
-}
-
-.title-admin {
-    text-align: center;
-    font-family: var(--font-titulos);
-    font-size: 32px;
-}
-
-.productos-article__card-admin{
-    margin-bottom: 15px;
-    display: flex;
-    flex-wrap: wrap;
-    flex-direction: column;
-    width: 45%;
-    justify-content: space-between;
-    background: rgba(184, 169, 196, 0.6);
-    border-radius: 8px;
-    border: 3px solid #8D05F8;
-}
-
-.productos-article-admin .productos-article__card-admin a img{
-    width: 100%;
-    object-fit: cover;
-}
-
-.description-product{
-    font-size: 15px;
-    margin-top: 12px;
-    font-family: var(--font-textos);
-    color: #360b54;
-}
-
-
-.price-admin {
-    display: block;
-    font-weight: bold;
-    color: #360b54;
-    font-size: 18px;
-    margin: 15px;
-    font-family: var(--font-titulos);
-}
-
-.button-admin {
-    display: flex;
-    width: 100%;
-}
-
-.button-edit {
-    background-color: #000;
-    border-radius: .8rem;
-    width: 40%;
-    height: fit-content;
-    height: -moz-fit-content;
-    text-align: center;
-    margin: 0 auto;
-    margin-bottom: 7px;
-    padding: .53rem;
-    text-transform: uppercase;
-    border:none;
-    cursor: pointer;
-    text-transform: uppercase;
-    font-family: var(--font-textos);
-    color: #fff;
-} */
-
-
-/* .button-edit a,
-.button-delete a{
-    color: white;
-}
-
-@media (min-width: 500px) {
-    .productos-article__card-admin {
-        width: 37%;
-        margin-bottom: 30px;
-        margin-top: 30px;
-    }
-}
-
-@media (min-width: 700px) {
-    .productos-article-admin {
-        width: 95%;
-        margin: 0 auto;
-    }
-
-    .productos-article__card-admin {
-        max-width: 210px;
-        margin-bottom: 50px;
-        margin-top: 50px;
-    }
- 
-    .button-delete {
-        background-color: #000;
-        border-radius: .8rem;
-        width: 90%;
-        height: fit-content;
-        height: -moz-fit-content;
-        text-align: center;
-        margin: 0 auto;
-        margin-bottom: 7px;
-        padding: .53rem;
-        text-transform: uppercase;
-        border:none;
-        cursor: pointer;
-        text-transform: uppercase;
-        font-family: var(--font-textos);
-        color: #fff;
-    } 
-} */
