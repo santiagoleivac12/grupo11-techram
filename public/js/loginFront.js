@@ -9,10 +9,12 @@ window.addEventListener('load', () => {
         $passFront = qs('#passFront'),
         $emailErrors = qs('#emailErrors'),
         $passError = qs('#passError'),
+        $checkEmail = qs("#id-email"),
+        $checkPass = qs("#id-password"),
         $login = qs('#login-error')
     //exprecion regular para email y contraceñanodemon
     let regExEmail = /^[a-z0-9!#$%&'*+/=?^_`{|}~-]+(?:\.[a-z0-9!#$%&'*+/=?^_`{|}~-]+)*@(?:[a-z0-9](?:[a-z0-9-]*[a-z0-9])?\.)+[a-z0-9](?:[a-z0-9-]*[a-z0-9])?$/
-    /*  let regExPass = /^(?=\w*\d)(?=\w*[A-Z])(?=\w*[a-z])\S{8,16}$/; */
+
 
     let validationsErrors = false;
 
@@ -22,16 +24,19 @@ window.addEventListener('load', () => {
             case !$email.value.trim():
                 $emailErrors.innerHTML = 'Debes completar el campo email';
                 $email.classList.add('is-invalid');
+                $checkEmail.style.display= "none"
                 validationsErrors = true;
                 break;
             case !regExEmail.test($email.value):
                 $emailErrors.innerHTML = 'Debes ingresar un email válido';
                 $email.classList.add('is-invalid');
+                $checkEmail.style.display= "none"
                 validationsErrors = true;
                 break;
             default:
                 $email.classList.remove('is-invalid');
                 $email.classList.add('is-valid');
+                $checkEmail.style.display= "inline-block";
                 $emailErrors.innerHTML = "";
                 validationsErrors = false;
                 break
@@ -43,23 +48,20 @@ window.addEventListener('load', () => {
             case !$passFront.value.trim():
                 $passError.innerHTML = 'Debes completar el campo contraseña';
                 $passFront.classList.add('is-invalid');
+                $checkPass.style.display= "none"
                 validationsErrors = true;
                 break;
-            /*  case !regExPass.test($passFront.value):
-                 $passError.innerHTML = 'contraseña incorrecta';
-                 $passFront.classList.add('is-invalid');
-                 validationsErrors = true;
-                 break; */
             default:
                 $passFront.classList.remove('is-invalid');
                 $passFront.classList.add('is-valid');
+                $checkPass.style.display= "inline-block";
                 $passError.innerHTML = "";
                 validationsErrors = false
                 break
         }
     })
     //para que el form no se envie incompleto.
-    $form.addEventListener('submit', (event) => {
+/*     $form.addEventListener('submit', (event) => {
      
         
         let error = false;
@@ -70,6 +72,27 @@ window.addEventListener('load', () => {
             alert('tenes que completar los campos');
         }
 
+    }) */
+
+    $form.addEventListener('submit', function(event){
+        event.preventDefault()
+        let error = false;
+        let elementsForm = this.elements;
+        
+        for (let index = 0; index < elementsForm.length - 1; index++){
+            if(elementsForm[index].value == ''
+            ){
+            /*     elementsForm[index].style.borderColor = ('#dd2211'); */
+                elementsForm[index].style.boxShadow= ("0px 0px 2px 3px rgba(227,3,3,0.60)");
+                $login.innerHTML = "Los campos señalados son obligatorios";
+                $login.classList.add('msg-error')
+                error = true;
+            }
+        }
+
+        if(!error && !validationsErrors){
+            $form.submit()
+        }
     })
 
 
