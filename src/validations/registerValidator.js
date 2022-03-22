@@ -35,13 +35,13 @@ module.exports = [
     .notEmpty()
     .withMessage('debes escribir tu contraseña')
     .isLength({
-        min: 8
+        min: 8,
+        max: 12
     })
-    .withMessage('La contraseña debe tener 8'),
+    .withMessage('La contraseña debe tener entre 8 y 12 caracteres'),
 
 
-/*     body('pass2').custom((value,{req})=> value !== req.body.pass1 ? false :true)
-    .withMessage('Las contraseñas no coinciden') */
+
 
 
 ]
