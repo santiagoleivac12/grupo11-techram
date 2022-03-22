@@ -184,16 +184,103 @@ window.addEventListener('load', () => {
             $imagePreview.innerHTML = "";
             return false;
         }else {
-            if($file.files && $file.files[0]){
+            switch (true) {
+                case !allowedExtensions.exec(this.value):
+                    $fileErrors.innerHTML = "Solo imágenes con extensión jpg, jpeg, png, gif, webp"
+                    this.classList.add('is-invalid')
+                    $imagePreview.innerHTML = null;
+                    break;
+                case this.value == "":
+                    $fileErrors.innerHTML = "Tiene subir una imagen"
+                    this.classList.add('is-invalid');
+                    $imagePreview.innerHTML = null;
+                    break
+                case this.files.length > 3:
+                    $fileErrors.innerHTML = "Solo se permiten 3 imágenes"
+                    this.classList.add('is-invalid');
+                    $imagePreview.innerHTML = null;
+                    break
+                default:
+                    this.classList.remove('is-invalid');
+                    this.classList.add('is-valid');
+                    $fileErrors.innerHTML = null;
+                    if (this.files) {
+                        [].forEach.call(this.files, readAndPreview);
+                    }
+        
+                    function readAndPreview(file) {
+        
+                        var reader = new FileReader();
+                        $imagePreview.innerHTML = null;
+                        reader.addEventListener("load", function () {
+                            var image = new Image();
+                            image.title = file.name;
+                            image.src = this.result;
+                            $imagePreview.appendChild(image);
+                        });
+                        reader.readAsDataURL(file);
+        
+                    }
+                    break;
+            }
+/*             if($file.files && $file.files[0]){
                 let reader = new FileReader();
                 reader.onload = function (e) {
                     $imagePreview.innerHTML = `<img src="${e.target.result}" alt=""`;
                 };
                 reader.readAsDataURL($file.files[0]);
                 $fileErrors.innerHTML = '';
-                /* $file.classList.remove(''); */
-            }
+                 $file.classList.remove(''); 
+            } */
         }
     }) 
+
+/*     const preview = document.getElementById('img-preview');
+        const imageError = document.getElementById('fileErrors');
+        const regExExt = /(.jpg|.jpeg|.png|.gif|.webp)$/i;
+
+
+        document.getElementById('fileEdit').addEventListener('change', function (e) {
+    switch (true) {
+        case !regExExt.exec(this.value):
+            imageError.innerHTML = "Solo imágenes con extensión jpg, jpeg, png, gif, webp"
+            this.classList.add('is-invalid')
+            preview.innerHTML = null;
+            break;
+        case this.value == "":
+            imageError.innerHTML = "Tiene subir una imagen"
+            this.classList.add('is-invalid');
+            preview.innerHTML = null;
+            break
+        case this.files.length > 3:
+            imageError.innerHTML = "Solo se permiten 3 imágenes"
+            this.classList.add('is-invalid');
+            preview.innerHTML = null;
+            break
+        default:
+            this.classList.remove('is-invalid');
+            this.classList.add('is-valid');
+            imageError.innerHTML = null;
+            if (this.files) {
+                [].forEach.call(this.files, readAndPreview);
+            }
+
+            function readAndPreview(file) {
+
+                var reader = new FileReader();
+                preview.innerHTML = null;
+                reader.addEventListener("load", function () {
+                    var image = new Image();
+                    image.height = 100;
+                    image.title = file.name;
+                    image.src = this.result;
+                    preview.appendChild(image);
+                });
+                reader.readAsDataURL(file);
+
+            }
+            break;
+    }
+}) */
 
 })

@@ -29,7 +29,7 @@ const indexRouter = require('./routes/index');
 const productsRouter = require('./routes/products');
 const adminRouter = require('./routes/admin');
 const usersRouter = require('./routes/users');
-const { login1 } = require('./controllers/usersControllers');
+
 
 
 
