@@ -23,14 +23,18 @@
                     <p>ó</p>
                     <form action="/users/login" method="POST" class="inputs-container">
                         <span id="form-error"></span>
-                        <input id="email-front" class="input" name="email" type="email" placeholder="email" >
+                        <div class="div-login">
+                            <input id="email-front" class="input" name="email" type="email" placeholder="email" ><i class="fas fa-check-circle" id="id-email"></i>
+                        </div>
                        <span  id="emailErrors"></span>
                         <% if(locals.errors && errors.email){%>
                             <small class='text-danger'>
                                 <%=errors.email.msg%>
                             </small>
                             <% }%>
-                                <input id="passFront" class="input" name='pass' type="password" placeholder="Contraseña" >
+                            <div class="div-login">
+                                <input id="passFront" class="input" name='pass' type="password" placeholder="Contraseña" ><i class="fas fa-check-circle" id="id-password"></i>
+                            </div>
                                 <span id="passError"></span>
                                 <% if(locals.errors && errors.pass){%>
                                     <small class='text-danger'>
@@ -40,9 +44,9 @@
                                         <p class="anexo"><input id="checkbox" type="checkbox" name="recordar">Recordar
                                             contraseña</p>
                                         <p class="anexo">Olvidaste tu contraseña? <a class="span">Click aquí</a></p>
-
-                                        <button type="submit" class="btn">login</button>
                                         <span id="login-error"></span>
+                                        <button type="submit" class="btn">login</button>
+                                        
                                         <p class="anexo">Aún no tienes una cuenta? <a class="span"
                                                 href="/register">Registrate aquí</a></p>
                     </form>
