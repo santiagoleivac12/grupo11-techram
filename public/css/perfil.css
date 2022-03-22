@@ -71,8 +71,13 @@ justify-content: center;
 .nameProfile{
   font-family: var(--font-titulos);
   color: thistle;
-  font-size: 15px;
+  font-size: 20px;
   width: 40%;
+}
+.letra{
+  color: rgba(0, 0, 0, 0.994);
+  font-size: 18px;
+  text-transform: capitalize;
 }
 .datosPersonales{
   padding-left: 20%;

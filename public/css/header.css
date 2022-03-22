@@ -36,7 +36,7 @@ a {
       display: inline-block;
       font-size: 10px;
       font-weight: bold;
-      color: white;
+      color:  white;
       text-transform: uppercase;
       font-family: var(--font-textos);
   }
@@ -98,10 +98,7 @@ a {
     z-index: 70; 
 } 
 h3.usario{
-  
    color: white;
-   
-    
 }
 
 input:checked  ~ ul{
@@ -178,16 +175,10 @@ input:checked  ~ ul{
     cursor: pointer;
 }
 
-.user {
-    
-    font-size: 24px;
-    text-align: center;
-    color:#b87cfd;
-}
 
-/*  .user-p {
+ /* .user-p {
     display: none;
-}   */
+}    */
 .cajaAvatar{
     width: 30px;
     height: 25px;
@@ -231,6 +222,8 @@ li.li-logout a{
 
 .user{
     display: inline-table;
+   
+    
 }
 
 
@@ -436,6 +429,7 @@ li.li-logout a{
     .user{
         display: inline-table;
     }
+  
 }
 
 @media (min-width:790px ) {
@@ -491,10 +485,11 @@ li.li-logout a{
         color: white;
        
     }
-p.user-p{
+ p.user-p{
     display: table;
-    padding-left: 8px;
-}
+  /*   padding-top: 12px; */ /*  para alinear  */
+    
+} 
     .logout-ul{
         display: none;
         width: 50px;
