@@ -139,6 +139,7 @@ window.addEventListener('load', () => {
         for (let index = 0; index < elementsForm.length - 1; index++){
             if(elementsForm[index].value == ''
             && elementsForm[index].type !== 'file'
+            && elementsForm[index].name !== 'phone'
             ){
             /*     elementsForm[index].style.borderColor = ('#dd2211'); */
                 elementsForm[index].style.boxShadow= ("0px 0px 2px 3px rgba(227,3,3,0.60)");
