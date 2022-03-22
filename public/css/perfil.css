@@ -38,7 +38,7 @@ justify-content: center;
 .titleProfile{
   display: flex;
   font-family: var(--font-titulos) ;
-  font-size: 20px;
+  font-size: 25px;
   text-transform: capitalize;
   letter-spacing: 0.5px;
   color: thistle;
@@ -73,11 +73,14 @@ justify-content: center;
   color: thistle;
   font-size: 20px;
   width: 40%;
+ letter-spacing: 1px;
 }
 .letra{
   color: rgba(0, 0, 0, 0.994);
   font-size: 18px;
   text-transform: capitalize;
+  font-family: var(--font-textos);
+  font-weight: 6px
 }
 .datosPersonales{
   padding-left: 20%;
