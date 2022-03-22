@@ -40,7 +40,11 @@
                     <button class="boton-mobile"><i class="fas fa-search"></i></button>
                 </div>
             </div>
-            <div class="user">
+            <div class="user" style="
+            display: flex;
+            flex-direction: row;
+            align-items: center;
+        ">
                 <% if (locals.user){%>
                     <p class="cajaAvatar"><img class="avatarUsuario" src="/images/users/avatar.png" alt="img-avatar" ></p>
                     
@@ -51,8 +55,11 @@
                     </ul>
                    
                 <% } else {%>
-                    <a href="/users/perfil"> <i class="fas fa-user"></i></a>
-                    <p class="user-p"> <a href="/users/perfil">mi cuenta</a></p>
+                    <a href="/users/perfil"> <i class="fas fa-user" style="
+                        color: #b87cfd;
+                    "></i></a>
+                    <p class="user-p"> <a href="/users/perfil" style="
+                        color: #b87cfd;" >mi cuenta</a></p>
                 <% } %>
                 
                
@@ -60,7 +67,8 @@
             </div>
             <div class="carrito">
                 <a href="/products/carrito"><i class="fas fa-shopping-cart"></i></a>
-                <p class="carrito-p"><a href="/products/carrito">mi carrito</a></p>
+                <p class="carrito-p"><a href="/products/carrito" style="
+                    color: #b87cfd;"  >mi carrito</a></p>
             </div>
         </div>
     </nav>
