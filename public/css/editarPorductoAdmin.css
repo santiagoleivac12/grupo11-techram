@@ -30,7 +30,7 @@
 .contenedor-admin textarea,
 .contenedor-admin select {
     /* margin: 0 auto; */
-    padding: 10px;
+    padding: 15px;
     border-radius: 5px;
     border: 2px solid #8D05F8;
 }
@@ -66,6 +66,11 @@ label.estilo{
     margin-bottom: 10px;
 }
 
+
+.titles {
+    width: 30%;
+    margin: 0 auto;
+}
 
 @media (min-width:480px){
     .button-container-edit-admin{

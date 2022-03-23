@@ -40,19 +40,6 @@
                     <% if (locals.errors && errors.stock) { %>
                         <small class="msg-error"><%= errors.stock.msg %></small>
                     <% } %>
-                </div>
-                <div class="form-create">
-                    <label class="estilo" for="producto-img">Agregue foto del producto</label>
-                    <div class="box-2 mt-3">
-                        <div id="img-preview">
-
-                        </div>
-                        <input type="file" id="fileCreate" name="producto-img" accept="jpg" class="input-admin" multiple>
-                        <span class="msg-error" id="fileErrors"></span>
-                        <% if (locals.errors && errors.image) { %>
-                            <small class="msg-error"><%= errors.image.msg %></small>
-                        <% } %>
-                    </div>
                     <label class="estilo" for="categoria-admin">Elige la categoria:</label>
                     <select id="categoria-admin" class="select-admin" name="category">
                         <option selected hidden value="">categoria</option>
@@ -75,6 +62,20 @@
                     <% if (locals.errors && errors.subcategory) { %>
                         <small class="msg-error"><%= errors.subcategory.msg %> </small>
                     <% } %>
+                </div>
+                <div class="form-create">
+                    <label class="estilo" for="producto-img">Agregue foto del producto</label>
+                    <div class="box-2 mt-3">
+                        <div id="img-preview">
+
+                        </div>
+                        <input type="file" id="fileCreate" name="producto-img" accept="jpg" class="input-admin" multiple>
+                        <span class="msg-error" id="fileErrors"></span>
+                        <% if (locals.errors && errors.image) { %>
+                            <small class="msg-error"><%= errors.image.msg %></small>
+                        <% } %>
+                    </div>
+ 
                     <label class="estilo" for="descripcion-admin">Descripción del producto</label>              
                     <textarea name="description" id="descripcion-admin" cols="30" rows="10"></textarea>
                     <span id="descriptionErrors"></span>

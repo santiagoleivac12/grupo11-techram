@@ -43,6 +43,28 @@
                 <% if (locals.errors && errors.discount) { %>
                     <small class="text-danger"><%= errors.discount.msg %></small>
                 <% } %>
+                <label class="estilo" for="category">Elige la categoria:</label>
+                <select name="category" id="categoria-admin" class="select-admin titles">
+                    <option selected hidden value="">categoria</option>
+                    <% categories.forEach(category => { %>
+                        <option value="<%- category.id %>" <%- locals.old && old.category == category.id ? "selected" : category.id == product.category ? "selected" : "" %>><%- category.name %></option>
+                     <% }) %>
+                </select>
+                <span id="categoryErrors"></span>
+                <% if (locals.errors && errors.category) { %>
+                    <small class="text-danger"><%= errors.category.msg %></small>
+                <% } %>
+                <label class="estilo" for="subcategory">Elige la subcategoria:</label>
+                <select name="subcategory" id="subcategoria-admin" class="select-admin titles">
+                    <option selected hidden value="">subcategoria</option>
+                    <% subcategories.forEach(subcategory => { %>
+                        <option value="<%- subcategory.id %>" <%= locals.old && old.subcategory == subcategory.id ? "selected" : ""  %> ><%- subcategory.name %> </option>
+                      <% }) %>
+                </select>
+                <span id="subcategoryErrors"></span>
+                <% if (locals.errors && errors.subcategory) { %>
+                    <small class="text-danger"><%= errors.subcategory.msg %></small>
+                <% } %>
                 <label class="estilo" class="estilo" for="producto-img">Agregue foto del producto</label>
                 <div class="box-2 mt-3">
                     <div id="img-preview">
@@ -54,31 +76,12 @@
                         <small class="msg-error"><%= errors.image.msg %></small>
                     <% } %>
                 </div>
-                <h3 class="estilo">Elige la categoria:</h3>
-                <label class="estilo" for="category"></label>
-                <select name="category" id="categoria-admin" class="select-admin">
-                    <option selected hidden value="">categoria</option>
-                    <% categories.forEach(category => { %>
-                        <option value="<%- category.id %>" <%- locals.old && old.category == category.id ? "selected" : category.id == product.category ? "selected" : "" %>><%- category.name %></option>
-                     <% }) %>
-                </select>
-                <span id="categoryErrors"></span>
-                <% if (locals.errors && errors.category) { %>
-                    <small class="text-danger"><%= errors.category.msg %></small>
-                <% } %>
-                <h3 class="estilo">Elige la subcategoria:</h3>
-                <label class="estilo" for="subcategory"></label>
-                <select name="subcategory" id="subcategoria-admin" class="select-admin">
-                    <option selected hidden value="">subcategoria</option>
-                    <% subcategories.forEach(subcategory => { %>
-                        <option value="<%- subcategory.id %>" <%= locals.old && old.subcategory == subcategory.id ? "selected" : ""  %> ><%- subcategory.name %> </option>
-                      <% }) %>
-                </select>
-                <span id="subcategoryErrors"></span>
-                <% if (locals.errors && errors.subcategory) { %>
-                    <small class="text-danger"><%= errors.subcategory.msg %></small>
-                <% } %>
+                <label class="estilo" for="description">Descripción del producto</label>
                 <textarea name="descripcion" id="descripcion-admin" cols="30" rows="10"><%= product.description %></textarea>
+                <span id="descriptionErrors"></span>
+                <% if (locals.errors && errors.description) { %>
+                    <small class="msg-error"><%= errors.description.msg %> </small>
+                <% } %>
             </div>
 
 
