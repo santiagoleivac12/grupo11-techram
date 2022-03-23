@@ -44,15 +44,13 @@ let controller = {
             })
         }
         if(errors.isEmpty()){
-            const {name, price, category, subcategory, description, discount, stock, conectivity, illumination} = req.body
+            const {name, price, category, subcategory, description, discount, stock} = req.body
             Products.create({
                 name, 
                 price, 
                 discount,
                 stock,
                 description,
-                conectivity,
-                illumination,
                 subcategoryId: subcategory,
             })
             .then((product) => {
