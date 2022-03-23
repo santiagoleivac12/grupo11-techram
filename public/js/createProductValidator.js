@@ -15,6 +15,8 @@ window.addEventListener('load', () => {
     $categoryErrors = qs("#categoryErrors"),
     $subcategory = qs("#subcategoria-admin"),
     $subcategoryErrors = qs("#subcategoryErrors"),
+    $description = qs("#descripcion-admin"),
+    $descriptionErrors = qs("#descriptionErrors"),
     $checkName = qs("#input-name"),
     $checkPrice = qs("#input-price"),
     $checkDiscount = qs("#input-discount"),
@@ -119,6 +121,30 @@ window.addEventListener('load', () => {
                 $stock.style.boxShadow= "none";
                 $checkStock.style.display= "inline-block"
                 $stockErrors.innerHTML = "";
+                validationsErrors = false;
+                break;
+        }
+    })
+
+    $description.addEventListener('blur', () =>{
+        switch(true) {
+            case !$description.value.trim():
+                $descriptionErrors.innerHTML = "El campo de descripción esta vacio";
+                $descriptionErrors.classList.add('msg-error')
+                $checkStock.style.display= "none" 
+                validationsErrors = true;
+                break;
+            case $description.value.length < 20:
+                $descriptionErrors.innerHTML = "Tiene que tener al menos 20 caracteres";
+                $descriptionErrors.classList.add('msg-error')
+                $checkName.style.display= "none"
+                validationsErrors = true;
+                break;
+            default:
+                $description.classList.remove('msg-error')
+                $description.style.boxShadow= "none";
+                /* $checkStock.style.display= "inline-block" */
+                $descriptionErrors.innerHTML = "";
                 validationsErrors = false;
                 break;
         }
