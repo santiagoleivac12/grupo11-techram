@@ -43,9 +43,8 @@
                 <% if (locals.errors && errors.discount) { %>
                     <small class="text-danger"><%= errors.discount.msg %></small>
                 <% } %>
-                <label class="estilo" for="category">Elige la categoria:</label>
+                <label class="estilo" for="category">Categoria</label>
                 <select name="category" id="categoria-admin" class="select-admin titles">
-                    <option selected hidden value="">categoria</option>
                     <% categories.forEach(category => { %>
                         <option value="<%- category.id %>" <%- locals.old && old.category == category.id ? "selected" : category.id == product.category ? "selected" : "" %>><%- category.name %></option>
                      <% }) %>
@@ -54,9 +53,8 @@
                 <% if (locals.errors && errors.category) { %>
                     <small class="text-danger"><%= errors.category.msg %></small>
                 <% } %>
-                <label class="estilo" for="subcategory">Elige la subcategoria:</label>
+                <label class="estilo" for="subcategory">Subcategoria</label>
                 <select name="subcategory" id="subcategoria-admin" class="select-admin titles">
-                    <option selected hidden value="">subcategoria</option>
                     <% subcategories.forEach(subcategory => { %>
                         <option value="<%- subcategory.id %>" <%= locals.old && old.subcategory == subcategory.id ? "selected" : ""  %> ><%- subcategory.name %> </option>
                       <% }) %>
