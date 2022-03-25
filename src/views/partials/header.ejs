@@ -7,15 +7,17 @@
                 <% if (locals.user && locals.user.rol == 1){%>
                     <li class="nav__li"><a href="/" class="nav__a">PRODUCTOS</a></li>
                     <li class="nav__li"><a href="/users/perfil" class="nav__a">MI CUENTA</a></li>
+                    <li class="nav__li"><a href="/users/register" class="nav__a">REGISTRATE</a></li>
+                    <li class="nav__li"><a href="/users/login" class="nav__a">INGRESA</a></li>
                     <li class="nav__li"><a href="/admin" class="nav__a">PERFIL ADMINISTRADOR</a></li>
-                    <% } else if(locals.user && locals.user.rol == 0){%>
-                        <li class="nav__li"><a href="/" class="nav__a">PRODUCTOS</a></li>
-                        <!-- <li class="nav__li"><a href="#" class="nav__a">ARMA TU PC</a></li> -->
-                        <li class="nav__li"><a href="/users/perfil" class="nav__a">MI CUENTA</a></li>
-                       <!--  <li class="nav__li"><a href="#" class="nav__a">AYUDA</a></li> -->
+                <% } else if(locals.user && locals.user.rol == 0){%>
+                    <li class="nav__li"><a href="/" class="nav__a">PRODUCTOS</a></li>
+                    <li class="nav__li"><a href="/users/perfil" class="nav__a">MI CUENTA</a></li>
+                    <li class="nav__li"><a href="/users/register" class="nav__a">REGISTRATE</a></li>
+                    <li class="nav__li"><a href="/users/login" class="nav__a">INGRESA</a></li>
                 <% } else {%>
                     <li class="nav__li"><a href="/" class="nav__a">PRODUCTOS</a></li>
-                    <!-- <li class="nav__li"><a href="#" class="nav__a">ARMA TU PC</a></li> -->
+                    <li class="nav__li"><a href="/users/perfil" class="nav__a">MI CUENTA</a></li>
                     <li class="nav__li"><a href="/users/register" class="nav__a">REGISTRATE</a></li>
                     <li class="nav__li"><a href="/users/login" class="nav__a">INGRESA</a></li>
                 <% } %>
@@ -76,15 +78,17 @@
                 <% if (locals.user && locals.user.rol == 1){%>
                     <li class="nav__li"><a href="/" class="nav__a">PRODUCTOS</a></li>
                     <li class="nav__li"><a href="/users/perfil" class="nav__a">MI CUENTA</a></li>
+                    <li class="nav__li"><a href="/users/register" class="nav__a">REGISTRATE</a></li>
+                    <li class="nav__li"><a href="/users/login" class="nav__a">INGRESA</a></li>
                     <li class="nav__li"><a href="/admin" class="nav__a">PERFIL ADMINISTRADOR</a></li>
                 <% } else if(locals.user && locals.user.rol == 0){%>
                     <li class="nav__li"><a href="/" class="nav__a">PRODUCTOS</a></li>
-                    <!-- <li class="nav__li"><a href="#" class="nav__a">ARMA TU PC</a></li> -->
                     <li class="nav__li"><a href="/users/perfil" class="nav__a">MI CUENTA</a></li>
-                    <!--  <li class="nav__li"><a href="#" class="nav__a">AYUDA</a></li> -->
-                <% } else {%> 
+                    <li class="nav__li"><a href="/users/register" class="nav__a">REGISTRATE</a></li>
+                    <li class="nav__li"><a href="/users/login" class="nav__a">INGRESA</a></li>
+                <% } else {%>
                     <li class="nav__li"><a href="/" class="nav__a">PRODUCTOS</a></li>
-                    <!-- <li class="nav__li"><a href="#" class="nav__a">ARMA TU PC</a></li> -->
+                    <li class="nav__li"><a href="/users/perfil" class="nav__a">MI CUENTA</a></li>
                     <li class="nav__li"><a href="/users/register" class="nav__a">REGISTRATE</a></li>
                     <li class="nav__li"><a href="/users/login" class="nav__a">INGRESA</a></li>
                 <% } %>

@@ -15,6 +15,8 @@ window.addEventListener('load', () => {
     $categoryErrors = qs("#categoryErrors"),
     $subcategory = qs("#subcategoria-admin"),
     $subcategoryErrors = qs("#subcategoryErrors"),
+    $description = qs("#descripcion-admin"),
+    $descriptionErrors = qs("#descriptionErrors"),
     $checkName = qs("#input-name"),
     $checkPrice = qs("#input-price"),
     $checkDiscount = qs("#input-discount"),
@@ -32,7 +34,7 @@ window.addEventListener('load', () => {
     $name.addEventListener('blur', () => {
         switch(true) {
             case !$name.value.trim():
-                $nameErrors.innerHTML = "El campo nombre esta vacio";
+                $nameErrors.innerHTML = "El campo nombre es obligatorio";
                 $nameErrors.classList.add('msg-error')
                 $checkName.style.display= "none"
                 validationsErrors = true;
@@ -62,13 +64,13 @@ window.addEventListener('load', () => {
     $price.addEventListener('blur', () => {
         switch(true) {
             case !$price.value.trim():
-                $priceErrors.innerHTML = "El campo precio esta vacio";
+                $priceErrors.innerHTML = "Tienes que ingresar un precio";
                 $priceErrors.classList.add('msg-error')
                 $checkPrice.style.display= "none" 
                 validationsErrors = true;
                 break;
             case !regExNumber.test($price.value):
-                $priceErrors.innerHTML = "Ingrese solo números";
+                $priceErrors.innerHTML = "Debes ingresar sólo números";
                 $priceErrors.classList.add('msg-error')
                 $checkPrice.style.display= "none"
                 validationsErrors = true;
@@ -86,7 +88,7 @@ window.addEventListener('load', () => {
     $discount.addEventListener('blur', () => {
         switch(true) {
             case regExNumber.test($discount.value):
-                $discountErrors.innerHTML = "Ingrese solo números";
+                $discountErrors.innerHTML = "Debes ingresar sólo números";
                 $discountErrors.classList.add('msg-error') 
                 $checkDiscount.style.display= "none"
                 validationsErrors = true;
@@ -103,13 +105,13 @@ window.addEventListener('load', () => {
     $stock.addEventListener('blur', () => {
         switch(true) {
             case !$stock.value.trim():
-                $stockErrors.innerHTML = "El campo de stock esta vacio";
+                $stockErrors.innerHTML = "Tienes que ingresar la cantidad";
                 $stockErrors.classList.add('msg-error')
                 $checkStock.style.display= "none" 
                 validationsErrors = true;
                 break;
             case !regExNumber.test($stock.value):
-                $stockErrors.innerHTML = "Ingrese solo números";
+                $stockErrors.innerHTML = "Debes ingresar sólo números";
                 $stockErrors.classList.add('msg-error')
                 $checkStock.style.display= "none" 
                 validationsErrors = true;
@@ -124,9 +126,31 @@ window.addEventListener('load', () => {
         }
     })
 
+    $description.addEventListener('blur', () =>{
+        switch(true) {
+            case !$description.value.trim():
+                $descriptionErrors.innerHTML = "Tienes que ingresar una descripción";
+                $descriptionErrors.classList.add('msg-error')
+                validationsErrors = true;
+                break;
+            case $description.value.length < 20:
+                $descriptionErrors.innerHTML = "Tiene que tener al menos 20 caracteres";
+                $descriptionErrors.classList.add('msg-error')
+                validationsErrors = true;
+                break;
+            default:
+                $description.classList.remove('msg-error')
+                $description.style.boxShadow= "none";
+                $descriptionErrors.innerHTML = "";
+                validationsErrors = false;
+                break;
+        }
+    })
+
+
     $category.addEventListener('blur', () => {
         if($category.value == ""){
-            $categoryErrors.innerHTML = "Debe elegir una categoría";
+            $categoryErrors.innerHTML = "Tienes que elegir una categoría";
             $categoryErrors.classList.add('msg-error') 
             validationsErrors = true;
         }else{
@@ -139,7 +163,7 @@ window.addEventListener('load', () => {
 
     $subcategory.addEventListener('blur', () => {
         if($subcategory.value == ""){
-            $subcategoryErrors.innerHTML = "Debe elegir una subcategoría";
+            $subcategoryErrors.innerHTML = "Tienes que elegir una subcategoría";
             $subcategoryErrors.classList.add('msg-error')
             validationsErrors = true;
         }else{

@@ -74,22 +74,18 @@ const controller = {
             .then(() => {
                 res.redirect('/users/login')
             })
-                /* .then((user) => {
-                    req.session.user={
-                        id: user.id,
-                        name: user.firstName,
-                        lastname: user.lastname,
-                        email: user.email,
-                        avatar: user.avatar,
-                        rol: user.rol,
-                        Address: user.address,
-                        phone: user.phone,
-
-
-                    } */
         } else {
+/*             errors = errors.mapped()
+            if(req.fileValidationError) {
+                errors = {
+                    ...errors,
+                    image : {
+                        msg: req.fileValidationError
+                    }
+                }
+            } */
             res.render('users/register', {
-                errors: errors.mapped(),
+                errors,
                 old: req.body,
                 session: req.session
             })

@@ -34,7 +34,7 @@ window.addEventListener('load', () => {
     $name.addEventListener('blur', () => {
         switch(true) {
             case !$name.value.trim():
-                $nameErrors.innerHTML = "El campo nombre esta vacio";
+                $nameErrors.innerHTML = "El campo nombre es obligatorio";
                 $nameErrors.classList.add('msg-error')
                 $checkName.style.display= "none"
                 validationsErrors = true;
@@ -64,13 +64,13 @@ window.addEventListener('load', () => {
     $price.addEventListener('blur', () => {
         switch(true) {
             case !$price.value.trim():
-                $priceErrors.innerHTML = "El campo precio esta vacio";
+                $priceErrors.innerHTML = "Tienes que ingresar un precio";
                 $priceErrors.classList.add('msg-error')
                 $checkPrice.style.display= "none" 
                 validationsErrors = true;
                 break;
             case !regExNumber.test($price.value):
-                $priceErrors.innerHTML = "Ingrese solo números";
+                $priceErrors.innerHTML = "Debes ingresar sólo números";
                 $priceErrors.classList.add('msg-error')
                 $checkPrice.style.display= "none"
                 validationsErrors = true;
@@ -87,31 +87,38 @@ window.addEventListener('load', () => {
 
     $discount.addEventListener('blur', () => {
         switch(true) {
-            case regExNumber.test($discount.value):
+            case !regExNumber.test($discount.value):
                 $discountErrors.innerHTML = "Ingrese solo números";
-                $discountErrors.classList.add('msg-error') 
+                $discountErrors.classList.add('msg-error')
                 $checkDiscount.style.display= "none"
                 validationsErrors = true;
+                break;
+/*             case $discount.value.trim():
+                $discount.classList.remove('msg-error')
+                $discount.style.boxShadow= "none";
+                $discountErrors.innerHTML = "";
+                validationsErrors = false;
+                break; */
             default:
                 $discount.classList.remove('msg-error')
                 $discount.style.boxShadow= "none";
                 $checkDiscount.style.display= "inline-block"
-                 $discountErrors.innerHTML = "";
-                 validationsErrors = false;
-                 break;
+                $discountErrors.innerHTML = "";
+                validationsErrors = false;
+                break;
         }
     })
 
     $stock.addEventListener('blur', () => {
         switch(true) {
             case !$stock.value.trim():
-                $stockErrors.innerHTML = "El campo de stock esta vacio";
+                $stockErrors.innerHTML = "Tienes que ingresar la cantidad";
                 $stockErrors.classList.add('msg-error')
                 $checkStock.style.display= "none" 
                 validationsErrors = true;
                 break;
             case !regExNumber.test($stock.value):
-                $stockErrors.innerHTML = "Ingrese solo números";
+                $stockErrors.innerHTML = "Debes ingresar sólo números";
                 $stockErrors.classList.add('msg-error')
                 $checkStock.style.display= "none" 
                 validationsErrors = true;
@@ -129,21 +136,18 @@ window.addEventListener('load', () => {
     $description.addEventListener('blur', () =>{
         switch(true) {
             case !$description.value.trim():
-                $descriptionErrors.innerHTML = "El campo de descripción esta vacio";
+                $descriptionErrors.innerHTML = "Tienes que ingresar una descripción";
                 $descriptionErrors.classList.add('msg-error')
-                $checkStock.style.display= "none" 
                 validationsErrors = true;
                 break;
             case $description.value.length < 20:
                 $descriptionErrors.innerHTML = "Tiene que tener al menos 20 caracteres";
                 $descriptionErrors.classList.add('msg-error')
-                $checkName.style.display= "none"
                 validationsErrors = true;
                 break;
             default:
                 $description.classList.remove('msg-error')
                 $description.style.boxShadow= "none";
-                /* $checkStock.style.display= "inline-block" */
                 $descriptionErrors.innerHTML = "";
                 validationsErrors = false;
                 break;
@@ -152,7 +156,7 @@ window.addEventListener('load', () => {
 
     $category.addEventListener('blur', () => {
         if($category.value == ""){
-            $categoryErrors.innerHTML = "Debe elegir una categoría";
+            $categoryErrors.innerHTML = "Tienes que elegir una categoría";
             $categoryErrors.classList.add('msg-error') 
             validationsErrors = true;
         }else{
@@ -165,7 +169,7 @@ window.addEventListener('load', () => {
 
     $subcategory.addEventListener('blur', () => {
         if($subcategory.value == ""){
-            $subcategoryErrors.innerHTML = "Debe elegir una subcategoría";
+            $subcategoryErrors.innerHTML = "Tienes que elegir una subcategoría";
             $subcategoryErrors.classList.add('msg-error')
             validationsErrors = true;
         }else{

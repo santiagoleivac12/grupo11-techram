@@ -36,12 +36,14 @@ window.addEventListener('load', () => {
             default:
                 $email.classList.remove('is-invalid');
                 $email.classList.add('is-valid');
+                $email.style.boxShadow= "none";
                 $checkEmail.style.display= "inline-block";
                 $emailErrors.innerHTML = "";
                 validationsErrors = false;
                 break
         }
     })
+
     //contraseña 
     $passFront.addEventListener('blur', function () {
         switch (true) {
@@ -54,6 +56,7 @@ window.addEventListener('load', () => {
             default:
                 $passFront.classList.remove('is-invalid');
                 $passFront.classList.add('is-valid');
+                $passFront.style.boxShadow= "none";
                 $checkPass.style.display= "inline-block";
                 $passError.innerHTML = "";
                 validationsErrors = false

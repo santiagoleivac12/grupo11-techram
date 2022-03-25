@@ -5,7 +5,7 @@ module.exports = [
     .notEmpty()
     .withMessage('El campo nombre es obligatorio').bail()
     .isLength({min:5})
-    .withMessage('El nombre tiene que tener entre al menos 5 caracteres')
+    .withMessage('Tiene que tener al menos 5 caracteres')
     /* .isAlphanumeric('Ingresa un nombre valido') */,
 
     check('category')
@@ -31,4 +31,11 @@ module.exports = [
     .withMessage('Tienes que ingresar la cantidad').bail()
     .isNumeric()
     .withMessage('Debes ingresar sólo números'),
+
+    check('description')
+    .notEmpty()
+    .withMessage('Tienes que ingresar una descripción').bail()
+    .isLength({min:20})
+    .withMessage('Tiene que tener al menos 20 caracteres')
+
 ]

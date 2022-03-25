@@ -123,15 +123,13 @@ let controller = {
     update: (req, res) => {
         let errors = validationResult(req)
         if(errors.isEmpty()){
-            const {name, price, category, subcategory, description, discount, stock, conectivity, illumination} = req.body
+            const {name, price, category, subcategory, description, discount, stock} = req.body
             Products.update({
                 name, 
                 price, 
                 discount,
                 stock,
                 description,
-                conectivity,
-                illumination,
                 subcategoryId: subcategory,
             }, {
                 where: {
