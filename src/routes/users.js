@@ -20,6 +20,9 @@ router.post('/register', upload.single('user-img'), registerValidator , controll
 //perfil
 router.get('/perfil', userCheck,controller.perfil2);
 
+//editar perfil
+router.get('/perfilEdit/:id', userCheck,controller.perfilEdit);
+
 // get logout
 router.get('/logout', controller.logout);
 
