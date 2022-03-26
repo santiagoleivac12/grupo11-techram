@@ -1,0 +1,13 @@
+.title-search {
+    font-family: var(--font-textos);
+    font-weight: bold;
+    font-size: 30px;
+    margin: 0 auto;
+    margin-top: 10px;
+    color: thistle;
+    letter-spacing: 1.5px;
+    width: 70%;
+    border-bottom: .1px solid rgba(160, 102, 218, 0.658);;
+    text-align: center;
+}
+
