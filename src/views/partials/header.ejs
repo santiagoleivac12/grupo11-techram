@@ -38,10 +38,12 @@
                 </ul>
             </div>
             <div class="buscador-responsive">
-                <div id="div-buscador">
-                    <input type="text" placeholder="Buscar...">
-                    <button class="boton-mobile"><i class="fas fa-search"></i></button>
-                </div>
+                <form action="/products/search" method="GET">
+                    <div id="div-buscador">
+                        <input type="search" name="keywords" placeholder="Buscar..">
+                        <button type="submit" class="boton-mobile"><i class="fas fa-search"></i></button>
+                    </div>
+                </form>              
             </div>
             <div >
                 <% if (locals.user){%>

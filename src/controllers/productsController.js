@@ -29,6 +29,23 @@ let controller = {
     carrito:(req,res)=>{
         res.render('products/carrito')
     },
+    search: (req, res) => {
+        Products.findAll({
+            where: {
+                name: {
+                    [Op.substring]: req.query.keywords
+                }
+            },
+            include: [{association: 'productImages'}]
+        })
+        .then((result) => {
+            res.render('products/searchResult', {
+                result,
+                search: req.query.keywords,
+                session: req.session
+            })
+        })
+    },
     Categories:(req,res)=>{
         res.render('products/categories')
     }

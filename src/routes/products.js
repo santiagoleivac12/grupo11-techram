@@ -11,6 +11,9 @@ router.get('/detail/:id/', controller.detail);
 router.get('/carrito', controller.carrito);
 
 //categorias
-router.get('/categories',controller.Categories)
+router.get('/categories',controller.Categories);
+
+//buscador
+router.get('/search', controller.search)
 
 module.exports = router;

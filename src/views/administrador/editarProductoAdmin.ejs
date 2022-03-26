@@ -46,7 +46,7 @@
                 <label class="estilo" for="category">Categoria</label>
                 <select name="category" id="categoria-admin" class="select-admin titles">
                     <% categories.forEach(category => { %>
-                        <option value="<%- category.id %>" <%- locals.old && old.category == category.id ? "selected" : category.id == product.category ? "selected" : "" %>><%- category.name %></option>
+                        <option value="<%- category.id %>" <%- locals.old && old.category == category.id ? "selected" : category.id == product.category ? "selected" : null %>><%- category.name %></option>
                      <% }) %>
                 </select>
                 <span id="categoryErrors"></span>
@@ -56,7 +56,7 @@
                 <label class="estilo" for="subcategory">Subcategoria</label>
                 <select name="subcategory" id="subcategoria-admin" class="select-admin titles">
                     <% subcategories.forEach(subcategory => { %>
-                        <option value="<%- subcategory.id %>" <%= locals.old && old.subcategory == subcategory.id ? "selected" : ""  %> ><%- subcategory.name %> </option>
+                        <option value="<%- subcategory.id %>" <%= locals.old && old.subcategory == subcategory.id ? "selected" : null  %> ><%- subcategory.name %> </option>
                       <% }) %>
                 </select>
                 <span id="subcategoryErrors"></span>
