@@ -45,12 +45,6 @@ window.addEventListener('load', () => {
                 $checkName.style.display= "none"
                 validationsErrors = true;
                 break;
-            case !regExAlpha.test($name.value):
-                $nameErrors.innerHTML = "Ingrese un nombre valido";
-                $nameErrors.classList.add('msg-error')
-                $checkName.style.display= "none"
-                 validationsErrors = true;
-                 break;
             default: 
                 $name.classList.remove('msg-error')
                 $name.style.boxShadow= "none";

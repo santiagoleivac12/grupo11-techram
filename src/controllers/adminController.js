@@ -11,14 +11,49 @@ const Order_items = db.Order_item;
 
 let controller = {
     admin: (req,res) => {
-        Products.findAll({
+/*         Products.findAll({
             include: [{association: "productImages"}]
+        }) */
+        let url = `https://${req.headers.host}${req.originalUrl}`;
+
+        const getPageData = (data, page, limit) => {
+            const { count, rows: result} = data;
+            const pages = Math.ceil( count/limit)
+            const currentPage = page ? + page : 0;
+            let next_page = "";
+            let previous_page = "";
+
+            if(url.includes('pages')){
+
+            }else{
+                next_page = `${url}?page=${currentPage + 1}&size=${limit}`;
+            }
+
+        }
+
+        const {page, size} = req.query;
+
+        const getPagination = (page , size) => {
+
+            const limit = size ? +size : 5;
+            const offset = page ? page * limit : 0;
+
+            return{ limit, offset}
+        }
+
+        const {limit, offset} = getPagination(page, size)
+
+        Products.findAndCountAll({
+            limit: limit,
+            offset: offset
         })
-        .then(products => {
-            res.render('administrador/admin',{
+        .then(res => {
+            const data = getPageData(res, page, limit)
+            res.send(data)
+/*             res.render('administrador/admin',{
             products,
             session: req.session  
-            })
+            }) */
 
         })
     },
@@ -123,13 +158,14 @@ let controller = {
     update: (req, res) => {
         let errors = validationResult(req)
         if(errors.isEmpty()){
-            const {name, price, category, subcategory, description, discount, stock} = req.body
+            const {name, price, category, subcategory, description, discount, stock, marca} = req.body
             Products.update({
                 name, 
                 price, 
                 discount,
                 stock,
                 description,
+                marca,
                 subcategoryId: subcategory,
             }, {
                 where: {

@@ -40,6 +40,14 @@
                     <% if (locals.errors && errors.stock) { %>
                         <small class="msg-error"><%= errors.stock.msg %></small>
                     <% } %>
+                    <label class="estilo" for="marca-admin">Marca:</label>
+                    <div>
+                        <input type="text" name="marca" id="marca-admin" class="inputdos"><i class="fas fa-check-circle" id="input-discount"></i>
+                    </div>
+                    <span id="marcaErrors"></span>
+                    <% if (locals.errors && errors.marca) { %>
+                        <small class="msg-error"><%= errors.marca.msg %> </small>
+                    <% } %>
                     <label class="estilo" for="categoria-admin">Elige la categoria:</label>
                     <select id="categoria-admin" class="select-admin" name="category">
                         <option selected hidden value="">categoria</option>
