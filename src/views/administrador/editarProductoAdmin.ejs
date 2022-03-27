@@ -75,7 +75,7 @@
                     <% } %>
                 </div>
                 <label class="estilo" for="description">Descripción del producto</label>
-                <textarea name="descripcion" id="descripcion-admin" cols="30" rows="10"><%= product.description %></textarea>
+                <textarea name="description" id="descripcion-admin" cols="30" rows="10"><%= product.description %></textarea>
                 <span id="descriptionErrors"></span>
                 <% if (locals.errors && errors.description) { %>
                     <small class="msg-error"><%= errors.description.msg %> </small>
