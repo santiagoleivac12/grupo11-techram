@@ -35,7 +35,7 @@ module.exports = (sequelize, dataTypes) => {
         type : dataTypes.STRING(360),
         autoIncrement: false
         },
-        illumination : {
+        marca : {
             type : dataTypes.STRING(60),
             autoIncrement: false
         }
