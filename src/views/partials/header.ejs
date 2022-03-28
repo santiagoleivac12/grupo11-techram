@@ -49,11 +49,19 @@
                 <% if (locals.user){%>
                     <p class="cajaAvatar"><img class="avatarUsuario" src="/images/users/avatar.png" alt="img-avatar" ></p>
                     
-                    <input type="checkbox" id="logout" class="input-user">
-                    <label for="logout" class="label-logout"><p class="user-p"><%=locals.user.firstName%></p></label>
-                    <ul class="logout-ul" style="display: contents;    word-spacing: 3px;" >
-                        <li class="li-logout"><a href="/users/logout">cerrar sesión</a></li>
-                    </ul>
+                    <!-- <input type="checkbox" id="logout" class="input-user"> -->
+                    <!-- <label for="logout" class="label-logout"><p class="user-p"></p></label> -->
+              <!--       <ul class="logout-ul" style="display: contents;    word-spacing: 3px;" >
+                        <li  class="li-logout"><a href="/users/logout">cerrar sesión</a></li>
+                    </ul> -->
+                    <div class="dropdown">
+                        <button onclick="myFunction()" class="dropbtn"><%=locals.user.firstName%></button>
+                        <div id="myDropdown" class="dropdown-content">
+                          <a href="/users/logout">cerrar sesión</a>
+                          <a href="/users/perfil">mi cuenta</a>
+                          
+                        </div>
+                      </div>
                    
                 <% } else {%>
                     <a href="/users/perfil"> <i class="fas fa-user" style="
@@ -97,4 +105,5 @@
             </ul>
         </div>
     </div>
+    <script src="/js/desplegable.js"></script>
 </header>
