@@ -86,6 +86,7 @@ tr:hover td{
 /*Pagination styles*/
 .center {
     text-align: center;
+    margin-top: 20px;
   }
   
   .pagination {
@@ -102,7 +103,13 @@ tr:hover td{
   /*   margin: 0 4px; */
   }
   
-  .pagination a.active {
+/*   .pagination a.active {
+    background-color: var(--inter);
+    color: white;
+    border: 1px solid var(--morado);
+  } */
+
+  .active {
     background-color: var(--inter);
     color: white;
     border: 1px solid var(--morado);

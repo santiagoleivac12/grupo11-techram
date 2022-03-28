@@ -14,7 +14,7 @@ body{
     --font-titulos: "Bebas Neue", cursive;
     --font-textos:'Source Sans Pro', sans-serif;
     background-image: linear-gradient(to bottom, #03001e, #7303c0, #b683a6e5 );
-    /* background-image: linear-gradient(to bottom, #03001e, #3d0b5e,#7303c0 ); */
+    /* background-image: linear-gradient(to bottom, #03001e, #7303c0, #fdeff9 ); */
     background-size: cover;
     background-attachment: fixed;
    
