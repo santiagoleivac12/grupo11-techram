@@ -23,11 +23,25 @@ let controller = {
             let next_page = "";
             let previous_page = "";
 
-            if(url.includes('pages')){
+            if(url.includes('page')){
+
+                let page_params = url.substring(url.search(/page/i), url.search(/&/i))
+
+                if (currentPage == 0) {
+                    next_page = url.replace(page_params, `page=${currentPage + 1}`)
+                } else {
+                    previous_page = url.replace(page_params, `page=${currentPage - 1}`)
+                    next_page = url.replace(page_params, `page=${currentPage + 1}`)
+                }
 
             }else{
                 next_page = `${url}?page=${currentPage + 1}&size=${limit}`;
             }
+
+            const next = page == (pages -1)? null : next_page;
+            const previous = currentPage == 0? null : previous_page;
+
+            return { count, pages, currentPage, previous, next, result}
 
         }
 
@@ -47,13 +61,17 @@ let controller = {
             limit: limit,
             offset: offset
         })
-        .then(res => {
-            const data = getPageData(res, page, limit)
-            res.send(data)
-/*             res.render('administrador/admin',{
-            products,
-            session: req.session  
-            }) */
+        .then(response => {
+            const data = getPageData(response, page, limit)
+            res.render('administrador/admin',{
+                products: data.result,
+                session: req.session,
+                count: data.count,
+                pages: data.pages,
+                currentPage: data.currentPage,
+                previous: data.previous,
+                next: data.next
+            })
 
         })
     },
@@ -233,18 +251,15 @@ let controller = {
                 }
             }
             let productId = Number(req.params.id);
-            const productPromise = Products.findByPk(productId);
             const categoriesPromise = Categories.findAll();
             const subcategoriesPromise = Subcategories.findAll();
             Promise.all([productPromise, categoriesPromise, subcategoriesPromise])
-            .then(([product, categories, subcategories])=>{
-                res.render('administrador/editarProductoAdmin', {
+            .then(([product, categories, subcategories]) => {
+                res.render("administrador/editarProductoAdmin", {
                     product,
-                    categories, 
+                    categories,
                     subcategories,
-                    errors,
-                    old: req.body,
-                    session: req.session
+                    session:req.session
                 })
             })
             .catch(error => console.log(error)) 
