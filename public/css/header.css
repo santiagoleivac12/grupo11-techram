@@ -663,7 +663,7 @@ width: 50px;
 
  /* Dropdown Button */
 .dropbtn {
-    background-color:var(--inter);
+    background-color:var(--morado);
     color: white;
     padding: 4px;
     font-size: 16px;
@@ -715,7 +715,7 @@ width: 50px;
   
   /* Change color of dropdown links on hover */
   .dropdown-content a:hover {
-      background-color: #ddd;
+      background-color: rgba(255, 157, 227, 0.296);
     border-radius: 4px;
     font-family: var(--font-textos);
     
