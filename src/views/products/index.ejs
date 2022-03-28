@@ -33,7 +33,7 @@
                                 <div class="card-img">                        
                                     <a href="/products/detail/<%- product.id %>"><img src="images/productos/<%- product.productImages[0].image %>"></a>
                                     <h5 class="descripcion-producto"><%- product.name %></h5>
-                                    <p class="price">$<%- product.price %></p>
+                                    <p class="price">$<%= product.price - product.price * product.discount / 100 %></p>
                                 </div>
                                 <div class="button-producto">
                                     <a href="/products/detail/<%- product.id %>">VER PRODUCTO</a>
