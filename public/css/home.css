@@ -184,7 +184,12 @@ a {
 }
 
 .productos-article__card:hover {
-    box-shadow: 0px 0px 10px rgb(117, 26, 135);
+   /*  box-shadow: 0px 0px 20px rgb(117, 26, 135); */
+   box-shadow: 0px 0px 0 #88116e,
+   0px 0px 4px #ee1fb0,
+   0px 0px 8px #b31198,
+   0px 0px 16px #a80e82;
+ border-radius: 4px;
 }
 
 

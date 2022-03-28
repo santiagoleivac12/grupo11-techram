@@ -23,7 +23,10 @@
                 </article>
             </section>
         <% }else{%>
-            <h2 class="subtitle">No hay resultados de la búsqueda de <%- search %></h2>
+            <div class="div-no-result">
+                <h2 class="no-result">NO HAY RESULTADOS PARA LA BUSQUEDA DE "<%- search %>"</h2>
+                <p class="no-result">Por favor intente con otro criterio</p>
+            </div>
         <% } %>
     </main>
     <%- include('../partials/footer') %>

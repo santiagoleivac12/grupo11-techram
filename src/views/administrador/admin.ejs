@@ -42,7 +42,8 @@
                     <a class="page-link" href="<%= previous == null? "#" : previous %>">&laquo;</a>
                 </li>
                 <% for( let i = 0; i < pages ; i++ ) { %>
-                    <li class="pagination" <% currentPage == i ? "active" : "" %>><a class="page-link" href="http://localhost:3000/admin?page=<%= i %>&size=5"><%- i + 1 %> </a></li>
+                    <li class="pagination" <% currentPage == i ? "active" : "" %>><a class="page-link" href="http://localhost:3000/admin?page=<%= i %>&size=5"><%- i + 1 %></a>
+                    </li>
                 <% } %>
                 <li class="pagination <%- next == null ? "disabled" : "" %>">
                     <a class="page-link" href="<%- next == null? "#" : next %>">&raquo;</a>
