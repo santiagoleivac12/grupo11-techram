@@ -46,6 +46,30 @@ let controller = {
             })
         })
     },
+    amdProducts: (req,res) => {
+        Products.findAll({
+            include: [{association: "productImages"}]
+        })
+        .then(products => {
+            res.render('products/amd',{
+            products,
+            session: req.session  
+            })
+
+        })
+    },
+    intelProducts: (req,res) => {
+        Products.findAll({
+            include: [{association: "productImages"}]
+        })
+        .then(products => {
+            res.render('products/intel',{
+            products,
+            session: req.session  
+            })
+
+        })
+    },
     Categories:(req,res)=>{
         res.render('products/categories')
     }

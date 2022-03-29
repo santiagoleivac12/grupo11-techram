@@ -12,7 +12,6 @@ let controller = {
             include: [{association: "productImages"}]
         })
         .then(products => {
-            /* res.send(products) */
             res.render('products/index',{
             products,
             session: req.session  

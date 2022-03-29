@@ -14,6 +14,10 @@ router.get('/carrito', userCheck,controller.carrito);
 router.get('/categories',controller.Categories);
 
 //buscador
-router.get('/search', controller.search)
+router.get('/search', controller.search);
+
+router.get('/amd', controller.amdProducts);
+
+router.get('/intel', controller.intelProducts);
 
 module.exports = router;
