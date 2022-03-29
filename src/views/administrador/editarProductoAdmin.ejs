@@ -43,6 +43,14 @@
                 <% if (locals.errors && errors.discount) { %>
                     <small class="text-danger"><%= errors.discount.msg %></small>
                 <% } %>
+                <label class="estilo" for="marca">Marca</label>
+                <div>
+                    <input name="marca" class="rellenar-name" type="text" id="marca-admin" value="<%= locals.old ? old.marca : product.marca %>"><i class="fas fa-check-circle" id="input-marca"></i>
+                </div>
+                <span id="marcaErrors"></span>
+                <% if (locals.errors && errors.marca) { %>
+                    <small class="text-danger"><%= errors.marca.msg %></small>
+                <% } %>
                 <label class="estilo" for="category">Categoria</label>
                 <select name="category" id="categoria-admin" class="select-admin titles">
                     <% categories.forEach(category => { %>

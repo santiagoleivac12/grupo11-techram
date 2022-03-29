@@ -85,7 +85,8 @@ label.estilo{
     font-size: 15px;
 }
 
-#input-name, #input-price, #input-discount, #input-stock, #id-email, #id-password {
+#input-name, #input-price, #input-discount, #input-stock, 
+#id-email, #id-password, #input-marca {
     display: none;
     font-size: 22px;
     color: #51ad23d2;
