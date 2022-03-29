@@ -55,7 +55,7 @@
                 <a href="<%- previous == null? "#" : previous %>">&laquo;</a>
             </li>
             <% for( let i = 0; i < pages ; i++ ) { %>
-                <li class="pagination" <%- currentPage == i ? "active" : "" %> ><a href="http://localhost:3000/admin?page=<%= i %>&size=5" class=""><%- i + 1 %> </a></li>
+                <li class="pagination" <%- currentPage == i ? "active" : "" %> ><a href="http://localhost:3000/admin?page=<%= i %>&size=10" class=""><%- i + 1 %> </a></li>
             <% } %>           
             <li class="pagination <%- next == null ? "disabled" : "" %>">
                 <a href="<%- next == null? "#" : next %>">&raquo;</a>
