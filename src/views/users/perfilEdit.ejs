@@ -6,39 +6,39 @@
     <body>
         <%- include('../partials/header') %>
         <main>
-            <div class="containerGen">
-            <div class="containerGeneral">
-            <p class="containerAvatar"><img class="avatarProfile" src="/images/users/avatar.png" alt="avatar"></p>
-            <p class="bienvenido">Tu perfil <b> <% if (typeof session.user != "undefined") { %>
+        <div class="containerGen">
+            <form id="formEdit" class="containerGeneral" method="POST" action="/editUser/<%- user.id %>/edit?_method=PUT" enctype="multipart/form-data">
+                <p class="containerAvatar"><img class="avatarProfile" src="/images/users/avatar.png" alt="avatar"></p>
+                <p class="bienvenido">Tu perfil <b> <% if (typeof session.user != "undefined") { %>
                 <span> <%= session.user.name %> </span>  
-               <div class="cajaContenedor">
-                <div class="datosPersonales">
-                    <p class="titleProfile">Datos Personales</p>
-                  <p class="firstNameProfile"> <h4 class="nameProfile">Nombre:</h4><p class="letra"><%= user.firstName %></p> </p>
-                  <p class="lastNameProfile"><h4 class="nameProfile">Apellido:</h4> <p class="letra"><%= user.lastname %></p></p>
-                  <p class="emailProfile"><h4 class="nameProfile">Email:</h4> <p class="letra"><%= user.email %></p></p>
-                  <!-- <p class="phoneProfile"><h4 class="nameProfile">Teléfono:</h4> <%= user.phone %></p> -->
-                  </div>
-              <% } else {%>
-                Usuario
-              <% } %> 
-           
-           <div class="datosPersonales" >
-               <p class='titleProfile'>Datos de Envio</p>
-            <p class="streetProfile"><h4 class="nameProfile">Dirección:</h4> <%= user.addresses.street %></p>
-            <p class="numberProfile"><h4 class="nameProfile">Número:</h4> <%=session.user.address %></p>
-            <p class="cityProfile"><h4 class="nameProfile">Ciudad:</h4> <%= session.user.address %></p>
-            <p class="provinceProfile"><h4 class="nameProfile">Provincia:</h4> <%= session.user.address %></p>
-            <p class="postalCodeProfile"><h4 class="nameProfile">Código Postal:</h4> <%= session.user.address %></p>
+                <div class="cajaContenedor">
+                    <div class="datosPersonales">
+                        <p class="titleProfile">Datos Personales</p>
+                      <p class="firstNameProfile"> <h4 class="nameProfile">Nombre:</h4><p class="letra"><%= user.firstName %> </p>
+                      <p class="lastNameProfile"><h4 class="nameProfile">Apellido:</h4> <p class="letra"><%= user.lastname %></p>
+                      <p class="emailProfile"><h4 class="nameProfile">Email:</h4> <p class="letra"><%= user.email %></p>
+                      <p class="phoneProfile"><h4 class="nameProfile">Teléfono:</h4> <p class="letra"><%= user.phone %></p>
+                    </div>
+                  <% } else {%>
+                    Usuario
+                  <% } %> 
+               
+               <div class="datosPersonales" >
+                   <p class='titleProfile'>Datos de Envio</p>
+                    <p class="streetProfile"><h4 class="nameProfile">Dirección:</h4> <%= user.addresses.street %></p>
+                    <p class="numberProfile"><h4 class="nameProfile">Número:</h4> <%=session.user.address %></p>
+                    <p class="cityProfile"><h4 class="nameProfile">Ciudad:</h4> <%= session.user.address %></p>
+                    <p class="provinceProfile"><h4 class="nameProfile">Provincia:</h4> <%= session.user.address %></p>
+                    <p class="postalCodeProfile"><h4 class="nameProfile">Código Postal:</h4> <%= session.user.address %></p>    
+               </div>
+                </div>
+    
+               <div class="botonCaja">
+                   <a href="" class="button-link">Editar información</a>
+                </div>
+            </form>
+            
 
-           </div>
-        </div>
-
-           <div class="botonCaja">
-               <a href="" class="button-link">Editar información</a>
-            </div>
-
-         </div>
         </div>
 
 
@@ -50,5 +50,90 @@
 
             <%- include('../partials/footer') %>
     </body>
+<!--     <form id="formEdit" class="contenedor-admin" method="POST" action="/admin/<%- product.id %>/edit?_method=PUT" enctype="multipart/form-data">
+        <div class="product-detail-edit">
+            <div class="img-container-edit">
+                <img class="img-edit" src="/images/productos/<%- product.productImages[0].image %>" alt="producto">
+           </div>           
+        </div>
+        <div class="edit-inf">
+            <label class="estilo" for="name">Nombre</label>
+            <div>
+                <input name="name" class="rellenar-name" type="text" id="name-admin" placeholder="Nombre Producto" value="<%= locals.old ? old.name : product.name %>"><i class="fas fa-check-circle" id="input-name"></i>
+            </div>
+            <span id="nameErrors"></span>
+            <% if (locals.errors && errors.name) { %>
+                <small class="text-danger"><%= errors.name.msg %></small>
+            <% } %>
+            <label class="estilo" for="price">Precio</label>
+            <div>
+                <input name="price" class="rellenar-name" type="text" id="price-admin" placeholder="Precio" value="<%= locals.old ? old.price : product.price %>"><i class="fas fa-check-circle" id="input-price"></i>
+            </div>
+            <span id="priceErrors"></span>
+            <% if (locals.errors && errors.price) { %>
+                <small class="text-danger"><%= errors.price.msg %></small>
+            <% } %>
+            <label class="estilo" for="stock">Stock</label>
+            <div>
+                <input name="stock" class="rellenar-name" type="text" id="stock-admin" placeholder="Stock" value="<%= product.stock %>"><i class="fas fa-check-circle" id="input-stock"></i>
+            </div>
+            <span id="stockErrors"></span>
+            <% if (locals.errors && errors.stock) { %>
+                <small class="text-danger"><%= errors.stock.msg %></small>
+            <% } %>
+            <label class="estilo" for="discount">Descuento</label>
+            <div>
+                <input name="discount" class="rellenar-name" type="text" id="discount-admin" value="<%= locals.old ? old.discount : product.discount %>"><i class="fas fa-check-circle" id="input-discount"></i>
+            </div>
+            <span id="discountErrors"></span>
+            <% if (locals.errors && errors.discount) { %>
+                <small class="text-danger"><%= errors.discount.msg %></small>
+            <% } %>
+            <label class="estilo" for="category">Categoria</label>
+            <select name="category" id="categoria-admin" class="select-admin titles">
+                <% categories.forEach(category => { %>
+                    <option value="<%- category.id %>" <%- locals.old && old.category == category.id ? "selected" : category.id == product.category ? "selected" : null %>><%- category.name %></option>
+                 <% }) %>
+            </select>
+            <span id="categoryErrors"></span>
+            <% if (locals.errors && errors.category) { %>
+                <small class="text-danger"><%= errors.category.msg %></small>
+            <% } %>
+            <label class="estilo" for="subcategory">Subcategoria</label>
+            <select name="subcategory" id="subcategoria-admin" class="select-admin titles">
+                <% subcategories.forEach(subcategory => { %>
+                    <option value="<%- subcategory.id %>" <%= locals.old && old.subcategory == subcategory.id ? "selected" : null  %> ><%- subcategory.name %> </option>
+                  <% }) %>
+            </select>
+            <span id="subcategoryErrors"></span>
+            <% if (locals.errors && errors.subcategory) { %>
+                <small class="text-danger"><%= errors.subcategory.msg %></small>
+            <% } %>
+            <label class="estilo" class="estilo" for="producto-img">Agregue foto del producto</label>
+            <div class="box-2 mt-3">
+                <div id="img-preview">
 
+                </div>
+                <input type="file" name="producto-img" accept="png" id="fileEdit" class="input-admin" multiple>
+                <span class="msg-error" id="fileErrors"></span>
+                <% if (locals.errors && errors.image) { %>
+                    <small class="msg-error"><%= errors.image.msg %></small>
+                <% } %>
+            </div>
+            <label class="estilo" for="description">Descripción del producto</label>
+            <textarea name="description" id="descripcion-admin" cols="30" rows="10"><%= product.description %></textarea>
+            <span id="descriptionErrors"></span>
+            <% if (locals.errors && errors.description) { %>
+                <small class="msg-error"><%= errors.description.msg %> </small>
+            <% } %>
+        </div>
+
+
+        <div class="div-button-create">
+            <span id="submitErrors"></span>
+            <button class="button-create" type="submit">Guardar</button>
+            </div>
+
+        </div>
+    </form> -->
 </html>

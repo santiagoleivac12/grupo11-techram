@@ -1,9 +1,9 @@
-.title-search {
+.title-search , .no-result{
     font-family: var(--font-textos);
     font-weight: bold;
     font-size: 30px;
     margin: 0 auto;
-    margin-top: 10px;
+    margin-top: 25px;
     color: thistle;
     letter-spacing: 1.5px;
     width: 70%;
@@ -11,3 +11,12 @@
     text-align: center;
 }
 
+.div-no-result {
+    margin-bottom: 40%;
+}
+
+.div-no-result p {
+    font-size: 20px;
+    border-bottom: none;
+    margin-top: 10px;
+}

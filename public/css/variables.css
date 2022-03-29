@@ -6,14 +6,15 @@
     --blanco: white;
    --fucsia: #ec38bc; 
     --inter: #7303c0;
-    --degradeFondo: linear-gradient(to bottom ,  #03001e, #4c0d75,#7303c0);
+    --degradeFondo: linear-gradient(to bottom ,  #03001e, #4c0d75,#7303c0); 
 }
 
 /* estilos generales */
 body{
     --font-titulos: "Bebas Neue", cursive;
     --font-textos:'Source Sans Pro', sans-serif;
-    background-image: linear-gradient(to bottom, #03001e, #4c0d75,#7303c0 );
+    background-image: linear-gradient(to bottom, #03001e, #7303c0, #b683a6e5 );
+    /* background-image: linear-gradient(to bottom, #03001e, #7303c0, #fdeff9 ); */
     background-size: cover;
     background-attachment: fixed;
    

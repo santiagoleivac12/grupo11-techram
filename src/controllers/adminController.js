@@ -14,7 +14,7 @@ let controller = {
 /*         Products.findAll({
             include: [{association: "productImages"}]
         }) */
-        let url = `https://${req.headers.host}${req.originalUrl}`;
+        let url = `http://${req.headers.host}${req.originalUrl}`;
 
         const getPageData = (data, page, limit) => {
             const { count, rows: result} = data;
@@ -51,7 +51,6 @@ let controller = {
 
             const limit = size ? +size : 5;
             const offset = page ? page * limit : 0;
-
             return{ limit, offset}
         }
 
