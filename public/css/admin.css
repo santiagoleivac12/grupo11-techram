@@ -86,7 +86,8 @@ tr:hover td{
 /*Pagination styles*/
 .center {
     text-align: center;
-    margin-top: 20px;
+    margin-top: 25px;
+    margin-bottom: 15px;
   }
   
   .pagination {
@@ -108,14 +109,17 @@ tr:hover td{
     color: white;
     border: 1px solid var(--morado);
   } */
+.pagination-li:disabled {
+    background-color: #0F362D;
+}
 
-  .active {
+
+.pagination a.active {
     background-color: var(--inter);
     color: white;
-    border: 1px solid var(--morado);
-  }
+}
   
-  .pagination a:hover:not(.active) {background-color: #ddd;}
+.pagination a:hover:not(.active) {background-color: #ddd;}
 
 @media (min-width: 450px){
     th, td {
