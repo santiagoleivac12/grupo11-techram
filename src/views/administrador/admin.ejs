@@ -22,7 +22,7 @@
                     <td><%- product.id %></td>
                     <td><%- product.name %></td>
                     <td><%- product.discount %></td>
-                    <td><%- product.price %></td>
+                    <td><%= product.price - product.price * product.discount / 100 %></td>
                     <td><%- product.stock %></td>
                     <td><button class="button-edit">
                             <a href="/admin/<%- product.id %>/edit"><i class="fas fa-edit"></i></a>

@@ -36,9 +36,9 @@ module.exports = [
     .notEmpty()
     .withMessage('Tienes que ingresar una descripción').bail()
     .isLength({min:20})
-    .withMessage('Tiene que tener al menos 20 caracteres'),
+    .withMessage('Tiene que tener al menos 20 caracteres')/* ,
 
     check('marca')
     .notEmpty()
-    .withMessage('Tienes que ingresar la marca')
+    .withMessage('Tienes que ingresar la marca') */
 ]
