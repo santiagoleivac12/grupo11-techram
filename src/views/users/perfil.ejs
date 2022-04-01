@@ -8,7 +8,7 @@
         <main>
             <div class="containerGen">
             <div class="containerGeneral">
-            <p class="containerAvatar"><img class="avatarProfile" src="/images/users/avatar.png" alt="avatar"></p>
+            <p class="containerAvatar"><img class="avatarProfile" src="/images/users/default-image.png" alt="avatar"></p>
             <p class="bienvenido">Tu perfil <b> <% if (typeof session.user != "undefined") { %>
                 <span> <%= session.user.name %> </span>  
                <div class="cajaContenedor">
@@ -17,7 +17,7 @@
                   <p class="firstNameProfile"> <h4 class="nameProfile">Nombre:</h4><p class="letra"><%= user.firstName %></p> </p>
                   <p class="lastNameProfile"><h4 class="nameProfile">Apellido:</h4> <p class="letra"><%= user.lastname %></p></p>
                   <p class="emailProfile"><h4 class="nameProfile">Email:</h4> <p class="letra"><%= user.email %></p></p>
-                  <!-- <p class="phoneProfile"><h4 class="nameProfile">Teléfono:</h4> <%= user.phone %></p> -->
+                 <p class="phoneProfile"><h4 class="nameProfile">Teléfono:</h4> <p class="letra"><%= user.phone %></p></p>
                   </div>
               <% } else {%>
                 Usuario
@@ -25,16 +25,18 @@
            
            <div class="datosPersonales" >
                <p class='titleProfile'>Datos de Envio</p>
-            <p class="streetProfile"><h4 class="nameProfile">Dirección:</h4> <%= user.addresses.street %></p>
-            <p class="numberProfile"><h4 class="nameProfile">Número:</h4> <%=session.user.address %></p>
-            <p class="cityProfile"><h4 class="nameProfile">Ciudad:</h4> <%= session.user.address %></p>
-            <p class="provinceProfile"><h4 class="nameProfile">Provincia:</h4> <%= session.user.address %></p>
-            <p class="postalCodeProfile"><h4 class="nameProfile">Código Postal:</h4> <%= session.user.address %></p>
+            <p class="streetProfile"><h4 class="nameProfile">Dirección:</h4> --------------</p>
+            <p class="numberProfile"><h4 class="nameProfile">Número:</h4>    -------------- </p> 
+            <p class="cityProfile"><h4 class="nameProfile">Ciudad:</h4>      -------------- </p>
+            <p class="provinceProfile"><h4 class="nameProfile">Provincia:</h4>--------------</p>
+            <p class="postalCodeProfile"><h4 class="nameProfile">Código Postal:</h4>-------------- </p>
 
            </div>
         </div>
 
-           <div class="botonCaja"><button class="buttonProfile">Editar Información</button></div>
+<!--            <div class="botonCaja">
+               <a href="/users/perfilEdit/<%- user.id %>" class="button-link">Editar información</a>
+            </div> -->
 
          </div>
         </div>

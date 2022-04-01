@@ -22,7 +22,7 @@
                     <td><%- product.id %></td>
                     <td><%- product.name %></td>
                     <td><%- product.discount %></td>
-                    <td><%- product.price %></td>
+                    <td><%= product.price - product.price * product.discount / 100 %></td>
                     <td><%- product.stock %></td>
                     <td><button class="button-edit">
                             <a href="/admin/<%- product.id %>/edit"><i class="fas fa-edit"></i></a>
@@ -34,7 +34,33 @@
                 </tr>
                 <% }) %>
             </table>
+
         </div>
+<!--         <nav aria-label="...">
+            <ul class="center">
+                <li class="pagination <%- previous == null ? "disabled" : "" %>">
+                    <a class="page-link" href="<%= previous == null? "#" : previous %>">&laquo;</a>
+                </li>
+                <% for( let i = 0; i < pages ; i++ ) { %>
+                    <li class="pagination" <% currentPage == i ? "active" : "" %>><a class="page-link <% currentPage == i ? "active" : "" %>" href="http://localhost:3000/admin?page=<%= i %>&size=5"><%- i + 1 %></a>
+                    </li>
+                <% } %>
+                <li class="pagination <%- next == null ? "disabled" : "" %>">
+                    <a class="page-link" href="<%- next == null? "#" : next %>">&raquo;</a>
+                </li>
+            </ul>
+          </nav> -->
+          <ul class="center">
+            <li class="pagination <%- previous == null ? "disabled" : "" %> ">
+                <a href="<%- previous == null? "#" : previous %>">&laquo;</a>
+            </li>
+            <% for( let i = 0; i < pages ; i++ ) { %>
+                <li class="pagination"><a href="http://localhost:3000/admin?page=<%= i %>&size=10" class="<%- currentPage == i ? "active" : "" %>"><%- i + 1 %></a></li>
+            <% } %>           
+            <li class="pagination <%- next == null ? "disabled" : "" %>">
+                <a href="<%- next == null? "#" : next %>">&raquo;</a>
+            </li>
+          </ul>
     </main>
 </body>
 </html>

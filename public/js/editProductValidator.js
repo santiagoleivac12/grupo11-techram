@@ -17,10 +17,13 @@ window.addEventListener('load', () => {
     $subcategoryErrors = qs("#subcategoryErrors"),
     $description = qs("#descripcion-admin"),
     $descriptionErrors = qs("#descriptionErrors"),
+    $marca = qs("#marca-admin"),
+    $marcaErrors = qs("#marcaErrors"),
     $checkName = qs("#input-name"),
     $checkPrice = qs("#input-price"),
     $checkDiscount = qs("#input-discount"),
     $checkStock = qs("#input-stock"),
+    $checkMarca = qs("#input-marca"),
     $form = qs("#formEdit"),
     $submitErrors = qs("#submitErrors"),
     $file = qs("#fileEdit"),
@@ -45,12 +48,12 @@ window.addEventListener('load', () => {
                 $checkName.style.display= "none"
                 validationsErrors = true;
                 break;
-            case !regExAlpha.test($name.value):
+/*             case !regExAlpha.test($name.value):
                 $nameErrors.innerHTML = "Ingrese un nombre valido";
                 $nameErrors.classList.add('msg-error')
                 $checkName.style.display= "none"
                  validationsErrors = true;
-                 break;
+                 break; */
             default: 
                 $name.classList.remove('msg-error')
                 $price.style.boxShadow= "none";
@@ -144,6 +147,19 @@ window.addEventListener('load', () => {
                 $descriptionErrors.innerHTML = "";
                 validationsErrors = false;
                 break;
+        }
+    })
+
+    $marca.addEventListener('blur', () => {
+        if($marca.value == ""){
+            $marcaErrors.innerHTML = "Tienes que ingresar la marca";
+            $marcaErrors.classList.add('msg-error') 
+            validationsErrors = true;
+        }else{
+            $marca.classList.remove('msg-error')
+            $marca.style.boxShadow= "none";
+            $marcaErrors.innerHTML = "";
+            validationsErrors = false;
         }
     })
 

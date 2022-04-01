@@ -8,6 +8,13 @@
     margin-top: 100px;
 }
 
+.div-img-preview {
+    display: flex;
+    width: 100%;
+    flex-direction: row;
+    flex-wrap: wrap;
+}
+
 .creacion-producto {  
     width: 90%;
     margin: 0 auto;
@@ -78,7 +85,8 @@ label.estilo{
     font-size: 15px;
 }
 
-#input-name, #input-price, #input-discount, #input-stock, #id-email, #id-password {
+#input-name, #input-price, #input-discount, #input-stock, 
+#id-email, #id-password, #input-marca {
     display: none;
     font-size: 22px;
     color: #51ad23d2;
@@ -87,20 +95,21 @@ label.estilo{
 }
 
 #img-preview {
-    width:80%;
-    height: 250px;
+    width:100%;
+    height: fit-content;
     margin: 0 auto;
-    max-width: 250px;
-    border: 3px solid #8D05F8;
+    max-width: 450px;
     margin-bottom: 5px;
 }
 
 
 
 #img-preview img {
-    width: 100%;
+    width: 30%;
     object-fit: cover;
-    height: 100% ;
+    height: 90% ;
+    margin: 5px;
+    border: 3px solid #8D05F8;
 }
 
 /* .submit-error {

@@ -61,10 +61,28 @@ justify-content: center;
   border-radius: 7px;
 }
 .botonCaja{
-  display: flex;
-  justify-content: center;
-  width: 100%;
+  background-color: var(--inter);
+  border-radius: .8rem;
+  width: 40%;
+  height: fit-content;
+  height: -moz-fit-content;
+  text-align: center;
+  margin: 0 auto;
+  margin-bottom: 7px;
+  padding: .53rem;
+  text-transform: uppercase;
+  border:none;
+  cursor: pointer;
+  text-transform: uppercase;
+  font-family: var(--font-textos);
 }
+
+.botonCaja a {
+  color: white;
+  font-size: 15px;
+  font-weight: bold;
+}
+
 .cajaContenedor{
   width: 100%;
 }

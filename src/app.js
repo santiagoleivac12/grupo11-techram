@@ -50,8 +50,3 @@ app.listen(PORT, () => console.log(`
 Servidor escuchando en el puerto ${PORT}
 http://localhost:${PORT}
 `))
-/* ----------------------------------------
-<% if (session.user.rol === 'Admin'){%>
-
-<% } %>//PARA PERMITIR O NO PERMITIR EL INGRESO
----------------------------------------- */

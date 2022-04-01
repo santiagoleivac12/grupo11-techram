@@ -17,10 +17,13 @@ window.addEventListener('load', () => {
     $subcategoryErrors = qs("#subcategoryErrors"),
     $description = qs("#descripcion-admin"),
     $descriptionErrors = qs("#descriptionErrors"),
+    $marca = qs("#marca-admin"),
+    $marcaErrors = qs("#marcaErrors"),
     $checkName = qs("#input-name"),
     $checkPrice = qs("#input-price"),
     $checkDiscount = qs("#input-discount"),
     $checkStock = qs("#input-stock"),
+    $checkMarca = qs("#input-marca"),
     $form = qs("#formCreate"),
     $submitErrors = qs("#submitErrors"),
     $file = qs("#fileCreate"),
@@ -45,12 +48,6 @@ window.addEventListener('load', () => {
                 $checkName.style.display= "none"
                 validationsErrors = true;
                 break;
-            case !regExAlpha.test($name.value):
-                $nameErrors.innerHTML = "Ingrese un nombre valido";
-                $nameErrors.classList.add('msg-error')
-                $checkName.style.display= "none"
-                 validationsErrors = true;
-                 break;
             default: 
                 $name.classList.remove('msg-error')
                 $name.style.boxShadow= "none";
@@ -133,6 +130,19 @@ window.addEventListener('load', () => {
         }
     })
 
+    $marca.addEventListener('blur', () => {
+        if($marca.value == ""){
+            $marcaErrors.innerHTML = "Tienes que ingresar la marca";
+            $marcaErrors.classList.add('msg-error') 
+            validationsErrors = true;
+        }else{
+            $marca.classList.remove('msg-error')
+            $marca.style.boxShadow= "none";
+            $marcaErrors.innerHTML = "";
+            validationsErrors = false;
+        }
+    })
+
     $description.addEventListener('blur', () =>{
         switch(true) {
             case !$description.value.trim():
@@ -160,7 +170,7 @@ window.addEventListener('load', () => {
             $categoryErrors.classList.add('msg-error') 
             validationsErrors = true;
         }else{
-            $subcategory.classList.remove('msg-error')
+            $category.classList.remove('msg-error')
             $category.style.boxShadow= "none";
             $subcategoryErrors.innerHTML = "";
             validationsErrors = false;

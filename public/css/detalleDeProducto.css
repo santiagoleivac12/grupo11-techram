@@ -7,7 +7,11 @@
   margin-top: 50px;
   flex-direction: column;
   background-color: rgba(255, 255, 255, 0.248);
-/*   border:.5px solid rgba(160, 102, 218, 0.658); */
+/*   box-shadow: 0px 0px 0 #88116e,
+  0px 0px 4px #ee1fb0,
+  0px 0px 8px #b31198,
+  0px 0px 16px #a80e82;
+  border-radius: 4px; */
 }
 
 .selector-cant{
@@ -262,11 +266,12 @@ height: 300px;
     text-align: center;
     border-bottom: none;
     padding-top: 10px;
-    border-top: 2px solid rgba(160, 102, 218, 0.658);
+    border-top: 2px solid rgba(255, 255, 255, 0.248);
   }
 
   .p-detalle {
     padding: 15px;
+    font-size: 28px;
   }
 
   .text-detail {

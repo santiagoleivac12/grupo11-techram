@@ -110,9 +110,18 @@ const controller = {
                 }) 
             
             })
+    },
+    perfilEdit: (req,res) => {
+        Users.findByPk( req.session.user.id, {
+            include: [{ association: 'addresses' }]
+        })
+        .then((user) => {
+            res.render('users/perfilEdit', {
+                user,
+                session: req.session
+            })            
+        })
     }
-
-
 }
 
 module.exports = controller

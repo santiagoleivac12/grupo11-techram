@@ -11,13 +11,65 @@ const Order_items = db.Order_item;
 
 let controller = {
     admin: (req,res) => {
-        Products.findAll({
+/*         Products.findAll({
             include: [{association: "productImages"}]
+        }) */
+        let url = `http://${req.headers.host}${req.originalUrl}`;
+
+        const getPageData = (data, page, limit) => {
+            const { count, rows: result} = data;
+            const pages = Math.ceil( count/limit)
+            const currentPage = page ? + page : 0;
+            let next_page = "";
+            let previous_page = "";
+
+            if(url.includes('page')){
+
+                let page_params = url.substring(url.search(/page/i), url.search(/&/i))
+
+                if (currentPage == 0) {
+                    next_page = url.replace(page_params, `page=${currentPage + 1}`)
+                } else {
+                    previous_page = url.replace(page_params, `page=${currentPage - 1}`)
+                    next_page = url.replace(page_params, `page=${currentPage + 1}`)
+                }
+
+            }else{
+                next_page = `${url}?page=${currentPage + 1}&size=${limit}`;
+            }
+
+            const next = page == (pages -1)? null : next_page;
+            const previous = currentPage == 0? null : previous_page;
+
+            return { count, pages, currentPage, previous, next, result}
+
+        }
+
+        const {page, size} = req.query;
+
+        const getPagination = (page , size) => {
+
+            const limit = size ? +size : 10;
+            const offset = page ? page * limit : 0;
+            return{ limit, offset}
+        }
+
+        const {limit, offset} = getPagination(page, size)
+
+        Products.findAndCountAll({
+            limit: limit,
+            offset: offset
         })
-        .then(products => {
+        .then(response => {
+            const data = getPageData(response, page, limit)
             res.render('administrador/admin',{
-            products,
-            session: req.session  
+                products: data.result,
+                session: req.session,
+                count: data.count,
+                pages: data.pages,
+                currentPage: data.currentPage,
+                previous: data.previous,
+                next: data.next
             })
 
         })
@@ -123,13 +175,14 @@ let controller = {
     update: (req, res) => {
         let errors = validationResult(req)
         if(errors.isEmpty()){
-            const {name, price, category, subcategory, description, discount, stock} = req.body
+            const {name, price, category, subcategory, description, discount, stock, marca} = req.body
             Products.update({
                 name, 
                 price, 
                 discount,
                 stock,
                 description,
+                marca,
                 subcategoryId: subcategory,
             }, {
                 where: {
@@ -197,18 +250,15 @@ let controller = {
                 }
             }
             let productId = Number(req.params.id);
-            const productPromise = Products.findByPk(productId);
             const categoriesPromise = Categories.findAll();
             const subcategoriesPromise = Subcategories.findAll();
             Promise.all([productPromise, categoriesPromise, subcategoriesPromise])
-            .then(([product, categories, subcategories])=>{
-                res.render('administrador/editarProductoAdmin', {
+            .then(([product, categories, subcategories]) => {
+                res.render("administrador/editarProductoAdmin", {
                     product,
-                    categories, 
+                    categories,
                     subcategories,
-                    errors,
-                    old: req.body,
-                    session: req.session
+                    session:req.session
                 })
             })
             .catch(error => console.log(error)) 

@@ -47,13 +47,21 @@
             </div>
             <div >
                 <% if (locals.user){%>
-                    <p class="cajaAvatar"><img class="avatarUsuario" src="/images/users/avatar.png" alt="img-avatar" ></p>
+                    <p class="cajaAvatar"><img class="avatarUsuario" src="/images/users/default-image.png" alt="img-avatar" ></p>
                     
-                    <input type="checkbox" id="logout" class="input-user">
-                    <label for="logout" class="label-logout"><p class="user-p"><%=locals.user.firstName%></p></label>
-                    <ul class="logout-ul" style="display: contents;    word-spacing: 3px;" >
-                        <li class="li-logout"><a href="/users/logout">cerrar sesión</a></li>
-                    </ul>
+                    <!-- <input type="checkbox" id="logout" class="input-user"> -->
+                    <!-- <label for="logout" class="label-logout"><p class="user-p"></p></label> -->
+              <!--       <ul class="logout-ul" style="display: contents;    word-spacing: 3px;" >
+                        <li  class="li-logout"><a href="/users/logout">cerrar sesión</a></li>
+                    </ul> -->
+                    <div class="dropdown">
+                        <button onclick="myFunction()" class="dropbtn"><%=locals.user.firstName%></button>
+                        <div id="myDropdown" class="dropdown-content">
+                          <a href="/users/logout">cerrar sesión</a>
+                          <a href="/users/perfil">mi cuenta</a>
+                          
+                        </div>
+                      </div>
                    
                 <% } else {%>
                     <a href="/users/perfil"> <i class="fas fa-user" style="
@@ -80,21 +88,23 @@
                 <% if (locals.user && locals.user.rol == 1){%>
                     <li class="nav__li"><a href="/" class="nav__a">PRODUCTOS</a></li>
                     <li class="nav__li"><a href="/users/perfil" class="nav__a">MI CUENTA</a></li>
-                    <li class="nav__li"><a href="/users/register" class="nav__a">REGISTRATE</a></li>
-                    <li class="nav__li"><a href="/users/login" class="nav__a">INGRESA</a></li>
+                    <li class="nav__li"><a href="/products/intel" class="nav__a">INTEL</a></li>
+                    <li class="nav__li"><a href="/products/amd" class="nav__a">AMD</a></li>
                     <li class="nav__li"><a href="/admin" class="nav__a">PERFIL ADMINISTRADOR</a></li>
                 <% } else if(locals.user && locals.user.rol == 0){%>
                     <li class="nav__li"><a href="/" class="nav__a">PRODUCTOS</a></li>
+                    <li class="nav__li"><a href="/products/intel" class="nav__a">INTEL</a></li>
+                    <li class="nav__li"><a href="/products/amd" class="nav__a">AMD</a></li>
                     <li class="nav__li"><a href="/users/perfil" class="nav__a">MI CUENTA</a></li>
-                    <li class="nav__li"><a href="/users/register" class="nav__a">REGISTRATE</a></li>
-                    <li class="nav__li"><a href="/users/login" class="nav__a">INGRESA</a></li>
                 <% } else {%>
                     <li class="nav__li"><a href="/" class="nav__a">PRODUCTOS</a></li>
-                    <li class="nav__li"><a href="/users/perfil" class="nav__a">MI CUENTA</a></li>
+                    <li class="nav__li"><a href="/products/intel" class="nav__a">INTEL</a></li>
+                    <li class="nav__li"><a href="/products/amd" class="nav__a">AMD</a></li>
                     <li class="nav__li"><a href="/users/register" class="nav__a">REGISTRATE</a></li>
                     <li class="nav__li"><a href="/users/login" class="nav__a">INGRESA</a></li>
                 <% } %>
             </ul>
         </div>
     </div>
+    <script src="/js/desplegable.js"></script>
 </header>

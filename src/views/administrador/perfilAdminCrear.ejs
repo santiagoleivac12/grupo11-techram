@@ -40,6 +40,14 @@
                     <% if (locals.errors && errors.stock) { %>
                         <small class="msg-error"><%= errors.stock.msg %></small>
                     <% } %>
+                    <label class="estilo" for="marca-admin">Marca:</label>
+                    <div>
+                        <input type="text" name="marca" id="marca-admin" class="inputdos"><i class="fas fa-check-circle" id="input-marca"></i>
+                    </div>
+                    <span id="marcaErrors"></span>
+                    <% if (locals.errors && errors.marca) { %>
+                        <small class="msg-error"><%= errors.marca.msg %> </small>
+                    <% } %>
                     <label class="estilo" for="categoria-admin">Elige la categoria:</label>
                     <select id="categoria-admin" class="select-admin" name="category">
                         <option selected hidden value="">categoria</option>
@@ -65,10 +73,10 @@
                 </div>
                 <div class="form-create">
                     <label class="estilo" for="producto-img">Agregue foto del producto</label>
-                    <div class="box-2 mt-3">
+                    <div class="div-img-preview">
                         <div id="img-preview">
 
-                        </div>
+                        </div>                    
                         <input type="file" id="fileCreate" name="producto-img" accept="jpg" class="input-admin" multiple>
                         <span class="msg-error" id="fileErrors"></span>
                         <% if (locals.errors && errors.image) { %>

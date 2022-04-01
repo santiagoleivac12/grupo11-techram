@@ -8,12 +8,16 @@ let controller = require('../controllers/productsController');
 router.get('/detail/:id/', controller.detail);
 
 //carrito
-router.get('/carrito', controller.carrito);
+router.get('/carrito', userCheck,controller.carrito);
 
 //categorias
 router.get('/categories',controller.Categories);
 
 //buscador
-router.get('/search', controller.search)
+router.get('/search', controller.search);
+
+router.get('/amd', controller.amdProducts);
+
+router.get('/intel', controller.intelProducts);
 
 module.exports = router;
